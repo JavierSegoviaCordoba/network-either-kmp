@@ -1,0 +1,16 @@
+[versions]
+dependencyUpdates = "0.36.0"
+detekt = "1.15.0"
+dokka = "1.4.20"
+kotlin = "1.4.21"
+jacoco = "0.8.6"
+nexusPublish = "0.4.0"
+nexusStaging = "0.22.0"
+
+[dependencies]
+detekt = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+dependencyUpdates = { group = "com.github.ben-manes", name = "gradle-versions-plugin", version.ref = "dependencyUpdates" }
+dokka = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokka" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+nexus-staging = { group = "io.codearte.gradle.nexus", name = "gradle-nexus-staging-plugin", version.ref = "nexusStaging" }
+nexus-publish = { group = "de.marcphilipp.gradle", name = "nexus-publish-plugin", version.ref = "nexusPublish" }
