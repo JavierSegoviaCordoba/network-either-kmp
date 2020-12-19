@@ -1,0 +1,7 @@
+[versions]
+kotest = "4.3.2"
+
+[dependencies]
+kotest-assertions = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
+kotlin-test-common = { group = "org.jetbrains.kotlin", name = "kotlin-test" }
+kotlin-test-annotations = { group = "org.jetbrains.kotlin", name = "kotlin-test-annotations-common" }

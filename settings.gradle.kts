@@ -11,7 +11,8 @@ dependencyResolutionManagement {
     }
 
     versionCatalogs {
-        create("gradlePluginLibs") { from(files("gradle/gradle-plugin-dependencies.toml")) }
+        create("commonTestLibs") { from(files("gradle/common-test-dependencies.toml")) }
+        create("jvmTestLibs") { from(files("gradle/jvm-test-dependencies.toml")) }
     }
 }
 

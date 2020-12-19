@@ -24,6 +24,24 @@ kotlin {
     sourceSets {
         commonMain
 
+        commonTest {
+            dependencies {
+                commonTestLibs.apply {
+                    implementation(kotest.assertions)
+                    implementation(kotlin.test.common)
+                    implementation(kotlin.test.annotations)
+                }
+            }
+        }
+
+        named("jvmTest") {
+            dependencies {
+                jvmTestLibs.apply {
+                    implementation(kotlin.test.junit)
+                }
+            }
+        }
+
         defaultLanguageSettings
     }
 }

@@ -1,0 +1,2 @@
+[dependencies]
+kotlin-test-junit = { group = "org.jetbrains.kotlin", name = "kotlin-test-junit" }
