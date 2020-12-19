@@ -1,6 +1,7 @@
 package com.javiersc.either.extensions
 
 import com.javiersc.either.Either
+import kotlin.jvm.JvmName
 
 /**
  * Combine an Either with another Either where both and the resulting Either have the same type
@@ -23,6 +24,7 @@ public fun <L, R> Either<L, R>.combine(
 /**
  * Combine an Either with another Either where all Either have different types
  */
+@JvmName("combine2")
 public fun <L1, R1, L2, R2, R, L> Either<L1, R1>.combine(
     another: Either<L2, R2>,
     left: (L1, L2) -> L,
@@ -43,6 +45,7 @@ public fun <L1, R1, L2, R2, R, L> Either<L1, R1>.combine(
 /**
  * Combine an Either with another Either where all Either have different right type and same left type
  */
+@JvmName("combine3")
 public fun <L, R1, R2, R> Either<L, R1>.combine(
     either: Either<L, R2>,
     left: (L, L) -> L,
