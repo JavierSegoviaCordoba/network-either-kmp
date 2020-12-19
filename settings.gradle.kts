@@ -16,4 +16,4 @@ dependencyResolutionManagement {
     }
 }
 
-include(":either")
+include(":projects:either")
