@@ -6,9 +6,9 @@ plugins {
 publishing {
     publications.withType<MavenPublication> {
         pom {
-            name.set("Logger")
-            description.set("Logger Multiplatform")
-            url.set("http://github.com/JavierSegoviaCordoba/logger")
+            name.set("Either")
+            description.set("Either Multiplatform")
+            url.set("http://github.com/JavierSegoviaCordoba/either")
             licenses {
                 license {
                     name.set("The Apache License, Version 2.0")
@@ -23,9 +23,9 @@ publishing {
                 }
             }
             scm {
-                url.set("https://github.com/JavierSegoviaCordoba/logger")
-                connection.set("scm:git:https://github.com/JavierSegoviaCordoba/logger.git")
-                developerConnection.set("scm:git:git@github.com:JavierSegoviaCordoba/logger.git")
+                url.set("https://github.com/JavierSegoviaCordoba/either")
+                connection.set("scm:git:https://github.com/JavierSegoviaCordoba/either.git")
+                developerConnection.set("scm:git:git@github.com:JavierSegoviaCordoba/either.git")
             }
         }
     }

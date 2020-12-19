@@ -16,7 +16,8 @@ dependencies {
     gradlePluginLibs.apply {
         implementation(dependencyUpdates)
         implementation(detekt)
-        implementation(dokka)
+        implementation(dokka.core)
+        implementation(dokka.gradlePlugin)
         implementation(kotlin.gradlePlugin)
         implementation(nexus.staging)
         implementation(nexus.publish)

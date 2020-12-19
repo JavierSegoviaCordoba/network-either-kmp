@@ -47,6 +47,9 @@ jobs:
         run: |
           cat <(echo -e "${{ secrets.gpgKey }}") | gpg --batch --import
 
+      - name: Generate docs
+        run: ./gradlew dokkaHtmlMultiModule
+
       - name: Maven publish
         env:
           ossUser: ${{ secrets.ossUser }}
@@ -61,12 +64,9 @@ jobs:
           ossToken: ${{ secrets.ossToken }}
         run: ./gradlew closeRepository
 
-      - name: Generate docs
-        run: ./gradlew dokkaHtml
-
       - name: Deploy docs to Github Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: build/dokka/html
+          FOLDER: build/dokka

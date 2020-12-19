@@ -8,7 +8,6 @@ plugins {
 
 val dokkaJar by tasks.creating(Jar::class) {
     archiveClassifier.set("javadoc")
-    dependsOn(tasks.dokkaHtml)
     dependsOn(tasks.dokkaJavadoc)
 }
 
