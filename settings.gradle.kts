@@ -14,3 +14,5 @@ dependencyResolutionManagement {
         create("gradlePluginLibs") { from(files("gradle/gradle-plugin-dependencies.toml")) }
     }
 }
+
+include(":either")
