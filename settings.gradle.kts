@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 }
 
 include(":projects:either")
+include(":projects:resource")
