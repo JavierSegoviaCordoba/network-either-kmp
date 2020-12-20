@@ -1,3 +1,4 @@
 plugins {
-    id("org.jetbrains.kotlin.multiplatform")
+    kotlin("multiplatform")
+    kotlin("plugin.serialization")
 }

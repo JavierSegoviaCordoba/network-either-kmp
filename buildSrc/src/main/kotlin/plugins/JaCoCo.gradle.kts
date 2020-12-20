@@ -8,7 +8,7 @@ jacoco {
 }
 
 tasks.withType<JacocoReport> {
-    dependsOn("jvmTest")
+    dependsOn("allTests")
     val coverageSourceDirs = arrayOf(
         "commonMain/src",
         "jvmMain/src"

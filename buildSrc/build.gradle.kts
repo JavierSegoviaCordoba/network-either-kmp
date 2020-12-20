@@ -17,8 +17,10 @@ dependencies {
         implementation(dependencyUpdates)
         implementation(detekt)
         implementation(dokka.core)
-        implementation(dokka.gradlePlugin)
-        implementation(kotlin.gradlePlugin)
+        implementation(dokka.plugin)
+        implementation(kotlin.plugin)
+        implementation(kotlin.serialization)
+        implementation(jacoco)
         implementation(nexus.staging)
         implementation(nexus.publish)
     }

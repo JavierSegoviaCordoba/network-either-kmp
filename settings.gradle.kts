@@ -9,12 +9,9 @@ dependencyResolutionManagement {
         mavenCentral()
         jcenter()
     }
-
-    versionCatalogs {
-        create("commonTestLibs") { from(files("gradle/common-test-dependencies.toml")) }
-        create("jvmTestLibs") { from(files("gradle/jvm-test-dependencies.toml")) }
-    }
 }
 
 include(":projects:either")
+include(":projects:network:network")
+include(":projects:network:network-resource")
 include(":projects:resource")

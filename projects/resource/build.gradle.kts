@@ -31,7 +31,7 @@ kotlin {
 
         commonTest {
             dependencies {
-                commonTestLibs.apply {
+                libs.common.test.apply {
                     implementation(kotest.assertions)
                     implementation(kotlin.test.common)
                     implementation(kotlin.test.annotations)
@@ -41,7 +41,7 @@ kotlin {
 
         named("jvmTest") {
             dependencies {
-                jvmTestLibs.apply {
+                libs.jvm.test.apply {
                     implementation(kotlin.test.junit)
                 }
             }
