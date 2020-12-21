@@ -37,5 +37,3 @@ jobs:
         run: ./gradlew jacocoTestReport
 
       - uses: codecov/codecov-action@v1
-        with:
-          files: core/build/reports/jacoco/report.xml, serialization/build/reports/jacoco/report.xml
