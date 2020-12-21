@@ -1,13 +1,9 @@
-# Module either
+# Module resource
 
-Utilities for handling Failure and Success plus Loading states or events.
+Utilities for handling `Failure` and `Success` with `Data` and/or `Loading` states/events.
 
 ### Download from MavenCentral
 
 ```kotlin
 implementation("com.javiersc.either:resource:$version")
 ```
-
-# Package com.javiersc.either.resource
-
-Core class.

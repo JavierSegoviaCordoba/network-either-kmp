@@ -10,7 +10,7 @@ implementation("com.javiersc.either:either:$version")
 
 # Package com.javiersc.either
 
-Core class.
+Core `sealed class`.
 
 ## Level 2 heading
 
