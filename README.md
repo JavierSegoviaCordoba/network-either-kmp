@@ -20,10 +20,11 @@ All docs are available on the [Either website](https://either.javiersc.com)
 implementation("com.javiersc.either:either:$version")
 ```
 
-- NetworkEither and ResourceEither mapper
+- NetworkEither, pretty printing logger and ResourceEither mapper
 
 ```kotlin
 implementation("com.javiersc.either:network:$version")
+implementation("com.javiersc.either:network-logger:$version")
 implementation("com.javiersc.either:network-resource:$version")
 ```
 

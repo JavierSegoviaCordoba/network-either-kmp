@@ -24,13 +24,13 @@ kotlin {
         commonMain {
             dependencies {
                 projects.projects.apply {
-                    implementation(either)
+                    api(either)
                 }
 
                 libs.common.main.apply {
-                    implementation(coroutines.core)
-                    implementation(ktor.client.core)
-                    implementation(serialization.json)
+                    api(coroutines.core)
+                    api(ktor.client.core)
+                    api(serialization.json)
                 }
             }
         }
@@ -50,8 +50,8 @@ kotlin {
         named("jvmMain") {
             dependencies {
                 libs.jvm.main.apply {
-                    implementation(okHttp3.okhttp)
-                    implementation(retrofit2.retrofit)
+                    api(okHttp3.okhttp)
+                    api(retrofit2.retrofit)
                 }
             }
         }

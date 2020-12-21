@@ -24,7 +24,11 @@ kotlin {
         commonMain {
             dependencies {
                 projects.projects.apply {
-                    api(either)
+                    api(network.network)
+                }
+
+                libs.common.main.apply {
+                    api(logger.serialization)
                 }
             }
         }

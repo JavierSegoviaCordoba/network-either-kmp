@@ -13,5 +13,6 @@ dependencyResolutionManagement {
 
 include(":projects:either")
 include(":projects:network:network")
+include(":projects:network:network-logger")
 include(":projects:network:network-resource")
 include(":projects:resource")
