@@ -40,6 +40,9 @@ jobs:
       - name: Upload reports to Codecov
         uses: codecov/codecov-action@v1
 
+      - name: Generate docs
+        run: ./gradlew dokkaHtmlMultiModule
+
       - name: Maven publish
         env:
           ossUser: ${{ secrets.ossUser }}
@@ -47,3 +50,11 @@ jobs:
           gpgKeyName: ${{ secrets.gpgKeyName }}
           gpgPassphrase: ${{ secrets.gpgPassphrase }}
         run: ./gradlew publishToSonatype -PisLibRelease=false
+
+      - name: Deploy docs to Github Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build/dokka
+          TARGET_FOLDER: develop
