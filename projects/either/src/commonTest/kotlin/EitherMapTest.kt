@@ -11,7 +11,6 @@ class EitherMapTest {
 
     @Test
     fun `Left mappers`() {
-
         val either: Either<Int, String> = Either.Left(1)
         either.map(left = { it + 1 }, right = { "" }).shouldBeTypeOf<Either.Left<Int>>().left shouldBe 2
 
@@ -20,7 +19,6 @@ class EitherMapTest {
 
     @Test
     fun `Right mappers`() {
-
         val either: Either<String, Int> = Either.Right(1)
         either.map(left = { "" }, right = { it + 1 }).shouldBeTypeOf<Either.Right<Int>>().right shouldBe 2
 
