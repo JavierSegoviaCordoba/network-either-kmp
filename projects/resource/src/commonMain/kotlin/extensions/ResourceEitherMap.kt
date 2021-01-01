@@ -10,11 +10,11 @@ import com.javiersc.either.resource.buildResourceSuccess
 public fun <F, S, NF, NS> ResourceEither<F, S>.map(
     failure: (F) -> NF,
     fallbackData: (S?) -> NS? = { null },
-    data: (S) -> NS,
+    success: (S) -> NS,
     isLoading: Boolean? = null
 ): ResourceEither<NF, NS> = when (this) {
     is Either.Left -> buildResourceFailure(failure(left.failure), fallbackData(left.data), isLoading ?: left.isLoading)
-    is Either.Right -> buildResourceSuccess(data(right.data), isLoading ?: right.isLoading)
+    is Either.Right -> buildResourceSuccess(success(right.data), isLoading ?: right.isLoading)
 }
 
 public fun <F, S, NF, NS> Failure<F, S>.map(

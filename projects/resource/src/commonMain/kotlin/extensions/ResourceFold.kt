@@ -5,10 +5,10 @@ import com.javiersc.either.resource.ResourceEither
 
 public fun <F, S> ResourceEither<F, S>.fold(
     failure: (F, S?, Boolean) -> Unit,
-    data: (S, Boolean) -> Unit,
+    success: (S, Boolean) -> Unit,
 ): Unit = when (this) {
     is Either.Left -> failure(left.failure, left.data, left.isLoading)
-    is Either.Right -> data(right.data, right.isLoading)
+    is Either.Right -> success(right.data, right.isLoading)
 }
 
 public fun <F, S> ResourceEither<F, S>.ifFailure(failure: (F, S?, Boolean) -> Unit) {

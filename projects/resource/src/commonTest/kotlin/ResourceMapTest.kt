@@ -16,7 +16,7 @@ internal class ResourceMapTest {
             .map(
                 failure = { number: Int -> number + 2 },
                 fallbackData = { number: Int? -> number?.plus(3) },
-                data = { number -> number + 4 },
+                success = { number -> number + 4 },
             ).shouldBeTypeOf<ResourceFailure<Int, Int>>()
             .left.shouldBe(Failure(failure + 2, success + 3, true))
     }
@@ -27,7 +27,7 @@ internal class ResourceMapTest {
             .map(
                 failure = { number: Int -> number + 2 },
                 fallbackData = { number: Int? -> number?.plus(3) },
-                data = { number -> number + 4 },
+                success = { number -> number + 4 },
             ).shouldBeTypeOf<ResourceSuccess<Int>>()
             .right.shouldBe(Success(success + 4, true))
     }

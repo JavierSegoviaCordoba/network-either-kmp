@@ -25,7 +25,7 @@ internal class ResourceFoldTest {
                 actualIsLoading = isLoading
                 counter++
             },
-            data = { data, isLoading ->
+            success = { data, isLoading ->
                 actual = data
                 actualIsLoading = isLoading
                 counter++
@@ -63,7 +63,7 @@ internal class ResourceFoldTest {
                 actualIsLoading = isLoading
                 counter++
             },
-            data = { data, isLoading ->
+            success = { data, isLoading ->
                 actual = data
                 actualIsLoading = isLoading
                 counter++
