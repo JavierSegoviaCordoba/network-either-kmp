@@ -20,13 +20,13 @@ internal class ResourceTest {
     fun `Create Resource SuccessLoading`() {
         buildResourceSuccessLoading<String, String>(success)
             .shouldBeTypeOf<Either.Right<String>>().right
-            .shouldBe(Success.Loading(success))
+            .shouldBe(Success(success, true))
     }
 
     @Test
-    fun `Create Resource SuccessData`() {
-        buildResourceSuccessData<String, String>(success, true)
+    fun `Create Resource Success`() {
+        buildResourceSuccess<String, String>(success, true)
             .shouldBeTypeOf<Either.Right<String>>().right
-            .shouldBe(Success.Data(success, true))
+            .shouldBe(Success(success, true))
     }
 }

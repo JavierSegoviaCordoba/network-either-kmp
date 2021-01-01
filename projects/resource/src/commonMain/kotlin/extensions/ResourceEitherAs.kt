@@ -2,7 +2,7 @@ package com.javiersc.either.resource.extensions
 
 import com.javiersc.either.resource.ResourceEither
 import com.javiersc.either.resource.buildResourceFailure
-import com.javiersc.either.resource.buildResourceSuccessData
+import com.javiersc.either.resource.buildResourceSuccess
 import com.javiersc.either.resource.buildResourceSuccessLoading
 
 /**
@@ -17,7 +17,6 @@ public fun <F, S> F.asFailure(data: S? = null, isLoading: Boolean = false): Reso
 public fun <F, S> S.asSuccessLoading(): ResourceEither<F, S> = buildResourceSuccessLoading(this)
 
 /**
- * Transform this in SuccessData
+ * Transform this in Success
  */
-public fun <F, S> S.asSuccessData(isLoading: Boolean = false): ResourceEither<F, S> =
-    buildResourceSuccessData(this, isLoading)
+public fun <F, S> S.asSuccess(isLoading: Boolean = false): ResourceEither<F, S> = buildResourceSuccess(this, isLoading)

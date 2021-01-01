@@ -13,14 +13,13 @@ public typealias ResourceFailure<F, S> = Either.Left<Failure<F, S>>
 
 public typealias ResourceSuccess<S> = Either.Right<Success<S>>
 
-public typealias ResourceSuccessLoading<S> = Either.Right<Success.Loading<S>>
-
-public typealias ResourceSuccessData<S> = Either.Right<Success.Data<S>>
+public fun <F, S> buildResourceFailureLoading(failure: F, data: S? = null): ResourceEither<F, S> =
+    Either.Left(Failure(failure, data, true))
 
 public fun <F, S> buildResourceFailure(failure: F, data: S? = null, isLoading: Boolean = false): ResourceEither<F, S> =
     Either.Left(Failure(failure, data, isLoading))
 
-public fun <F, S> buildResourceSuccessLoading(data: S?): ResourceEither<F, S> = Either.Right(Success.Loading(data))
+public fun <F, S> buildResourceSuccessLoading(data: S): ResourceEither<F, S> = Either.Right(Success(data, true))
 
-public fun <F, S> buildResourceSuccessData(data: S, isLoading: Boolean = false): ResourceEither<F, S> =
-    Either.Right(Success.Data(data, isLoading))
+public fun <F, S> buildResourceSuccess(data: S, isLoading: Boolean = false): ResourceEither<F, S> =
+    Either.Right(Success(data, isLoading))

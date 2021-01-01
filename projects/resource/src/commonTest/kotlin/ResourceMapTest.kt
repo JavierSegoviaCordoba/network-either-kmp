@@ -22,24 +22,13 @@ internal class ResourceMapTest {
     }
 
     @Test
-    fun `Map SuccessLoading`() {
-        buildResourceSuccessLoading<Int, Int>(success)
+    fun `Map Success`() {
+        buildResourceSuccess<Int, Int>(success, true)
             .map(
                 failure = { number: Int -> number + 2 },
                 fallbackData = { number: Int? -> number?.plus(3) },
                 data = { number -> number + 4 },
-            ).shouldBeTypeOf<ResourceSuccessLoading<Int>>()
-            .right.shouldBe(Success.Loading(success + 3))
-    }
-
-    @Test
-    fun `Map SuccessData`() {
-        buildResourceSuccessData<Int, Int>(success, true)
-            .map(
-                failure = { number: Int -> number + 2 },
-                fallbackData = { number: Int? -> number?.plus(3) },
-                data = { number -> number + 4 },
-            ).shouldBeTypeOf<ResourceSuccessData<Int>>()
-            .right.shouldBe(Success.Data(success + 4, true))
+            ).shouldBeTypeOf<ResourceSuccess<Int>>()
+            .right.shouldBe(Success(success + 4, true))
     }
 }
