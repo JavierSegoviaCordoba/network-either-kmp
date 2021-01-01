@@ -19,12 +19,12 @@ public fun <F, S> NetworkEither<F, S>.alsoPrettyPrint(
         success = { data, code, headers ->
             logSerializableS(tag, Response.serializer(successSerializer), Response(data, code, headers))
         },
-        http = { error, code, headers ->
+        failureHttp = { error, code, headers ->
             logSerializableE(tag, Response.serializer(failureSerializer), Response(error, code, headers))
         },
-        local = { if (tag != null) logE(tag, LocalError) else logE(LocalError) },
-        remote = { if (tag != null) logE(tag, RemoteError) else logE(RemoteError) },
-        unknown = { throwable ->
+        failureLocal = { if (tag != null) logE(tag, LocalError) else logE(LocalError) },
+        failureRemote = { if (tag != null) logE(tag, RemoteError) else logE(RemoteError) },
+        failureUnknown = { throwable ->
             with(throwable.stackTraceToString()) {
                 if (tag != null) logE(tag, this) else logE(this)
             }
@@ -44,12 +44,12 @@ public fun <F, S> NetworkEither<F, S>.alsoPrettyPrint(
             success = { data, code, headers ->
                 serializableS(tag, Response.serializer(successSerializer), Response(data, code, headers))
             },
-            http = { error, code, headers ->
+            failureHttp = { error, code, headers ->
                 serializableD(tag, Response.serializer(failureSerializer), Response(error, code, headers))
             },
-            local = { e(tag, LocalError) },
-            remote = { e(tag, RemoteError) },
-            unknown = { throwable -> e(tag, throwable.stackTraceToString()) },
+            failureLocal = { e(tag, LocalError) },
+            failureRemote = { e(tag, RemoteError) },
+            failureUnknown = { throwable -> e(tag, throwable.stackTraceToString()) },
         )
     }
     return this

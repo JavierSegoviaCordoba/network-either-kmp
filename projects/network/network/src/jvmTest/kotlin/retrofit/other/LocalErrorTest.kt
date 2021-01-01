@@ -8,13 +8,13 @@ import com.javiersc.either.network.retrofit.BaseTest
 import com.javiersc.either.network.retrofit.config.DogService
 import com.javiersc.either.network.runTestBlocking
 import io.kotest.matchers.shouldBe
-import okhttp3.mockwebserver.MockWebServer
 import kotlin.test.Test
+import okhttp3.mockwebserver.MockWebServer
 
 internal class LocalErrorTest : BaseTest<ErrorDTO, DogDTO>() {
 
     override val mockWebServer: MockWebServer get() = MockWebServer()
-    override val service: DogService get() = DogService.getServiceLocalFailure(mockWebServer.url("/"))
+    override val service: DogService get() = DogService.getServicefailureLocal(mockWebServer.url("/"))
     override val codeToFile: Pair<Int, String?> get() = 200 to null
     override val expected: NetworkEither<ErrorDTO, DogDTO> = buildNetworkFailureLocal()
 

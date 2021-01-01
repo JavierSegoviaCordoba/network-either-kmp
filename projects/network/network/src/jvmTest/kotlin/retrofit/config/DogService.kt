@@ -5,6 +5,7 @@ import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.NetworkEitherCallAdapterFactory
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
+import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.Deferred
 import kotlinx.serialization.json.Json
 import okhttp3.HttpUrl
@@ -13,7 +14,6 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.create
 import retrofit2.http.GET
-import java.util.concurrent.TimeUnit
 
 internal interface DogService {
 
@@ -38,7 +38,7 @@ internal interface DogService {
             addConverterFactory(converter)
         }.build().create()
 
-        fun getServiceLocalFailure(httpUrl: HttpUrl, timeoutMillis: Long = 200): DogService = Retrofit.Builder().apply {
+        fun getServicefailureLocal(httpUrl: HttpUrl, timeoutMillis: Long = 200): DogService = Retrofit.Builder().apply {
             baseUrl(httpUrl)
             client(okHttpClient(timeoutMillis))
             addCallAdapterFactory(NetworkEitherCallAdapterFactory { false })

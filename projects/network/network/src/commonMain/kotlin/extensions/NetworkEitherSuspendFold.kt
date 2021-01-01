@@ -7,12 +7,12 @@ import com.javiersc.either.network.NetworkFailure
 import com.javiersc.either.network.NetworkSuccess
 import kotlin.jvm.JvmName
 
-public fun <F, S> NetworkEither<F, S>.fold(
-    success: (S, Int, Headers) -> Unit,
-    failureHttp: (F, Int, Headers) -> Unit,
-    failureLocal: () -> Unit,
-    failureRemote: () -> Unit,
-    failureUnknown: (Throwable) -> Unit,
+public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
+    success: suspend (S, Int, Headers) -> Unit,
+    failureHttp: suspend (F, Int, Headers) -> Unit,
+    failureLocal: suspend () -> Unit,
+    failureRemote: suspend () -> Unit,
+    failureUnknown: suspend (Throwable) -> Unit,
 ): Unit = when (this) {
     is NetworkFailure<F> -> when (val left = left) {
         is Failure.Http<F> -> failureHttp(left.error, left.code, left.headers)
@@ -23,13 +23,13 @@ public fun <F, S> NetworkEither<F, S>.fold(
     is NetworkSuccess<S> -> success(right.data, right.code, right.headers)
 }
 
-@JvmName("foldSuccessErrorSimple")
-public fun <F, S> NetworkEither<F, S>.fold(
-    success: (S) -> Unit,
-    failureHttp: (F) -> Unit,
-    failureLocal: () -> Unit,
-    failureRemote: () -> Unit,
-    failureUnknown: (Throwable) -> Unit,
+@JvmName("suspendFoldSuccessErrorSimple")
+public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
+    success: suspend (S) -> Unit,
+    failureHttp: suspend (F) -> Unit,
+    failureLocal: suspend () -> Unit,
+    failureRemote: suspend () -> Unit,
+    failureUnknown: suspend (Throwable) -> Unit,
 ): Unit = when (this) {
     is NetworkFailure<F> -> when (val left = left) {
         is Failure.Http<F> -> failureHttp(left.error)
@@ -40,13 +40,13 @@ public fun <F, S> NetworkEither<F, S>.fold(
     is NetworkSuccess<S> -> success(right.data)
 }
 
-@JvmName("foldSuccessErrorCodeSimple")
-public fun <F, S> NetworkEither<F, S>.fold(
-    success: (S) -> Unit,
-    failureHttp: (Int) -> Unit,
-    failureLocal: () -> Unit,
-    failureRemote: () -> Unit,
-    failureUnknown: (Throwable) -> Unit,
+@JvmName("suspendFoldSuccessErrorCodeSimple")
+public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
+    success: suspend (S) -> Unit,
+    failureHttp: suspend (Int) -> Unit,
+    failureLocal: suspend () -> Unit,
+    failureRemote: suspend () -> Unit,
+    failureUnknown: suspend (Throwable) -> Unit,
 ): Unit = when (this) {
     is NetworkFailure<F> -> when (val left = left) {
         is Failure.Http<F> -> failureHttp(left.code)
@@ -57,13 +57,13 @@ public fun <F, S> NetworkEither<F, S>.fold(
     is NetworkSuccess<S> -> success(right.data)
 }
 
-@JvmName("foldSuccessSimpleErrorVerySimple")
-public fun <F, S> NetworkEither<F, S>.fold(
-    success: (S) -> Unit,
-    failureHttp: () -> Unit,
-    failureLocal: () -> Unit,
-    failureRemote: () -> Unit,
-    failureUnknown: (Throwable) -> Unit,
+@JvmName("suspendFoldSuccessSimple")
+public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
+    success: suspend (S) -> Unit,
+    failureHttp: suspend () -> Unit,
+    failureLocal: suspend () -> Unit,
+    failureRemote: suspend () -> Unit,
+    failureUnknown: suspend (Throwable) -> Unit,
 ): Unit = when (this) {
     is NetworkFailure<F> -> when (val left = left) {
         is Failure.Http<F> -> failureHttp()

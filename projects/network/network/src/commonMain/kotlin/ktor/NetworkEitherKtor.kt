@@ -54,11 +54,11 @@ internal suspend inline fun <reified T> HttpResponse.decode(): T = Json.decodeFr
 internal suspend inline fun <reified F, reified S> Throwable.asNetworkEither(): NetworkEither<F, S> =
     when (this) {
         is ResponseException -> serializeAsError()
-        is UnresolvedAddressException -> localOrRemoteFailure()
-        is IOException -> localOrRemoteFailure()
+        is UnresolvedAddressException -> localOrfailureRemote()
+        is IOException -> localOrfailureRemote()
         else -> buildNetworkFailureUnknown(this)
     }
 
 @PublishedApi
-internal fun <F, S> localOrRemoteFailure(): NetworkEither<F, S> =
+internal fun <F, S> localOrfailureRemote(): NetworkEither<F, S> =
     if (isNetworkAvailable) buildNetworkFailureRemote() else buildNetworkFailureLocal()
