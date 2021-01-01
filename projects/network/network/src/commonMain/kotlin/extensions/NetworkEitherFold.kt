@@ -5,7 +5,6 @@ import com.javiersc.either.network.Headers
 import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.NetworkFailure
 import com.javiersc.either.network.NetworkSuccess
-import kotlin.jvm.JvmName
 
 public fun <F, S> NetworkEither<F, S>.fold(
     success: (S, Int, Headers) -> Unit,
@@ -23,8 +22,7 @@ public fun <F, S> NetworkEither<F, S>.fold(
     is NetworkSuccess<S> -> success(right.data, right.code, right.headers)
 }
 
-@JvmName("foldSuccessErrorSimple")
-public fun <F, S> NetworkEither<F, S>.fold(
+public fun <F, S> NetworkEither<F, S>.foldSimple(
     success: (S) -> Unit,
     failureHttp: (F) -> Unit,
     failureLocal: () -> Unit,
@@ -40,8 +38,7 @@ public fun <F, S> NetworkEither<F, S>.fold(
     is NetworkSuccess<S> -> success(right.data)
 }
 
-@JvmName("foldSuccessErrorCodeSimple")
-public fun <F, S> NetworkEither<F, S>.fold(
+public fun <F, S> NetworkEither<F, S>.foldSuccessDataErrorCode(
     success: (S) -> Unit,
     failureHttp: (Int) -> Unit,
     failureLocal: () -> Unit,
@@ -57,8 +54,7 @@ public fun <F, S> NetworkEither<F, S>.fold(
     is NetworkSuccess<S> -> success(right.data)
 }
 
-@JvmName("foldSuccessSimpleErrorVerySimple")
-public fun <F, S> NetworkEither<F, S>.fold(
+public fun <F, S> NetworkEither<F, S>.foldOnlySuccessData(
     success: (S) -> Unit,
     failureHttp: () -> Unit,
     failureLocal: () -> Unit,

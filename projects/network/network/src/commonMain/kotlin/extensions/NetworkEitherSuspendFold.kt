@@ -5,7 +5,6 @@ import com.javiersc.either.network.Headers
 import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.NetworkFailure
 import com.javiersc.either.network.NetworkSuccess
-import kotlin.jvm.JvmName
 
 public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
     success: suspend (S, Int, Headers) -> Unit,
@@ -23,8 +22,7 @@ public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
     is NetworkSuccess<S> -> success(right.data, right.code, right.headers)
 }
 
-@JvmName("suspendFoldSuccessErrorSimple")
-public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
+public suspend fun <F, S> NetworkEither<F, S>.suspendFoldSimple(
     success: suspend (S) -> Unit,
     failureHttp: suspend (F) -> Unit,
     failureLocal: suspend () -> Unit,
@@ -40,8 +38,7 @@ public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
     is NetworkSuccess<S> -> success(right.data)
 }
 
-@JvmName("suspendFoldSuccessErrorCodeSimple")
-public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
+public suspend fun <F, S> NetworkEither<F, S>.suspendFoldSuccessDataErrorCode(
     success: suspend (S) -> Unit,
     failureHttp: suspend (Int) -> Unit,
     failureLocal: suspend () -> Unit,
@@ -57,8 +54,7 @@ public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
     is NetworkSuccess<S> -> success(right.data)
 }
 
-@JvmName("suspendFoldSuccessSimple")
-public suspend fun <F, S> NetworkEither<F, S>.suspendFold(
+public suspend fun <F, S> NetworkEither<F, S>.suspendFoldOnlySuccessData(
     success: suspend (S) -> Unit,
     failureHttp: suspend () -> Unit,
     failureLocal: suspend () -> Unit,
