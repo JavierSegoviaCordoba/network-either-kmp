@@ -21,6 +21,7 @@ common-test-kotlin-test-annotations = { group = "org.jetbrains.kotlin", name = "
 common-test-ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
 common-test-ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
 
+jvm-main-ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
 jvm-main-okHttp3-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttp" }
 jvm-main-retrofit2-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 

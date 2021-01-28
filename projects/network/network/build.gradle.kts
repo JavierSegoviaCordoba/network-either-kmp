@@ -50,6 +50,7 @@ kotlin {
         named("jvmMain") {
             dependencies {
                 libs.jvm.main.apply {
+                    api(ktor.client.cio)
                     api(okHttp3.okhttp)
                     api(retrofit2.retrofit)
                 }
