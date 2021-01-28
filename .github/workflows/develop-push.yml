@@ -58,3 +58,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: build/dokka
           TARGET_FOLDER: develop
+          CLEAN: false
