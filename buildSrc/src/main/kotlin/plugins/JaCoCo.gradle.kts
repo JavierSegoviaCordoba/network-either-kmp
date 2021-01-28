@@ -8,14 +8,22 @@ jacoco {
 }
 
 tasks.withType<JacocoReport> {
-    dependsOn("allTests")
-    val coverageSourceDirs = arrayOf(
-        "commonMain/src",
-        "jvmMain/src"
-    )
-    val classFiles = File("$buildDir/classes/kotlin/jvm/main")
-        .walkBottomUp()
-        .toSet()
+    dependsOn("check")
+
+    val coverageSourceDirs =
+        projectDir
+            .walkTopDown()
+            .asSequence()
+            .filter { it.path.contains("Main") }
+            .map { it.path.replaceBefore("src", "") }
+            .map { it.replaceAfter("Main", "") }
+            .toSet()
+
+    val classFiles =
+        File("$buildDir/classes/kotlin/jvm/main")
+            .walkBottomUp()
+            .toSet()
+
     classDirectories.setFrom(classFiles)
     sourceDirectories.setFrom(files(coverageSourceDirs))
     additionalSourceDirs.setFrom(files(coverageSourceDirs))
