@@ -12,26 +12,26 @@ val dokkaJar by tasks.creating(Jar::class) {
 publishing {
     publications.withType<MavenPublication> {
         pom {
-            name.set(POM.name)
-            description.set(POM.description)
-            url.set(POM.url)
+            name.set(property("pomName").toString())
+            description.set(property("pomDescription").toString())
+            url.set(property("pomUrl").toString())
             licenses {
                 license {
-                    name.set(POM.License.name)
-                    url.set(POM.License.url)
+                    name.set(property("pomLicenseName").toString())
+                    url.set(property("pomLicenseUrl").toString())
                 }
             }
             developers {
                 developer {
-                    id.set(POM.Developer.id)
-                    name.set(POM.Developer.name)
-                    email.set(POM.Developer.email)
+                    id.set(property("pomDeveloperId").toString())
+                    name.set(property("pomDeveloperName").toString())
+                    email.set(property("pomDeveloperEmail").toString())
                 }
             }
             scm {
-                url.set(POM.SMC.url)
-                connection.set(POM.SMC.connection)
-                developerConnection.set(POM.SMC.developerConnection)
+                url.set(property("pomSMCurl").toString())
+                connection.set(property("pomsmcConnection").toString())
+                developerConnection.set(property("pomSMCdeveloperConnection").toString())
             }
         }
     }
