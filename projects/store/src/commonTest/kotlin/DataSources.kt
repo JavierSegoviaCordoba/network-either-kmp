@@ -11,31 +11,31 @@ internal class CacheDataSource {
     private var _numbers: MutableList<Int>? = mutableListOf(10, 11)
 
     suspend fun get(key: Int): List<Int>? {
-        delay(1500).also { println("GET CACHE") }
+        delay(200).also { println("GET CACHE") }
         return _numbers?.toList()
     }
 
     suspend fun insert(numbers: List<Int>) {
-        delay(1500).also { println("INSERT CACHE: $numbers") }
+        delay(200).also { println("INSERT CACHE: $numbers") }
         if (_numbers != null) _numbers?.addAll(numbers)
         else _numbers = numbers.toMutableList()
     }
 
     suspend fun delete(numbers: List<Number>) {
-        delay(1500).also { println("DELETE CACHE: $numbers") }
+        delay(200).also { println("DELETE CACHE: $numbers") }
         _numbers?.removeAll(numbers)
         if (_numbers.isNullOrEmpty()) _numbers = null
     }
 
     suspend fun deleteAll() {
-        delay(1500).also { println("DELETE_ALL CACHE") }
+        delay(200).also { println("DELETE_ALL CACHE") }
         _numbers = null
     }
 }
 
 internal class RemoteDataSource {
     suspend fun get(key: Int): ResourceEither<Boolean, List<Int>> {
-        delay(1500).also { println("GET REMOTE") }
+        delay(600).also { println("GET REMOTE") }
         return buildResourceSuccess(listOf(7, 8, key))
     }
 }
@@ -49,25 +49,25 @@ internal class LocalDataSource {
     fun stream(key: Int): Flow<List<Int>> = _flow
 
     suspend fun get(key: Int): List<Int> {
-        delay(1500).also { println("GET SOT") }
+//        delay(1500).also { println("GET SOT") }
         return _numbers.toList()
     }
 
     suspend fun write(numbers: List<Int>) =
         doAndEmit {
-            delay(1500).also { println("INSERT SOT: $numbers") }
+            delay(200).also { println("INSERT SOT: $numbers") }
             _numbers.addAll(numbers)
         }
 
     suspend fun delete(numbers: List<Number>) =
         doAndEmit {
-            delay(1500).also { println("DELETE SOT: $numbers") }
+            delay(200).also { println("DELETE SOT: $numbers") }
             _numbers.removeAll(numbers)
         }
 
     suspend fun deleteAll() =
         doAndEmit {
-            delay(1500).also { println("DELETE_ALL SOT") }
+            delay(200).also { println("DELETE_ALL SOT") }
             _numbers.clear()
         }
 

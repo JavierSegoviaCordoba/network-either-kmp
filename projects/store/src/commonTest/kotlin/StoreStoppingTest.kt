@@ -44,8 +44,13 @@ internal class StoreStoppingTest {
                             deleteAll = localDataSource::deleteAll,
                         ),
                 )
-
-            store.stream(2, operationsCacheSourceOfTruthRemoteStopping).take(2).toList() shouldBe
+            store
+                .stream(
+                    key = 2,
+                    config = operations(operationsCacheSourceOfTruthRemoteStopping),
+                )
+                .take(2)
+                .toList() shouldBe
                 listOf(
                     buildResourceSuccessLoading(listOf(10, 11)),
                     buildResourceSuccess(listOf(1, 2, 3, 4)),
@@ -84,7 +89,13 @@ internal class StoreStoppingTest {
                             ),
                     )
 
-                store.stream(2, operationsCacheSourceOfTruthRemoteStopping).take(3).toList()
+                store
+                    .stream(
+                        key = 2,
+                        config = operations(operationsCacheSourceOfTruthRemoteStopping),
+                    )
+                    .take(3)
+                    .toList()
             }
         }
     }

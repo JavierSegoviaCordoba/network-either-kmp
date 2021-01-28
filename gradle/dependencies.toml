@@ -7,7 +7,7 @@ okHttp = "4.9.0"
 retrofit = "2.9.0"
 retrofitConverter = "0.8.0"
 serialization = "1.0.1"
-turbine = "0.3.0"
+turbine = "0.4.0-SNAPSHOT"
 
 [dependencies]
 common-main-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }

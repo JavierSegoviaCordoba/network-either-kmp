@@ -31,8 +31,5 @@ public val operationsCacheSourceOfTruthRemoteStopping: List<OperationFlow> =
 public val operationsCacheRemote: List<OperationFlow> =
     operations {
         add { (Get from Cache).emittingLoading() }
-        addAndInvoke {
-            (Get from Remote).emitting() shouldDo
-                listOf(Insert into Cache, Insert into SourceOfTruth)
-        }
+        addAndInvoke { (Get from Remote).emitting() shouldDo (Insert into Cache) }
     }

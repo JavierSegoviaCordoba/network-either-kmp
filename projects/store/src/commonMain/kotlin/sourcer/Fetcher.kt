@@ -1,6 +1,7 @@
 package com.javiersc.either.store.sourcer
 
 import com.javiersc.either.resource.ResourceEither
+import com.javiersc.either.store.internal.sourcer.FactoryFetcher
 
 public interface Fetcher<Key : Any, F : Any, S : Any> {
 
@@ -14,12 +15,5 @@ public interface Fetcher<Key : Any, F : Any, S : Any> {
             FactoryFetcher(
                 factoryGet = get,
             )
-    }
-
-    private class FactoryFetcher<Key : Any, F : Any, S : Any>(
-        private val factoryGet: suspend (Key) -> ResourceEither<F, S>,
-    ) : Fetcher<Key, F, S> {
-
-        override suspend fun get(key: Key): ResourceEither<F, S> = factoryGet(key)
     }
 }

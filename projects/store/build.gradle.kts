@@ -3,22 +3,13 @@ plugins {
     NexusPublish
     JaCoCo
     Dokka
-    EitherVersioning
-}
-
-val dokkaJar by tasks.creating(Jar::class) {
-    archiveClassifier.set("javadoc")
-    dependsOn(tasks.dokkaJavadoc)
+    Versioning
 }
 
 kotlin {
     explicitApi()
 
-    jvm {
-        mavenPublication {
-            artifact(dokkaJar)
-        }
-    }
+    jvm()
 
     sourceSets {
         commonMain {
@@ -46,13 +37,7 @@ kotlin {
             }
         }
 
-        named("jvmTest") {
-            dependencies {
-                libs.jvm.test.apply {
-                    implementation(kotlin.test.junit)
-                }
-            }
-        }
+        named("jvmTest")
 
         defaultLanguageSettings
     }

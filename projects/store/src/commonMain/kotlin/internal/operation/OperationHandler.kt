@@ -1,6 +1,6 @@
 @file:Suppress("LongParameterList", "ComplexMethod", "LongMethod", "NestedBlockDepth")
 
-package com.javiersc.either.store.operation
+package com.javiersc.either.store.internal.operation
 
 import com.javiersc.either.resource.ResourceEither
 import com.javiersc.either.resource.ResourceFailure
@@ -9,12 +9,15 @@ import com.javiersc.either.resource.buildResourceFailure
 import com.javiersc.either.resource.buildResourceSuccess
 import com.javiersc.either.store.StoreAction
 import com.javiersc.either.store.StoreSource
+import com.javiersc.either.store.internal.storeError
+import com.javiersc.either.store.operation.Operation
+import com.javiersc.either.store.operation.OperationEmit
 import com.javiersc.either.store.sourcer.Cacher
 import com.javiersc.either.store.sourcer.Fetcher
 import com.javiersc.either.store.sourcer.SourceOfTruth
 import kotlinx.coroutines.channels.ProducerScope
 
-public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
+internal suspend fun <Key : Any, F : Any, S : Any> handleOperation(
     key: Key,
     data: S?,
     resource: ResourceEither<F, S>?,
@@ -23,9 +26,10 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
     cacher: Cacher<Key, S>?,
     fetcher: Fetcher<Key, F, S>?,
     sot: SourceOfTruth<Key, S>?,
-    flow: ProducerScope<ResourceEither<F, S>>,
+    flow: ProducerScope<ResourceEither<F, S>>?,
 ): OperationHandled<F, S> {
-    val internalOperation = operationEmit?.operation ?: operation ?: error("There is no operations")
+    val internalOperation =
+        operationEmit?.operation ?: operation ?: storeError("There is no operations")
     val action = internalOperation.action
     val source = internalOperation.source
     val shouldEmit = operationEmit?.emit != null
@@ -41,7 +45,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                 StoreSource.Cache -> {
                     cache = cacher?.get(key)
                     if (cache != null && shouldEmit) {
-                        flow.send(buildResourceSuccess(cache, shouldLoad))
+                        flow?.send(buildResourceSuccess(cache, shouldLoad))
                     }
                 }
                 StoreSource.Remote -> {
@@ -49,7 +53,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     if (shouldEmit) {
                         when (remote) {
                             is ResourceFailure<F, S> ->
-                                flow.send(
+                                flow?.send(
                                     buildResourceFailure(
                                         remote.left.failure,
                                         remote.left.data,
@@ -57,26 +61,26 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                                     ),
                                 )
                             is ResourceSuccess<S> ->
-                                flow.send(buildResourceSuccess(remote.right.data, shouldLoad))
+                                flow?.send(buildResourceSuccess(remote.right.data, shouldLoad))
                         }
                     }
                 }
                 StoreSource.SourceOfTruth -> {
                     persistence = sot?.get(key)
                     if (shouldEmit && persistence != null) {
-                        flow.send(buildResourceSuccess(persistence, shouldLoad))
+                        flow?.send(buildResourceSuccess(persistence, shouldLoad))
                     }
                 }
             }
         }
-        StoreAction.Insert ->
+        StoreAction.Insert -> {
             when (source) {
                 StoreSource.Cache -> {
                     if (data != null) cacher?.insert(data)
                     if (resource is ResourceSuccess<S>) cacher?.insert(resource.right.data)
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
                 StoreSource.Remote -> TODO()
@@ -85,10 +89,11 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     if (resource is ResourceSuccess<S>) sot?.insert(resource.right.data)
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
             }
+        }
         StoreAction.Update -> {
             when (source) {
                 StoreSource.Cache -> {
@@ -96,7 +101,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     if (resource is ResourceSuccess<S>) cacher?.update(resource.right.data)
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
                 StoreSource.Remote -> TODO()
@@ -105,7 +110,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     if (resource is ResourceSuccess<S>) sot?.update(resource.right.data)
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
             }
@@ -117,7 +122,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     if (resource is ResourceSuccess<S>) cacher?.delete(resource.right.data)
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
                 StoreSource.Remote -> TODO()
@@ -126,7 +131,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     if (resource is ResourceSuccess<S>) sot?.delete(resource.right.data)
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
             }
@@ -137,7 +142,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     cacher?.deleteAll()
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
                 StoreSource.Remote -> TODO()
@@ -145,7 +150,7 @@ public suspend fun <Key : Any, F : Any, S : Any> handleOperation(
                     sot?.deleteAll()
 
                     if (shouldEmit && sot != null) {
-                        flow.send(buildResourceSuccess(sot.get(key), shouldLoad))
+                        flow?.send(buildResourceSuccess(sot.get(key), shouldLoad))
                     }
                 }
             }

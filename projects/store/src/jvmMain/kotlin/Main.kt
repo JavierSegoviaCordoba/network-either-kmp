@@ -3,7 +3,6 @@
 import com.javiersc.either.resource.ResourceEither
 import com.javiersc.either.resource.buildResourceSuccess
 import com.javiersc.either.store.Store
-import com.javiersc.either.store.operation.operationsCacheSourceOfTruthRemoteStopping
 import com.javiersc.either.store.sourcer.Cacher
 import com.javiersc.either.store.sourcer.Fetcher
 import com.javiersc.either.store.sourcer.SourceOfTruth
@@ -46,7 +45,7 @@ internal fun main() {
                     ),
             )
 
-        store.stream(2, operationsCacheSourceOfTruthRemoteStopping).collect {
+        store.stream(2).collect {
             println(it)
             println("Duration: ${Duration.between(now, Instant.now()).toMillis()}")
         }
@@ -79,6 +78,7 @@ internal class CacheDataSource {
 }
 
 internal class RemoteDataSource {
+
     suspend fun get(key: Int): ResourceEither<Boolean, List<Int>> {
         delay(1500).also { println("GET REMOTE") }
         return buildResourceSuccess(listOf(7, 8, key))
