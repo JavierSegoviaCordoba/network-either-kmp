@@ -16,8 +16,9 @@ common-main-serialization-core = { group = "org.jetbrains.kotlinx", name = "kotl
 common-main-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
 
 common-test-kotest-assertions = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
-common-test-kotlin-test-common = { group = "org.jetbrains.kotlin", name = "kotlin-test" }
 common-test-kotlin-test-annotations = { group = "org.jetbrains.kotlin", name = "kotlin-test-annotations-common" }
+common-test-kotlin-test-common = { group = "org.jetbrains.kotlin", name = "kotlin-test" }
+common-test-kotlin-test-junit = { group = "org.jetbrains.kotlin", name = "kotlin-test-junit" }
 common-test-ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
 common-test-ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
 

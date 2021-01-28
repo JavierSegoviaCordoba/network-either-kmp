@@ -1,31 +1,45 @@
 plugins {
     id("de.marcphilipp.nexus-publish")
     signing
+    id("Dokka")
+}
+
+val dokkaJar by tasks.creating(Jar::class) {
+    archiveClassifier.set("javadoc")
+    dependsOn(tasks.dokkaJavadoc)
 }
 
 publishing {
     publications.withType<MavenPublication> {
         pom {
-            name.set("Either")
-            description.set("Either Multiplatform")
-            url.set("http://github.com/JavierSegoviaCordoba/either")
+            name.set(POM.name)
+            description.set(POM.description)
+            url.set(POM.url)
             licenses {
                 license {
-                    name.set("The Apache License, Version 2.0")
-                    url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    name.set(POM.License.name)
+                    url.set(POM.License.url)
                 }
             }
             developers {
                 developer {
-                    id.set("JavierSegoviaCordoba")
-                    name.set("Javier Segovia Cordoba")
-                    email.set("javiersegoviacordoba@gmail.com")
+                    id.set(POM.Developer.id)
+                    name.set(POM.Developer.name)
+                    email.set(POM.Developer.email)
                 }
             }
             scm {
-                url.set("https://github.com/JavierSegoviaCordoba/either")
-                connection.set("scm:git:https://github.com/JavierSegoviaCordoba/either.git")
-                developerConnection.set("scm:git:git@github.com:JavierSegoviaCordoba/either.git")
+                url.set(POM.SMC.url)
+                connection.set(POM.SMC.connection)
+                developerConnection.set(POM.SMC.developerConnection)
+            }
+        }
+    }
+
+    publications {
+        publications.configureEach {
+            if (this is MavenPublication) {
+                artifact(dokkaJar)
             }
         }
     }
