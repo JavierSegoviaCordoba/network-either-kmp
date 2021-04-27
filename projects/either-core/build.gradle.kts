@@ -15,7 +15,7 @@ kotlin {
             dependencies {
                 libs.apply {
                     implementation(kotest.kotestAssertionsCore)
-                    implementation(jetbrains.kotlin.kotlinTestMultiplatform)
+                    implementation(jetbrains.kotlin.kotlinTest)
                 }
             }
         }

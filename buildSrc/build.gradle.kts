@@ -7,6 +7,12 @@ repositories {
     jcenter()
     google()
     gradlePluginPortal()
+    maven {
+        setUrl("https://oss.sonatype.org/content/repositories/snapshots")
+        content {
+            includeGroup("com.javiersc.massive-catalogs")
+        }
+    }
 }
 
 dependencies {

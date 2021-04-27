@@ -28,7 +28,7 @@ kotlin {
                     implementation(cash.turbine.turbine)
                     implementation(javiersc.runBlocking.suspendTest)
                     implementation(jetbrains.kotlinx.kotlinxCoroutinesTest)
-                    implementation(jetbrains.kotlin.kotlinTestMultiplatform)
+                    implementation(jetbrains.kotlin.kotlinTest)
                     implementation(kotest.kotestAssertionsCore)
                 }
             }

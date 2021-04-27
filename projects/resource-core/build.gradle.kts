@@ -20,7 +20,7 @@ kotlin {
         commonTest {
             dependencies {
                 libs.apply {
-                    implementation(jetbrains.kotlin.kotlinTestMultiplatform)
+                    implementation(jetbrains.kotlin.kotlinTest)
                     implementation(kotest.kotestAssertionsCore)
                 }
             }
