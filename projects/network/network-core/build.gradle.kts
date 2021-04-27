@@ -13,12 +13,11 @@ kotlin {
             dependencies {
                 projects.projects.apply {
                     api(eitherCore)
-                    api(network.networkCore)
-                    api(resourceCore)
                 }
 
                 libs.apply {
-                    implementation(jetbrains.kotlinx.kotlinxCoroutinesCore)
+                    implementation(javiersc.runBlocking.runBlocking)
+                    api(jetbrains.kotlinx.kotlinxCoroutinesCore)
                     api(jetbrains.kotlinx.kotlinxSerializationJson)
                     api(ktor.ktorClientCore)
                 }
@@ -39,6 +38,7 @@ kotlin {
         named("jvmMain") {
             dependencies {
                 libs.apply {
+                    api(ktor.ktorClientCio)
                     api(squareup.okhttp3.okhttp)
                     api(squareup.retrofit2.retrofit)
                 }

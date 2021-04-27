@@ -12,12 +12,7 @@ kotlin {
         commonMain {
             dependencies {
                 projects.projects.apply {
-                    api(resourceCore)
-                }
-
-                libs.apply {
-                    implementation(jetbrains.kotlinx.kotlinxCoroutinesCore)
-                    implementation(javiersc.runBlocking.runBlocking)
+                    api(eitherCore)
                 }
             }
         }
@@ -25,9 +20,6 @@ kotlin {
         commonTest {
             dependencies {
                 libs.apply {
-                    implementation(cash.turbine.turbine)
-                    implementation(javiersc.runBlocking.suspendTest)
-                    implementation(jetbrains.kotlinx.kotlinxCoroutinesTest)
                     implementation(jetbrains.kotlin.kotlinTestMultiplatform)
                     implementation(kotest.kotestAssertionsCore)
                 }

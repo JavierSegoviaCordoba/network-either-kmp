@@ -6,23 +6,16 @@ import com.javiersc.either.resource.buildResourceSuccessLoading
 import com.javiersc.either.store.sourcer.Cacher
 import com.javiersc.either.store.sourcer.Fetcher
 import com.javiersc.either.store.sourcer.SourceOfTruth
+import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.shouldBe
-import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.test.Test
 import kotlin.time.seconds
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.CoroutineStart
-import kotlinx.coroutines.CoroutineStart.DEFAULT
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.test.runBlockingTest
 
 internal class StoreTurbineTest {
 
     @Test
     fun `Store test`() {
-        runBlockingTest {
+        suspendTest {
             val cacheDataSource = CacheDataSource()
             val remoteDataSource = RemoteDataSource()
             val localDataSource = LocalDataSource()
@@ -30,9 +23,9 @@ internal class StoreTurbineTest {
             val store: Store<Int, Boolean, List<Int>> =
                 Store(
                     cacher =
-                        Cacher.of(
-                            get = cacheDataSource::get,
-                            insert = cacheDataSource::insert,
+                    Cacher.of(
+                        get = cacheDataSource::get,
+                        insert = cacheDataSource::insert,
                             delete = cacheDataSource::delete,
                             deleteAll = cacheDataSource::deleteAll,
                         ),
@@ -50,7 +43,7 @@ internal class StoreTurbineTest {
                         ),
                 )
 
-            store.stream(2).stateIn(CoroutineScope(coroutineContext + Job())).test(timeout = 10.seconds) {
+            store.stream(2).test(timeout = 100.seconds) {
                 expectItem() shouldBe buildResourceSuccessLoading(listOf(10, 11))
                 expectItem() shouldBe buildResourceSuccessLoading(listOf(1, 2, 3, 4))
                 expectItem() shouldBe buildResourceSuccess(listOf(7, 8, 2))

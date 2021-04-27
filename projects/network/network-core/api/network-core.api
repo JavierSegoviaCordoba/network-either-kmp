@@ -1,0 +1,113 @@
+public abstract class com/javiersc/either/network/Failure {
+}
+
+public final class com/javiersc/either/network/Failure$Http : com/javiersc/either/network/Failure {
+	public fun <init> (Ljava/lang/Object;ILjava/util/Map;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/util/Map;
+	public final fun copy (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/either/network/Failure$Http;
+	public static synthetic fun copy$default (Lcom/javiersc/either/network/Failure$Http;Ljava/lang/Object;ILjava/util/Map;ILjava/lang/Object;)Lcom/javiersc/either/network/Failure$Http;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCode ()I
+	public final fun getError ()Ljava/lang/Object;
+	public final fun getHeaders ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/network/Failure$Local : com/javiersc/either/network/Failure {
+	public static final field INSTANCE Lcom/javiersc/either/network/Failure$Local;
+}
+
+public final class com/javiersc/either/network/Failure$Remote : com/javiersc/either/network/Failure {
+	public static final field INSTANCE Lcom/javiersc/either/network/Failure$Remote;
+}
+
+public final class com/javiersc/either/network/Failure$Unknown : com/javiersc/either/network/Failure {
+	public fun <init> (Ljava/lang/Throwable;)V
+	public final fun component1 ()Ljava/lang/Throwable;
+	public final fun copy (Ljava/lang/Throwable;)Lcom/javiersc/either/network/Failure$Unknown;
+	public static synthetic fun copy$default (Lcom/javiersc/either/network/Failure$Unknown;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/javiersc/either/network/Failure$Unknown;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getThrowable ()Ljava/lang/Throwable;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/network/NetworkEitherCallAdapterFactory : retrofit2/CallAdapter$Factory {
+	public fun <init> ()V
+	public fun <init> (Lkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun get (Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;Lretrofit2/Retrofit;)Lretrofit2/CallAdapter;
+}
+
+public final class com/javiersc/either/network/NetworkEitherKt {
+	public static final fun buildNetworkFailureHttp (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/either/Either;
+	public static final fun buildNetworkFailureLocal ()Lcom/javiersc/either/Either;
+	public static final fun buildNetworkFailureRemote ()Lcom/javiersc/either/Either;
+	public static final fun buildNetworkFailureUnknown (Ljava/lang/Throwable;)Lcom/javiersc/either/Either;
+	public static final fun buildNetworkSuccess (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/either/Either;
+}
+
+public final class com/javiersc/either/network/Success {
+	public fun <init> (Ljava/lang/Object;ILjava/util/Map;)V
+	public final fun component1 ()Ljava/lang/Object;
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/util/Map;
+	public final fun copy (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/either/network/Success;
+	public static synthetic fun copy$default (Lcom/javiersc/either/network/Success;Ljava/lang/Object;ILjava/util/Map;ILjava/lang/Object;)Lcom/javiersc/either/network/Success;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCode ()I
+	public final fun getData ()Ljava/lang/Object;
+	public final fun getHeaders ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/network/extensions/NetworkEitherFoldKt {
+	public static final fun fold (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+	public static final fun foldOnlySuccessData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+	public static final fun foldSimple (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+	public static final fun foldSuccessDataErrorCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+}
+
+public final class com/javiersc/either/network/extensions/NetworkEitherIfKt {
+	public static final fun ifFailure (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
+	public static final fun ifFailureHttp (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function3;)V
+	public static final fun ifFailureHttpOnlyCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
+	public static final fun ifFailureHttpOnlyError (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
+	public static final fun ifFailureLocal (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function0;)V
+	public static final fun ifFailureRemote (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function0;)V
+	public static final fun ifFailureUnknown (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
+	public static final fun ifSuccess (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function3;)V
+	public static final fun ifSuccessOnlyData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
+}
+
+public final class com/javiersc/either/network/extensions/NetworkEitherSuspendFoldKt {
+	public static final fun suspendFold (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function4;Lkotlin/jvm/functions/Function4;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendFoldOnlySuccessData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendFoldSimple (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendFoldSuccessDataErrorCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/javiersc/either/network/extensions/NetworkEitherSuspendIfKt {
+	public static final fun suspendIfFailure (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfFailureHttp (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function4;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfFailureHttpOnlyCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfFailureHttpOnlyError (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfFailureLocal (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfFailureRemote (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfFailureUnknown (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfSuccess (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function4;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun suspendIfSuccessOnlyData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/javiersc/either/network/ktor/NetworkEitherKtorKt {
+	public static final fun localOrfailureRemote ()Lcom/javiersc/either/Either;
+}
+
+public final class com/javiersc/either/network/utils/IsNetworkAvailableKt {
+	public static final fun isNetworkAvailable ()Z
+}
+

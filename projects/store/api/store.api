@@ -1,0 +1,176 @@
+public final class MainKt {
+	public static synthetic fun main ([Ljava/lang/String;)V
+}
+
+public final class com/javiersc/either/store/OperationsConfig {
+	public fun <init> ()V
+	public fun <init> (ZLjava/util/List;)V
+	public synthetic fun <init> (ZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getOperations ()Ljava/util/List;
+	public final fun getShouldStopWithEmptyList ()Z
+	public final fun setOperations (Ljava/util/List;)V
+	public final fun setShouldStopWithEmptyList (Z)V
+}
+
+public final class com/javiersc/either/store/OperationsConfigKt {
+	public static final fun operations (Ljava/util/List;)Lcom/javiersc/either/store/OperationsConfig;
+	public static final fun operations (Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/store/OperationsConfig;
+	public static final fun operationsConfig (Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/store/OperationsConfig;
+}
+
+public abstract interface class com/javiersc/either/store/Store {
+	public static final field Companion Lcom/javiersc/either/store/Store$Companion;
+	public abstract fun clear (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun clearAll (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun get (Ljava/lang/Object;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getFromCache (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getFromRemote (Ljava/lang/Object;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getFromSourceOfTruth (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun stream (Ljava/lang/Object;Lcom/javiersc/either/store/OperationsConfig;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class com/javiersc/either/store/Store$Companion {
+	public final fun invoke (Lcom/javiersc/either/store/sourcer/Cacher;Lcom/javiersc/either/store/sourcer/Fetcher;Lcom/javiersc/either/store/sourcer/SourceOfTruth;)Lcom/javiersc/either/store/Store;
+	public static synthetic fun invoke$default (Lcom/javiersc/either/store/Store$Companion;Lcom/javiersc/either/store/sourcer/Cacher;Lcom/javiersc/either/store/sourcer/Fetcher;Lcom/javiersc/either/store/sourcer/SourceOfTruth;ILjava/lang/Object;)Lcom/javiersc/either/store/Store;
+}
+
+public final class com/javiersc/either/store/Store$DefaultImpls {
+	public static synthetic fun getFromRemote$default (Lcom/javiersc/either/store/Store;Ljava/lang/Object;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun stream$default (Lcom/javiersc/either/store/Store;Ljava/lang/Object;Lcom/javiersc/either/store/OperationsConfig;ILjava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class com/javiersc/either/store/StoreAction : java/lang/Enum {
+	public static final field Delete Lcom/javiersc/either/store/StoreAction;
+	public static final field DeleteAll Lcom/javiersc/either/store/StoreAction;
+	public static final field Get Lcom/javiersc/either/store/StoreAction;
+	public static final field Insert Lcom/javiersc/either/store/StoreAction;
+	public static final field Update Lcom/javiersc/either/store/StoreAction;
+	public static fun valueOf (Ljava/lang/String;)Lcom/javiersc/either/store/StoreAction;
+	public static fun values ()[Lcom/javiersc/either/store/StoreAction;
+}
+
+public final class com/javiersc/either/store/StoreException : java/lang/Exception {
+	public fun <init> (Ljava/lang/String;)V
+	public fun getMessage ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/store/StoreSource : java/lang/Enum {
+	public static final field Cache Lcom/javiersc/either/store/StoreSource;
+	public static final field Remote Lcom/javiersc/either/store/StoreSource;
+	public static final field SourceOfTruth Lcom/javiersc/either/store/StoreSource;
+	public static fun valueOf (Ljava/lang/String;)Lcom/javiersc/either/store/StoreSource;
+	public static fun values ()[Lcom/javiersc/either/store/StoreSource;
+}
+
+public final class com/javiersc/either/store/operation/DefaultOperationsKt {
+	public static final fun getOperationsCacheRemote ()Ljava/util/List;
+	public static final fun getOperationsCacheSourceOfTruthRemote ()Ljava/util/List;
+	public static final fun getOperationsCacheSourceOfTruthRemoteStopping ()Ljava/util/List;
+}
+
+public final class com/javiersc/either/store/operation/EmitAndLoading {
+	public fun <init> ()V
+	public fun <init> (Z)V
+	public synthetic fun <init> (ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Z
+	public final fun copy (Z)Lcom/javiersc/either/store/operation/EmitAndLoading;
+	public static synthetic fun copy$default (Lcom/javiersc/either/store/operation/EmitAndLoading;ZILjava/lang/Object;)Lcom/javiersc/either/store/operation/EmitAndLoading;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getShouldLoad ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/store/operation/Operation {
+	public fun <init> (Lcom/javiersc/either/store/StoreAction;Lcom/javiersc/either/store/StoreSource;)V
+	public final fun component1 ()Lcom/javiersc/either/store/StoreAction;
+	public final fun component2 ()Lcom/javiersc/either/store/StoreSource;
+	public final fun copy (Lcom/javiersc/either/store/StoreAction;Lcom/javiersc/either/store/StoreSource;)Lcom/javiersc/either/store/operation/Operation;
+	public static synthetic fun copy$default (Lcom/javiersc/either/store/operation/Operation;Lcom/javiersc/either/store/StoreAction;Lcom/javiersc/either/store/StoreSource;ILjava/lang/Object;)Lcom/javiersc/either/store/operation/Operation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcom/javiersc/either/store/StoreAction;
+	public final fun getSource ()Lcom/javiersc/either/store/StoreSource;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/store/operation/OperationEmit {
+	public fun <init> (Lcom/javiersc/either/store/operation/Operation;Lcom/javiersc/either/store/operation/EmitAndLoading;Z)V
+	public final fun component1 ()Lcom/javiersc/either/store/operation/Operation;
+	public final fun component2 ()Lcom/javiersc/either/store/operation/EmitAndLoading;
+	public final fun component3 ()Z
+	public final fun copy (Lcom/javiersc/either/store/operation/Operation;Lcom/javiersc/either/store/operation/EmitAndLoading;Z)Lcom/javiersc/either/store/operation/OperationEmit;
+	public static synthetic fun copy$default (Lcom/javiersc/either/store/operation/OperationEmit;Lcom/javiersc/either/store/operation/Operation;Lcom/javiersc/either/store/operation/EmitAndLoading;ZILjava/lang/Object;)Lcom/javiersc/either/store/operation/OperationEmit;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEmit ()Lcom/javiersc/either/store/operation/EmitAndLoading;
+	public final fun getOperation ()Lcom/javiersc/either/store/operation/Operation;
+	public final fun getShouldShortCircuit ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/store/operation/OperationFlow {
+	public fun <init> (Lcom/javiersc/either/store/operation/OperationEmit;Ljava/util/List;)V
+	public final fun component1 ()Lcom/javiersc/either/store/operation/OperationEmit;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Lcom/javiersc/either/store/operation/OperationEmit;Ljava/util/List;)Lcom/javiersc/either/store/operation/OperationFlow;
+	public static synthetic fun copy$default (Lcom/javiersc/either/store/operation/OperationFlow;Lcom/javiersc/either/store/operation/OperationEmit;Ljava/util/List;ILjava/lang/Object;)Lcom/javiersc/either/store/operation/OperationFlow;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getOperationEmit ()Lcom/javiersc/either/store/operation/OperationEmit;
+	public final fun getOperations ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/javiersc/either/store/operation/OperationsExtensionsKt {
+	public static final fun add (Ljava/util/List;Lkotlin/jvm/functions/Function0;)V
+	public static final fun addAndInvoke (Ljava/util/List;Lkotlin/jvm/functions/Function0;)V
+	public static final fun addAndInvokeStopping (Ljava/util/List;Lkotlin/jvm/functions/Function0;)V
+	public static final fun addStopping (Ljava/util/List;Lkotlin/jvm/functions/Function0;)V
+	public static final fun emitting (Lcom/javiersc/either/store/operation/Operation;)Lcom/javiersc/either/store/operation/OperationEmit;
+	public static final fun emittingLoading (Lcom/javiersc/either/store/operation/Operation;)Lcom/javiersc/either/store/operation/OperationEmit;
+	public static final fun from (Lcom/javiersc/either/store/StoreAction;Lcom/javiersc/either/store/StoreSource;)Lcom/javiersc/either/store/operation/Operation;
+	public static final fun into (Lcom/javiersc/either/store/StoreAction;Lcom/javiersc/either/store/StoreSource;)Lcom/javiersc/either/store/operation/Operation;
+	public static final fun operations (Lkotlin/jvm/functions/Function1;)Ljava/util/List;
+	public static final fun shouldDo (Lcom/javiersc/either/store/operation/OperationEmit;Lcom/javiersc/either/store/operation/Operation;)Lcom/javiersc/either/store/operation/OperationFlow;
+	public static final fun shouldDo (Lcom/javiersc/either/store/operation/OperationEmit;Ljava/util/List;)Lcom/javiersc/either/store/operation/OperationFlow;
+}
+
+public abstract interface class com/javiersc/either/store/sourcer/Cacher {
+	public static final field Companion Lcom/javiersc/either/store/sourcer/Cacher$Companion;
+	public abstract fun delete (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun deleteAll (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun get (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun insert (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun update (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/javiersc/either/store/sourcer/Cacher$Companion {
+	public final fun of (Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/store/sourcer/Cacher;
+	public static synthetic fun of$default (Lcom/javiersc/either/store/sourcer/Cacher$Companion;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/javiersc/either/store/sourcer/Cacher;
+}
+
+public abstract interface class com/javiersc/either/store/sourcer/Fetcher {
+	public static final field Companion Lcom/javiersc/either/store/sourcer/Fetcher$Companion;
+	public abstract fun get (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/javiersc/either/store/sourcer/Fetcher$Companion {
+	public final fun of (Lkotlin/jvm/functions/Function2;)Lcom/javiersc/either/store/sourcer/Fetcher;
+}
+
+public abstract interface class com/javiersc/either/store/sourcer/SourceOfTruth {
+	public static final field Companion Lcom/javiersc/either/store/sourcer/SourceOfTruth$Companion;
+	public abstract fun delete (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun deleteAll (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun get (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun insert (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun stream (Ljava/lang/Object;)Lkotlinx/coroutines/flow/Flow;
+	public abstract fun update (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/javiersc/either/store/sourcer/SourceOfTruth$Companion {
+	public final fun of (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/store/sourcer/SourceOfTruth;
+	public static synthetic fun of$default (Lcom/javiersc/either/store/sourcer/SourceOfTruth$Companion;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/javiersc/either/store/sourcer/SourceOfTruth;
+}
+

@@ -9,23 +9,13 @@ kotlin {
     jvm()
 
     sourceSets {
-        commonMain {
-            dependencies {
-                projects.projects.apply {
-                    api(network.networkCore)
-                }
-
-                libs.common.main.apply {
-                    api(logger.serialization)
-                }
-            }
-        }
+        commonMain
 
         commonTest {
             dependencies {
                 libs.apply {
-                    implementation(jetbrains.kotlin.kotlinTestMultiplatform)
                     implementation(kotest.kotestAssertionsCore)
+                    implementation(jetbrains.kotlin.kotlinTestMultiplatform)
                 }
             }
         }

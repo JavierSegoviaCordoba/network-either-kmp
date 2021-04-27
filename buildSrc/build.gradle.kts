@@ -13,15 +13,22 @@ dependencies {
     implementation(gradleApi())
     implementation(localGroovy())
 
-    gradlePluginLibs.apply {
-        implementation(dependencyUpdates)
-        implementation(detekt)
-        implementation(dokka.core)
-        implementation(dokka.plugin)
-        implementation(kotlin.plugin)
-        implementation(kotlin.serialization)
-        implementation(jacoco)
-        implementation(nexus.staging)
-        implementation(nexus.publish)
+    pluginLibs.apply {
+        implementation(javiersc.massiveCatalogs.pluginsAccessors)
+
+        implementation(javiersc.gradlePlugins.changelog)
+        implementation(javiersc.gradlePlugins.codeAnalysis)
+        implementation(javiersc.gradlePlugins.codeFormatter)
+        implementation(javiersc.gradlePlugins.dependencyUpdates)
+        implementation(javiersc.gradlePlugins.docs)
+        implementation(javiersc.gradlePlugins.kotlinMultiplatform)
+        implementation(javiersc.gradlePlugins.publishKotlinMultiplatform)
+        implementation(javiersc.gradlePlugins.nexus)
+        implementation(javiersc.gradlePlugins.readmeBadgesGenerator)
+        implementation(javiersc.gradlePlugins.versioning)
+
+        implementation(android.toolsBuild.gradle)
+        implementation(jetbrains.kotlin.kotlinSerialization)
+        implementation(jetbrains.kotlinx.binaryCompatibilityValidator)
     }
 }
