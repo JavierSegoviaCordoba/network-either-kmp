@@ -1,19 +1,13 @@
-
 rootProject.name = "either"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 enableFeaturePreview("VERSION_CATALOGS")
 
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
         jcenter()
-        maven {
-            setUrl("https://oss.sonatype.org/content/repositories/snapshots")
-            content {
-                includeGroup("com.javiersc.massive-catalogs")
-            }
-        }
     }
 
     versionCatalogs {
@@ -27,8 +21,11 @@ dependencyResolutionManagement {
 }
 
 include(":projects:either-core")
+
 include(":projects:network:network-core")
-//include(":projects:network:network-logger")
+// include(":projects:network:network-logger")
 include(":projects:network:network-resource")
+
 include(":projects:resource-core")
+
 include(":projects:store")

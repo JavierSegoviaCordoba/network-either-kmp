@@ -11,12 +11,10 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                projects.projects.apply {
-                    api(eitherCore)
-                }
+                projects.projects.apply { api(eitherCore) }
 
                 libs.apply {
-                    implementation(javiersc.runBlocking.runBlocking)
+                    implementation(javiersc.runBlocking.runBlockingCore)
                     api(jetbrains.kotlinx.kotlinxCoroutinesCore)
                     api(jetbrains.kotlinx.kotlinxSerializationJson)
                     api(ktor.ktorClientCore)

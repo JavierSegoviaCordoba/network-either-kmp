@@ -1,0 +1,58 @@
+# TODO: Change all necessary properties
+site_name: NAME # TODO
+site_description: DESCRIPTION # TODO
+site_author: AUTHOR # TODO
+remote_branch: gh-pages
+
+repo_name: REPO NAME # TODO
+repo_url: https://github.com/USER/REPO-NAME # TODO
+
+copyright: 'Copyright &copy; 2021 AUTHOR' # TODO
+
+theme:
+  name: 'material'
+  language: 'en'
+  # TODO favicon: 'assets/favicon.png'
+  # TODO logo: 'assets/logo.svg'
+  palette:
+    primary: 'white'
+    accent: 'white'
+  font:
+    text: 'Fira Sans'
+    code: 'JetBrains Mono'
+
+nav:
+  - Overview: index.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - smarty
+  - codehilite:
+      guess_lang: false
+      linenums: True
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - tables
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/USER # TODO
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/USER # TODO
+
+extra_css:
+  - css/all.css

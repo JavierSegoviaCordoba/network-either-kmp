@@ -11,13 +11,11 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                projects.projects.apply {
-                    api(resourceCore)
-                }
+                projects.projects.apply { api(resourceCore) }
 
                 libs.apply {
                     implementation(jetbrains.kotlinx.kotlinxCoroutinesCore)
-                    implementation(javiersc.runBlocking.runBlocking)
+                    implementation(javiersc.runBlocking.runBlockingCore)
                 }
             }
         }

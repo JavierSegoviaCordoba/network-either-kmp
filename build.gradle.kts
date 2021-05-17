@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `javiersc-versioning`
+    `javiersc-all-projects`
     `javiersc-changelog`
     `javiersc-code-analysis`
     `javiersc-dependency-updates`
@@ -9,14 +10,6 @@ plugins {
     `kotlinx-binary-compatibility-validator`
     `javiersc-nexus`
     `javiersc-readme-badges-generator`
-}
-
-tasks {
-    withType<Test> {
-        maxParallelForks = Runtime.getRuntime().availableProcessors()
-        useJUnitPlatform()
-        useTestNG()
-    }
 }
 
 allprojects.forEach { project ->
