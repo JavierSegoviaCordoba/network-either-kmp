@@ -1,9 +1,7 @@
 plugins {
-    KotlinMultiplatform
-    NexusPublish
-    JaCoCo
-    Dokka
-    Versioning
+    `javiersc-kotlin-multiplatform`
+    `kotlin-serialization`
+    `javiersc-publish-kotlin-multiplatform`
 }
 
 kotlin {
@@ -15,28 +13,25 @@ kotlin {
         commonMain {
             dependencies {
                 projects.projects.apply {
-                    api(network.network)
+                    api(network.networkCore)
                 }
 
-                libs.common.main.apply {
-                    api(logger.serialization)
+                libs.apply {
+                    api(javiersc.mokoki.mokokiSerialization)
                 }
             }
         }
 
         commonTest {
             dependencies {
-                libs.common.test.apply {
-                    implementation(kotest.assertions)
-                    implementation(kotlin.test.annotations)
-                    implementation(kotlin.test.common)
-                    implementation(kotlin.test.junit)
+                libs.apply {
+                    implementation(jetbrains.kotlin.kotlinTestCommon)
+                    implementation(jetbrains.kotlin.kotlinTestJunit)
+                    implementation(kotest.kotestAssertionsCore)
                 }
             }
         }
 
         named("jvmTest")
-
-        defaultLanguageSettings
     }
 }

@@ -1,0 +1,5 @@
+public final class com/javiersc/either/network/logger/NetworkEitherLoggerKt {
+	public static final fun alsoPrettyPrint (Lcom/javiersc/either/Either;Ljava/lang/String;Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;)Lcom/javiersc/either/Either;
+	public static synthetic fun alsoPrettyPrint$default (Lcom/javiersc/either/Either;Ljava/lang/String;Lkotlinx/serialization/KSerializer;Lkotlinx/serialization/KSerializer;ILjava/lang/Object;)Lcom/javiersc/either/Either;
+}
+

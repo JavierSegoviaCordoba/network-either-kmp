@@ -1,68 +1,46 @@
+@file:Suppress("TopLevelPropertyNaming")
+
 package com.javiersc.either.network.logger
 
 import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.extensions.fold
-import com.javiersc.logger.extensions.logE
-import com.javiersc.logger.serialization.LoggerSerialization
-import com.javiersc.logger.serialization.extensions.logSerializableE
-import com.javiersc.logger.serialization.extensions.logSerializableS
+import com.javiersc.mokoki.extensions.logE
+import com.javiersc.mokoki.serialization.extensions.logSerializableE
+import com.javiersc.mokoki.serialization.extensions.logSerializableV
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.serializer
 
 public fun <F, S> NetworkEither<F, S>.alsoPrettyPrint(
-    tag: String? = null,
+    tag: String = "NetworkEither",
     failureSerializer: KSerializer<F>,
     successSerializer: KSerializer<S>,
 ): NetworkEither<F, S> {
     fold(
         success = { data, code, headers ->
-            logSerializableS(tag, Response.serializer(successSerializer), Response(data, code, headers))
+            logSerializableV(
+                tag,
+                Response.serializer(successSerializer),
+                Response(data, code.value, headers)
+            )
         },
         failureHttp = { error, code, headers ->
-            logSerializableE(tag, Response.serializer(failureSerializer), Response(error, code, headers))
+            logSerializableE(
+                tag,
+                Response.serializer(failureSerializer),
+                Response(error, code.value, headers)
+            )
         },
-        failureLocal = { if (tag != null) logE(tag, LocalError) else logE(LocalError) },
-        failureRemote = { if (tag != null) logE(tag, RemoteError) else logE(RemoteError) },
-        failureUnknown = { throwable ->
-            with(throwable.stackTraceToString()) {
-                if (tag != null) logE(tag, this) else logE(this)
-            }
-        },
+        failureLocal = { logE(tag, LocalError) },
+        failureRemote = { logE(tag, RemoteError) },
+        failureUnknown = { throwable -> logE(tag, throwable.stackTraceToString()) },
     )
     return this
 }
 
-public fun <F, S> NetworkEither<F, S>.alsoPrettyPrint(
-    tag: String? = null,
-    logger: LoggerSerialization,
-    failureSerializer: KSerializer<F>,
-    successSerializer: KSerializer<S>,
-): NetworkEither<F, S> {
-    with(logger) {
-        fold(
-            success = { data, code, headers ->
-                serializableS(tag, Response.serializer(successSerializer), Response(data, code, headers))
-            },
-            failureHttp = { error, code, headers ->
-                serializableD(tag, Response.serializer(failureSerializer), Response(error, code, headers))
-            },
-            failureLocal = { e(tag, LocalError) },
-            failureRemote = { e(tag, RemoteError) },
-            failureUnknown = { throwable -> e(tag, throwable.stackTraceToString()) },
-        )
-    }
-    return this
-}
-
 public inline fun <reified F, reified S> NetworkEither<F, S>.alsoPrettyPrint(
-    tag: String? = null,
+    tag: String = "NetworkEither",
 ): NetworkEither<F, S> = alsoPrettyPrint(tag, serializer(), serializer())
-
-public inline fun <reified F, reified S> NetworkEither<F, S>.alsoPrettyPrint(
-    tag: String? = null,
-    logger: LoggerSerialization,
-): NetworkEither<F, S> = alsoPrettyPrint(tag, logger, serializer(), serializer())
 
 @Serializable
 internal data class Response<T>(val body: T, val code: Int, val headers: Map<String, List<String>>)

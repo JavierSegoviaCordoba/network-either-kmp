@@ -1,9 +1,6 @@
 plugins {
-    KotlinMultiplatform
-    NexusPublish
-    JaCoCo
-    Dokka
-    Versioning
+    `javiersc-kotlin-multiplatform`
+    `javiersc-publish-kotlin-multiplatform`
 }
 
 kotlin {
@@ -15,50 +12,47 @@ kotlin {
         commonMain {
             dependencies {
                 projects.projects.apply {
-                    api(either)
-                    api(network.network)
-                    api(resource)
+                    api(eitherCore)
+                    api(network.networkCore)
+                    api(resourceCore)
                 }
 
-                libs.common.main.apply {
-                    api(coroutines.core)
-                    api(ktor.client.core)
-                    api(serialization.json)
+                libs.apply {
+                    implementation(jetbrains.kotlinx.kotlinxCoroutinesCore)
+                    api(jetbrains.kotlinx.kotlinxSerializationJson)
+                    api(ktor.ktorClientCore)
                 }
             }
         }
 
         commonTest {
             dependencies {
-                libs.common.test.apply {
-                    implementation(kotest.assertions)
-                    implementation(kotlin.test.annotations)
-                    implementation(kotlin.test.common)
-                    implementation(kotlin.test.junit)
-                    implementation(ktor.client.mock)
-                    implementation(ktor.client.serialization)
+                libs.apply {
+                    implementation(jetbrains.kotlin.kotlinTestCommon)
+                    implementation(jetbrains.kotlin.kotlinTestJunit)
+                    implementation(kotest.kotestAssertionsCore)
+                    implementation(ktor.ktorClientMock)
+                    implementation(ktor.ktorClientSerialization)
                 }
             }
         }
 
         named("jvmMain") {
             dependencies {
-                libs.jvm.main.apply {
-                    api(okHttp3.okhttp)
-                    api(retrofit2.retrofit)
+                libs.apply {
+                    api(squareup.okhttp3.okhttp)
+                    api(squareup.retrofit2.retrofit)
                 }
             }
         }
 
         named("jvmTest") {
             dependencies {
-                libs.jvm.test.apply {
-                    implementation(okHttp3.mockWebServer)
-                    implementation(retrofit2.converter.serialization)
+                libs.apply {
+                    implementation(jakewharton.retrofit.retrofit2KotlinxSerializationConverter)
+                    implementation(squareup.okhttp3.mockwebserver)
                 }
             }
         }
-
-        defaultLanguageSettings
     }
 }
