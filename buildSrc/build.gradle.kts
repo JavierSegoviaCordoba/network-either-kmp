@@ -12,8 +12,6 @@ dependencies {
     implementation(localGroovy())
 
     pluginLibs.apply {
-        implementation(javiersc.massiveCatalogs.pluginsAccessors)
-
         implementation(javiersc.gradlePlugins.allProjects)
         implementation(javiersc.gradlePlugins.changelog)
         implementation(javiersc.gradlePlugins.codeAnalysis)
@@ -21,6 +19,7 @@ dependencies {
         implementation(javiersc.gradlePlugins.dependencyUpdates)
         implementation(javiersc.gradlePlugins.docs)
         implementation(javiersc.gradlePlugins.kotlinMultiplatform)
+        implementation(javiersc.gradlePlugins.pluginAccessors)
         implementation(javiersc.gradlePlugins.publishKotlinMultiplatform)
         implementation(javiersc.gradlePlugins.nexus)
         implementation(javiersc.gradlePlugins.readmeBadges)

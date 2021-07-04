@@ -13,7 +13,7 @@ import com.javiersc.either.network.buildNetworkSuccess
 import io.kotest.matchers.shouldBe
 import io.ktor.http.headersOf
 import io.ktor.util.toMap
-import org.junit.Test
+import kotlin.test.Test
 
 internal class NetworkEitherToEitherWithFailureAndSuccessAsLambdaParamsTest {
 
