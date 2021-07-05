@@ -7,7 +7,6 @@ enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
-        jcenter()
     }
 
     versionCatalogs {
@@ -20,8 +19,16 @@ dependencyResolutionManagement {
     }
 }
 
-include(":projects:either-core")
-include(":projects:network:network-core")
-include(":projects:network:network-logger")
-include(":projects:network:network-resource")
-include(":projects:resource-core")
+include(
+    ":projects:either-core",
+)
+
+include(
+    ":projects:network:network-core",
+    ":projects:network:network-logger",
+    ":projects:network:network-resource",
+)
+
+include(
+    ":projects:resource-core",
+)

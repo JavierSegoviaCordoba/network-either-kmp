@@ -31,6 +31,7 @@ kotlin {
                     implementation(kotest.kotestAssertionsCore)
                     implementation(ktor.ktorClientMock)
                     implementation(ktor.ktorClientSerialization)
+                    implementation(squareup.okio.okio)
                 }
             }
         }
