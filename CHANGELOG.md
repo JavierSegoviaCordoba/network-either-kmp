@@ -5,7 +5,6 @@
 ### Added
 
 ### Changed
-- `NetworkEitherCore` use Ktor `HttpClient`
 
 ### Deprecated
 
@@ -14,6 +13,12 @@
 ### Fixed
 
 ### Updated
+
+
+## [0.1.0-alpha.3] - 2021-07-19
+
+### Changed
+- `NetworkEitherCore` use Ktor `HttpClient`
 
 ## [0.1.0-alpha.2] - 2021-07-16
 - No changes
