@@ -121,8 +121,12 @@ public final class com/javiersc/either/network/extensions/NetworkEitherToEitherK
 	public static final fun toEitherWithDataAndErrorCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/Either;
 }
 
+public final class com/javiersc/either/network/ktor/NetworkEitherKtor {
+	public fun <init> (Lio/ktor/client/HttpClient;)V
+}
+
 public final class com/javiersc/either/network/ktor/NetworkEitherKtorKt {
-	public static final fun localOrfailureRemote ()Lcom/javiersc/either/Either;
+	public static final fun localOrFailureRemote ()Lcom/javiersc/either/Either;
 }
 
 public final class com/javiersc/either/network/utils/IsNetworkAvailableKt {

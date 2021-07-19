@@ -3,7 +3,6 @@ package com.javiersc.either.network.ktor.serverError
 import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.buildNetworkFailureHttp
 import com.javiersc.either.network.ktor.BaseTest
-import com.javiersc.either.network.ktor.NetworkEither
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.runTestBlocking
@@ -19,6 +18,6 @@ internal class Error5xxTest : BaseTest<ErrorDTO, DogDTO>() {
 
     @Test
     fun `Request 5xx`() = runTestBlocking {
-        NetworkEither<ErrorDTO, DogDTO> { client.get("path") } shouldBe expected
+        networkEitherKtor<ErrorDTO, DogDTO> { get("path") } shouldBe expected
     }
 }

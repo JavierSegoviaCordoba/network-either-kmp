@@ -5,6 +5,7 @@
 ### Added
 
 ### Changed
+- `NetworkEitherCore` use Ktor `HttpClient`
 
 ### Deprecated
 

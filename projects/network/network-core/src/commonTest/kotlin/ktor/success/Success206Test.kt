@@ -3,7 +3,6 @@ package com.javiersc.either.network.ktor.success
 import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.buildNetworkSuccess
 import com.javiersc.either.network.ktor.BaseTest
-import com.javiersc.either.network.ktor.NetworkEither
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.runTestBlocking
@@ -18,6 +17,6 @@ internal class Success206Test : BaseTest<ErrorDTO, DogDTO>() {
 
     @Test
     fun `Request 206`() = runTestBlocking {
-        NetworkEither<ErrorDTO, DogDTO> { client.get("path") } shouldBe expected
+        networkEitherKtor<ErrorDTO, DogDTO> { get("path") } shouldBe expected
     }
 }

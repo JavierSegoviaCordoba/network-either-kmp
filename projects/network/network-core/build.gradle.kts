@@ -19,6 +19,7 @@ kotlin {
                     api(jetbrains.kotlinx.kotlinxCoroutinesCore)
                     api(jetbrains.kotlinx.kotlinxSerializationJson)
                     api(ktor.ktorClientCore)
+                    api(ktor.ktorClientSerialization)
                 }
             }
         }

@@ -33,7 +33,7 @@ internal abstract class BaseTest<F, S> {
     val headers: Headers
         get() = headersOf("Content-Type" to listOf("application/json")).toMap()
 
-    val client =
+    private val client =
         HttpClient(MockEngine) {
             install(JsonFeature) { serializer = KotlinxSerializer() }
             engine {
@@ -57,6 +57,8 @@ internal abstract class BaseTest<F, S> {
                 }
             }
         }
+
+    val networkEitherKtor: NetworkEitherKtor = NetworkEitherKtor(client)
 }
 
 internal abstract class BaseNullTest<F> {
@@ -71,7 +73,7 @@ internal abstract class BaseNullTest<F> {
     val headers: Headers
         get() = headersOf("Content-Type" to listOf("application/json")).toMap()
 
-    val client =
+    private val client =
         HttpClient(MockEngine) {
             install(JsonFeature) { serializer = KotlinxSerializer() }
             engine {
@@ -95,6 +97,8 @@ internal abstract class BaseNullTest<F> {
                 }
             }
         }
+
+    val networkEitherKtor: NetworkEitherKtor = NetworkEitherKtor(client)
 }
 
 private val Url.hostWithPortIfRequired: String

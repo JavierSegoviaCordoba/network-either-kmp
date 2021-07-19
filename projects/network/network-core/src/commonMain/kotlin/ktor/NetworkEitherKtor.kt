@@ -10,63 +10,85 @@ import com.javiersc.either.network.buildNetworkFailureRemote
 import com.javiersc.either.network.buildNetworkFailureUnknown
 import com.javiersc.either.network.buildNetworkSuccess
 import com.javiersc.either.network.utils.isNetworkAvailable
+import io.ktor.client.HttpClient
+import io.ktor.client.call.receive
 import io.ktor.client.features.ResponseException
+import io.ktor.client.features.feature
+import io.ktor.client.features.json.JsonFeature
+import io.ktor.client.features.json.JsonSerializer
 import io.ktor.client.statement.HttpResponse
-import io.ktor.client.statement.readText
 import io.ktor.http.HttpStatusCode.Companion.NoContent
 import io.ktor.http.HttpStatusCode.Companion.ResetContent
 import io.ktor.util.network.UnresolvedAddressException
+import io.ktor.util.reflect.typeInfo
 import io.ktor.util.toMap
 import io.ktor.utils.io.errors.IOException
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
 
-/** Transform a request made by a Ktor client to NetworkResponse */
-@Suppress("FunctionNaming", "FunctionName")
-public suspend inline fun <reified F, reified S> NetworkEither(
-    request: () -> HttpResponse,
-): NetworkEither<F, S> =
-    try {
-        request().asNetworkEither()
-    } catch (throwable: Throwable) {
-        throwable.asNetworkEither()
+/** Create a wrapper which allow doing requests which will be transformed to `NetworkEither` */
+public class NetworkEitherKtor(@PublishedApi internal val client: HttpClient) {
+
+    public suspend inline operator fun <reified F, reified S> invoke(
+        request: HttpClient.() -> HttpResponse
+    ): NetworkEither<F, S> {
+        val jsonFeature: JsonFeature =
+            checkNotNull(client.feature(JsonFeature)) {
+                "JsonFeature is missing and it is mandatory"
+            }
+
+        val jsonSerializer: JsonSerializer = jsonFeature.serializer
+        return try {
+            request(client).asNetworkEither(jsonSerializer)
+        } catch (throwable: Throwable) {
+            throwable.asNetworkEither(jsonSerializer)
+        }
     }
+}
 
 @PublishedApi
-internal suspend inline fun <reified F, reified S> HttpResponse.asNetworkEither():
-    NetworkEither<F, S> =
+internal suspend inline fun <reified F, reified S> HttpResponse.asNetworkEither(
+    jsonSerializer: JsonSerializer,
+): NetworkEither<F, S> =
     with(this) {
         if (content.availableForRead == 0) {
             val statusCode =
                 if (status != NoContent || status != ResetContent) NoContent else status
             buildNetworkSuccess(Unit as S, HttpStatusCode(statusCode.value), headers.toMap())
-        } else buildNetworkSuccess(decode(), HttpStatusCode(status.value), headers.toMap())
+        } else {
+            buildNetworkSuccess(
+                jsonSerializer.read(typeInfo<S>(), receive()) as S,
+                HttpStatusCode(status.value),
+                headers.toMap()
+            )
+        }
     }
 
 @PublishedApi
-internal suspend inline fun <reified F, reified S> ResponseException.serializeAsError():
-    NetworkEither<F, S> =
+internal suspend inline fun <reified F, reified S> ResponseException.serializeAsError(
+    jsonSerializer: JsonSerializer,
+): NetworkEither<F, S> =
     try {
         with(response) {
-            buildNetworkFailureHttp(decode(), HttpStatusCode(status.value), headers.toMap())
+            buildNetworkFailureHttp(
+                jsonSerializer.read(typeInfo<F>(), receive()) as F,
+                HttpStatusCode(status.value),
+                headers.toMap()
+            )
         }
     } catch (throwable: Throwable) {
         buildNetworkFailureUnknown(throwable)
     }
 
 @PublishedApi
-internal suspend inline fun <reified T> HttpResponse.decode(): T = Json.decodeFromString(readText())
-
-@PublishedApi
-internal suspend inline fun <reified F, reified S> Throwable.asNetworkEither():
-    NetworkEither<F, S> =
+internal suspend inline fun <reified F, reified S> Throwable.asNetworkEither(
+    jsonSerializer: JsonSerializer,
+): NetworkEither<F, S> =
     when (this) {
-        is ResponseException -> serializeAsError()
-        is UnresolvedAddressException -> localOrfailureRemote()
-        is IOException -> localOrfailureRemote()
+        is ResponseException -> serializeAsError(jsonSerializer)
+        is UnresolvedAddressException -> localOrFailureRemote()
+        is IOException -> localOrFailureRemote()
         else -> buildNetworkFailureUnknown(this)
     }
 
 @PublishedApi
-internal fun <F, S> localOrfailureRemote(): NetworkEither<F, S> =
+internal fun <F, S> localOrFailureRemote(): NetworkEither<F, S> =
     if (isNetworkAvailable) buildNetworkFailureRemote() else buildNetworkFailureLocal()

@@ -3,7 +3,6 @@ package com.javiersc.either.network.ktor.other
 import com.javiersc.either.network.NetworkFailureUnknown
 import com.javiersc.either.network.buildNetworkFailureUnknown
 import com.javiersc.either.network.ktor.BaseTest
-import com.javiersc.either.network.ktor.NetworkEither
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.runTestBlocking
@@ -21,7 +20,7 @@ internal class MalformedJsonTest : BaseTest<ErrorDTO, DogDTO>() {
 
     @Test
     fun `Request 200 with a malformed json`() = runTestBlocking {
-        NetworkEither<ErrorDTO, DogDTO> { client.get("path") }
+        networkEitherKtor<ErrorDTO, DogDTO> { get("path") }
             .shouldBeTypeOf<NetworkFailureUnknown>()
             .left
             .throwable
