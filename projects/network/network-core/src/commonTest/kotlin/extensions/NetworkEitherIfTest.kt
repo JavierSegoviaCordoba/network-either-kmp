@@ -1,5 +1,6 @@
 package com.javiersc.either.network.extensions
 
+import com.javiersc.either.network.Failure
 import com.javiersc.either.network.HttpStatusCode
 import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.NetworkFailureHttp
@@ -21,6 +22,19 @@ import kotlin.test.Test
 class NetworkEitherIfTest {
 
     @Test
+    fun `if Failure`() {
+        val expected: NetworkEither<String, String> =
+            buildNetworkFailureHttp("error", HttpStatusCode(400), emptyHeader.toMap())
+        var actual: NetworkEither<String, String>? = null
+
+        expected.ifFailure { failure ->
+            failure.shouldBeTypeOf<Failure.Http<String>>()
+            with(failure) { actual = buildNetworkFailureHttp(error, code, headers) }
+        }
+        actual.shouldBeTypeOf<NetworkFailureHttp<String>>() shouldBe expected
+    }
+
+    @Test
     fun `if Failure Http`() {
         val expected: NetworkEither<String, String> =
             buildNetworkFailureHttp("error", HttpStatusCode(400), emptyHeader.toMap())
@@ -30,6 +44,26 @@ class NetworkEitherIfTest {
             actual = buildNetworkFailureHttp(error, code, headers)
         }
         actual.shouldBeTypeOf<NetworkFailureHttp<String>>() shouldBe expected
+    }
+
+    @Test
+    fun `if Failure Http only error`() {
+        val expected: NetworkEither<String, String> =
+            buildNetworkFailureHttp("error", HttpStatusCode(400), emptyHeader.toMap())
+        var actual: String? = null
+
+        expected.ifFailureHttpOnlyError { error -> actual = error }
+        actual shouldBe expected.shouldBeTypeOf<NetworkFailureHttp<String>>().left.error
+    }
+
+    @Test
+    fun `if Failure Http only code`() {
+        val expected: NetworkEither<String, String> =
+            buildNetworkFailureHttp("error", HttpStatusCode(400), emptyHeader.toMap())
+        var actual: HttpStatusCode? = null
+
+        expected.ifFailureHttpOnlyCode { code -> actual = code }
+        actual shouldBe expected.shouldBeTypeOf<NetworkFailureHttp<String>>().left.code
     }
 
     @Test
@@ -70,5 +104,15 @@ class NetworkEitherIfTest {
             actual = buildNetworkSuccess(data, code, headers)
         }
         actual.shouldBeTypeOf<NetworkSuccess<String>>() shouldBe expected
+    }
+
+    @Test
+    fun `if Success only data`() {
+        val expected: NetworkEither<String, String> =
+            buildNetworkSuccess("success", HttpStatusCode(200), emptyHeader.toMap())
+        var actual: String? = null
+
+        expected.ifSuccessOnlyData { data -> actual = data }
+        actual shouldBe expected.shouldBeTypeOf<NetworkSuccess<String>>().right.data
     }
 }
