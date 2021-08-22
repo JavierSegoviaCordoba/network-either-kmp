@@ -12,7 +12,7 @@ plugins {
     `javiersc-nexus`
     `javiersc-readme-badges-generator`
     `javiersc-gradle-wrapper-updater`
-    `javiersc-massive-catalogs-updater`
+    `javiersc-build-version-catalogs-updater`
 }
 
 allprojects.forEach { project ->

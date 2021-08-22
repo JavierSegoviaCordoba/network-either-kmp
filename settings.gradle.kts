@@ -1,23 +1,34 @@
-
-rootProject.name = "either"
+rootProject.name = providers.gradleProperty("allProjects.name").forUseAtConfigurationTime().get()
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("VERSION_CATALOGS")
+
+pluginManagement {
+    repositories {
+        mavenCentral()
+    }
+
+    plugins {
+        val buildVersionCatalogs: String by settings
+
+        id("com.javiersc.gradle.plugins.build.version.catalogs") version buildVersionCatalogs
+    }
+}
+
+plugins {
+    id("com.javiersc.gradle.plugins.build.version.catalogs")
+}
 
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
     }
-
-    versionCatalogs {
-        val massiveCatalogs: String by settings
-
-        create("libs") { from("com.javiersc.massive-catalogs:libs-catalog:$massiveCatalogs") }
-        create("pluginLibs") {
-            from("com.javiersc.massive-catalogs:plugins-catalog:$massiveCatalogs")
-        }
-    }
 }
+
+include(
+    ":a--catalogs:libs",
+    ":a--catalogs:plugins",
+)
 
 include(
     ":projects:either-core",
