@@ -1,5 +1,5 @@
 [versions]
-coroutines = "1.5.1-native-mt"
+coroutines = "1.5.2"
 kotest = "4.6.1"
 ktor = "1.6.2"
 mokoki = "0.1.0-alpha.5"
