@@ -24,7 +24,7 @@ import kotlin.jvm.JvmName
  * )
  * ```
  */
-public fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
+public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
     left: (Failure<NF>) -> ResourceEither<F, S>,
     right: (Success<NS>) -> ResourceEither<F, S>,
 ): ResourceEither<F, S> =
@@ -51,7 +51,7 @@ public fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
  * )
  * ```
  */
-public fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
+public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
     success: (NS, HttpStatusCode, Headers) -> S,
     httpError: (NF, HttpStatusCode, Headers) -> F,
     localError: () -> F,
@@ -100,7 +100,7 @@ public fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
  * )
  * ```
  */
-public fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
+public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
     success: (NS) -> S,
     httpError: (NF) -> F,
     localError: () -> F,
@@ -144,7 +144,7 @@ public fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
  * ```
  */
 @JvmName("toResourceWithSuccessDataAndErrorCode")
-public fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
+public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
     success: (NS) -> S,
     httpError: (HttpStatusCode) -> F,
     localError: () -> F,

@@ -95,25 +95,6 @@ public final class com/javiersc/either/network/extensions/NetworkEitherIfKt {
 	public static final fun ifSuccessOnlyData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
 }
 
-public final class com/javiersc/either/network/extensions/NetworkEitherSuspendFoldKt {
-	public static final fun suspendFold (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function4;Lkotlin/jvm/functions/Function4;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun suspendFoldOnlySuccessData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun suspendFoldSimple (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun suspendFoldSuccessDataErrorCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-}
-
-public final class com/javiersc/either/network/extensions/NetworkEitherSuspendIfKt {
-	public static final fun ifFailureHttpOnlyCodeSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifFailureHttpOnlyErrorSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifFailureHttpSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function4;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifFailureLocalSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifFailureRemoteSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifFailureSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifFailureUnknownSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifSuccessOnlyDataSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun ifSuccessSuspended (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function4;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-}
-
 public final class com/javiersc/either/network/extensions/NetworkEitherToEitherKt {
 	public static final fun toEither (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/Either;
 	public static final fun toEither (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/Either;

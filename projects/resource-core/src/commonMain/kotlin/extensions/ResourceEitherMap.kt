@@ -7,7 +7,7 @@ import com.javiersc.either.resource.Success
 import com.javiersc.either.resource.buildResourceFailure
 import com.javiersc.either.resource.buildResourceSuccess
 
-public fun <F, S, NF, NS> ResourceEither<F, S>.map(
+public inline fun <F, S, NF, NS> ResourceEither<F, S>.map(
     failure: (F) -> NF,
     fallbackData: (S?) -> NS? = { null },
     success: (S) -> NS,
@@ -23,12 +23,12 @@ public fun <F, S, NF, NS> ResourceEither<F, S>.map(
         is Either.Right -> buildResourceSuccess(success(right.data), isLoading ?: right.isLoading)
     }
 
-public fun <F, S, NF, NS> Failure<F, S>.map(
+public inline fun <F, S, NF, NS> Failure<F, S>.map(
     failure: (F) -> NF,
     fallbackData: (S?) -> NS? = { null },
     isLoading: Boolean? = null
 ): Failure<NF, NS> =
     Failure(failure(this.failure), fallbackData(this.data), isLoading ?: this.isLoading)
 
-public fun <S, NS> Success<S>.map(isLoading: Boolean? = null, data: (S) -> NS): Success<NS> =
+public inline fun <S, NS> Success<S>.map(isLoading: Boolean? = null, data: (S) -> NS): Success<NS> =
     Success(data(this.data), isLoading ?: this.isLoading)

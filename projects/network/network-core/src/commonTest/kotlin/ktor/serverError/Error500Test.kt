@@ -5,7 +5,7 @@ import com.javiersc.either.network.buildNetworkFailureHttp
 import com.javiersc.either.network.ktor.BaseTest
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
-import com.javiersc.either.network.runTestBlocking
+import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.shouldBe
 import io.ktor.client.request.get
 import kotlin.test.Test
@@ -17,7 +17,7 @@ internal class Error500Test : BaseTest<ErrorDTO, DogDTO>() {
         buildNetworkFailureHttp(error, code, headers)
 
     @Test
-    fun `Request 500`() = runTestBlocking {
+    fun `Request 500`() = suspendTest {
         networkEitherKtor<ErrorDTO, DogDTO> { get("path") } shouldBe expected
     }
 }

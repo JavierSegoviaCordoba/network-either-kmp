@@ -6,7 +6,7 @@ import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.retrofit.BaseTest
 import com.javiersc.either.network.retrofit.config.DogService
-import com.javiersc.either.network.runTestBlocking
+import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.shouldBe
 import kotlin.test.Test
 import okhttp3.mockwebserver.MockWebServer
@@ -21,7 +21,7 @@ internal class LocalErrorTest : BaseTest<ErrorDTO, DogDTO>() {
         get() = 200 to null
     override val expected: NetworkEither<ErrorDTO, DogDTO> = buildNetworkFailureLocal()
 
-    @Test fun `suspend call`() = runTestBlocking { service.getDog() shouldBe expected }
+    @Test fun `suspend call`() = suspendTest { service.getDog() shouldBe expected }
 
-    @Test fun `async call`() = runTestBlocking { service.getDogAsync().await() shouldBe expected }
+    @Test fun `async call`() = suspendTest { service.getDogAsync().await() shouldBe expected }
 }

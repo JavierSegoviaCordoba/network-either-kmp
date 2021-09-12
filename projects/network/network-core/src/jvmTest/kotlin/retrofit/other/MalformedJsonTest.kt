@@ -6,7 +6,7 @@ import com.javiersc.either.network.buildNetworkFailureUnknown
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.retrofit.BaseTest
-import com.javiersc.either.network.runTestBlocking
+import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.string.shouldContain
 import io.kotest.matchers.types.shouldBeTypeOf
 import kotlin.test.Test
@@ -19,7 +19,7 @@ internal class MalformedJsonTest : BaseTest<ErrorDTO, DogDTO>() {
         buildNetworkFailureUnknown(SerializationException(partialMessage))
 
     @Test
-    fun `suspend call 200 with a malformed json`() = runTestBlocking {
+    fun `suspend call 200 with a malformed json`() = suspendTest {
         service
             .getDog()
             .shouldBeTypeOf<NetworkFailureUnknown>()
@@ -32,7 +32,7 @@ internal class MalformedJsonTest : BaseTest<ErrorDTO, DogDTO>() {
     }
 
     @Test
-    fun `async call  200 with a malformed json`() = runTestBlocking {
+    fun `async call  200 with a malformed json`() = suspendTest {
         service
             .getDogAsync()
             .await()

@@ -19,7 +19,7 @@ import kotlin.jvm.JvmName
  * )
  * ```
  */
-public fun <F, S, L, R> NetworkEither<F, S>.toEither(
+public inline fun <F, S, L, R> NetworkEither<F, S>.toEither(
     left: (Failure<F>) -> L,
     right: (Success<S>) -> R,
 ): Either<L, R> =
@@ -42,7 +42,7 @@ public fun <F, S, L, R> NetworkEither<F, S>.toEither(
  * )
  * ```
  */
-public fun <F, S, L, R> NetworkEither<F, S>.toEither(
+public inline fun <F, S, L, R> NetworkEither<F, S>.toEither(
     success: (S, HttpStatusCode, Headers) -> R,
     httpError: (F, HttpStatusCode, Headers) -> L,
     localError: () -> L,
@@ -74,7 +74,7 @@ public fun <F, S, L, R> NetworkEither<F, S>.toEither(
  * )
  * ```
  */
-public fun <F, S, L, R> NetworkEither<F, S>.toEither(
+public inline fun <F, S, L, R> NetworkEither<F, S>.toEither(
     success: (S) -> R,
     httpError: (F) -> L,
     localError: () -> L,
@@ -107,7 +107,7 @@ public fun <F, S, L, R> NetworkEither<F, S>.toEither(
  * ```
  */
 @JvmName("toEitherWithDataAndErrorCode")
-public fun <F, S, L, R> NetworkEither<F, S>.toEither(
+public inline fun <F, S, L, R> NetworkEither<F, S>.toEither(
     success: (S) -> R,
     httpError: (HttpStatusCode) -> L,
     localError: () -> L,

@@ -16,8 +16,7 @@ javiersc-mokoki-mokokiCore = { module = "com.javiersc.mokoki:mokoki-core", versi
 javiersc-mokoki-mokokiSerialization = { module = "com.javiersc.mokoki:mokoki-serialization", version.ref = "mokoki" }
 javiersc-runBlocking-runBlockingCore = { module = "com.javiersc.run-blocking:run-blocking-core", version.ref = "runBlocking" }
 javiersc-runBlocking-suspendTest = { module = "com.javiersc.run-blocking:suspend-test", version.ref = "runBlocking" }
-jetbrains-kotlin-kotlinTestCommon = { module = "org.jetbrains.kotlin:kotlin-test-common" }
-jetbrains-kotlin-kotlinTestJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
+jetbrains-kotlin-kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test" }
 jetbrains-kotlinx-kotlinxCoroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 jetbrains-kotlinx-kotlinxSerializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 kotest-kotestAssertionsCore = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
@@ -31,4 +30,4 @@ squareup-okio-okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 squareup-retrofit2-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
 [bundles]
-testing = ["jetbrains-kotlin-kotlinTestCommon", "kotest-kotestAssertionsCore"]
+testing = ["jetbrains-kotlin-kotlinTest", "kotest-kotestAssertionsCore"]
