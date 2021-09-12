@@ -1,5 +1,5 @@
 plugins {
-    `javiersc-kotlin-multiplatform`
+    `javiersc-kotlin-multiplatform-no-android`
     `kotlin-serialization`
     `javiersc-publish-kotlin-multiplatform`
 }
