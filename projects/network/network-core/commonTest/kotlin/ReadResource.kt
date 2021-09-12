@@ -4,7 +4,7 @@ import okio.ExperimentalFileSystem
 import okio.Path.Companion.toPath
 
 @OptIn(ExperimentalFileSystem::class)
-val resourcesFolderAbsolutePath = fileSystem.canonicalize("./src/commonTest/resources".toPath())
+val resourcesFolderAbsolutePath = fileSystem.canonicalize("./commonTest/resources".toPath())
 
 @OptIn(ExperimentalFileSystem::class)
 internal fun readResource(file: String): String =

@@ -19,7 +19,5 @@ kotlin {
                 }
             }
         }
-
-        named("jvmTest")
     }
 }

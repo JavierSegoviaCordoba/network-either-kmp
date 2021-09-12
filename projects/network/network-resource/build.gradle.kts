@@ -35,23 +35,5 @@ kotlin {
                 }
             }
         }
-
-        named("jvmMain") {
-            dependencies {
-                libs.apply {
-                    api(squareup.okhttp3.okhttp)
-                    api(squareup.retrofit2.retrofit)
-                }
-            }
-        }
-
-        named("jvmTest") {
-            dependencies {
-                libs.apply {
-                    implementation(jakewharton.retrofit.retrofit2KotlinxSerializationConverter)
-                    implementation(squareup.okhttp3.mockwebserver)
-                }
-            }
-        }
     }
 }
