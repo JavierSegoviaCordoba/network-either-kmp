@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     `javiersc-versioning`
     `javiersc-all-projects`
@@ -10,10 +8,4 @@ plugins {
     `kotlinx-binary-compatibility-validator`
     `javiersc-nexus`
     `javiersc-readme-badges-generator`
-}
-
-allprojects.forEach { project ->
-    project.tasks.withType<KotlinCompile>().all {
-        kotlinOptions { jvmTarget = JavaVersion.VERSION_1_8.toString() }
-    }
 }
