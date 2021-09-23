@@ -7,7 +7,7 @@ okHttp = "4.9.1"
 okio = "3.0.0-alpha.10"
 retrofit = "2.9.0"
 retrofitKotlinConverter = "0.8.0"
-runBlocking = "0.1.0-alpha.4"
+runBlocking = "0.1.0-beta.1"
 serialization = "1.2.2"
 
 [libraries]
