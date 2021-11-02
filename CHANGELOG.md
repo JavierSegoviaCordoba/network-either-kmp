@@ -13,6 +13,9 @@
 ### Fixed
 
 ### Updated
+- `io.ktor:ktor-client-serialization -> 1.6.5`
+- `io.ktor:ktor-client-core -> 1.6.5`
+- `io.ktor:ktor-client-cio -> 1.6.5`
 - `com.javiersc.gradle-plugins:versioning -> 0.1.0-alpha.71`
 - `com.javiersc.gradle-plugins:readme-badges -> 0.1.0-alpha.71`
 - `com.javiersc.gradle-plugins:publish-kotlin-multiplatform -> 0.1.0-alpha.71`
