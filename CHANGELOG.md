@@ -13,6 +13,7 @@
 ### Fixed
 
 ### Updated
+- `com.squareup.okio:okio -> 3.0.0`
 - `io.ktor:ktor-client-serialization -> 1.6.5`
 - `io.ktor:ktor-client-core -> 1.6.5`
 - `io.ktor:ktor-client-cio -> 1.6.5`
