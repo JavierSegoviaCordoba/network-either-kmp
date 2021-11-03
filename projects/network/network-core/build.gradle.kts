@@ -1,7 +1,8 @@
 plugins {
-    `javiersc-kotlin-multiplatform-no-android`
+    `kotlin-multiplatform`
     `kotlin-serialization`
-    `javiersc-publish-kotlin-multiplatform`
+    `javiersc-kotlin-library`
+    `javiersc-publish`
 }
 
 kotlin {
