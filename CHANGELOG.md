@@ -13,6 +13,7 @@
 ### Fixed
 
 ### Updated
+- `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
 - `com.squareup.okio:okio -> 3.0.0`
 - `io.ktor:ktor-client-serialization -> 1.6.5`
 - `io.ktor:ktor-client-core -> 1.6.5`
