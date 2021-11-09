@@ -6,6 +6,7 @@ import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.retrofit.BaseNullTest
 import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.shouldBe
+import kotlin.test.Ignore
 import kotlin.test.Test
 
 internal class Success204Test : BaseNullTest<ErrorDTO>() {
@@ -15,5 +16,7 @@ internal class Success204Test : BaseNullTest<ErrorDTO>() {
 
     @Test fun `suspend call 204`() = suspendTest { service.getDog() shouldBe expected }
 
-    @Test fun `async call 204`() = suspendTest { service.getDogAsync().await() shouldBe expected }
+    @Test
+    @Ignore("Parallel execution breaks, refactor to use RetrofitMock or another framework")
+    fun `async call 204`() = suspendTest { service.getDogAsync().await() shouldBe expected }
 }

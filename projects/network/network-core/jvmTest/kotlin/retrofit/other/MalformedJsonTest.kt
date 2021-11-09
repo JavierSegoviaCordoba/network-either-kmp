@@ -11,6 +11,7 @@ import io.kotest.matchers.string.shouldContain
 import io.kotest.matchers.types.shouldBeTypeOf
 import kotlin.test.Test
 import kotlinx.serialization.SerializationException
+import org.junit.Ignore
 
 internal class MalformedJsonTest : BaseTest<ErrorDTO, DogDTO>() {
 
@@ -32,6 +33,7 @@ internal class MalformedJsonTest : BaseTest<ErrorDTO, DogDTO>() {
     }
 
     @Test
+    @Ignore("Parallel execution breaks, refactor to use RetrofitMock or another framework")
     fun `async call  200 with a malformed json`() = suspendTest {
         service
             .getDogAsync()
