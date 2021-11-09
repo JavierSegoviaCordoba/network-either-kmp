@@ -13,7 +13,7 @@
 ### Fixed
 
 ### Updated
-- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.6`
+- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.8`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
 - `com.squareup.okio:okio -> 3.0.0`
 - `io.ktor:ktor-client-serialization -> 1.6.5`
