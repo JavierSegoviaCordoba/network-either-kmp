@@ -13,6 +13,7 @@
 ### Fixed
 
 ### Updated
+- `org.jetbrains.kotlin:kotlin-serialization -> 1.6.0`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.1`
 - `gradle -> 7.3`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.8`
