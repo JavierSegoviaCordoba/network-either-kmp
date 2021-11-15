@@ -14,25 +14,14 @@
 
 ### Updated
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.0`
+- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.11`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.1`
 - `gradle -> 7.3`
-- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.8`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
 - `com.squareup.okio:okio -> 3.0.0`
 - `io.ktor:ktor-client-serialization -> 1.6.5`
 - `io.ktor:ktor-client-core -> 1.6.5`
 - `io.ktor:ktor-client-cio -> 1.6.5`
-- `com.javiersc.gradle-plugins:versioning -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:readme-badges -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:publish-kotlin-multiplatform -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:plugin-accessors -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:nexus -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:kotlin-multiplatform-no-android -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:docs -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:code-formatter -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:code-analysis -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:changelog -> 0.1.0-alpha.71`
-- `com.javiersc.gradle-plugins:all-projects -> 0.1.0-alpha.71`
 
 
 ## [0.1.0-alpha.3] - 2021-07-19
