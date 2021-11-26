@@ -13,6 +13,10 @@
 ### Fixed
 
 ### Updated
+- `io.ktor:ktor-client-serialization -> 1.6.6`
+- `io.ktor:ktor-client-mock -> 1.6.6`
+- `io.ktor:ktor-client-core -> 1.6.6`
+- `io.ktor:ktor-client-cio -> 1.6.6`
 - `io.kotest:kotest-assertions-core -> 5.0.0`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
@@ -22,9 +26,6 @@
 - `gradle -> 7.3`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
 - `com.squareup.okio:okio -> 3.0.0`
-- `io.ktor:ktor-client-serialization -> 1.6.5`
-- `io.ktor:ktor-client-core -> 1.6.5`
-- `io.ktor:ktor-client-cio -> 1.6.5`
 
 
 ## [0.1.0-alpha.3] - 2021-07-19
