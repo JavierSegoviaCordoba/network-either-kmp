@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.2`
+- `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.2`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.7`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.7`
 - `gradle -> 7.3.1`
