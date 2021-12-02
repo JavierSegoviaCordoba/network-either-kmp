@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `gradle -> 7.3.1`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.22`
 - `io.ktor:ktor-client-serialization -> 1.6.6`
 - `io.ktor:ktor-client-mock -> 1.6.6`
@@ -24,7 +25,6 @@
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.0`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.1`
-- `gradle -> 7.3`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
 - `com.squareup.okio:okio -> 3.0.0`
 
