@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.7`
+- `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.7`
 - `gradle -> 7.3.1`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.22`
 - `io.ktor:ktor-client-serialization -> 1.6.6`
