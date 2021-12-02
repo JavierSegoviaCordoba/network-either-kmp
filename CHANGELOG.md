@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `io.kotest:kotest-assertions-core -> 5.0.1`
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.2`
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.2`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.7`
@@ -24,7 +25,6 @@
 - `io.ktor:ktor-client-mock -> 1.6.6`
 - `io.ktor:ktor-client-core -> 1.6.6`
 - `io.ktor:ktor-client-cio -> 1.6.6`
-- `io.kotest:kotest-assertions-core -> 5.0.0`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.0`
