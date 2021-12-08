@@ -1,7 +1,7 @@
 [versions]
 coroutines = "1.5.2"
 kotest = "5.0.1"
-ktor = "1.6.6"
+ktor = "1.6.7"
 mokoki = "0.1.0-alpha.7"
 okHttp = "4.9.3"
 okio = "3.0.0"
