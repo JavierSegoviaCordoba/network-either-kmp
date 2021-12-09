@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `com.android.tools.build:gradle -> 7.0.4`
 - `io.ktor:ktor-client-mock -> 1.6.7`
 - `io.ktor:ktor-client-core -> 1.6.7`
 - `io.kotest:kotest-assertions-core -> 5.0.1`
