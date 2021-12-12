@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.24`
 - `io.kotest:kotest-assertions-core -> 5.0.2`
 - `com.android.tools.build:gradle -> 7.0.4`
 - `io.ktor:ktor-client-mock -> 1.6.7`
@@ -23,7 +24,6 @@
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.7`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.7`
 - `gradle -> 7.3.1`
-- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.22`
 - `io.ktor:ktor-client-serialization -> 1.6.6`
 - `io.ktor:ktor-client-cio -> 1.6.6`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
