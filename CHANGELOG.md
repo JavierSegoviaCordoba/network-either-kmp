@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
+- `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.9`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.24`
 - `io.kotest:kotest-assertions-core -> 5.0.2`
 - `com.android.tools.build:gradle -> 7.0.4`
@@ -21,8 +23,6 @@
 - `io.ktor:ktor-client-core -> 1.6.7`
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.2`
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.2`
-- `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.7`
-- `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.7`
 - `gradle -> 7.3.1`
 - `io.ktor:ktor-client-serialization -> 1.6.6`
 - `io.ktor:ktor-client-cio -> 1.6.6`
