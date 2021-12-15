@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `gradle -> 7.3.2`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.10`
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.10`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
@@ -25,7 +26,6 @@
 - `io.ktor:ktor-client-core -> 1.6.7`
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.2`
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.2`
-- `gradle -> 7.3.1`
 - `io.ktor:ktor-client-serialization -> 1.6.6`
 - `io.ktor:ktor-client-cio -> 1.6.6`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
