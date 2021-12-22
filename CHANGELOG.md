@@ -14,9 +14,9 @@
 
 ### Updated
 
+- `gradle -> 7.3.3`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.0`
 - `io.kotest:kotest-assertions-core -> 5.0.3`
-- `gradle -> 7.3.2`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.10`
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.10`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
