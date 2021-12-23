@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
 - `gradle -> 7.3.3`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.0`
 - `io.kotest:kotest-assertions-core -> 5.0.3`
@@ -31,7 +32,6 @@
 - `io.ktor:ktor-client-cio -> 1.6.6`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
-- `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.1`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
 - `com.squareup.okio:okio -> 3.0.0`
 
