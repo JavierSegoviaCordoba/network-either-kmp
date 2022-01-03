@@ -1,0 +1,128 @@
+{
+  "modules": [
+    {
+      "name": "either",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.either-core",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.resource-core",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-core",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-logger",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-resource",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.buildSrc",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.either-core.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.either-core.jvmTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.either-core.commonMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.either-core.commonTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.resource-core.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.resource-core.jvmTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.resource-core.commonMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.resource-core.commonTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-core.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-core.jvmTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-core.commonMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-core.commonTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-logger.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-logger.jvmTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-logger.commonMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-logger.commonTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-resource.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-resource.jvmTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-resource.commonMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.projects.network.network-resource.commonTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.buildSrc.test",
+      "languageLevel": 11
+    },
+    {
+      "name": "either.buildSrc.main",
+      "languageLevel": 11
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Function \"buildResourceFailureLoading\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/Resource.kt",
+      "language": "kotlin",
+      "line": 14,
+      "offset": 18,
+      "length": 27,
+      "code": {
+        "startLine": 12,
+        "length": 27,
+        "offset": 82,
+        "surroundingCode": "public typealias ResourceSuccess<S> = Either.Right<Success<S>>\n\npublic fun <F, S> buildResourceFailureLoading(failure: F, data: S? = null): ResourceEither<F, S> =\n    Either.Left(Failure(failure, data, true))\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "2852883702971712040"
+}]}

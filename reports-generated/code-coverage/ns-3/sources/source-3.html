@@ -1,0 +1,215 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > NetworkEitherCallAdapterFactory</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.javiersc.either.network</a>
+</div>
+
+<h1>Coverage Summary for Class: NetworkEitherCallAdapterFactory (com.javiersc.either.network)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Block, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">NetworkEitherCallAdapterFactory</td>
+<td class="coverageStat">
+  <span class="percent">
+    75%
+  </span>
+  <span class="absValue">
+    (3/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (8/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87.1%
+  </span>
+  <span class="absValue">
+    (27/31)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">NetworkEitherCallAdapterFactory$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (4/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (8/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87.5%
+  </span>
+  <span class="absValue">
+    (28/32)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.network
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.javiersc.either.Either
+<i class="no-highlight">4</i>&nbsp;import com.javiersc.either.network.internal.deferred.NetworkEitherDeferredCallAdapter
+<i class="no-highlight">5</i>&nbsp;import com.javiersc.either.network.internal.suspend.NetworkEitherSuspendCallAdapter
+<i class="no-highlight">6</i>&nbsp;import com.javiersc.either.network.utils.isNetworkAvailable as internalIsNetworkAvailable
+<i class="no-highlight">7</i>&nbsp;import java.lang.reflect.ParameterizedType
+<i class="no-highlight">8</i>&nbsp;import java.lang.reflect.Type
+<i class="no-highlight">9</i>&nbsp;import kotlinx.coroutines.Deferred
+<i class="no-highlight">10</i>&nbsp;import retrofit2.Call
+<i class="no-highlight">11</i>&nbsp;import retrofit2.CallAdapter
+<i class="no-highlight">12</i>&nbsp;import retrofit2.Retrofit
+<i class="no-highlight">13</i>&nbsp;
+<b class="nc"><i class="no-highlight">14</i>&nbsp;public class NetworkEitherCallAdapterFactory(</b>
+<b class="fc"><i class="no-highlight">15</i>&nbsp;    private val isNetworkAvailable: () -&gt; Boolean = { internalIsNetworkAvailable }</b>
+<b class="fc"><i class="no-highlight">16</i>&nbsp;) : CallAdapter.Factory() {</b>
+<i class="no-highlight">17</i>&nbsp;
+<i class="no-highlight">18</i>&nbsp;    override fun get(
+<i class="no-highlight">19</i>&nbsp;        returnType: Type,
+<i class="no-highlight">20</i>&nbsp;        annotations: Array&lt;Annotation&gt;,
+<i class="no-highlight">21</i>&nbsp;        retrofit: Retrofit
+<i class="no-highlight">22</i>&nbsp;    ): CallAdapter&lt;*, *&gt;? {
+<b class="pc"><i class="no-highlight">23</i>&nbsp;        check(returnType is ParameterizedType) {</b>
+<b class="nc"><i class="no-highlight">24</i>&nbsp;            &quot;$returnType must be parameterized. Raw types are not supported&quot;</b>
+<i class="no-highlight">25</i>&nbsp;        }
+<i class="no-highlight">26</i>&nbsp;
+<b class="fc"><i class="no-highlight">27</i>&nbsp;        val containerType = getParameterUpperBound(0, returnType)</b>
+<b class="pc"><i class="no-highlight">28</i>&nbsp;        if (getRawType(containerType) != Either::class.java) return null</b>
+<i class="no-highlight">29</i>&nbsp;
+<b class="pc"><i class="no-highlight">30</i>&nbsp;        check(containerType is ParameterizedType) {</b>
+<b class="nc"><i class="no-highlight">31</i>&nbsp;            &quot;$containerType must be parameterized. Raw types are not supported&quot;</b>
+<i class="no-highlight">32</i>&nbsp;        }
+<i class="no-highlight">33</i>&nbsp;
+<b class="fc"><i class="no-highlight">34</i>&nbsp;        val (errorBodyType, successBodyType) = containerType.getBodyTypes()</b>
+<b class="fc"><i class="no-highlight">35</i>&nbsp;        val errorBodyConverter =</b>
+<b class="fc"><i class="no-highlight">36</i>&nbsp;            retrofit.nextResponseBodyConverter&lt;Any&gt;(null, errorBodyType, annotations)</b>
+<i class="no-highlight">37</i>&nbsp;
+<b class="fc"><i class="no-highlight">38</i>&nbsp;        return when (getRawType(returnType)) {</b>
+<b class="fc"><i class="no-highlight">39</i>&nbsp;            Deferred::class.java -&gt;</b>
+<b class="fc"><i class="no-highlight">40</i>&nbsp;                NetworkEitherDeferredCallAdapter&lt;Any, Any&gt;(</b>
+<b class="fc"><i class="no-highlight">41</i>&nbsp;                    successBodyType,</b>
+<b class="fc"><i class="no-highlight">42</i>&nbsp;                    errorBodyConverter,</b>
+<b class="fc"><i class="no-highlight">43</i>&nbsp;                    isNetworkAvailable</b>
+<i class="no-highlight">44</i>&nbsp;                )
+<b class="pc"><i class="no-highlight">45</i>&nbsp;            Call::class.java -&gt;</b>
+<b class="fc"><i class="no-highlight">46</i>&nbsp;                NetworkEitherSuspendCallAdapter&lt;Any, Any&gt;(</b>
+<b class="fc"><i class="no-highlight">47</i>&nbsp;                    successBodyType,</b>
+<b class="fc"><i class="no-highlight">48</i>&nbsp;                    errorBodyConverter,</b>
+<b class="fc"><i class="no-highlight">49</i>&nbsp;                    isNetworkAvailable</b>
+<i class="no-highlight">50</i>&nbsp;                )
+<b class="nc"><i class="no-highlight">51</i>&nbsp;            else -&gt; null</b>
+<i class="no-highlight">52</i>&nbsp;        }
+<i class="no-highlight">53</i>&nbsp;    }
+<i class="no-highlight">54</i>&nbsp;
+<i class="no-highlight">55</i>&nbsp;    private fun ParameterizedType.getBodyTypes(): Pair&lt;Type, Type&gt; {
+<b class="fc"><i class="no-highlight">56</i>&nbsp;        val failureWrapperType: ParameterizedType =</b>
+<b class="pc"><i class="no-highlight">57</i>&nbsp;            getParameterUpperBound(0, this) as ParameterizedType</b>
+<b class="fc"><i class="no-highlight">58</i>&nbsp;        val errorType = getParameterUpperBound(0, failureWrapperType)</b>
+<b class="fc"><i class="no-highlight">59</i>&nbsp;        val successWrapperType: ParameterizedType =</b>
+<b class="pc"><i class="no-highlight">60</i>&nbsp;            getParameterUpperBound(1, this) as ParameterizedType</b>
+<b class="fc"><i class="no-highlight">61</i>&nbsp;        val successType = getParameterUpperBound(0, successWrapperType)</b>
+<b class="fc"><i class="no-highlight">62</i>&nbsp;        return errorType to successType</b>
+<i class="no-highlight">63</i>&nbsp;    }
+<i class="no-highlight">64</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-01-03 23:41</div>
+</div>
+</body>
+</html>
