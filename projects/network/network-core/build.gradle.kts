@@ -1,7 +1,7 @@
 plugins {
     `kotlin-multiplatform`
     `kotlin-serialization`
-    `javiersc-kotlin-library`
+    `javiersc-kotlin-config`
     `javiersc-publish`
 }
 

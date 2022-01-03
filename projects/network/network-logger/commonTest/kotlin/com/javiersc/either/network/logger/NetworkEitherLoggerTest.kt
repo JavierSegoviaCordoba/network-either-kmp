@@ -1,3 +1,5 @@
+package com.javiersc.either.network.logger
+
 import com.javiersc.either.network.HttpStatusCode
 import com.javiersc.either.network.NetworkEither
 import com.javiersc.either.network.buildNetworkFailureHttp
@@ -5,7 +7,6 @@ import com.javiersc.either.network.buildNetworkFailureLocal
 import com.javiersc.either.network.buildNetworkFailureRemote
 import com.javiersc.either.network.buildNetworkFailureUnknown
 import com.javiersc.either.network.buildNetworkSuccess
-import com.javiersc.either.network.logger.alsoPrettyPrint
 import io.kotest.matchers.shouldBe
 import io.ktor.http.headersOf
 import io.ktor.util.toMap

@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.39`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
 - `gradle -> 7.3.3`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.0`

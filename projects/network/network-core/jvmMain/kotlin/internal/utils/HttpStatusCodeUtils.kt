@@ -1,4 +1,4 @@
-package com.javiersc.either.network.internal.extensions
+package com.javiersc.either.network.internal.utils
 
 import io.ktor.http.Headers
 import io.ktor.http.HttpStatusCode

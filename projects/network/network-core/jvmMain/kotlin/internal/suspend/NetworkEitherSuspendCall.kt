@@ -6,8 +6,8 @@ import com.javiersc.either.network.buildNetworkFailureLocal
 import com.javiersc.either.network.buildNetworkFailureRemote
 import com.javiersc.either.network.buildNetworkFailureUnknown
 import com.javiersc.either.network.buildNetworkSuccess
-import com.javiersc.either.network.internal.extensions.emptyHeader
 import com.javiersc.either.network.internal.hasBody
+import com.javiersc.either.network.internal.utils.emptyHeader
 import com.javiersc.either.network.internal.utils.printlnError
 import com.javiersc.either.network.internal.utils.printlnWarning
 import io.ktor.http.HttpStatusCode

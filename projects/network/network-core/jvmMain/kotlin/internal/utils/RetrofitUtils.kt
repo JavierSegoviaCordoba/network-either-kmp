@@ -1,6 +1,5 @@
 package com.javiersc.either.network.internal.utils
 
-import com.javiersc.either.network.internal.extensions.toHttpStatusCode
 import io.ktor.http.Headers
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
