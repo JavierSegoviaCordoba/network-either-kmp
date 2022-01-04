@@ -1375,7 +1375,7 @@
       ]
     },
     {
-      "name": "Gradle: com.javiersc.run-blocking:run-blocking-core:commonMain:0.1.0-beta.2",
+      "name": "Gradle: com.javiersc.run-blocking:run-blocking-core:commonMain:0.1.0-beta.3",
       "roots": [
         "jar://$PROJECT_DIR$/.gradle/kotlin/sourceSetMetadata/network-core.network.projects.either/commonMain/implementation/com.javiersc.run-blocking-run-blocking-core/com.javiersc.run-blocking-run-blocking-core-commonMain.klib!/"
       ],
@@ -1510,9 +1510,9 @@
       "properties": {}
     },
     {
-      "name": "Gradle: com.javiersc.run-blocking:suspend-test:commonMain:0.1.0-beta.2",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.0",
       "roots": [
-        "jar://$PROJECT_DIR$/.gradle/kotlin/sourceSetMetadata/network-core.network.projects.either/commonTest/implementation/com.javiersc.run-blocking-suspend-test/com.javiersc.run-blocking-suspend-test-commonMain.klib!/"
+        "jar://$PROJECT_DIR$/.gradle/kotlin/sourceSetMetadata/network-core.network.projects.either/commonTest/implementation/org.jetbrains.kotlinx-kotlinx-coroutines-test/org.jetbrains.kotlinx-kotlinx-coroutines-test-commonMain.klib!/"
       ],
       "properties": {}
     },
@@ -1572,9 +1572,9 @@
       ]
     },
     {
-      "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.2",
+      "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/com.javiersc.run-blocking/run-blocking-core-jvm/0.1.0-beta.2/2eb708fda6b0a4376da26f31bd1f7e7dd65e5469/run-blocking-core-jvm-0.1.0-beta.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/com.javiersc.run-blocking/run-blocking-core-jvm/0.1.0-beta.3/6ff5a4e4803dce2a487a0fbd60d92c57f75db3e/run-blocking-core-jvm-0.1.0-beta.3.jar!/"
       ]
     },
     {
@@ -1779,15 +1779,15 @@
       ]
     },
     {
-      "name": "Gradle: junit:junit:4.13",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.0",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/junit/junit/4.13/e49ccba652b735c93bd6e6f59760d8254cf597dd/junit-4.13.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-test-jvm/1.6.0/fddf2484b3716e9cbca887047c184333d295b011/kotlinx-coroutines-test-jvm-1.6.0.jar!/"
       ]
     },
     {
-      "name": "Gradle: com.javiersc.run-blocking:suspend-test-jvm:0.1.0-beta.2",
+      "name": "Gradle: junit:junit:4.13",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/com.javiersc.run-blocking/suspend-test-jvm/0.1.0-beta.2/ce8abf8d1a1668f975eaf47db31f5cffe7e10dd7/suspend-test-jvm-0.1.0-beta.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/junit/junit/4.13/e49ccba652b735c93bd6e6f59760d8254cf597dd/junit-4.13.jar!/"
       ]
     },
     {

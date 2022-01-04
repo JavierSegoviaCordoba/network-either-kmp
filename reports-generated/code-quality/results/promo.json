@@ -6,27 +6,58 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"toResource\" is never used",
+  "comment": "Function \"successDataOrNull\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
       "type": "method",
-      "path": "projects/network/network-resource/commonMain/kotlin/com/javiersc/either/network/resource/NetworkEitherToResource.kt",
+      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceOr.kt",
       "language": "kotlin",
-      "line": 147,
-      "offset": 55,
-      "length": 10,
+      "line": 9,
+      "offset": 39,
+      "length": 17,
       "code": {
-        "startLine": 145,
-        "length": 10,
-        "offset": 109,
-        "surroundingCode": " */\n@JvmName(\"toResourceWithSuccessDataAndErrorCode\")\npublic inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(\n    success: (NS) -> S,\n    httpError: (HttpStatusCode) -> F,"
+        "startLine": 7,
+        "length": 17,
+        "offset": 91,
+        "surroundingCode": "    if (this is ResourceSuccess<S>) this else null\n\npublic fun <F, S> ResourceEither<F, S>.successDataOrNull(): S? =\n    if (this is ResourceSuccess<S>) right.data else null"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.network.network-resource.commonMain",
+    "module": "either.projects.resource-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "-1255339598038577374"
+  "hash": "-2195170149349149491"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Function \"successOrNull\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceOr.kt",
+      "language": "kotlin",
+      "line": 6,
+      "offset": 39,
+      "length": 13,
+      "code": {
+        "startLine": 4,
+        "length": 13,
+        "offset": 92,
+        "surroundingCode": "import com.javiersc.either.resource.ResourceSuccess\n\npublic fun <F, S> ResourceEither<F, S>.successOrNull(): ResourceSuccess<S>? =\n    if (this is ResourceSuccess<S>) this else null\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "-4078336491634993750"
 }]}

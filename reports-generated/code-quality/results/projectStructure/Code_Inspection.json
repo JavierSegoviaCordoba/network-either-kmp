@@ -831,7 +831,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.2",
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -996,6 +996,10 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.0",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
           "type": "Library"
         },
@@ -1004,19 +1008,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: junit:junit:4.13",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.2",
-          "type": "Library"
-        },
-        {
           "name": "Gradle: com.squareup.okio:okio:3.0.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:suspend-test-jvm:0.1.0-beta.2",
+          "name": "Gradle: junit:junit:4.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -1181,7 +1181,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core:commonMain:0.1.0-beta.2",
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core:commonMain:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -1257,13 +1257,13 @@
           "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest",
           "sourceFolders": [
             {
-              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/resources",
-              "type": "TestResource",
+              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/kotlin",
+              "type": "TestSource",
               "packagePrefix": ""
             },
             {
-              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/kotlin",
-              "type": "TestSource",
+              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/resources",
+              "type": "TestResource",
               "packagePrefix": ""
             }
           ]
@@ -1287,7 +1287,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core:commonMain:0.1.0-beta.2",
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core:commonMain:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -1311,7 +1311,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:suspend-test:commonMain:0.1.0-beta.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.0",
           "type": "Library"
         },
         {
@@ -1470,7 +1470,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.2",
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -1677,7 +1677,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.2",
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -2138,7 +2138,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.2",
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -2321,7 +2321,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.2",
+          "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
           "type": "Library"
         },
         {
@@ -2754,7 +2754,7 @@
           "type": "Library"
         },
         {
-          "name": "/data/project/buildSrc/.gradle/7.3.3/dependencies-accessors/1b2f4094e78f0f1e2fb3b8ff19ee8413266f74a2/classes",
+          "name": "/data/project/buildSrc/.gradle/7.3.3/dependencies-accessors/18d332d99c409e30df09f928f38f9493eab62fd3/classes",
           "type": "Library"
         },
         {
@@ -3809,7 +3809,7 @@
           "type": "Library"
         },
         {
-          "name": "/data/project/buildSrc/.gradle/7.3.3/dependencies-accessors/1b2f4094e78f0f1e2fb3b8ff19ee8413266f74a2/classes",
+          "name": "/data/project/buildSrc/.gradle/7.3.3/dependencies-accessors/18d332d99c409e30df09f928f38f9493eab62fd3/classes",
           "type": "Library"
         },
         {

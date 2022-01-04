@@ -1,33 +1,5 @@
 {"version":"3","listProblem":[{
   "tool": "Code Inspection",
-  "category": "Migration",
-  "type": "Usage of redundant or deprecated syntax or deprecated symbols",
-  "severity": "High",
-  "comment": "Unnecessary safe call on a non-null receiver of type \\[ERROR : \\]",
-  "detailsInfo": "Reports obsolete language features and unnecessarily verbose code constructs during the code cleanup operation (**Code \\| Code Cleanup** ).\n\n\nA quick-fix automatically replaces usages of obsolete language features or unnecessarily verbose code constructs with compact and up-to-date syntax.\n\n\nIt also replaces deprecated symbols with their proposed substitutions.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/internal/ExceptionExtensions.kt",
-      "language": "kotlin",
-      "line": 6,
-      "offset": 26,
-      "length": 2,
-      "code": {
-        "startLine": 4,
-        "length": 2,
-        "offset": 79,
-        "surroundingCode": "\ninternal val SerializationException.hasBody: Boolean\n    get() = !this.message?.substringAfter(\"JSON input:\").isNullOrBlank()\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.projects.network.network-core.commonMain",
-    "inspectionName": "KotlinDeprecation"
-  },
-  "hash": "9236136db91e93a79c6a96f09771aae6fb65af92d72963c89cd7c7029d29c44a"
-},{
-  "tool": "Code Inspection",
   "category": "JVM languages",
   "type": "Unstable API Usage",
   "severity": "High",
