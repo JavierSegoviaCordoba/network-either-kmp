@@ -6,10 +6,10 @@ import com.javiersc.either.network.buildNetworkFailureUnknown
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.retrofit.BaseTest
-import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.string.shouldContain
 import io.kotest.matchers.types.shouldBeTypeOf
 import kotlin.test.Test
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.SerializationException
 import org.junit.Ignore
 
@@ -20,7 +20,7 @@ internal class MalformedJsonTest : BaseTest<ErrorDTO, DogDTO>() {
         buildNetworkFailureUnknown(SerializationException(partialMessage))
 
     @Test
-    fun `suspend call 200 with a malformed json`() = suspendTest {
+    fun `suspend call 200 with a malformed json`() = runTest {
         service
             .getDog()
             .shouldBeTypeOf<NetworkFailureUnknown>()
@@ -34,7 +34,7 @@ internal class MalformedJsonTest : BaseTest<ErrorDTO, DogDTO>() {
 
     @Test
     @Ignore("Parallel execution breaks, refactor to use RetrofitMock or another framework")
-    fun `async call  200 with a malformed json`() = suspendTest {
+    fun `async call  200 with a malformed json`() = runTest {
         service
             .getDogAsync()
             .await()

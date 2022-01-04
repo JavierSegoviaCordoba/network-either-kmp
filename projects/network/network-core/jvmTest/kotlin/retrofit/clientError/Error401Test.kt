@@ -5,10 +5,10 @@ import com.javiersc.either.network.buildNetworkFailureHttp
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
 import com.javiersc.either.network.retrofit.BaseTest
-import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.shouldBe
 import kotlin.test.Ignore
 import kotlin.test.Test
+import kotlinx.coroutines.test.runTest
 
 internal class Error401Test : BaseTest<ErrorDTO, DogDTO>() {
 
@@ -16,9 +16,9 @@ internal class Error401Test : BaseTest<ErrorDTO, DogDTO>() {
     override val expected: NetworkEither<ErrorDTO, DogDTO> =
         buildNetworkFailureHttp(error, code, headers)
 
-    @Test fun `suspend call 401`() = suspendTest { service.getDog() shouldBe expected }
+    @Test fun `suspend call 401`() = runTest { service.getDog() shouldBe expected }
 
     @Test
     @Ignore("Parallel execution breaks, refactor to use RetrofitMock or another framework")
-    fun `async call 401`() = suspendTest { service.getDogAsync().await() shouldBe expected }
+    fun `async call 401`() = runTest { service.getDogAsync().await() shouldBe expected }
 }

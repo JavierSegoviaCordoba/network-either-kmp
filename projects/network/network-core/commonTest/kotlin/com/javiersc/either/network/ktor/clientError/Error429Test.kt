@@ -5,10 +5,10 @@ import com.javiersc.either.network.buildNetworkFailureHttp
 import com.javiersc.either.network.ktor.BaseTest
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
-import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.shouldBe
 import io.ktor.client.request.get
 import kotlin.test.Test
+import kotlinx.coroutines.test.runTest
 
 internal class Error429Test : BaseTest<ErrorDTO, DogDTO>() {
 
@@ -17,7 +17,7 @@ internal class Error429Test : BaseTest<ErrorDTO, DogDTO>() {
         buildNetworkFailureHttp(error, code, headers)
 
     @Test
-    fun `Request 429`() = suspendTest {
+    fun `Request 429`() = runTest {
         networkEitherKtor<ErrorDTO, DogDTO> { get("path") } shouldBe expected
     }
 }

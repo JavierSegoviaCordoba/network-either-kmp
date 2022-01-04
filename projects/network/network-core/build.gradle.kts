@@ -28,8 +28,8 @@ kotlin {
         commonTest {
             dependencies {
                 libs.apply {
-                    implementation(javiersc.runBlocking.suspendTest)
                     implementation(jetbrains.kotlin.kotlinTest)
+                    implementation(jetbrains.kotlinx.kotlinxCoroutinesTest)
                     implementation(kotest.kotestAssertionsCore)
                     implementation(ktor.ktorClientMock)
                     implementation(ktor.ktorClientSerialization)

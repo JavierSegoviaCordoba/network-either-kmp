@@ -5,10 +5,10 @@ import com.javiersc.either.network.buildNetworkSuccess
 import com.javiersc.either.network.ktor.BaseTest
 import com.javiersc.either.network.models.DogDTO
 import com.javiersc.either.network.models.ErrorDTO
-import com.javiersc.runBlocking.suspendTest
 import io.kotest.matchers.shouldBe
 import io.ktor.client.request.get
 import kotlin.test.Test
+import kotlinx.coroutines.test.runTest
 
 internal class Success201Test : BaseTest<ErrorDTO, DogDTO>() {
 
@@ -16,7 +16,7 @@ internal class Success201Test : BaseTest<ErrorDTO, DogDTO>() {
     override val expected: NetworkEither<ErrorDTO, DogDTO> = buildNetworkSuccess(dog, code, headers)
 
     @Test
-    fun `Request 201`() = suspendTest {
+    fun `Request 201`() = runTest {
         networkEitherKtor<ErrorDTO, DogDTO> { get("path") } shouldBe expected
     }
 }
