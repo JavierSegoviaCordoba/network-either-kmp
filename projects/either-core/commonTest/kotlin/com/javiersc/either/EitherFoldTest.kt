@@ -7,7 +7,7 @@ import kotlin.test.Test
 class EitherFoldTest {
 
     @Test
-    fun `Fold left`() {
+    fun fold_left() {
         var left = 0
         var right = 0
         val either: Either<Int, Int> = Either.Left(1)
@@ -20,7 +20,7 @@ class EitherFoldTest {
     }
 
     @Test
-    fun `Fold right`() {
+    fun fold_right() {
         var left = 0
         var right = 0
         val either: Either<Int, Int> = Either.Right(1)

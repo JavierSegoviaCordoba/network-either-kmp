@@ -10,7 +10,7 @@ import kotlin.test.Test
 class EitherMapTest {
 
     @Test
-    fun `Left mappers`() {
+    fun left_mappers() {
         val either: Either<Int, String> = Either.Left(1)
         either
             .map(left = { it + 1 }, right = { "" })
@@ -21,7 +21,7 @@ class EitherMapTest {
     }
 
     @Test
-    fun `Right mappers`() {
+    fun right_mappers() {
         val either: Either<String, Int> = Either.Right(1)
         either
             .map(left = { "" }, right = { it + 1 })
