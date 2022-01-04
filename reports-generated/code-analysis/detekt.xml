@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="4.3">
 <file name="projects/network/network-core/jvmMain/kotlin/internal/utils/RetrofitUtils.kt">
-	<error line="17" column="22" severity="warning" message="In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty." source="detekt.SpreadOperator" />
-	<error line="20" column="22" severity="warning" message="In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty." source="detekt.SpreadOperator" />
+	<error line="16" column="22" severity="warning" message="In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty." source="detekt.SpreadOperator" />
+	<error line="19" column="22" severity="warning" message="In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty." source="detekt.SpreadOperator" />
 </file>
 <file name="buildSrc/build.gradle.kts">
 	<error line="15" column="5" severity="warning" message="This comment contains &apos;TODO:&apos; that has been defined as forbidden in detekt." source="detekt.ForbiddenComment" />

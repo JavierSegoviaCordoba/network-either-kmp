@@ -1,0 +1,137 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > HttpExceptionSuspendHandlerKt</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.javiersc.either.network.internal.suspend</a>
+</div>
+
+<h1>Coverage Summary for Class: HttpExceptionSuspendHandlerKt (com.javiersc.either.network.internal.suspend)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Block, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">HttpExceptionSuspendHandlerKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.network.internal.suspend
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.javiersc.either.network.NetworkEither
+<i class="no-highlight">4</i>&nbsp;import com.javiersc.either.network.internal.utils.headers
+<i class="no-highlight">5</i>&nbsp;import com.javiersc.either.network.internal.utils.httpStatusCode
+<i class="no-highlight">6</i>&nbsp;import io.ktor.util.toMap
+<i class="no-highlight">7</i>&nbsp;import okhttp3.ResponseBody
+<i class="no-highlight">8</i>&nbsp;import retrofit2.Callback
+<i class="no-highlight">9</i>&nbsp;import retrofit2.Converter
+<i class="no-highlight">10</i>&nbsp;import retrofit2.HttpException
+<i class="no-highlight">11</i>&nbsp;
+<i class="no-highlight">12</i>&nbsp;internal fun &lt;F : Any, S : Any&gt; HttpException.httpExceptionSuspendHandler(
+<i class="no-highlight">13</i>&nbsp;    errorConverter: Converter&lt;ResponseBody, F&gt;,
+<i class="no-highlight">14</i>&nbsp;    call: NetworkEitherSuspendCall&lt;F, S&gt;,
+<i class="no-highlight">15</i>&nbsp;    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;,
+<i class="no-highlight">16</i>&nbsp;) {
+<b class="nc"><i class="no-highlight">17</i>&nbsp;    val errorBody: F? = response()?.errorBody()?.let(errorConverter::convert)</b>
+<i class="no-highlight">18</i>&nbsp;
+<b class="nc"><i class="no-highlight">19</i>&nbsp;    handleSuspend(call, callback, httpStatusCode.value, null, errorBody, headers = headers.toMap())</b>
+<i class="no-highlight">20</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-01-04 00:04</div>
+</div>
+</body>
+</html>

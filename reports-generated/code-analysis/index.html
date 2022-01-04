@@ -75,7 +75,7 @@ pre {
     <li>374 number of properties</li>
     <li>323 number of functions</li>
     <li>136 number of classes</li>
-    <li>27 number of packages</li>
+    <li>26 number of packages</li>
     <li>166 number of kt files</li>
   </ul>
 </div>
@@ -85,8 +85,8 @@ pre {
 
 <div>
   <ul>
-    <li>5,667 lines of code (loc)</li>
-    <li>4,513 source lines of code (sloc)</li>
+    <li>5,666 lines of code (loc)</li>
+    <li>4,512 source lines of code (sloc)</li>
     <li>2,584 logical lines of code (lloc)</li>
     <li>140 comment lines of code (cloc)</li>
     <li>568 cyclomatic complexity (mcc)</li>
@@ -105,24 +105,24 @@ pre {
   <details id="SpreadOperator" open="open">
     <summary class="rule-container"><span class="rule">SpreadOperator: 2 </span><span class="description">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span></summary>
     <ul>
-      <li><span class="location">projects/network/network-core/jvmMain/kotlin/internal/utils/RetrofitUtils.kt:17:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
-        <pre><code><span class="lineno">  14 </span>    get() = code() toHttpStatusCode message()
-<span class="lineno">  15 </span>
-<span class="lineno">  16 </span>internal val HttpException.headers: Headers
-<span class="lineno">  17 </span>    get() = headersOf<span class="error">(*response()?.headers().toOkHttpHeaders())</span>
-<span class="lineno">  18 </span>
-<span class="lineno">  19 </span>internal val Response&lt;*&gt;.headers: Headers
-<span class="lineno">  20 </span>    get() = headersOf(*headers().toOkHttpHeaders())
+      <li><span class="location">projects/network/network-core/jvmMain/kotlin/internal/utils/RetrofitUtils.kt:16:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
+        <pre><code><span class="lineno">  13 </span>    get() = code() toHttpStatusCode message()
+<span class="lineno">  14 </span>
+<span class="lineno">  15 </span>internal val HttpException.headers: Headers
+<span class="lineno">  16 </span>    get() = headersOf<span class="error">(*response()?.headers().toOkHttpHeaders())</span>
+<span class="lineno">  17 </span>
+<span class="lineno">  18 </span>internal val Response&lt;*&gt;.headers: Headers
+<span class="lineno">  19 </span>    get() = headersOf(*headers().toOkHttpHeaders())
 </code></pre>
       </li>
-      <li><span class="location">projects/network/network-core/jvmMain/kotlin/internal/utils/RetrofitUtils.kt:20:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
-        <pre><code><span class="lineno">  17 </span>    get() = headersOf(*response()?.headers().toOkHttpHeaders())
-<span class="lineno">  18 </span>
-<span class="lineno">  19 </span>internal val Response&lt;*&gt;.headers: Headers
-<span class="lineno">  20 </span>    get() = headersOf<span class="error">(*headers().toOkHttpHeaders())</span>
-<span class="lineno">  21 </span>
-<span class="lineno">  22 </span>private fun okhttp3.Headers?.toOkHttpHeaders(): Array&lt;Pair&lt;String, List&lt;String&gt;&gt;&gt; {
-<span class="lineno">  23 </span>    return this?.toMultimap()?.map { header -&gt; header.key to header.value }?.toTypedArray()
+      <li><span class="location">projects/network/network-core/jvmMain/kotlin/internal/utils/RetrofitUtils.kt:19:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
+        <pre><code><span class="lineno">  16 </span>    get() = headersOf(*response()?.headers().toOkHttpHeaders())
+<span class="lineno">  17 </span>
+<span class="lineno">  18 </span>internal val Response&lt;*&gt;.headers: Headers
+<span class="lineno">  19 </span>    get() = headersOf<span class="error">(*headers().toOkHttpHeaders())</span>
+<span class="lineno">  20 </span>
+<span class="lineno">  21 </span>private fun okhttp3.Headers?.toOkHttpHeaders(): Array&lt;Pair&lt;String, List&lt;String&gt;&gt;&gt; {
+<span class="lineno">  22 </span>    return this?.toMultimap()?.map { header -&gt; header.key to header.value }?.toTypedArray()
 </code></pre>
       </li>
     </ul>
@@ -146,7 +146,7 @@ pre {
 </div>
 
 
-generated with <a href="https://detekt.github.io/">detekt version 1.19.0</a> on 2022-01-03 23:41:05 UTC.
+generated with <a href="https://detekt.github.io/">detekt version 1.19.0</a> on 2022-01-04 00:03:38 UTC.
 
 </body>
 </html>

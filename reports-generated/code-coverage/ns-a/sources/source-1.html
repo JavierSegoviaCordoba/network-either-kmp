@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > HttpStatusCodeExtensionsKt</title>
+  <title>Coverage Report > NetworkEitherLoggerKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,10 +17,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.either.network.ktor</a>
+    <a href="../index.html">com.javiersc.either.network.logger</a>
 </div>
 
-<h1>Coverage Summary for Class: HttpStatusCodeExtensionsKt (com.javiersc.either.network.ktor)</h1>
+<h1>Coverage Summary for Class: NetworkEitherLoggerKt (com.javiersc.either.network.logger)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -35,15 +35,11 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 <th class="coverageStat 
 ">
-  Block, %
-</th>
-<th class="coverageStat 
-">
   Line, %
 </th>
 </tr>
 <tr>
-  <td class="name">HttpStatusCodeExtensionsKt</td>
+  <td class="name">NetworkEitherLoggerKt</td>
 <td class="coverageStat">
   <span class="percent">
     100%
@@ -54,26 +50,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    50%
   </span>
   <span class="absValue">
-    (2/2)
+    (2/4)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    80%
   </span>
   <span class="absValue">
-    (8/8)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (2/2)
+    (16/20)
   </span>
 </td>
 </tr>
@@ -85,19 +73,55 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.network.ktor
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;@file:Suppress(&quot;TopLevelPropertyNaming&quot;)
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import io.ktor.http.Headers
-<i class="no-highlight">4</i>&nbsp;import io.ktor.http.HttpStatusCode
-<i class="no-highlight">5</i>&nbsp;import io.ktor.http.headersOf
-<i class="no-highlight">6</i>&nbsp;
-<i class="no-highlight">7</i>&nbsp;internal infix fun Int.toHttpStatusCode(message: String): HttpStatusCode {
-<b class="fc"><i class="no-highlight">8</i>&nbsp;    return HttpStatusCode.allStatusCodes.find { it.value == this } ?: HttpStatusCode(this, message)</b>
-<i class="no-highlight">9</i>&nbsp;}
-<i class="no-highlight">10</i>&nbsp;
-<i class="no-highlight">11</i>&nbsp;@PublishedApi
-<i class="no-highlight">12</i>&nbsp;internal val emptyHeader: Headers
-<b class="fc"><i class="no-highlight">13</i>&nbsp;    get() = headersOf(&quot;Content-Length&quot;, listOf(&quot;0&quot;))</b>
+<i class="no-highlight">3</i>&nbsp;package com.javiersc.either.network.logger
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;import com.javiersc.either.network.NetworkEither
+<i class="no-highlight">6</i>&nbsp;import com.javiersc.either.network.extensions.fold
+<i class="no-highlight">7</i>&nbsp;import com.javiersc.mokoki.extensions.logE
+<i class="no-highlight">8</i>&nbsp;import com.javiersc.mokoki.serialization.extensions.logSerializableE
+<i class="no-highlight">9</i>&nbsp;import com.javiersc.mokoki.serialization.extensions.logSerializableV
+<i class="no-highlight">10</i>&nbsp;import kotlinx.serialization.KSerializer
+<i class="no-highlight">11</i>&nbsp;import kotlinx.serialization.Serializable
+<i class="no-highlight">12</i>&nbsp;import kotlinx.serialization.serializer
+<i class="no-highlight">13</i>&nbsp;
+<b class="nc"><i class="no-highlight">14</i>&nbsp;public fun &lt;F, S&gt; NetworkEither&lt;F, S&gt;.alsoPrettyPrint(</b>
+<b class="nc"><i class="no-highlight">15</i>&nbsp;    tag: String = &quot;NetworkEither&quot;,</b>
+<i class="no-highlight">16</i>&nbsp;    failureSerializer: KSerializer&lt;F&gt;,
+<i class="no-highlight">17</i>&nbsp;    successSerializer: KSerializer&lt;S&gt;,
+<i class="no-highlight">18</i>&nbsp;): NetworkEither&lt;F, S&gt; {
+<b class="fc"><i class="no-highlight">19</i>&nbsp;    fold(</b>
+<i class="no-highlight">20</i>&nbsp;        success = { data, code, headers -&gt;
+<b class="fc"><i class="no-highlight">21</i>&nbsp;            logSerializableV(</b>
+<b class="fc"><i class="no-highlight">22</i>&nbsp;                tag,</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;                Response.serializer(successSerializer),</b>
+<b class="fc"><i class="no-highlight">24</i>&nbsp;                Response(data, code.value, headers)</b>
+<i class="no-highlight">25</i>&nbsp;            )
+<b class="fc"><i class="no-highlight">26</i>&nbsp;        },</b>
+<i class="no-highlight">27</i>&nbsp;        failureHttp = { error, code, headers -&gt;
+<b class="fc"><i class="no-highlight">28</i>&nbsp;            logSerializableE(</b>
+<b class="fc"><i class="no-highlight">29</i>&nbsp;                tag,</b>
+<b class="fc"><i class="no-highlight">30</i>&nbsp;                Response.serializer(failureSerializer),</b>
+<b class="fc"><i class="no-highlight">31</i>&nbsp;                Response(error, code.value, headers)</b>
+<i class="no-highlight">32</i>&nbsp;            )
+<b class="fc"><i class="no-highlight">33</i>&nbsp;        },</b>
+<b class="fc"><i class="no-highlight">34</i>&nbsp;        failureLocal = { logE(tag, LocalError) },</b>
+<b class="fc"><i class="no-highlight">35</i>&nbsp;        failureRemote = { logE(tag, RemoteError) },</b>
+<b class="fc"><i class="no-highlight">36</i>&nbsp;        failureUnknown = { throwable -&gt; logE(tag, throwable.stackTraceToString()) },</b>
+<i class="no-highlight">37</i>&nbsp;    )
+<b class="fc"><i class="no-highlight">38</i>&nbsp;    return this</b>
+<i class="no-highlight">39</i>&nbsp;}
+<i class="no-highlight">40</i>&nbsp;
+<b class="nc"><i class="no-highlight">41</i>&nbsp;public inline fun &lt;reified F, reified S&gt; NetworkEither&lt;F, S&gt;.alsoPrettyPrint(</b>
+<b class="nc"><i class="no-highlight">42</i>&nbsp;    tag: String = &quot;NetworkEither&quot;,</b>
+<b class="fc"><i class="no-highlight">43</i>&nbsp;): NetworkEither&lt;F, S&gt; = alsoPrettyPrint(tag, serializer(), serializer())</b>
+<i class="no-highlight">44</i>&nbsp;
+<i class="no-highlight">45</i>&nbsp;@Serializable
+<i class="no-highlight">46</i>&nbsp;internal data class Response&lt;T&gt;(val body: T, val code: Int, val headers: Map&lt;String, List&lt;String&gt;&gt;)
+<i class="no-highlight">47</i>&nbsp;
+<i class="no-highlight">48</i>&nbsp;private const val LocalError = &quot;Internet not available&quot;
+<i class="no-highlight">49</i>&nbsp;private const val RemoteError = &quot;Remote not available&quot;
 </div>
 </pre>
 </div>
@@ -124,7 +148,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-01-03 23:41</div>
+    <div style="float:right;">generated on 2022-01-04 00:04</div>
 </div>
 </body>
 </html>

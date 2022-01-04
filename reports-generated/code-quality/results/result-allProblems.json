@@ -1,33 +1,5 @@
 {"version":"3","listProblem":[{
   "tool": "Code Inspection",
-  "category": "Java interop issues",
-  "type": "Package name does not match containing directory",
-  "severity": "Critical",
-  "comment": "Package directive does not match the file location",
-  "detailsInfo": "Reports `package` directives that do not match the location of the file.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "projects/network/network-core/jvmMain/kotlin/internal/utils/HttpStatusCodeUtils.kt",
-      "language": "kotlin",
-      "line": 1,
-      "offset": 1,
-      "length": 55,
-      "code": {
-        "startLine": 1,
-        "length": 55,
-        "offset": 0,
-        "surroundingCode": "package com.javiersc.either.network.internal.extensions\n\nimport io.ktor.http.Headers"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.projects.network.network-core.jvmMain",
-    "inspectionName": "PackageDirectoryMismatch"
-  },
-  "hash": "15aae121b9b31496fc110043cf8fca9a5ceabf0454d1463a089a1f8edd3dfe3d"
-},{
-  "tool": "Code Inspection",
   "category": "JVM languages",
   "type": "Unstable API Usage",
   "severity": "High",
