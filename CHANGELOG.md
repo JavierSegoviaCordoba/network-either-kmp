@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.3`
+- `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.3`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.39`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
 - `gradle -> 7.3.3`
@@ -23,12 +25,9 @@
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.10`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.9`
-- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.24`
 - `com.android.tools.build:gradle -> 7.0.4`
 - `io.ktor:ktor-client-mock -> 1.6.7`
 - `io.ktor:ktor-client-core -> 1.6.7`
-- `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.2`
-- `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.2`
 - `io.ktor:ktor-client-serialization -> 1.6.6`
 - `io.ktor:ktor-client-cio -> 1.6.6`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
