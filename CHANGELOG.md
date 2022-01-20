@@ -14,13 +14,13 @@
 
 ### Updated
 
+- `io.kotest:kotest-assertions-core -> 5.1.0`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.40`
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.3`
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.3`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
 - `gradle -> 7.3.3`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.0`
-- `io.kotest:kotest-assertions-core -> 5.0.3`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.10`
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.10`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
