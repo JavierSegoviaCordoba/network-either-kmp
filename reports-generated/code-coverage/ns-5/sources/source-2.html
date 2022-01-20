@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > Constants</title>
+  <title>Coverage Report > ExceptionExtensionsKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -20,14 +20,62 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">com.javiersc.either.network.internal</a>
 </div>
 
-<h1>Coverage Summary for Class: Constants (com.javiersc.either.network.internal)</h1>
+<h1>Coverage Summary for Class: ExceptionExtensionsKt (com.javiersc.either.network.internal)</h1>
 
 <table class="coverageStats">
 <tr>
   <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Block, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
 </tr>
 <tr>
-  <td class="name">Constants</td>
+  <td class="name">ExceptionExtensionsKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (4/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
 </tr>
 
 </table>
@@ -39,11 +87,10 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.network.internal
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;internal object Constants {
-<i class="no-highlight">4</i>&nbsp;    const val DnsTimeout = 2000
-<i class="no-highlight">5</i>&nbsp;    const val DnsUrl = &quot;https://8.8.8.8/&quot;
-<i class="no-highlight">6</i>&nbsp;    const val DnsPort = 53
-<i class="no-highlight">7</i>&nbsp;}
+<i class="no-highlight">3</i>&nbsp;import kotlinx.serialization.SerializationException
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;internal val SerializationException.hasBody: Boolean
+<b class="pc"><i class="no-highlight">6</i>&nbsp;    get() = !this.message?.substringAfter(&quot;JSON input:&quot;).isNullOrBlank()</b>
 </div>
 </pre>
 </div>
@@ -70,7 +117,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-01-04 15:21</div>
+    <div style="float:right;">generated on 2022-01-20 19:11</div>
 </div>
 </body>
 </html>
