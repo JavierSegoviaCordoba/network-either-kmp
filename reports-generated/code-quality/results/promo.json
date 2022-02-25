@@ -6,27 +6,89 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"toEither\" is never used",
+  "comment": "Function \"map\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
       "type": "method",
-      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/extensions/NetworkEitherToEither.kt",
+      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceEitherMap.kt",
       "language": "kotlin",
-      "line": 110,
-      "offset": 51,
-      "length": 8,
+      "line": 33,
+      "offset": 37,
+      "length": 3,
       "code": {
-        "startLine": 108,
-        "length": 8,
-        "offset": 96,
-        "surroundingCode": " */\n@JvmName(\"toEitherWithDataAndErrorCode\")\npublic inline fun <F, S, L, R> NetworkEither<F, S>.toEither(\n    success: (S) -> R,\n    httpError: (HttpStatusCode) -> L,"
+        "startLine": 31,
+        "length": 3,
+        "offset": 127,
+        "surroundingCode": "    Failure(failure(this.failure), fallbackData(this.data), isLoading ?: this.isLoading)\n\npublic inline fun <S, NS> Success<S>.map(isLoading: Boolean? = null, data: (S) -> NS): Success<NS> =\n    Success(data(this.data), isLoading ?: this.isLoading)"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.network.network-core.commonMain",
+    "module": "either.projects.resource-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "5452011929095889037"
+  "hash": "-8392039999114015316"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Function \"map\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceEitherMap.kt",
+      "language": "kotlin",
+      "line": 26,
+      "offset": 47,
+      "length": 3,
+      "code": {
+        "startLine": 24,
+        "length": 3,
+        "offset": 54,
+        "surroundingCode": "    }\n\npublic inline fun <F, S, NF, NS> Failure<F, S>.map(\n    failure: (F) -> NF,\n    fallbackData: (S?) -> NS? = { null },"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "-4839184018641717124"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Function \"buildResourceFailureLoading\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/Resource.kt",
+      "language": "kotlin",
+      "line": 14,
+      "offset": 18,
+      "length": 27,
+      "code": {
+        "startLine": 12,
+        "length": 27,
+        "offset": 82,
+        "surroundingCode": "public typealias ResourceSuccess<S> = Either.Right<Success<S>>\n\npublic fun <F, S> buildResourceFailureLoading(failure: F, data: S? = null): ResourceEither<F, S> =\n    Either.Left(Failure(failure, data, true))\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "2852883702971712040"
 }]}
