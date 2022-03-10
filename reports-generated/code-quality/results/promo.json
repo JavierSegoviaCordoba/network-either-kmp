@@ -6,29 +6,29 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"map\" is never used",
+  "comment": "Property \"DnsTimeout\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
-      "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceEitherMap.kt",
+      "type": "field",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/internal/Constants.kt",
       "language": "kotlin",
-      "line": 33,
-      "offset": 37,
-      "length": 3,
+      "line": 4,
+      "offset": 14,
+      "length": 10,
       "code": {
-        "startLine": 31,
-        "length": 3,
-        "offset": 127,
-        "surroundingCode": "    Failure(failure(this.failure), fallbackData(this.data), isLoading ?: this.isLoading)\n\npublic inline fun <S, NS> Success<S>.map(isLoading: Boolean? = null, data: (S) -> NS): Success<NS> =\n    Success(data(this.data), isLoading ?: this.isLoading)"
+        "startLine": 2,
+        "length": 10,
+        "offset": 43,
+        "surroundingCode": "\ninternal object Constants {\n    const val DnsTimeout = 2000\n    const val DnsUrl = \"https://8.8.8.8/\"\n    const val DnsPort = 53"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.resource-core.commonMain",
+    "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "-8392039999114015316"
+  "hash": "-2109313831371598203"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -37,58 +37,27 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"map\" is never used",
+  "comment": "Property \"DnsPort\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
-      "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceEitherMap.kt",
+      "type": "field",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/internal/Constants.kt",
       "language": "kotlin",
-      "line": 26,
-      "offset": 47,
-      "length": 3,
+      "line": 6,
+      "offset": 14,
+      "length": 7,
       "code": {
-        "startLine": 24,
-        "length": 3,
-        "offset": 54,
-        "surroundingCode": "    }\n\npublic inline fun <F, S, NF, NS> Failure<F, S>.map(\n    failure: (F) -> NF,\n    fallbackData: (S?) -> NS? = { null },"
+        "startLine": 4,
+        "length": 7,
+        "offset": 88,
+        "surroundingCode": "    const val DnsTimeout = 2000\n    const val DnsUrl = \"https://8.8.8.8/\"\n    const val DnsPort = 53\n}"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.resource-core.commonMain",
+    "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "-4839184018641717124"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused symbol",
-  "tags": [
-    "kotlin"
-  ],
-  "severity": "High",
-  "comment": "Function \"buildResourceFailureLoading\" is never used",
-  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/Resource.kt",
-      "language": "kotlin",
-      "line": 14,
-      "offset": 18,
-      "length": 27,
-      "code": {
-        "startLine": 12,
-        "length": 27,
-        "offset": 82,
-        "surroundingCode": "public typealias ResourceSuccess<S> = Either.Right<Success<S>>\n\npublic fun <F, S> buildResourceFailureLoading(failure: F, data: S? = null): ResourceEither<F, S> =\n    Either.Left(Failure(failure, data, true))\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.projects.resource-core.commonMain",
-    "inspectionName": "UnusedSymbol"
-  },
-  "hash": "2852883702971712040"
+  "hash": "872078774589154143"
 }]}
