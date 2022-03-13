@@ -1257,13 +1257,13 @@
           "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest",
           "sourceFolders": [
             {
-              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/kotlin",
-              "type": "TestSource",
+              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/resources",
+              "type": "TestResource",
               "packagePrefix": ""
             },
             {
-              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/resources",
-              "type": "TestResource",
+              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/kotlin",
+              "type": "TestSource",
               "packagePrefix": ""
             }
           ]
