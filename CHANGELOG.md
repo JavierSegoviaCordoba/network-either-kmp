@@ -14,7 +14,7 @@
 
 ### Updated
 
-- `io.kotest:kotest-assertions-core -> 5.2.0`
+- `io.kotest:kotest-assertions-core -> 5.2.1`
 - `gradle -> 7.4.1`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.41`
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.3`
