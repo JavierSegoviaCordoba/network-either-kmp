@@ -39,21 +39,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: HttpClient",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: ResponseException",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "method",
       "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
       "language": "kotlin",
-      "line": 28,
-      "offset": 66,
-      "length": 10,
+      "line": 66,
+      "offset": 51,
+      "length": 17,
       "code": {
-        "startLine": 26,
-        "length": 10,
-        "offset": 163,
-        "surroundingCode": "\n/** Create a wrapper which allow doing requests which will be transformed to `NetworkEither` */\npublic class NetworkEitherKtor(@PublishedApi internal val client: HttpClient) {\n\n    public suspend inline operator fun <reified F, reified S> invoke("
+        "startLine": 64,
+        "length": 17,
+        "offset": 66,
+        "surroundingCode": "\n@PublishedApi\ninternal suspend inline fun <reified F, reified S> ResponseException.serializeAsError(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> ="
       }
     }
   ],
@@ -61,7 +61,7 @@
     "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-7186087333759233908"
+  "hash": "-7300586649857113692"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -78,14 +78,14 @@
       "type": "method",
       "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
       "language": "kotlin",
-      "line": 83,
+      "line": 67,
       "offset": 20,
       "length": 14,
       "code": {
-        "startLine": 81,
+        "startLine": 65,
         "length": 14,
-        "offset": 112,
-        "surroundingCode": "@PublishedApi\ninternal suspend inline fun <reified F, reified S> Throwable.asNetworkEither(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> =\n    when (this) {"
+        "offset": 121,
+        "surroundingCode": "@PublishedApi\ninternal suspend inline fun <reified F, reified S> ResponseException.serializeAsError(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> =\n    try {"
       }
     }
   ],
@@ -93,7 +93,7 @@
     "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-1858113360064602179"
+  "hash": "-4966108588637846394"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -103,21 +103,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: ResponseException",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: HttpResponse",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "method",
       "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
       "language": "kotlin",
-      "line": 86,
-      "offset": 11,
-      "length": 17,
+      "line": 48,
+      "offset": 51,
+      "length": 12,
       "code": {
-        "startLine": 84,
-        "length": 17,
-        "offset": 54,
-        "surroundingCode": "): NetworkEither<F, S> =\n    when (this) {\n        is ResponseException -> serializeAsError(jsonSerializer)\n        is UnresolvedAddressException -> localOrFailureRemote()\n        is IOException -> localOrFailureRemote()"
+        "startLine": 46,
+        "length": 12,
+        "offset": 66,
+        "surroundingCode": "\n@PublishedApi\ninternal suspend inline fun <reified F, reified S> HttpResponse.asNetworkEither(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> ="
       }
     }
   ],
@@ -125,7 +125,7 @@
     "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-1798394468030320704"
+  "hash": "-8330600375361369387"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -135,21 +135,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: UnresolvedAddressException",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: JsonSerializer",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "method",
       "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
       "language": "kotlin",
-      "line": 87,
-      "offset": 11,
-      "length": 26,
+      "line": 49,
+      "offset": 20,
+      "length": 14,
       "code": {
-        "startLine": 85,
-        "length": 26,
-        "offset": 94,
-        "surroundingCode": "    when (this) {\n        is ResponseException -> serializeAsError(jsonSerializer)\n        is UnresolvedAddressException -> localOrFailureRemote()\n        is IOException -> localOrFailureRemote()\n        else -> buildNetworkFailureUnknown(this)"
+        "startLine": 47,
+        "length": 14,
+        "offset": 115,
+        "surroundingCode": "@PublishedApi\ninternal suspend inline fun <reified F, reified S> HttpResponse.asNetworkEither(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> =\n    with(this) {"
       }
     }
   ],
@@ -157,7 +157,7 @@
     "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "4861123359852467970"
+  "hash": "9034781076198162906"
 },{
   "tool": "Code Inspection",
   "category": "General",
