@@ -14,6 +14,10 @@
 
 ### Updated
 
+- `io.ktor:ktor-client-serialization -> 1.6.8`
+- `io.ktor:ktor-client-mock -> 1.6.8`
+- `io.ktor:ktor-client-core -> 1.6.8`
+- `io.ktor:ktor-client-cio -> 1.6.8`
 - `io.kotest:kotest-assertions-core -> 5.2.1`
 - `gradle -> 7.4.1`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.41`
@@ -26,10 +30,6 @@
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.9`
 - `com.android.tools.build:gradle -> 7.0.4`
-- `io.ktor:ktor-client-mock -> 1.6.7`
-- `io.ktor:ktor-client-core -> 1.6.7`
-- `io.ktor:ktor-client-serialization -> 1.6.6`
-- `io.ktor:ktor-client-cio -> 1.6.6`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
