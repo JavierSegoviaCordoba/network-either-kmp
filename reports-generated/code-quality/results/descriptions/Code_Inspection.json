@@ -1865,16 +1865,16 @@
           "description": "Invalid Wake Lock Tag  \n\nWake Lock tags must follow the naming conventions defined in the\\`PowerManager\\` documentation.  \n\nIssue id: InvalidWakeLockTag  \n\n<https://developer.android.com/reference/android/os/PowerManager.html>"
         },
         {
-          "shortName": "AndroidLintGradlePluginVersion",
-          "displayName": "Incompatible Android Gradle Plugin",
-          "enabled": true,
-          "description": "Incompatible Android Gradle Plugin  \n\nNot all versions of the Android Gradle plugin are compatible with all versions of the SDK. If you update your tools, or if you are trying to open a project that was built with an old version of the tools, you may need to update your plugin version number.  \n\nIssue id: GradlePluginVersion"
-        },
-        {
           "shortName": "AndroidLintExifInterface",
           "displayName": "Using android.media.ExifInterface",
           "enabled": true,
           "description": "Using `android.media.ExifInterface`  \n\nThe `android.media.ExifInterface` implementation has some known security bugs in older versions of Android. There is a new implementation available of this library in the support library, which is preferable.  \n\nIssue id: ExifInterface"
+        },
+        {
+          "shortName": "AndroidLintGradlePluginVersion",
+          "displayName": "Incompatible Android Gradle Plugin",
+          "enabled": true,
+          "description": "Incompatible Android Gradle Plugin  \n\nNot all versions of the Android Gradle plugin are compatible with all versions of the SDK. If you update your tools, or if you are trying to open a project that was built with an old version of the tools, you may need to update your plugin version number.  \n\nIssue id: GradlePluginVersion"
         },
         {
           "shortName": "AndroidLintMissingOnPlayFromSearch",
@@ -1943,16 +1943,16 @@
           "description": "Battery Life Issues  \n\nThis issue flags code that either  \n\\* negatively affects battery life, or  \n\\* uses APIs that have recently changed behavior to prevent background tasks from consuming memory and battery excessively.  \n\nGenerally, you should be using `WorkManager` instead.  \n\nFor more details on how to update your code, please see <https://developer.android.com/topic/performance/background-optimization>  \n\nIssue id: BatteryLife"
         },
         {
-          "shortName": "AndroidLintPermissionImpliesUnsupportedHardware",
-          "displayName": "Permission Implies Unsupported Hardware",
-          "enabled": true,
-          "description": "Permission Implies Unsupported Hardware  \n\nThe `<uses-permission>` element should not require a permission that implies an unsupported TV hardware feature. Google Play assumes that certain hardware related permissions indicate that the underlying hardware features are required by default. To fix the issue, consider declaring the corresponding `uses-feature` element with `required=\"false\"` attribute.  \n\nIssue id: PermissionImpliesUnsupportedHardware  \n\n<https://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions>"
-        },
-        {
           "shortName": "AndroidLintUseAlpha2",
           "displayName": "Using 3-letter Codes",
           "enabled": true,
           "description": "Using 3-letter Codes  \n\nFor compatibility with earlier devices, you should only use 3-letter language and region codes when there is no corresponding 2 letter code.  \n\nIssue id: UseAlpha2  \n\n<https://tools.ietf.org/html/bcp47>"
+        },
+        {
+          "shortName": "AndroidLintPermissionImpliesUnsupportedHardware",
+          "displayName": "Permission Implies Unsupported Hardware",
+          "enabled": true,
+          "description": "Permission Implies Unsupported Hardware  \n\nThe `<uses-permission>` element should not require a permission that implies an unsupported TV hardware feature. Google Play assumes that certain hardware related permissions indicate that the underlying hardware features are required by default. To fix the issue, consider declaring the corresponding `uses-feature` element with `required=\"false\"` attribute.  \n\nIssue id: PermissionImpliesUnsupportedHardware  \n\n<https://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions>"
         },
         {
           "shortName": "AndroidLintUnsupportedTvHardware",
@@ -2111,10 +2111,10 @@
           "description": "Description is under construction"
         },
         {
-          "shortName": "AndroidLintResourceName",
-          "displayName": "Resource with Wrong Prefix",
+          "shortName": "AndroidLintLockedOrientationActivity",
+          "displayName": "Incompatible screenOrientation manifest value",
           "enabled": true,
-          "description": "Resource with Wrong Prefix  \n\nIn Gradle projects you can specify a resource prefix that all resources in the project must conform to. This makes it easier to ensure that you don't accidentally combine resources from different libraries, since they all end up in the same shared app namespace.  \n\nIssue id: ResourceName"
+          "description": "Incompatible screenOrientation value  \n\nThe `<activity>` element should not be locked to any orientation so that users can take advantage of the multi-window environments and larger screens available on Android. To fix the issue, consider declaring the corresponding activity element with \\`screenOrientation=\"unspecified\"`or `\"fullSensor\"\\` attribute.  \n\nIssue id: LockedOrientationActivity  \n\n<https://developer.android.com/topic/arc/window-management>"
         },
         {
           "shortName": "AndroidLintMissingIntentFilterForMediaSearch",
@@ -2123,10 +2123,10 @@
           "description": "Missing MEDIA_PLAY_FROM_SEARCH intent-filter  \n\nTo support voice searches on Android Auto, you should also register an `intent-filter` for the action `android.media.action.MEDIA_PLAY_FROM_SEARCH`.  \nTo do this, add\n\n```\n`<intent-filter>`\n    `<action android:name=\"android.media.action.MEDIA_PLAY_FROM_SEARCH\" />`\n`</intent-filter>`\n```\n\nto your `<activity>` or `<service>`.  \n\nIssue id: MissingIntentFilterForMediaSearch  \n\n<https://developer.android.com/training/auto/audio/index.html#support_voice>"
         },
         {
-          "shortName": "AndroidLintLockedOrientationActivity",
-          "displayName": "Incompatible screenOrientation manifest value",
+          "shortName": "AndroidLintResourceName",
+          "displayName": "Resource with Wrong Prefix",
           "enabled": true,
-          "description": "Incompatible screenOrientation value  \n\nThe `<activity>` element should not be locked to any orientation so that users can take advantage of the multi-window environments and larger screens available on Android. To fix the issue, consider declaring the corresponding activity element with \\`screenOrientation=\"unspecified\"`or `\"fullSensor\"\\` attribute.  \n\nIssue id: LockedOrientationActivity  \n\n<https://developer.android.com/topic/arc/window-management>"
+          "description": "Resource with Wrong Prefix  \n\nIn Gradle projects you can specify a resource prefix that all resources in the project must conform to. This makes it easier to ensure that you don't accidentally combine resources from different libraries, since they all end up in the same shared app namespace.  \n\nIssue id: ResourceName"
         },
         {
           "shortName": "AndroidLintImpliedTouchscreenHardware",
@@ -2452,16 +2452,16 @@
           "description": "Reports method and constructor calls that implicitly use the platform default charset. These calls can produce different results on systems that use different default charsets. It might result in unexpected behaviour.\n\n**Example:**\n\n    void foo(byte[] bytes) {\n      String s = new String(bytes);\n    }\n\nYou can use a quick-fix that specifies the explicit UTF-8 charset if the corresponding overloaded method is available.\nAfter the quick-fix is applied:\n\n    void foo(byte[] bytes) {\n      String s = new String(bytes, StandardCharsets.UTF_8);\n    }\n"
         },
         {
-          "shortName": "UnnecessaryUnicodeEscape",
-          "displayName": "Unnecessary unicode escape sequence",
-          "enabled": false,
-          "description": "Reports unnecessary unicode escape sequences. For example, when the file encoding can handle the character without escaping it. Unicode control characters are not reported by this inspection (except for a line feed and a tab).\n\n**Example:**\n\n    String s = \"\\u0062\";\n"
-        },
-        {
           "shortName": "StringTokenizer",
           "displayName": "Use of StringTokenizer",
           "enabled": false,
           "description": "Reports usages of the `StringTokenizer` class. Excessive use of `StringTokenizer` is incorrect in an internationalized environment."
+        },
+        {
+          "shortName": "UnnecessaryUnicodeEscape",
+          "displayName": "Unnecessary unicode escape sequence",
+          "enabled": false,
+          "description": "Reports unnecessary unicode escape sequences. For example, when the file encoding can handle the character without escaping it. Unicode control characters are not reported by this inspection (except for a line feed and a tab).\n\n**Example:**\n\n    String s = \"\\u0062\";\n"
         },
         {
           "shortName": "NumericToString",
@@ -4463,16 +4463,16 @@
           "description": "Reports usages of the non-short-circuit forms of boolean 'and' and 'or' (`&` and `|`). Although the non-short-circuit versions are occasionally useful, in most cases the short-circuit forms (`&&` and `||`) are intended and such unintentional usages may lead to subtle bugs.\n\n\nA quick-fix is suggested to use the short-circuit versions.\n\n**Example:**\n\n\n      void foo(boolean x, boolean y) {\n        if (x | y) { /**/ }\n      }\n\nAfter the quick-fix is applied:\n\n\n      void foo(boolean x, boolean y) {\n        if (x || y) { /**/ }\n      }\n"
         },
         {
-          "shortName": "EqualsAndHashcode",
-          "displayName": "'equals()' and 'hashCode()' not paired",
-          "enabled": true,
-          "description": "Reports classes that override the `equals()` method but do not override the `hashCode()` method or vice versa, which can potentially lead to problems when the class is added to a `Collection` or a `HashMap`.\n\nThe quick-fix generates the default implementation for an absent method.\n\nExample:\n\n\n    class StringHolder {\n      String s;\n\n      @Override public int hashCode() {\n        return s != null ? s.hashCode() : 0;\n      }\n    }\n\nAfter the quick-fix is applied:\n\n\n    class StringHolder {\n      String s;\n\n      @Override public int hashCode() {\n        return s != null ? s.hashCode() : 0;\n      }\n\n      @Override\n      public boolean equals(Object o) {\n        if (this == o) return true;\n        if (!(o instanceof StringHolder)) return false;\n\n        StringHolder holder = (StringHolder)o;\n\n        if (s != null ? !s.equals(holder.s) : holder.s != null) return false;\n\n        return true;\n      }\n    }\n"
-        },
-        {
           "shortName": "IteratorHasNextCallsIteratorNext",
           "displayName": "'Iterator.hasNext()' which calls 'next()'",
           "enabled": true,
           "description": "Reports implementations of `Iterator.hasNext()` or `ListIterator.hasPrevious()` that call `Iterator.next()` or `ListIterator.previous()` on the iterator instance. Such calls are almost certainly an error, as methods like `hasNext()` should not modify the iterators state, while `next()` should.\n\n**Example:**\n\n\n      class MyIterator implements Iterator<Integer> {\n        public boolean hasNext() {\n          return next() != null;\n        }\n      }\n"
+        },
+        {
+          "shortName": "EqualsAndHashcode",
+          "displayName": "'equals()' and 'hashCode()' not paired",
+          "enabled": true,
+          "description": "Reports classes that override the `equals()` method but do not override the `hashCode()` method or vice versa, which can potentially lead to problems when the class is added to a `Collection` or a `HashMap`.\n\nThe quick-fix generates the default implementation for an absent method.\n\nExample:\n\n\n    class StringHolder {\n      String s;\n\n      @Override public int hashCode() {\n        return s != null ? s.hashCode() : 0;\n      }\n    }\n\nAfter the quick-fix is applied:\n\n\n    class StringHolder {\n      String s;\n\n      @Override public int hashCode() {\n        return s != null ? s.hashCode() : 0;\n      }\n\n      @Override\n      public boolean equals(Object o) {\n        if (this == o) return true;\n        if (!(o instanceof StringHolder)) return false;\n\n        StringHolder holder = (StringHolder)o;\n\n        if (s != null ? !s.equals(holder.s) : holder.s != null) return false;\n\n        return true;\n      }\n    }\n"
         },
         {
           "shortName": "SuspiciousArrayMethodCall",
@@ -4978,16 +4978,16 @@
           "description": "Reports non-final fields in enumeration types as they are rarely needed and provide a global mutable state.\n\n**Example:**\n\n\n      enum Enum {\n        FIRST(\"first\"),\n        SECOND(\"second\");\n\n        public String str;\n\n        Enum(String str) {\n            this.str = str;\n        }\n      }\n\nAfter the quick-fix is applied:\n\n\n      enum Enum {\n        FIRST(\"first\"),\n        SECOND(\"second\");\n\n        public final String str;\n\n        Enum(String str) {\n            this.str = str;\n        }\n      }\n\nConfigure the \\`Ignore field if quick-fix is not available\\` checkbox to only highlight fields that can be made final by the quick-fix."
         },
         {
-          "shortName": "NonFinalUtilityClass",
-          "displayName": "Utility class is not 'final'",
-          "enabled": false,
-          "description": "Reports utility classes that aren't `final`.\n\nUtility classes have all fields and methods declared as `static`.\nMaking them `final` prevents them from being accidentally subclassed."
-        },
-        {
           "shortName": "Singleton",
           "displayName": "Singleton",
           "enabled": false,
           "description": "Reports singleton classes.\n\nSingleton classes are declared in a way that only one instance of the class can ever be instantiated. Singleton classes complicate testing,\nand their presence may indicate a lack of object-oriented design.\n\n**Example:**\n\n\n      class Singleton {\n        private static final Singleton ourInstance = new Singleton();\n\n        private Singleton() {\n        }\n\n        public Singleton getInstance() {\n            return ourInstance;\n        }\n      }\n"
+        },
+        {
+          "shortName": "NonFinalUtilityClass",
+          "displayName": "Utility class is not 'final'",
+          "enabled": false,
+          "description": "Reports utility classes that aren't `final`.\n\nUtility classes have all fields and methods declared as `static`.\nMaking them `final` prevents them from being accidentally subclassed."
         },
         {
           "shortName": "ParameterCanBeLocal",
@@ -5907,16 +5907,16 @@
           "description": "Reports equality expressions which are negated by a prefix expression.\n\nSuch expressions can be simplified using the `!=` operator.\n\nExample:\n\n\n      !(i == 1)\n\nAfter the quick-fix is applied:\n\n\n      i != 1\n"
         },
         {
-          "shortName": "DoubleNegation",
-          "displayName": "Double negation",
-          "enabled": true,
-          "description": "Reports double negations that can be simplified.\n\nExample:\n\n\n      if (!!functionCall()) {}\n\nAfter the quick-fix is applied:\n\n\n      if (functionCall()) {}\n\nExample:\n\n\n      if (!(a != b)) {}\n\nAfter the quick-fix is applied:\n\n\n      if (a == b) {}\n"
-        },
-        {
           "shortName": "AssertionCanBeIf",
           "displayName": "Assertion can be replaced with 'if' statement",
           "enabled": false,
           "description": "Reports `assert` statements and suggests replacing them with `if` statements that throw `java.lang.AssertionError`.\n\nExample:\n\n\n      assert param != null;\n\nAfter the quick-fix is applied:\n\n\n      if (param == null) throw new AssertionError();\n"
+        },
+        {
+          "shortName": "DoubleNegation",
+          "displayName": "Double negation",
+          "enabled": true,
+          "description": "Reports double negations that can be simplified.\n\nExample:\n\n\n      if (!!functionCall()) {}\n\nAfter the quick-fix is applied:\n\n\n      if (functionCall()) {}\n\nExample:\n\n\n      if (!(a != b)) {}\n\nAfter the quick-fix is applied:\n\n\n      if (a == b) {}\n"
         },
         {
           "shortName": "BreakStatement",
@@ -10462,16 +10462,16 @@
           "description": "Reports methods whose number of statements exceeds the specified maximum.\n\nMethods with too many statements may be confusing and are a good sign that refactoring is necessary.\n\nThe following statements are not counted:\n\n* empty statements (semicolons)\n* block statements\n* `for` loop initialization statements, that is, `int i = ...` within a `for(int i = ...;...)` statement\n* `for` loop update statements, that is, `i += 2` within a `for(int i = ...;...; i += 2)` statement\n\nUse the **Maximum statements per method** field to specify the maximum allowed number of statements in a method."
         },
         {
-          "shortName": "OverlyLongLambda",
-          "displayName": "Overly long lambda expression",
-          "enabled": false,
-          "description": "Reports lambda expressions whose number of statements exceeds the specified maximum.\n\nLambda expressions that are too long may be confusing, and it is often better to extract the statements into a separate method.\n\n\nThe following statements are not counted:\n\n* empty statements (semicolons)\n* block statements\n* `for` loop initialization statements, that is, `int i = ...` within a `for(int i = ...;...)` statement\n* `for` loop update statements, that is, `i += 2` within a `for(int i = ...;...; i += 2)` statement\n\nUse the **Non-comment source statements limit** field to specify the maximum allowed number of statements in a lambda expression."
-        },
-        {
           "shortName": "ParametersPerMethod",
           "displayName": "Method with too many parameters",
           "enabled": false,
           "description": "Reports methods whose number of parameters exceeds the specified maximum. Methods with too many parameters can be a good sign that a refactoring is necessary.\n\nMethods that have super methods are not reported.\n\nUse the **Parameter limit** field to specify the maximum allowed number of parameters for a method."
+        },
+        {
+          "shortName": "OverlyLongLambda",
+          "displayName": "Overly long lambda expression",
+          "enabled": false,
+          "description": "Reports lambda expressions whose number of statements exceeds the specified maximum.\n\nLambda expressions that are too long may be confusing, and it is often better to extract the statements into a separate method.\n\n\nThe following statements are not counted:\n\n* empty statements (semicolons)\n* block statements\n* `for` loop initialization statements, that is, `int i = ...` within a `for(int i = ...;...)` statement\n* `for` loop update statements, that is, `i += 2` within a `for(int i = ...;...; i += 2)` statement\n\nUse the **Non-comment source statements limit** field to specify the maximum allowed number of statements in a lambda expression."
         },
         {
           "shortName": "MethodCoupling",
