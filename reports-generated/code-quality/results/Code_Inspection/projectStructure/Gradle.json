@@ -26,28 +26,28 @@
       "version": "4.9.3"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-client-serialization-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-client-serialization-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-serialization-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-client-cio-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-client-cio-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-cio-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-core-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-client-core-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-client-core-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-core-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
@@ -98,12 +98,12 @@
       "version": "2.8.0"
     },
     {
-      "ideaName": "Gradle: org.slf4j:slf4j-api:1.7.32",
-      "gradleName": "org.slf4j:slf4j-api:1.7.32",
+      "ideaName": "Gradle: org.slf4j:slf4j-api:1.7.36",
+      "gradleName": "org.slf4j:slf4j-api:1.7.36",
       "unresolved": false,
       "groupId": "org.slf4j",
       "artifactId": "slf4j-api",
-      "version": "1.7.32"
+      "version": "1.7.36"
     },
     {
       "ideaName": "Gradle: org.jetbrains:annotations:13.0",
@@ -114,36 +114,36 @@
       "version": "13.0"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-json-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-client-json-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-json-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-client-json-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-json-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-http-cio-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-http-cio-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-http-cio-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-network-tls-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-network-tls-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-network-tls-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-http-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-http-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-http-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-http-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-http-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
@@ -154,52 +154,52 @@
       "version": "1.3.2"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-network-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-network-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-network-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-network-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-utils-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-utils-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-utils-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-utils-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-utils-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-io-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-io-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-io-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-io-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-io-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-cio:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-client-cio:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-cio:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-client-cio:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-cio",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-network-tls:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-network-tls:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-network-tls:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-network-tls:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-network-tls",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-network:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-network:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-network:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-network:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-network",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: com.squareup.okio:okio-metadata:2.8.0",
@@ -234,12 +234,12 @@
       "version": "1.6.10"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-mock-jvm:1.6.7",
-      "gradleName": "io.ktor:ktor-client-mock-jvm:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-mock-jvm:1.6.8",
+      "gradleName": "io.ktor:ktor-client-mock-jvm:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-mock-jvm",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.0",
@@ -258,12 +258,12 @@
       "version": "4.13"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.1.0",
-      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.1.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
+      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.2.2",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-core-jvm",
-      "version": "5.1.0"
+      "version": "5.2.2"
     },
     {
       "ideaName": "Gradle: com.squareup.okio:okio-jvm:3.0.0",
@@ -298,12 +298,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.1.0",
-      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.1.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
+      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.2.2",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-shared-jvm",
-      "version": "5.1.0"
+      "version": "5.2.2"
     },
     {
       "ideaName": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
@@ -330,12 +330,12 @@
       "version": "1.2.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.1.0",
-      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.1.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
+      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.2.2",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-api-jvm",
-      "version": "5.1.0"
+      "version": "5.2.2"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.0",
@@ -362,12 +362,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.1.0",
-      "gradleName": "io.kotest:kotest-common-jvm:5.1.0",
+      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
+      "gradleName": "io.kotest:kotest-common-jvm:5.2.2",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-common-jvm",
-      "version": "5.1.0"
+      "version": "5.2.2"
     },
     {
       "ideaName": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
@@ -418,20 +418,20 @@
       "version": "1.0.0"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-client-serialization:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-client-serialization:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-serialization",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-client-core:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-client-core:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-core",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
@@ -458,12 +458,12 @@
       "version": "1.3.2"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-client-json:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-client-json:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-json",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
@@ -474,20 +474,20 @@
       "version": "1.6.10"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-http-cio:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-http-cio:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-http-cio",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-http:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-http:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-http",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
@@ -498,20 +498,20 @@
       "version": "1.3.2"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-utils:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-utils:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-utils",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-io:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-io:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-io",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: com.javiersc.run-blocking:run-blocking-core:commonMain:0.1.0-beta.3",
@@ -522,12 +522,12 @@
       "version": "0.1.0-beta.3"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-mock:commonMain:1.6.7",
-      "gradleName": "io.ktor:ktor-client-mock:commonMain:1.6.7",
+      "ideaName": "Gradle: io.ktor:ktor-client-mock:commonMain:1.6.8",
+      "gradleName": "io.ktor:ktor-client-mock:commonMain:1.6.8",
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-client-mock",
-      "version": "1.6.7"
+      "version": "1.6.8"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.0",
@@ -538,28 +538,28 @@
       "version": "1.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.1.0",
-      "gradleName": "io.kotest:kotest-assertions-core:commonMain:5.1.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
+      "gradleName": "io.kotest:kotest-assertions-core:commonMain:5.2.2",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-core",
-      "version": "5.1.0"
+      "version": "5.2.2"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.1.0",
-      "gradleName": "io.kotest:kotest-assertions-shared:commonMain:5.1.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
+      "gradleName": "io.kotest:kotest-assertions-shared:commonMain:5.2.2",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-shared",
-      "version": "5.1.0"
+      "version": "5.2.2"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.1.0",
-      "gradleName": "io.kotest:kotest-assertions-api:commonMain:5.1.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
+      "gradleName": "io.kotest:kotest-assertions-api:commonMain:5.2.2",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-api",
-      "version": "5.1.0"
+      "version": "5.2.2"
     },
     {
       "ideaName": "Gradle: com.javiersc.mokoki:mokoki-serialization-jvm:0.1.0-alpha.9",

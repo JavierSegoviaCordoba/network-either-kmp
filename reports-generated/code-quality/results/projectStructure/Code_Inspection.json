@@ -252,7 +252,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -288,7 +288,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -312,11 +312,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -406,7 +406,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -430,7 +430,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -438,7 +438,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -552,7 +552,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -588,7 +588,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -612,11 +612,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -714,7 +714,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -734,7 +734,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -742,7 +742,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -803,7 +803,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -811,15 +811,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -839,7 +839,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -851,7 +851,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.slf4j:slf4j-api:1.7.32",
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
           "type": "Library"
         },
         {
@@ -859,23 +859,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -887,15 +887,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.8",
           "type": "Library"
         }
       ]
@@ -960,7 +960,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -980,19 +980,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-mock-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-mock-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1020,7 +1020,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -1028,7 +1028,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1048,7 +1048,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.slf4j:slf4j-api:1.7.32",
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
           "type": "Library"
         },
         {
@@ -1076,7 +1076,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1084,19 +1084,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1104,7 +1104,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -1124,23 +1124,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1185,11 +1185,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1209,7 +1209,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1217,11 +1217,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1237,7 +1237,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1245,7 +1245,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         }
       ]
@@ -1291,15 +1291,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-mock:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-mock:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1319,7 +1319,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -1327,7 +1327,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1339,11 +1339,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1359,15 +1359,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -1375,7 +1375,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1458,15 +1458,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1490,7 +1490,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.slf4j:slf4j-api:1.7.32",
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
           "type": "Library"
         },
         {
@@ -1498,19 +1498,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1518,15 +1518,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.8",
           "type": "Library"
         }
       ]
@@ -1605,7 +1605,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1613,7 +1613,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1629,7 +1629,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -1653,7 +1653,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1661,7 +1661,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1669,7 +1669,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1681,7 +1681,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1693,11 +1693,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1717,7 +1717,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.slf4j:slf4j-api:1.7.32",
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
           "type": "Library"
         },
         {
@@ -1725,7 +1725,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1733,11 +1733,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1757,23 +1757,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1781,15 +1781,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1797,7 +1797,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -1846,11 +1846,11 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1882,15 +1882,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1902,11 +1902,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         }
       ]
@@ -1943,7 +1943,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -1967,19 +1967,19 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2011,15 +2011,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2031,11 +2031,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         }
       ]
@@ -2114,7 +2114,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -2130,11 +2130,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -2146,7 +2146,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.slf4j:slf4j-api:1.7.32",
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
           "type": "Library"
         },
         {
@@ -2158,31 +2158,31 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.8",
           "type": "Library"
         }
       ]
@@ -2273,7 +2273,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -2281,11 +2281,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-mock-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-mock-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -2293,7 +2293,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -2309,7 +2309,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -2329,7 +2329,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.slf4j:slf4j-api:1.7.32",
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
           "type": "Library"
         },
         {
@@ -2341,7 +2341,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -2357,15 +2357,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
           "type": "Library"
         },
         {
@@ -2385,27 +2385,27 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io-jvm:1.6.8",
           "type": "Library"
         },
         {
@@ -2458,7 +2458,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2474,7 +2474,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2486,11 +2486,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2502,11 +2502,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2514,7 +2514,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         }
       ]
@@ -2559,7 +2559,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-mock:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-mock:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2567,11 +2567,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-core:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2587,7 +2587,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-serialization:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2599,19 +2599,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.1.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
           "type": "Library"
         },
         {
@@ -2627,7 +2627,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2635,7 +2635,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -2643,7 +2643,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.7",
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         }
       ]
