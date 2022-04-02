@@ -14,13 +14,13 @@
 
 ### Updated
 
+- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.42`
 - `io.kotest:kotest-assertions-core -> 5.2.2`
 - `io.ktor:ktor-client-serialization -> 1.6.8`
 - `io.ktor:ktor-client-mock -> 1.6.8`
 - `io.ktor:ktor-client-core -> 1.6.8`
 - `io.ktor:ktor-client-cio -> 1.6.8`
 - `gradle -> 7.4.1`
-- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.41`
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.3`
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.3`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
