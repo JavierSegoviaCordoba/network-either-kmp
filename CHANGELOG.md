@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `org.jetbrains.kotlin:kotlin-serialization -> 1.6.20`
+- `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.20`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.42`
 - `io.kotest:kotest-assertions-core -> 5.2.2`
 - `io.ktor:ktor-client-serialization -> 1.6.8`
@@ -25,8 +27,6 @@
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.3`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.0`
-- `org.jetbrains.kotlin:kotlin-serialization -> 1.6.10`
-- `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.10`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.9`
 - `com.android.tools.build:gradle -> 7.0.4`
