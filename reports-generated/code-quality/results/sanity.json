@@ -1,0 +1,417 @@
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[MISSING_DEPENDENCY_CLASS] Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-core/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 16,
+      "length": 8,
+      "code": {
+        "startLine": 14,
+        "length": 8,
+        "offset": 64,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply { api(eitherCore) }\n\n                libs.apply {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-3708300803356029317"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE_WRONG_RECEIVER] Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic val Project.projects: RootProjectAccessor defined in org.gradle.kotlin.dsl\npublic val TaskContainer.projects: TaskProvider<ProjectReportTask> defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsAllPluginGroup.projects: PluginDependencySpec defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsPluginGroup.projects: ComJavierscGradlePluginsProjectsPluginGroup defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-core/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 25,
+      "length": 8,
+      "code": {
+        "startLine": 14,
+        "length": 8,
+        "offset": 73,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply { api(eitherCore) }\n\n                libs.apply {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "847003352219480468"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: eitherCore",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-core/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 46,
+      "length": 10,
+      "code": {
+        "startLine": 14,
+        "length": 10,
+        "offset": 94,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply { api(eitherCore) }\n\n                libs.apply {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-6228397818001878353"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[MISSING_DEPENDENCY_CLASS] Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-logger/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 16,
+      "length": 8,
+      "code": {
+        "startLine": 14,
+        "length": 8,
+        "offset": 64,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply {\n                    api(network.networkCore)\n                }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-logger",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "2867263116875074191"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE_WRONG_RECEIVER] Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic val Project.projects: RootProjectAccessor defined in org.gradle.kotlin.dsl\npublic val TaskContainer.projects: TaskProvider<ProjectReportTask> defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsAllPluginGroup.projects: PluginDependencySpec defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsPluginGroup.projects: ComJavierscGradlePluginsProjectsPluginGroup defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-logger/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 25,
+      "length": 8,
+      "code": {
+        "startLine": 14,
+        "length": 8,
+        "offset": 73,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply {\n                    api(network.networkCore)\n                }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-logger",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "1745422437413033555"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: network",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-logger/build.gradle.kts",
+      "language": "kotlin",
+      "line": 17,
+      "offset": 24,
+      "length": 7,
+      "code": {
+        "startLine": 15,
+        "length": 7,
+        "offset": 93,
+        "surroundingCode": "            dependencies {\n                projects.projects.apply {\n                    api(network.networkCore)\n                }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-logger",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "6810223423741428394"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[MISSING_DEPENDENCY_CLASS] Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-resource/build.gradle.kts",
+      "language": "kotlin",
+      "line": 15,
+      "offset": 16,
+      "length": 8,
+      "code": {
+        "startLine": 13,
+        "length": 8,
+        "offset": 64,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply {\n                    api(eitherCore)\n                    api(network.networkCore)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-resource",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "2782905763942042931"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE_WRONG_RECEIVER] Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic val Project.projects: RootProjectAccessor defined in org.gradle.kotlin.dsl\npublic val TaskContainer.projects: TaskProvider<ProjectReportTask> defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsAllPluginGroup.projects: PluginDependencySpec defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsPluginGroup.projects: ComJavierscGradlePluginsProjectsPluginGroup defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-resource/build.gradle.kts",
+      "language": "kotlin",
+      "line": 15,
+      "offset": 25,
+      "length": 8,
+      "code": {
+        "startLine": 13,
+        "length": 8,
+        "offset": 73,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply {\n                    api(eitherCore)\n                    api(network.networkCore)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-resource",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-5235062874195957758"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: eitherCore",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-resource/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 24,
+      "length": 10,
+      "code": {
+        "startLine": 14,
+        "length": 10,
+        "offset": 93,
+        "surroundingCode": "            dependencies {\n                projects.projects.apply {\n                    api(eitherCore)\n                    api(network.networkCore)\n                    api(resourceCore)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-resource",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "2502066661671529869"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: network",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-resource/build.gradle.kts",
+      "language": "kotlin",
+      "line": 17,
+      "offset": 24,
+      "length": 7,
+      "code": {
+        "startLine": 15,
+        "length": 7,
+        "offset": 102,
+        "surroundingCode": "                projects.projects.apply {\n                    api(eitherCore)\n                    api(network.networkCore)\n                    api(resourceCore)\n                }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-resource",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "2441611437956894828"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[MISSING_DEPENDENCY_CLASS] Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/resource-core/build.gradle.kts",
+      "language": "kotlin",
+      "line": 15,
+      "offset": 16,
+      "length": 8,
+      "code": {
+        "startLine": 13,
+        "length": 8,
+        "offset": 64,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply {\n                    api(eitherCore)\n                }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-4108810358926446085"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE_WRONG_RECEIVER] Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic val Project.projects: RootProjectAccessor defined in org.gradle.kotlin.dsl\npublic val TaskContainer.projects: TaskProvider<ProjectReportTask> defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsAllPluginGroup.projects: PluginDependencySpec defined in org.gradle.kotlin.dsl\npublic val ComJavierscGradlePluginsPluginGroup.projects: ComJavierscGradlePluginsProjectsPluginGroup defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/resource-core/build.gradle.kts",
+      "language": "kotlin",
+      "line": 15,
+      "offset": 25,
+      "length": 8,
+      "code": {
+        "startLine": 13,
+        "length": 8,
+        "offset": 73,
+        "surroundingCode": "        commonMain {\n            dependencies {\n                projects.projects.apply {\n                    api(eitherCore)\n                }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-1864838488264634651"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: eitherCore",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/resource-core/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 24,
+      "length": 10,
+      "code": {
+        "startLine": 14,
+        "length": 10,
+        "offset": 93,
+        "surroundingCode": "            dependencies {\n                projects.projects.apply {\n                    api(eitherCore)\n                }\n            }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "4222662892354683477"
+}]}
