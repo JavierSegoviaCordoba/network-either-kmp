@@ -193,15 +193,15 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -244,11 +244,11 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.20",
           "type": "Library"
         },
         {
@@ -256,23 +256,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.20",
           "type": "Library"
         },
         {
@@ -357,23 +349,23 @@
           "type": "Own sources"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
           "name": "Gradle: org.jetbrains:annotations:13.0",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
           "type": "Library"
         }
       ]
@@ -410,23 +402,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.20",
           "type": "Library"
         },
         {
@@ -434,7 +426,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
@@ -442,7 +434,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains:annotations:13.0",
           "type": "Library"
         }
       ]
@@ -481,15 +473,15 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -544,11 +536,11 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.20",
           "type": "Library"
         },
         {
@@ -556,23 +548,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.20",
           "type": "Library"
         },
         {
@@ -661,23 +645,23 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
           "name": "Gradle: org.jetbrains:annotations:13.0",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
           "type": "Library"
         }
       ]
@@ -718,19 +702,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.20",
           "type": "Library"
         },
         {
@@ -738,7 +722,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -746,11 +730,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains:annotations:13.0",
           "type": "Library"
         }
       ]
@@ -795,7 +779,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -835,7 +819,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
@@ -843,7 +827,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -972,11 +956,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.20",
           "type": "Library"
         },
         {
@@ -1032,7 +1016,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -1040,11 +1024,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.20",
           "type": "Library"
         },
         {
@@ -1068,10 +1052,6 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
-          "type": "Library"
-        },
-        {
           "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
           "type": "Library"
         },
@@ -1080,7 +1060,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
+          "name": "Gradle: io.ktor:ktor-network:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1092,11 +1072,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network:commonMain:1.6.8",
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-network-tls-jvm:1.6.8",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-metadata:all:1.0.0",
           "type": "Library"
         },
         {
@@ -1105,10 +1085,6 @@
         },
         {
           "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-metadata:all:1.0.0",
           "type": "Library"
         },
         {
@@ -1205,7 +1181,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -1213,7 +1189,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
@@ -1229,11 +1205,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -1257,13 +1233,13 @@
           "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest",
           "sourceFolders": [
             {
-              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/resources",
-              "type": "TestResource",
+              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/kotlin",
+              "type": "TestSource",
               "packagePrefix": ""
             },
             {
-              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/kotlin",
-              "type": "TestSource",
+              "path": "file://$PROJECT_DIR$/projects/network/network-core/commonTest/resources",
+              "type": "TestResource",
               "packagePrefix": ""
             }
           ]
@@ -1323,7 +1299,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -1331,7 +1307,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
@@ -1351,11 +1327,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -1379,11 +1355,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.20",
           "type": "Library"
         }
       ]
@@ -1422,7 +1398,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -1450,11 +1426,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -1581,11 +1557,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.20",
           "type": "Library"
         },
         {
@@ -1641,15 +1617,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.20",
           "type": "Library"
         },
         {
@@ -1657,19 +1633,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
-          "type": "Library"
-        },
-        {
           "name": "Gradle: io.ktor:ktor-client-cio-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-core-jvm:1.6.8",
+          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1681,7 +1657,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
+          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1693,11 +1669,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-http-cio:commonMain:1.6.8",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: io.ktor:ktor-http:commonMain:1.6.8",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
           "type": "Library"
         },
         {
@@ -1705,11 +1677,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
           "type": "Library"
         },
         {
           "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1725,19 +1701,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
-          "type": "Library"
-        },
-        {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.10",
           "type": "Library"
         },
         {
           "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: io.ktor:ktor-io:commonMain:1.6.8",
           "type": "Library"
         },
         {
@@ -1838,7 +1806,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -1870,15 +1838,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -1951,15 +1919,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.20",
           "type": "Library"
         },
         {
@@ -1999,15 +1967,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -2098,7 +2066,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -2122,11 +2090,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -2257,11 +2225,11 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.20",
           "type": "Library"
         },
         {
@@ -2297,15 +2265,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.20",
           "type": "Library"
         },
         {
@@ -2317,15 +2285,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
-          "type": "Library"
-        },
-        {
           "name": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
           "type": "Library"
         },
         {
@@ -2462,7 +2422,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -2482,7 +2442,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
@@ -2494,11 +2454,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -2575,7 +2535,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -2595,7 +2555,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
@@ -2615,15 +2575,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-common:1.6.20",
           "type": "Library"
         },
         {
@@ -2631,7 +2591,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.20",
           "type": "Library"
         },
         {
@@ -2778,7 +2738,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:all-plugins:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:all-plugins:0.1.0-rc.42",
           "type": "Library"
         },
         {
@@ -2786,7 +2746,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -2798,87 +2758,87 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-serialization:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-serialization:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:kotlin-config:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:kotlin-config:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:publish:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:publish:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:core:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:core:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:all-projects:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:all-projects:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:code-analysis:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:code-analysis:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:code-coverage:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:code-coverage:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:code-formatter:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:code-formatter:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:dependency-updates:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:dependency-updates:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:versioning:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:versioning:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:changelog:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:changelog:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:docs:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:docs:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:readme-badges:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:readme-badges:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:gradle-wrapper-updater:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:gradle-wrapper-updater:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:nexus:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:nexus:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:massive-catalogs-updater:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:massive-catalogs-updater:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:projects-version-catalog:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:projects-version-catalog:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:plugin-accessors:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:plugin-accessors:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -2894,11 +2854,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-api:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-api:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-model:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-model:1.6.20",
           "type": "Library"
         },
         {
@@ -2934,7 +2894,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
@@ -2962,15 +2922,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-native-utils:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-native-utils:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-project-model:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-project-model:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-io:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-io:1.6.20",
           "type": "Library"
         },
         {
@@ -3162,19 +3122,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-runner:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-runner:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-tooling-metadata:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-tooling-metadata:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-klib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-klib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-klib-commonizer-api:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-klib-commonizer-api:1.6.20",
           "type": "Library"
         },
         {
@@ -3190,27 +3150,27 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-annotation-processing-gradle:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-annotation-processing-gradle:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-android-extensions:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-android-extensions:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-embeddable:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.adarshr:gradle-test-logger-plugin:3.1.0",
+          "name": "Gradle: com.adarshr:gradle-test-logger-plugin:3.2.0",
           "type": "Library"
         },
         {
@@ -3218,7 +3178,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: ru.vyarus:gradle-mkdocs-plugin:2.2.0",
+          "name": "Gradle: ru.vyarus:gradle-mkdocs-plugin:2.3.0",
           "type": "Library"
         },
         {
@@ -3226,15 +3186,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.gradle.publish:plugin-publish-plugin:0.20.0",
+          "name": "Gradle: com.gradle.publish:plugin-publish-plugin:0.21.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.diffplug.spotless:spotless-plugin-gradle:6.3.0",
+          "name": "Gradle: com.diffplug.spotless:spotless-plugin-gradle:6.4.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.eclipse.jgit:org.eclipse.jgit:6.0.0.202111291000-r",
+          "name": "Gradle: org.eclipse.jgit:org.eclipse.jgit:6.1.0.202203080745-r",
           "type": "Library"
         },
         {
@@ -3286,7 +3246,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.intellij.deps:trove4j:1.0.20181211",
+          "name": "Gradle: org.jetbrains.intellij.deps:trove4j:1.0.20200330",
           "type": "Library"
         },
         {
@@ -3414,7 +3374,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-client:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-client:1.6.20",
           "type": "Library"
         },
         {
@@ -3422,7 +3382,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-build-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-build-common:1.6.20",
           "type": "Library"
         },
         {
@@ -3442,7 +3402,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-embeddable:1.6.20",
           "type": "Library"
         },
         {
@@ -3450,11 +3410,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-jvm:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-jvm:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-common:1.6.20",
           "type": "Library"
         },
         {
@@ -3514,7 +3474,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.diffplug.spotless:spotless-lib-extra:2.23.0",
+          "name": "Gradle: com.diffplug.spotless:spotless-lib-extra:2.24.1",
           "type": "Library"
         },
         {
@@ -3530,7 +3490,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.diffplug.spotless:spotless-lib:2.23.0",
+          "name": "Gradle: com.diffplug.spotless:spotless-lib:2.24.1",
           "type": "Library"
         },
         {
@@ -3817,7 +3777,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:all-plugins:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:all-plugins:0.1.0-rc.42",
           "type": "Library"
         },
         {
@@ -3825,7 +3785,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
@@ -3837,87 +3797,87 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-serialization:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-serialization:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:kotlin-config:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:kotlin-config:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:publish:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:publish:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:core:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:core:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:all-projects:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:all-projects:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:code-analysis:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:code-analysis:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:code-coverage:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:code-coverage:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:code-formatter:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:code-formatter:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:dependency-updates:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:dependency-updates:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:versioning:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:versioning:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:changelog:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:changelog:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:docs:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:docs:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:readme-badges:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:readme-badges:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:gradle-wrapper-updater:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:gradle-wrapper-updater:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:nexus:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:nexus:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:massive-catalogs-updater:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:massive-catalogs-updater:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:projects-version-catalog:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:projects-version-catalog:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.gradle-plugins:plugin-accessors:0.1.0-rc.41",
+          "name": "Gradle: com.javiersc.gradle-plugins:plugin-accessors:0.1.0-rc.42",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
           "type": "Library"
         },
         {
@@ -3933,11 +3893,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-api:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-api:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-model:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-gradle-plugin-model:1.6.20",
           "type": "Library"
         },
         {
@@ -3973,7 +3933,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
           "type": "Library"
         },
         {
@@ -4001,15 +3961,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-native-utils:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-native-utils:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-project-model:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-project-model:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-io:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-io:1.6.20",
           "type": "Library"
         },
         {
@@ -4181,19 +4141,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-runner:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-runner:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-tooling-metadata:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-tooling-metadata:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-klib:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-util-klib:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-klib-commonizer-api:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-klib-commonizer-api:1.6.20",
           "type": "Library"
         },
         {
@@ -4209,23 +4169,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-annotation-processing-gradle:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-annotation-processing-gradle:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-android-extensions:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-android-extensions:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-compiler-embeddable:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.6.20",
           "type": "Library"
         },
         {
@@ -4241,7 +4201,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.adarshr:gradle-test-logger-plugin:3.1.0",
+          "name": "Gradle: com.adarshr:gradle-test-logger-plugin:3.2.0",
           "type": "Library"
         },
         {
@@ -4249,7 +4209,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: ru.vyarus:gradle-mkdocs-plugin:2.2.0",
+          "name": "Gradle: ru.vyarus:gradle-mkdocs-plugin:2.3.0",
           "type": "Library"
         },
         {
@@ -4257,15 +4217,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.gradle.publish:plugin-publish-plugin:0.20.0",
+          "name": "Gradle: com.gradle.publish:plugin-publish-plugin:0.21.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.diffplug.spotless:spotless-plugin-gradle:6.3.0",
+          "name": "Gradle: com.diffplug.spotless:spotless-plugin-gradle:6.4.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.eclipse.jgit:org.eclipse.jgit:6.0.0.202111291000-r",
+          "name": "Gradle: org.eclipse.jgit:org.eclipse.jgit:6.1.0.202203080745-r",
           "type": "Library"
         },
         {
@@ -4321,7 +4281,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.intellij.deps:trove4j:1.0.20181211",
+          "name": "Gradle: org.jetbrains.intellij.deps:trove4j:1.0.20200330",
           "type": "Library"
         },
         {
@@ -4449,7 +4409,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-client:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-client:1.6.20",
           "type": "Library"
         },
         {
@@ -4457,7 +4417,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-build-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-build-common:1.6.20",
           "type": "Library"
         },
         {
@@ -4477,7 +4437,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-embeddable:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-daemon-embeddable:1.6.20",
           "type": "Library"
         },
         {
@@ -4485,11 +4445,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-jvm:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-jvm:1.6.20",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-common:1.6.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-scripting-common:1.6.20",
           "type": "Library"
         },
         {
@@ -4549,7 +4509,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.diffplug.spotless:spotless-lib-extra:2.23.0",
+          "name": "Gradle: com.diffplug.spotless:spotless-lib-extra:2.24.1",
           "type": "Library"
         },
         {
@@ -4565,7 +4525,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.diffplug.spotless:spotless-lib:2.23.0",
+          "name": "Gradle: com.diffplug.spotless:spotless-lib:2.24.1",
           "type": "Library"
         },
         {
