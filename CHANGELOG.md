@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `org.jetbrains.kotlinx:kotlinx-coroutines-test -> 1.6.1`
+- `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.1`
 - `gradle -> 7.4.2`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.20`
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.20`
@@ -26,7 +28,6 @@
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.3`
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.3`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
-- `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.0`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.9`
 - `com.android.tools.build:gradle -> 7.0.4`
