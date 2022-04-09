@@ -14,13 +14,13 @@
 
 ### Updated
 
+- `io.kotest:kotest-assertions-core -> 5.2.3`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-test -> 1.6.1`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.1`
 - `gradle -> 7.4.2`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.20`
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.20`
 - `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.42`
-- `io.kotest:kotest-assertions-core -> 5.2.2`
 - `io.ktor:ktor-client-serialization -> 1.6.8`
 - `io.ktor:ktor-client-mock -> 1.6.8`
 - `io.ktor:ktor-client-core -> 1.6.8`
