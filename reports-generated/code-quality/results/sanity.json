@@ -39,38 +39,6 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: ResponseException",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
-      "language": "kotlin",
-      "line": 66,
-      "offset": 51,
-      "length": 17,
-      "code": {
-        "startLine": 64,
-        "length": 17,
-        "offset": 66,
-        "surroundingCode": "\n@PublishedApi\ninternal suspend inline fun <reified F, reified S> ResponseException.serializeAsError(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> ="
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.projects.network.network-core.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "-7300586649857113692"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "kotlin",
-    "Sanity"
-  ],
-  "severity": "Critical",
   "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: JsonSerializer",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
@@ -78,14 +46,14 @@
       "type": "method",
       "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
       "language": "kotlin",
-      "line": 67,
+      "line": 83,
       "offset": 20,
       "length": 14,
       "code": {
-        "startLine": 65,
+        "startLine": 81,
         "length": 14,
-        "offset": 121,
-        "surroundingCode": "@PublishedApi\ninternal suspend inline fun <reified F, reified S> ResponseException.serializeAsError(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> =\n    try {"
+        "offset": 112,
+        "surroundingCode": "@PublishedApi\ninternal suspend inline fun <reified F, reified S> Throwable.asNetworkEither(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> =\n    when (this) {"
       }
     }
   ],
@@ -93,7 +61,7 @@
     "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-4966108588637846394"
+  "hash": "-1858113360064602179"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -103,21 +71,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: HttpClient",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: ResponseException",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "method",
       "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
       "language": "kotlin",
-      "line": 28,
-      "offset": 66,
-      "length": 10,
+      "line": 86,
+      "offset": 11,
+      "length": 17,
       "code": {
-        "startLine": 26,
-        "length": 10,
-        "offset": 163,
-        "surroundingCode": "\n/** Create a wrapper which allow doing requests which will be transformed to `NetworkEither` */\npublic class NetworkEitherKtor(@PublishedApi internal val client: HttpClient) {\n\n    public suspend inline operator fun <reified F, reified S> invoke("
+        "startLine": 84,
+        "length": 17,
+        "offset": 54,
+        "surroundingCode": "): NetworkEither<F, S> =\n    when (this) {\n        is ResponseException -> serializeAsError(jsonSerializer)\n        is UnresolvedAddressException -> localOrFailureRemote()\n        is IOException -> localOrFailureRemote()"
       }
     }
   ],
@@ -125,7 +93,7 @@
     "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-7186087333759233908"
+  "hash": "-1798394468030320704"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -135,21 +103,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: HttpResponse",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: UnresolvedAddressException",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "method",
       "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
       "language": "kotlin",
-      "line": 48,
-      "offset": 51,
-      "length": 12,
+      "line": 87,
+      "offset": 11,
+      "length": 26,
       "code": {
-        "startLine": 46,
-        "length": 12,
-        "offset": 66,
-        "surroundingCode": "\n@PublishedApi\ninternal suspend inline fun <reified F, reified S> HttpResponse.asNetworkEither(\n    jsonSerializer: JsonSerializer,\n): NetworkEither<F, S> ="
+        "startLine": 85,
+        "length": 26,
+        "offset": 94,
+        "surroundingCode": "    when (this) {\n        is ResponseException -> serializeAsError(jsonSerializer)\n        is UnresolvedAddressException -> localOrFailureRemote()\n        is IOException -> localOrFailureRemote()\n        else -> buildNetworkFailureUnknown(this)"
       }
     }
   ],
@@ -157,7 +125,39 @@
     "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-8330600375361369387"
+  "hash": "4861123359852467970"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: IOException",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/ktor/NetworkEitherKtor.kt",
+      "language": "kotlin",
+      "line": 88,
+      "offset": 11,
+      "length": 11,
+      "code": {
+        "startLine": 86,
+        "length": 11,
+        "offset": 140,
+        "surroundingCode": "        is ResponseException -> serializeAsError(jsonSerializer)\n        is UnresolvedAddressException -> localOrFailureRemote()\n        is IOException -> localOrFailureRemote()\n        else -> buildNetworkFailureUnknown(this)\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "6887254424856817296"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -263,70 +263,6 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: serializer",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "projects/network/network-logger/commonMain/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
-      "language": "kotlin",
-      "line": 43,
-      "offset": 46,
-      "length": 10,
-      "code": {
-        "startLine": 41,
-        "length": 10,
-        "offset": 159,
-        "surroundingCode": "public inline fun <reified F, reified S> NetworkEither<F, S>.alsoPrettyPrint(\n    tag: String = \"NetworkEither\",\n): NetworkEither<F, S> = alsoPrettyPrint(tag, serializer(), serializer())\n\n@Serializable"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.projects.network.network-logger.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "-1251801787610552636"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "kotlin",
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: serializer",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "projects/network/network-logger/commonMain/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
-      "language": "kotlin",
-      "line": 43,
-      "offset": 60,
-      "length": 10,
-      "code": {
-        "startLine": 41,
-        "length": 10,
-        "offset": 173,
-        "surroundingCode": "public inline fun <reified F, reified S> NetworkEither<F, S>.alsoPrettyPrint(\n    tag: String = \"NetworkEither\",\n): NetworkEither<F, S> = alsoPrettyPrint(tag, serializer(), serializer())\n\n@Serializable"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.projects.network.network-logger.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "6623769995906069794"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "kotlin",
-    "Sanity"
-  ],
-  "severity": "Critical",
   "comment": "[INVISIBLE_REFERENCE] Cannot access 'Serializable': it is internal in 'kotlin.io'",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
@@ -382,6 +318,70 @@
     "inspectionName": "KotlinAnnotator"
   },
   "hash": "-8352868256501969736"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: mokoki",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-logger/commonMain/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
+      "language": "kotlin",
+      "line": 7,
+      "offset": 20,
+      "length": 6,
+      "code": {
+        "startLine": 5,
+        "length": 6,
+        "offset": 120,
+        "surroundingCode": "import com.javiersc.either.network.NetworkEither\nimport com.javiersc.either.network.extensions.fold\nimport com.javiersc.mokoki.extensions.logE\nimport com.javiersc.mokoki.serialization.extensions.logSerializableE\nimport com.javiersc.mokoki.serialization.extensions.logSerializableV"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-logger.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-1252439723096212925"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "[UNRESOLVED_REFERENCE] Unresolved reference: mokoki",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "projects/network/network-logger/commonMain/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
+      "language": "kotlin",
+      "line": 8,
+      "offset": 20,
+      "length": 6,
+      "code": {
+        "startLine": 6,
+        "length": 6,
+        "offset": 114,
+        "surroundingCode": "import com.javiersc.either.network.extensions.fold\nimport com.javiersc.mokoki.extensions.logE\nimport com.javiersc.mokoki.serialization.extensions.logSerializableE\nimport com.javiersc.mokoki.serialization.extensions.logSerializableV\nimport kotlinx.serialization.KSerializer"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-logger.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-4958963543696230017"
 },{
   "tool": "Code Inspection",
   "category": "General",

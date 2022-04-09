@@ -6,29 +6,153 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Property \"isFailure\" is never used",
+  "comment": "Property \"DnsPort\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
-      "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceIs.kt",
+      "type": "field",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/internal/Constants.kt",
       "language": "kotlin",
       "line": 6,
-      "offset": 39,
-      "length": 9,
+      "offset": 14,
+      "length": 7,
       "code": {
         "startLine": 4,
-        "length": 9,
-        "offset": 91,
-        "surroundingCode": "import com.javiersc.either.resource.ResourceEither\n\npublic val <F, S> ResourceEither<F, S>.isFailure: Boolean\n    get() = this is Either.Left\n"
+        "length": 7,
+        "offset": 88,
+        "surroundingCode": "    const val DnsTimeout = 2000\n    const val DnsUrl = \"https://8.8.8.8/\"\n    const val DnsPort = 53\n}"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.resource-core.commonMain",
+    "module": "either.projects.network.network-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "-6148663292736156299"
+  "hash": "872078774589154143"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Property \"DnsTimeout\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "field",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/internal/Constants.kt",
+      "language": "kotlin",
+      "line": 4,
+      "offset": 14,
+      "length": 10,
+      "code": {
+        "startLine": 2,
+        "length": 10,
+        "offset": 43,
+        "surroundingCode": "\ninternal object Constants {\n    const val DnsTimeout = 2000\n    const val DnsUrl = \"https://8.8.8.8/\"\n    const val DnsPort = 53"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "-2109313831371598203"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Function \"fold\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/extensions/NetworkEitherFold.kt",
+      "language": "kotlin",
+      "line": 48,
+      "offset": 45,
+      "length": 4,
+      "code": {
+        "startLine": 46,
+        "length": 4,
+        "offset": 90,
+        "surroundingCode": "\n@JvmName(\"foldWithSuccessDataAndErrorCode\")\npublic inline fun <F, S> NetworkEither<F, S>.fold(\n    success: (S) -> Unit,\n    failureHttp: (HttpStatusCode) -> Unit,"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "-7734417502026955195"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Function \"fold\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/extensions/NetworkEitherFold.kt",
+      "language": "kotlin",
+      "line": 29,
+      "offset": 45,
+      "length": 4,
+      "code": {
+        "startLine": 27,
+        "length": 4,
+        "offset": 52,
+        "surroundingCode": "    }\n\npublic inline fun <F, S> NetworkEither<F, S>.fold(\n    success: (S) -> Unit,\n    failureHttp: (F) -> Unit,"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "-4081851060431953604"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Function \"foldOnlySuccessData\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/network/network-core/commonMain/kotlin/com/javiersc/either/network/extensions/NetworkEitherFold.kt",
+      "language": "kotlin",
+      "line": 66,
+      "offset": 45,
+      "length": 19,
+      "code": {
+        "startLine": 64,
+        "length": 19,
+        "offset": 52,
+        "surroundingCode": "    }\n\npublic inline fun <F, S> NetworkEither<F, S>.foldOnlySuccessData(\n    success: (S) -> Unit,\n    failureHttp: () -> Unit,"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.network.network-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "2749023372762200295"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -60,6 +184,37 @@
     "inspectionName": "UnusedSymbol"
   },
   "hash": "-1120759161073759357"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Property \"isFailure\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceIs.kt",
+      "language": "kotlin",
+      "line": 6,
+      "offset": 39,
+      "length": 9,
+      "code": {
+        "startLine": 4,
+        "length": 9,
+        "offset": 91,
+        "surroundingCode": "import com.javiersc.either.resource.ResourceEither\n\npublic val <F, S> ResourceEither<F, S>.isFailure: Boolean\n    get() = this is Either.Left\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "either.projects.resource-core.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "-6148663292736156299"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
