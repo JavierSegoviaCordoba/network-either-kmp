@@ -252,7 +252,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -272,7 +272,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
           "type": "Library"
         },
         {
@@ -280,7 +280,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -304,15 +304,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.3",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.3",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
@@ -398,7 +398,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -422,7 +422,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -430,7 +430,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -462,6 +462,10 @@
         },
         {
           "name": "either.projects.either-core.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "either.projects.either-core.commonMain",
           "type": "Module"
         },
         {
@@ -540,7 +544,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -560,7 +564,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
           "type": "Library"
         },
         {
@@ -568,7 +572,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -592,15 +596,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.3",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.3",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
@@ -694,7 +698,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -714,7 +718,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -722,7 +726,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -771,6 +775,10 @@
           "type": "Module"
         },
         {
+          "name": "either.projects.either-core.commonMain",
+          "type": "Module"
+        },
+        {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
@@ -799,7 +807,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
@@ -972,11 +980,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
@@ -996,7 +1004,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1032,7 +1040,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
           "type": "Library"
         },
         {
@@ -1076,7 +1084,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1096,7 +1104,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1104,7 +1112,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1161,11 +1169,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
           "type": "Library"
         },
         {
@@ -1271,15 +1279,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.1",
           "type": "Library"
         },
         {
@@ -1287,7 +1295,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -1327,7 +1335,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -1335,7 +1343,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -1386,11 +1394,19 @@
           "type": "Module"
         },
         {
+          "name": "either.projects.network.network-core.commonMain",
+          "type": "Module"
+        },
+        {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
           "type": "Library"
         },
         {
           "name": "either.projects.either-core.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "either.projects.either-core.commonMain",
           "type": "Module"
         },
         {
@@ -1434,7 +1450,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
@@ -1581,15 +1597,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1633,7 +1649,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
@@ -1673,7 +1689,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
           "type": "Library"
         },
         {
@@ -1689,7 +1705,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1717,7 +1733,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1733,7 +1749,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -1806,11 +1822,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
           "type": "Library"
         },
         {
@@ -1895,7 +1911,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -1919,11 +1935,11 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.3",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -1935,11 +1951,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
           "type": "Library"
         },
         {
@@ -2018,6 +2034,10 @@
           "type": "Module"
         },
         {
+          "name": "either.projects.network.network-core.commonMain",
+          "type": "Module"
+        },
+        {
           "name": "either.projects.resource-core.jvmMain",
           "type": "Module"
         },
@@ -2026,11 +2046,19 @@
           "type": "Module"
         },
         {
+          "name": "either.projects.resource-core.commonMain",
+          "type": "Module"
+        },
+        {
           "name": "either.projects.either-core.jvmMain",
           "type": "Module"
         },
         {
           "name": "either.projects.resource-core.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "either.projects.either-core.commonMain",
           "type": "Module"
         },
         {
@@ -2058,7 +2086,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
@@ -2229,11 +2257,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -2277,7 +2305,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
           "type": "Library"
         },
         {
@@ -2297,7 +2325,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -2325,7 +2353,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -2333,7 +2361,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.2.3",
           "type": "Library"
         },
         {
@@ -2398,11 +2426,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
           "type": "Library"
         },
         {
@@ -2499,7 +2527,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -2511,11 +2539,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
           "type": "Library"
         },
         {
@@ -2535,7 +2563,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -2543,7 +2571,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.2.3",
           "type": "Library"
         },
         {
@@ -2714,7 +2742,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.8.0",
+          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.9.0",
           "type": "Library"
         },
         {
@@ -3018,7 +3046,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.ow2.asm:asm:9.0",
+          "name": "Gradle: org.ow2.asm:asm:9.2",
           "type": "Library"
         },
         {
@@ -3082,11 +3110,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.ow2.asm:asm-tree:9.0",
+          "name": "Gradle: org.ow2.asm:asm-tree:9.2",
           "type": "Library"
         },
         {
@@ -3753,7 +3781,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.8.0",
+          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.9.0",
           "type": "Library"
         },
         {
@@ -4045,7 +4073,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.ow2.asm:asm:9.0",
+          "name": "Gradle: org.ow2.asm:asm:9.2",
           "type": "Library"
         },
         {
@@ -4161,11 +4189,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.ow2.asm:asm-tree:9.0",
+          "name": "Gradle: org.ow2.asm:asm-tree:9.2",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2",
           "type": "Library"
         },
         {
