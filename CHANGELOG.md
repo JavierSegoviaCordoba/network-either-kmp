@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.9.0`
 - `io.kotest:kotest-assertions-core -> 5.2.3`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-test -> 1.6.1`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.1`
@@ -33,7 +34,6 @@
 - `com.android.tools.build:gradle -> 7.0.4`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
-- `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.8.0`
 - `com.squareup.okio:okio -> 3.0.0`
 
 ## [0.1.0-alpha.3] - 2021-07-19
