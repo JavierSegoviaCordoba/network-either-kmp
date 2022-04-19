@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `com.squareup.okio:okio -> 3.1.0`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.21`
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.6.21`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.9.0`
@@ -34,7 +35,6 @@
 - `com.android.tools.build:gradle -> 7.0.4`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
-- `com.squareup.okio:okio -> 3.0.0`
 
 ## [0.1.0-alpha.3] - 2021-07-19
 
