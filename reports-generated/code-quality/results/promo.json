@@ -6,29 +6,29 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"successOrNull\" is never used",
+  "comment": "Function \"toResource\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
       "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceOr.kt",
+      "path": "projects/network/network-resource/commonMain/kotlin/com/javiersc/either/network/resource/NetworkEitherToResource.kt",
       "language": "kotlin",
-      "line": 6,
-      "offset": 39,
-      "length": 13,
+      "line": 147,
+      "offset": 55,
+      "length": 10,
       "code": {
-        "startLine": 4,
-        "length": 13,
-        "offset": 92,
-        "surroundingCode": "import com.javiersc.either.resource.ResourceSuccess\n\npublic fun <F, S> ResourceEither<F, S>.successOrNull(): ResourceSuccess<S>? =\n    if (this is ResourceSuccess<S>) this else null\n"
+        "startLine": 145,
+        "length": 10,
+        "offset": 109,
+        "surroundingCode": " */\n@JvmName(\"toResourceWithSuccessDataAndErrorCode\")\npublic inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(\n    success: (NS) -> S,\n    httpError: (HttpStatusCode) -> F,"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.resource-core.commonMain",
+    "module": "either.projects.network.network-resource.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "-4078336491634993750"
+  "hash": "-1255339598038577374"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -37,29 +37,29 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"successDataOrNull\" is never used",
+  "comment": "Function \"combine\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
       "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceOr.kt",
+      "path": "projects/either-core/commonMain/kotlin/com/javiersc/either/extensions/EitherCombine.kt",
       "language": "kotlin",
-      "line": 9,
-      "offset": 39,
-      "length": 17,
+      "line": 52,
+      "offset": 47,
+      "length": 7,
       "code": {
-        "startLine": 7,
-        "length": 17,
-        "offset": 91,
-        "surroundingCode": "    if (this is ResourceSuccess<S>) this else null\n\npublic fun <F, S> ResourceEither<F, S>.successDataOrNull(): S? =\n    if (this is ResourceSuccess<S>) right.data else null"
+        "startLine": 50,
+        "length": 7,
+        "offset": 72,
+        "surroundingCode": " */\n@JvmName(\"combine3\")\npublic inline fun <L, R1, R2, R> Either<L, R1>.combine(\n    either: Either<L, R2>,\n    left: (L, L) -> L,"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.resource-core.commonMain",
+    "module": "either.projects.either-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "-2195170149349149491"
+  "hash": "-3707088650072694683"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -68,29 +68,29 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"asSuccessLoading\" is never used",
+  "comment": "Function \"combine\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
       "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceEitherAs.kt",
+      "path": "projects/either-core/commonMain/kotlin/com/javiersc/either/extensions/EitherCombine.kt",
       "language": "kotlin",
-      "line": 13,
-      "offset": 20,
-      "length": 16,
+      "line": 27,
+      "offset": 56,
+      "length": 7,
       "code": {
-        "startLine": 11,
-        "length": 16,
-        "offset": 61,
-        "surroundingCode": "\n/** Transform this in SuccessLoading */\npublic fun <F, S> S.asSuccessLoading(): ResourceEither<F, S> = buildResourceSuccessLoading(this)\n\n/** Transform this in Success */"
+        "startLine": 25,
+        "length": 7,
+        "offset": 160,
+        "surroundingCode": "/** Combine an Either with another Either where all Either have different types */\n@JvmName(\"combine2\")\npublic inline fun <L1, R1, L2, R2, R, L> Either<L1, R1>.combine(\n    another: Either<L2, R2>,\n    left: (L1, L2) -> L,"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.resource-core.commonMain",
+    "module": "either.projects.either-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "2424912818377598191"
+  "hash": "8433212714635192884"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -99,58 +99,27 @@
     "kotlin"
   ],
   "severity": "High",
-  "comment": "Function \"asFailure\" is never used",
+  "comment": "Function \"combine\" is never used",
   "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
   "sources": [
     {
       "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceEitherAs.kt",
+      "path": "projects/either-core/commonMain/kotlin/com/javiersc/either/extensions/EitherCombine.kt",
       "language": "kotlin",
-      "line": 9,
-      "offset": 20,
-      "length": 9,
+      "line": 7,
+      "offset": 38,
+      "length": 7,
       "code": {
-        "startLine": 7,
-        "length": 9,
-        "offset": 54,
-        "surroundingCode": "\n/** Transform this in Failure */\npublic fun <F, S> F.asFailure(data: S? = null, isLoading: Boolean = false): ResourceEither<F, S> =\n    buildResourceFailure(this, data, isLoading)\n"
+        "startLine": 5,
+        "length": 7,
+        "offset": 139,
+        "surroundingCode": "\n/** Combine an Either with another Either where both and the resulting Either have the same type */\npublic inline fun <L, R> Either<L, R>.combine(\n    either: Either<L, R>,\n    left: (L, L) -> L,"
       }
     }
   ],
   "attributes": {
-    "module": "either.projects.resource-core.commonMain",
+    "module": "either.projects.either-core.commonMain",
     "inspectionName": "UnusedSymbol"
   },
-  "hash": "4020070812314824129"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused symbol",
-  "tags": [
-    "kotlin"
-  ],
-  "severity": "High",
-  "comment": "Function \"asSuccess\" is never used",
-  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "projects/resource-core/commonMain/kotlin/com/javiersc/either/resource/extensions/ResourceEitherAs.kt",
-      "language": "kotlin",
-      "line": 16,
-      "offset": 20,
-      "length": 9,
-      "code": {
-        "startLine": 14,
-        "length": 9,
-        "offset": 54,
-        "surroundingCode": "\n/** Transform this in Success */\npublic fun <F, S> S.asSuccess(isLoading: Boolean = false): ResourceEither<F, S> =\n    buildResourceSuccess(this, isLoading)"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.projects.resource-core.commonMain",
-    "inspectionName": "UnusedSymbol"
-  },
-  "hash": "8156489602023245861"
+  "hash": "-6992938304543186945"
 }]}
