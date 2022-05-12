@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.3`
 - `io.kotest:kotest-assertions-core -> 5.3.0`
 - `com.squareup.okio:okio -> 3.1.0`
 - `org.jetbrains.kotlin:kotlin-serialization -> 1.6.21`
@@ -29,7 +30,6 @@
 - `io.ktor:ktor-client-cio -> 1.6.8`
 - `com.javiersc.run-blocking:suspend-test -> 0.1.0-beta.3`
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.3`
-- `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.2`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.9`
 - `com.android.tools.build:gradle -> 7.0.4`
