@@ -811,7 +811,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -867,7 +867,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -988,7 +988,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -1004,7 +1004,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -1173,7 +1173,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1197,7 +1197,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1287,7 +1287,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1319,7 +1319,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1450,7 +1450,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -1486,7 +1486,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -1605,7 +1605,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1657,7 +1657,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -1665,7 +1665,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1741,7 +1741,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -1826,7 +1826,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1858,7 +1858,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1955,7 +1955,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -1987,7 +1987,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -2074,7 +2074,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -2118,7 +2118,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -2241,7 +2241,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -2309,7 +2309,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
           "type": "Library"
         },
         {
@@ -2410,7 +2410,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -2434,7 +2434,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -2519,7 +2519,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
           "type": "Library"
         },
         {
@@ -2547,7 +2547,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
           "type": "Library"
         },
         {

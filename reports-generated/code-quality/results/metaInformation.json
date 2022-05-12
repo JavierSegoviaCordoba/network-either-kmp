@@ -1,13 +1,13 @@
 {
-  "total": 2,
+  "total": 0,
   "tools inspection": {
-    "Code Inspection": 2
+    "Code Inspection": 0
   },
   "attributes": {
     "vcs": {
       "sarifIdea": {
         "repositoryUri": "https://github.com/JavierSegoviaCordoba/either",
-        "revisionId": "b85289ffe0fb3d62c15db258aeae7deb2d768a5c",
+        "revisionId": "a995bb1844c89587d7da45a2a244d8bcb1f095c1",
         "branch": "main"
       }
     },

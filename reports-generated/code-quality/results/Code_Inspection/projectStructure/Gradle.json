@@ -58,12 +58,12 @@
       "version": "1.6.1"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2",
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlinx",
       "artifactId": "kotlinx-serialization-json-jvm",
-      "version": "1.3.2"
+      "version": "1.3.3"
     },
     {
       "ideaName": "Gradle: com.javiersc.run-blocking:run-blocking-core-jvm:0.1.0-beta.3",
@@ -146,12 +146,12 @@
       "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2",
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.3",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlinx",
       "artifactId": "kotlinx-serialization-core-jvm",
-      "version": "1.3.2"
+      "version": "1.3.3"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-network-jvm:1.6.8",
@@ -426,12 +426,12 @@
       "version": "1.6.1"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.2",
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlinx",
       "artifactId": "kotlinx-serialization-json",
-      "version": "1.3.2"
+      "version": "1.3.3"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-client-json:commonMain:1.6.8",
@@ -466,12 +466,12 @@
       "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.2",
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-serialization-core:commonMain:1.3.3",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlinx",
       "artifactId": "kotlinx-serialization-core",
-      "version": "1.3.2"
+      "version": "1.3.3"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-utils:commonMain:1.6.8",
