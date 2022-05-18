@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `com.android.tools.build:gradle -> 7.2.0`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.10.0`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.3`
 - `io.kotest:kotest-assertions-core -> 5.3.0`
@@ -32,7 +33,6 @@
 - `com.javiersc.run-blocking:run-blocking-core -> 0.1.0-beta.3`
 - `com.javiersc.mokoki:mokoki-serialization -> 0.1.0-alpha.9`
 - `com.javiersc.mokoki:mokoki-core -> 0.1.0-alpha.9`
-- `com.android.tools.build:gradle -> 7.0.4`
 - `com.squareup.okhttp3:mockwebserver -> 4.9.3`
 - `com.squareup.okhttp3:okhttp -> 4.9.3`
 
