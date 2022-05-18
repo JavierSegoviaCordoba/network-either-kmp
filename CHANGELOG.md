@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.43`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.10.0`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.3`
 - `io.kotest:kotest-assertions-core -> 5.3.0`
@@ -23,7 +24,6 @@
 - `org.jetbrains.kotlinx:kotlinx-coroutines-test -> 1.6.1`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.1`
 - `gradle -> 7.4.2`
-- `com.javiersc.gradle-plugins:all-plugins -> 0.1.0-rc.42`
 - `io.ktor:ktor-client-serialization -> 1.6.8`
 - `io.ktor:ktor-client-mock -> 1.6.8`
 - `io.ktor:ktor-client-core -> 1.6.8`
