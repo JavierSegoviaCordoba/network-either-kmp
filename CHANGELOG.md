@@ -14,8 +14,8 @@
 
 ### Updated
 
-- `org.jetbrains.kotlinx:kotlinx-coroutines-test -> 1.6.2`
-- `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.2`
+- `org.jetbrains.kotlinx:kotlinx-coroutines-test -> 1.6.3`
+- `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.3`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.10.0`
 - `org.jetbrains.kotlinx:kotlinx-serialization-json -> 1.3.3`
 - `io.kotest:kotest-assertions-core -> 5.3.0`

@@ -1,5 +1,5 @@
 [versions]
-coroutines = "1.6.2"
+coroutines = "1.6.3"
 kotest = "5.3.0"
 ktor = "1.6.8"
 mokoki = "0.1.0-alpha.9"
