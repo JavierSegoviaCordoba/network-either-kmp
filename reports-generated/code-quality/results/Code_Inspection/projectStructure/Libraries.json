@@ -12,12 +12,6 @@
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.9.0",
-      "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/binary-compatibility-validator/0.9.0/6c9bb9864a73d0f27e51f543d3743259ac221af0/binary-compatibility-validator-0.9.0.jar!/"
-      ]
-    },
-    {
       "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
       "roots": [
         "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.6.20/dab8089bca6ac0e394c37281ea8cff2f99acd421/kotlin-stdlib-jdk8-1.6.20.jar!/"
@@ -45,6 +39,12 @@
       "name": "Gradle: org.jetbrains.kotlin:kotlin-serialization:1.6.21",
       "roots": [
         "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-serialization/1.6.21/636b62fee651b7b6bd431919e026a430c96626c/kotlin-serialization-1.6.21.jar!/"
+      ]
+    },
+    {
+      "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.0",
+      "roots": [
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/binary-compatibility-validator/0.10.0/ccda5bf2aa3141f66b7f78b91afbf2e3678638fa/binary-compatibility-validator-0.10.0.jar!/"
       ]
     },
     {
@@ -1421,14 +1421,14 @@
       "properties": {}
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.3",
       "roots": [
         "jar://$PROJECT_DIR$/.gradle/kotlin/sourceSetMetadata/network-core.network.projects.either/commonMain/api/org.jetbrains.kotlinx-kotlinx-coroutines-core/org.jetbrains.kotlinx-kotlinx-coroutines-core-commonMain.klib!/"
       ],
       "properties": {}
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.3",
       "roots": [
         "jar://$PROJECT_DIR$/.gradle/kotlin/sourceSetMetadata/network-core.network.projects.either/commonMain/api/org.jetbrains.kotlinx-kotlinx-coroutines-core/org.jetbrains.kotlinx-kotlinx-coroutines-core-concurrentMain.klib!/"
       ],
@@ -1535,7 +1535,7 @@
       "properties": {}
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.3",
       "roots": [
         "jar://$PROJECT_DIR$/.gradle/kotlin/sourceSetMetadata/network-core.network.projects.either/commonTest/implementation/org.jetbrains.kotlinx-kotlinx-coroutines-test/org.jetbrains.kotlinx-kotlinx-coroutines-test-commonMain.klib!/"
       ],
@@ -1586,9 +1586,9 @@
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.1/97fd74ccf54a863d221956ffcd21835e168e2aaa/kotlinx-coroutines-core-jvm-1.6.1.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.3/b2c2f0c8e99eac632a8db723b365bd59067cf7bd/kotlinx-coroutines-core-jvm-1.6.3.jar!/"
       ]
     },
     {
@@ -1721,9 +1721,9 @@
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8/1.6.1/365e34d5f89c5cd4b3288f09f783befa21545358/kotlinx-coroutines-jdk8-1.6.1.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8/1.6.3/9381b4f9b62d3667c0dc15a17cd390eddd3ecd15/kotlinx-coroutines-jdk8-1.6.3.jar!/"
       ]
     },
     {
@@ -1805,9 +1805,9 @@
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-test-jvm/1.6.1/ee8acbaa07394eaf4f0e788fbbad9ead940c60fc/kotlinx-coroutines-test-jvm-1.6.1.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-test-jvm/1.6.3/a3df48df354832fafd29f33795dfea8e90f8c8db/kotlinx-coroutines-test-jvm-1.6.3.jar!/"
       ]
     },
     {
@@ -1832,6 +1832,18 @@
       "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-metadata:all:1.0.0",
       "roots": [
         "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-metadata/1.0.0/5980c79fa16dcd71c61e86722b52467674ca9497/kotlinx-serialization-core-metadata-1.0.0-all.jar!/"
+      ]
+    },
+    {
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
+      "roots": [
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8/1.6.1/365e34d5f89c5cd4b3288f09f783befa21545358/kotlinx-coroutines-jdk8-1.6.1.jar!/"
+      ]
+    },
+    {
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
+      "roots": [
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.1/97fd74ccf54a863d221956ffcd21835e168e2aaa/kotlinx-coroutines-core-jvm-1.6.1.jar!/"
       ]
     }
   ]
