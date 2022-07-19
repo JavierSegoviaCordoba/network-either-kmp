@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.509s</div>
+<div class="counter">3.452s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,31 +81,31 @@
 <tr>
 <td class="success">Pretty print Http failure()[jvm]</td>
 <td class="success">Pretty print Http failure()</td>
-<td class="success">0.270s</td>
+<td class="success">0.213s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Pretty print Local failure()[jvm]</td>
 <td class="success">Pretty print Local failure()</td>
-<td class="success">0.025s</td>
+<td class="success">0.023s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Pretty print Remote failure()[jvm]</td>
 <td class="success">Pretty print Remote failure()</td>
-<td class="success">1.980s</td>
+<td class="success">2.958s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Pretty print Success()[jvm]</td>
 <td class="success">Pretty print Success()</td>
-<td class="success">0.068s</td>
+<td class="success">0.028s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Pretty print Unknown failure()[jvm]</td>
 <td class="success">Pretty print Unknown failure()</td>
-<td class="success">0.166s</td>
+<td class="success">0.230s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -242,13 +242,15 @@
 ?[31m │ 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)                               │ ?[0m
 ?[31m │ 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)                                                                │ ?[0m
 ?[31m │ 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)                                                                    │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)                                                                       │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)                                                                       │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)                                                                        │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)                                                               │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)                                                         │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)                                                                                                │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)                                                                                                │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)                                                                                               │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)                                                                                                │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)                                                               │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)                                                                            │ ?[0m
 ?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) │ ?[0m
 ?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)            │ ?[0m
 ?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)                                                │ ?[0m
@@ -332,13 +334,15 @@
 ?[31m │ 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)                               │ ?[0m
 ?[31m │ 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)                                                                │ ?[0m
 ?[31m │ 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)                                                                    │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)                                                                       │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)                                                                       │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)                                                                        │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)                                                               │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)                                                         │ ?[0m
 ?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)                                                                                                │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)                                                                                                │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)                                                                                               │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)                                                                                                │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)                                                               │ ?[0m
+?[31m │ 	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)                                                                            │ ?[0m
 ?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) │ ?[0m
 ?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)            │ ?[0m
 ?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)                                                │ ?[0m
@@ -384,7 +388,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4.2</a> at Jun 27, 2022, 8:06:20 AM</p>
+<a href="http://www.gradle.org">Gradle 7.5</a> at Jul 19, 2022, 10:03:37 PM</p>
 </div>
 </div>
 </body>

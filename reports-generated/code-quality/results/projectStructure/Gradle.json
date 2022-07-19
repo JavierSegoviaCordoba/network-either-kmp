@@ -2,14 +2,6 @@
   "gradleJvm": "#JAVA_HOME",
   "libraries": [
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlin",
-      "artifactId": "kotlin-stdlib-jdk8",
-      "version": "1.6.21"
-    },
-    {
       "ideaName": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
       "gradleName": "com.squareup.retrofit2:retrofit:2.9.0",
       "unresolved": false,
@@ -18,12 +10,20 @@
       "version": "2.9.0"
     },
     {
-      "ideaName": "Gradle: com.squareup.okhttp3:okhttp:4.9.3",
-      "gradleName": "com.squareup.okhttp3:okhttp:4.9.3",
+      "ideaName": "Gradle: com.squareup.okhttp3:okhttp:4.10.0",
+      "gradleName": "com.squareup.okhttp3:okhttp:4.10.0",
       "unresolved": false,
       "groupId": "com.squareup.okhttp3",
       "artifactId": "okhttp",
-      "version": "4.9.3"
+      "version": "4.10.0"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-jdk8",
+      "version": "1.6.21"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-client-serialization-jvm:1.6.8",
@@ -74,14 +74,6 @@
       "version": "0.1.0-beta.3"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlin",
-      "artifactId": "kotlin-stdlib-jdk7",
-      "version": "1.6.21"
-    },
-    {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.21",
       "gradleName": "org.jetbrains.kotlin:kotlin-stdlib:1.6.21",
       "unresolved": false,
@@ -90,12 +82,12 @@
       "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: com.squareup.okio:okio:2.8.0",
-      "gradleName": "com.squareup.okio:okio:2.8.0",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
       "unresolved": false,
-      "groupId": "com.squareup.okio",
-      "artifactId": "okio",
-      "version": "2.8.0"
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-jdk7",
+      "version": "1.6.21"
     },
     {
       "ideaName": "Gradle: org.slf4j:slf4j-api:1.7.36",
@@ -104,6 +96,14 @@
       "groupId": "org.slf4j",
       "artifactId": "slf4j-api",
       "version": "1.7.36"
+    },
+    {
+      "ideaName": "Gradle: com.squareup.okio:okio-jvm:3.0.0",
+      "gradleName": "com.squareup.okio:okio-jvm:3.0.0",
+      "unresolved": false,
+      "groupId": "com.squareup.okio",
+      "artifactId": "okio-jvm",
+      "version": "3.0.0"
     },
     {
       "ideaName": "Gradle: org.jetbrains:annotations:13.0",
@@ -194,6 +194,14 @@
       "version": "1.6.8"
     },
     {
+      "ideaName": "Gradle: com.squareup.okio:okio:3.0.0",
+      "gradleName": "com.squareup.okio:okio:3.0.0",
+      "unresolved": false,
+      "groupId": "com.squareup.okio",
+      "artifactId": "okio",
+      "version": "3.0.0"
+    },
+    {
       "ideaName": "Gradle: io.ktor:ktor-network:commonMain:1.6.8",
       "gradleName": "io.ktor:ktor-network:commonMain:1.6.8",
       "unresolved": false,
@@ -202,20 +210,12 @@
       "version": "1.6.8"
     },
     {
-      "ideaName": "Gradle: com.squareup.okio:okio-metadata:2.8.0",
-      "gradleName": "com.squareup.okio:okio-metadata:2.8.0",
-      "unresolved": false,
-      "groupId": "com.squareup.okio",
-      "artifactId": "okio-metadata",
-      "version": "2.8.0"
-    },
-    {
-      "ideaName": "Gradle: com.squareup.okhttp3:mockwebserver:4.9.3",
-      "gradleName": "com.squareup.okhttp3:mockwebserver:4.9.3",
+      "ideaName": "Gradle: com.squareup.okhttp3:mockwebserver:4.10.0",
+      "gradleName": "com.squareup.okhttp3:mockwebserver:4.10.0",
       "unresolved": false,
       "groupId": "com.squareup.okhttp3",
       "artifactId": "mockwebserver",
-      "version": "4.9.3"
+      "version": "4.10.0"
     },
     {
       "ideaName": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
@@ -266,12 +266,12 @@
       "version": "5.3.0"
     },
     {
-      "ideaName": "Gradle: com.squareup.okio:okio-jvm:3.1.0",
-      "gradleName": "com.squareup.okio:okio-jvm:3.1.0",
+      "ideaName": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+      "gradleName": "com.squareup.okio:okio-jvm:3.2.0",
       "unresolved": false,
       "groupId": "com.squareup.okio",
       "artifactId": "okio-jvm",
-      "version": "3.1.0"
+      "version": "3.2.0"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
@@ -522,12 +522,12 @@
       "version": "5.3.0"
     },
     {
-      "ideaName": "Gradle: com.squareup.okio:okio:commonMain:3.1.0",
-      "gradleName": "com.squareup.okio:okio:commonMain:3.1.0",
+      "ideaName": "Gradle: com.squareup.okio:okio:commonMain:3.2.0",
+      "gradleName": "com.squareup.okio:okio:commonMain:3.2.0",
       "unresolved": false,
       "groupId": "com.squareup.okio",
       "artifactId": "okio",
-      "version": "3.1.0"
+      "version": "3.2.0"
     },
     {
       "ideaName": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.3.0",
@@ -618,20 +618,20 @@
       "version": "0.1.0-rc.42"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib-jdk8",
-      "version": "1.6.20"
+      "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.5.31",
-      "gradleName": "org.jetbrains.kotlin:kotlin-reflect:1.5.31",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-reflect:1.6.21",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-reflect",
-      "version": "1.5.31"
+      "version": "1.6.21"
     },
     {
       "ideaName": "Gradle: com.android.tools.build:gradle:7.0.4",
@@ -802,20 +802,20 @@
       "version": "0.1.0-rc.42"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib-jdk7",
-      "version": "1.6.20"
+      "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib:1.6.21",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib",
-      "version": "1.6.20"
+      "version": "1.6.21"
     },
     {
       "ideaName": "Gradle: com.android.tools.build:builder:7.0.4",
@@ -914,20 +914,20 @@
       "version": "1.1.0"
     },
     {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-common",
+      "version": "1.6.21"
+    },
+    {
       "ideaName": "Gradle: org.jetbrains:annotations:13.0",
       "gradleName": "org.jetbrains:annotations:13.0",
       "unresolved": false,
       "groupId": "org.jetbrains",
       "artifactId": "annotations",
       "version": "13.0"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlin",
-      "artifactId": "kotlin-stdlib-common",
-      "version": "1.6.20"
     },
     {
       "ideaName": "Gradle: com.android.tools.build:manifest-merger:30.0.4",
@@ -1000,14 +1000,6 @@
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-util-io",
       "version": "1.6.21"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-reflect:1.6.10",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlin",
-      "artifactId": "kotlin-reflect",
-      "version": "1.6.10"
     },
     {
       "ideaName": "Gradle: com.android.tools.lint:lint-model:30.0.4",
@@ -2432,6 +2424,46 @@
       "groupId": "org.jetbrains.kotlinx",
       "artifactId": "kotlinx-serialization-core-jvm",
       "version": "1.1.0"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-jdk8",
+      "version": "1.6.20"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.20",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-jdk7",
+      "version": "1.6.20"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib",
+      "version": "1.6.20"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+      "gradleName": "org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-reflect",
+      "version": "1.6.10"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.6.20",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-common",
+      "version": "1.6.20"
     }
   ]
 }
