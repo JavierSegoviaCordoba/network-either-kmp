@@ -17,11 +17,11 @@ internal fun <F : Any, S : Any> Response<S>.responseDeferredHandler(
     val errorBody: F? =
         if (errorBody()?.contentLength() == 0L) null
         else
-            runCatching { errorBody()?.let { errorConverter.convert(it) } }.getOrElse {
-                printlnError("Error body can't be serialized with the error object provided").run {
-                    null
+            runCatching { errorBody()?.let { errorConverter.convert(it) } }
+                .getOrElse {
+                    printlnError("Error body can't be serialized with the error object provided")
+                        .run { null }
                 }
-            }
 
     handleDeferred(deferred, httpStatusCode.value, body(), errorBody, headers.toMap())
 }

@@ -42,7 +42,9 @@ internal fun <F : Any, S : Any> deferredAdapt(
 
             override fun onFailure(call: Call<S>, throwable: Throwable) {
                 when (throwable) {
-                    is UnknownHostException, is ConnectException, is InterruptedIOException ->
+                    is UnknownHostException,
+                    is ConnectException,
+                    is InterruptedIOException ->
                         onCommonConnectionException(deferred, isNetworkAvailable())
                     is EOFException -> onEOFException(deferred)
                     is IllegalStateException -> onIllegalStateException(deferred, throwable)

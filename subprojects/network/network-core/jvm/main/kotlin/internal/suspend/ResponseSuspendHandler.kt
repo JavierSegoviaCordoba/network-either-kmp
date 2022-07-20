@@ -18,11 +18,11 @@ internal fun <F : Any, S : Any> Response<S>.responseSuspendHandler(
     val errorBody: F? =
         if (errorBody()?.contentLength() == 0L) null
         else
-            runCatching { errorBody()?.let { errorConverter.convert(it) } }.getOrElse {
-                printlnError("Error body can't be serialized with the error object provided").run {
-                    null
+            runCatching { errorBody()?.let { errorConverter.convert(it) } }
+                .getOrElse {
+                    printlnError("Error body can't be serialized with the error object provided")
+                        .run { null }
                 }
-            }
 
     handleSuspend(call, callback, httpStatusCode.value, body(), errorBody, headers.toMap())
 }

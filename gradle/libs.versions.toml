@@ -1,0 +1,16 @@
+[versions]
+hubdle = "0.2.0-alpha.31"
+kotlin = "1.7.10"
+ktor = "2.0.3"
+
+[libraries]
+jetbrains-kotlin-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+ktor-ktorClientCio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-ktorClientContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-ktorClientCore = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-ktorClientMock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
+ktor-ktorClientOkHttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-ktorSerializationKotlinxJson = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+[plugins]
+javiersc-hubdle = { id = "com.javiersc.hubdle", version.ref = "hubdle" }
