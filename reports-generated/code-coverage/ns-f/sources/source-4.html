@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > Success</title>
+  <title>Coverage Report > ResourceIsKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,10 +17,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.either.resource</a>
+    <a href="../index.html">com.javiersc.either.resource.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: Success (com.javiersc.either.resource)</h1>
+<h1>Coverage Summary for Class: ResourceIsKt (com.javiersc.either.resource.extensions)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -47,21 +47,13 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">Success</td>
+  <td class="name">ResourceIsKt</td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (1/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (1/1)
+    (0/1)
   </span>
 </td>
 <td class="coverageStat">
@@ -69,23 +61,31 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/2)
+    (0/3)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (1/1)
+    (0/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    72.7%
+    0%
   </span>
   <span class="absValue">
-    (16/22)
+    (0/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/25)
   </span>
 </td>
 </tr>
@@ -97,10 +97,19 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.resource
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.resource.extensions
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;/** Right value for Either which lets you add the success data and a loading flag */
-<b class="pc"><i class="no-highlight">4</i>&nbsp;public data class Success&lt;out S&gt;(val data: S, val isLoading: Boolean = false)</b>
+<i class="no-highlight">3</i>&nbsp;import com.javiersc.either.Either
+<i class="no-highlight">4</i>&nbsp;import com.javiersc.either.resource.ResourceEither
+<i class="no-highlight">5</i>&nbsp;
+<i class="no-highlight">6</i>&nbsp;public val &lt;F, S&gt; ResourceEither&lt;F, S&gt;.isFailure: Boolean
+<b class="nc"><i class="no-highlight">7</i>&nbsp;    get() = this is Either.Left</b>
+<i class="no-highlight">8</i>&nbsp;
+<i class="no-highlight">9</i>&nbsp;public val &lt;F, S&gt; ResourceEither&lt;F, S&gt;.isSuccess: Boolean
+<b class="nc"><i class="no-highlight">10</i>&nbsp;    get() = (this is Either.Right)</b>
+<i class="no-highlight">11</i>&nbsp;
+<i class="no-highlight">12</i>&nbsp;public val &lt;F, S&gt; ResourceEither&lt;F, S&gt;.isLoading: Boolean
+<b class="nc"><i class="no-highlight">13</i>&nbsp;    get() = (this is Either.Left &amp;&amp; left.isLoading) || (this is Either.Right &amp;&amp; right.isLoading)</b>
 </div>
 </pre>
 </div>
@@ -127,7 +136,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-19 22:03</div>
+    <div style="float:right;">generated on 2022-07-22 21:59</div>
 </div>
 </body>
 </html>

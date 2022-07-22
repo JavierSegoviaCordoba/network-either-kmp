@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > ResourceEitherAsKt</title>
+  <title>Coverage Report > Failure</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,10 +17,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.either.resource.extensions</a>
+    <a href="../index.html">com.javiersc.either.resource</a>
 </div>
 
-<h1>Coverage Summary for Class: ResourceEitherAsKt (com.javiersc.either.resource.extensions)</h1>
+<h1>Coverage Summary for Class: Failure (com.javiersc.either.resource)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -47,38 +47,38 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">ResourceEitherAsKt</td>
+  <td class="name">Failure</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/5)
+    (1/1)
   </span>
 </td>
     <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/5)
+    (4/4)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/34)
+    (34/34)
   </span>
 </td>
 </tr>
@@ -90,23 +90,17 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.resource.extensions
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.resource
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.either.resource.ResourceEither
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.either.resource.buildResourceFailure
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.either.resource.buildResourceSuccess
-<i class="no-highlight">6</i>&nbsp;import com.javiersc.either.resource.buildResourceSuccessLoading
-<i class="no-highlight">7</i>&nbsp;
-<i class="no-highlight">8</i>&nbsp;/** Transform this in Failure */
-<b class="nc"><i class="no-highlight">9</i>&nbsp;public fun &lt;F, S&gt; F.asFailure(data: S? = null, isLoading: Boolean = false): ResourceEither&lt;F, S&gt; =</b>
-<b class="nc"><i class="no-highlight">10</i>&nbsp;    buildResourceFailure(this, data, isLoading)</b>
-<i class="no-highlight">11</i>&nbsp;
-<i class="no-highlight">12</i>&nbsp;/** Transform this in SuccessLoading */
-<b class="nc"><i class="no-highlight">13</i>&nbsp;public fun &lt;F, S&gt; S.asSuccessLoading(): ResourceEither&lt;F, S&gt; = buildResourceSuccessLoading(this)</b>
-<i class="no-highlight">14</i>&nbsp;
-<i class="no-highlight">15</i>&nbsp;/** Transform this in Success */
-<b class="nc"><i class="no-highlight">16</i>&nbsp;public fun &lt;F, S&gt; S.asSuccess(isLoading: Boolean = false): ResourceEither&lt;F, S&gt; =</b>
-<b class="nc"><i class="no-highlight">17</i>&nbsp;    buildResourceSuccess(this, isLoading)</b>
+<i class="no-highlight">3</i>&nbsp;/**
+<i class="no-highlight">4</i>&nbsp; * Left value fot Either which lets you add the failure data, a fallback success data and a loading
+<i class="no-highlight">5</i>&nbsp; * flag
+<i class="no-highlight">6</i>&nbsp; */
+<b class="fc"><i class="no-highlight">7</i>&nbsp;public data class Failure&lt;F, S&gt;(</b>
+<b class="fc"><i class="no-highlight">8</i>&nbsp;    val failure: F,</b>
+<b class="fc"><i class="no-highlight">9</i>&nbsp;    val data: S? = null,</b>
+<b class="fc"><i class="no-highlight">10</i>&nbsp;    val isLoading: Boolean = false</b>
+<i class="no-highlight">11</i>&nbsp;)
 </div>
 </pre>
 </div>
@@ -133,7 +127,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-19 22:03</div>
+    <div style="float:right;">generated on 2022-07-22 21:59</div>
 </div>
 </body>
 </html>

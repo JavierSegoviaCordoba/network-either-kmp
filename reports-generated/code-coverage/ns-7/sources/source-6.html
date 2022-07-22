@@ -74,18 +74,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    66.7%
+    71.4%
   </span>
   <span class="absValue">
-    (4/6)
+    (5/7)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    82.7%
+    84.8%
   </span>
   <span class="absValue">
-    (67/81)
+    (67/79)
   </span>
 </td>
 </tr>
@@ -117,11 +117,11 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc"><i class="no-highlight">18</i>&nbsp;    val errorBody: F? =</b>
 <b class="pc"><i class="no-highlight">19</i>&nbsp;        if (errorBody()?.contentLength() == 0L) null</b>
 <i class="no-highlight">20</i>&nbsp;        else
-<b class="pc"><i class="no-highlight">21</i>&nbsp;            runCatching { errorBody()?.let { errorConverter.convert(it) } }.getOrElse {</b>
-<b class="nc"><i class="no-highlight">22</i>&nbsp;                printlnError(&quot;Error body can&#39;t be serialized with the error object provided&quot;).run {</b>
-<b class="nc"><i class="no-highlight">23</i>&nbsp;                    null</b>
-<i class="no-highlight">24</i>&nbsp;                }
-<i class="no-highlight">25</i>&nbsp;            }
+<b class="fc"><i class="no-highlight">21</i>&nbsp;            runCatching { errorBody()?.let { errorConverter.convert(it) } }</b>
+<b class="pc"><i class="no-highlight">22</i>&nbsp;                .getOrElse {</b>
+<b class="nc"><i class="no-highlight">23</i>&nbsp;                    printlnError(&quot;Error body can&#39;t be serialized with the error object provided&quot;)</b>
+<b class="nc"><i class="no-highlight">24</i>&nbsp;                        .run { null }</b>
+<i class="no-highlight">25</i>&nbsp;                }
 <i class="no-highlight">26</i>&nbsp;
 <b class="fc"><i class="no-highlight">27</i>&nbsp;    handleSuspend(call, callback, httpStatusCode.value, body(), errorBody, headers.toMap())</b>
 <i class="no-highlight">28</i>&nbsp;}
@@ -151,7 +151,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-19 22:03</div>
+    <div style="float:right;">generated on 2022-07-22 21:59</div>
 </div>
 </body>
 </html>

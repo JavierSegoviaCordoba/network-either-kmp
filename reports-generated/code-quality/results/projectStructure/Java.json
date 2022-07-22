@@ -5,123 +5,111 @@
       "languageLevel": 11
     },
     {
-      "name": "either.projects",
+      "name": "either.subprojects",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.either-core",
+      "name": "either.subprojects.either-core",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network",
+      "name": "either.subprojects.network",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.resource-core",
+      "name": "either.subprojects.resource-core",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-core",
+      "name": "either.subprojects.network.network-core",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-logger",
+      "name": "either.subprojects.network.network-logger",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-resource",
+      "name": "either.subprojects.network.network-resource",
       "languageLevel": 11
     },
     {
-      "name": "either.buildSrc",
+      "name": "either.subprojects.either-core.jvmMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.either-core.jvmMain",
+      "name": "either.subprojects.either-core.jvmTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.either-core.jvmTest",
+      "name": "either.subprojects.either-core.commonMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.either-core.commonMain",
+      "name": "either.subprojects.either-core.commonTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.either-core.commonTest",
+      "name": "either.subprojects.resource-core.jvmMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.resource-core.jvmMain",
+      "name": "either.subprojects.resource-core.jvmTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.resource-core.jvmTest",
+      "name": "either.subprojects.resource-core.commonMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.resource-core.commonMain",
+      "name": "either.subprojects.resource-core.commonTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.resource-core.commonTest",
+      "name": "either.subprojects.network.network-core.jvmMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-core.jvmMain",
+      "name": "either.subprojects.network.network-core.jvmTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-core.jvmTest",
+      "name": "either.subprojects.network.network-core.commonMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-core.commonMain",
+      "name": "either.subprojects.network.network-core.commonTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-core.commonTest",
+      "name": "either.subprojects.network.network-logger.jvmMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-logger.jvmMain",
+      "name": "either.subprojects.network.network-logger.jvmTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-logger.jvmTest",
+      "name": "either.subprojects.network.network-logger.commonMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-logger.commonMain",
+      "name": "either.subprojects.network.network-logger.commonTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-logger.commonTest",
+      "name": "either.subprojects.network.network-resource.jvmMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-resource.jvmMain",
+      "name": "either.subprojects.network.network-resource.jvmTest",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-resource.jvmTest",
+      "name": "either.subprojects.network.network-resource.commonMain",
       "languageLevel": 11
     },
     {
-      "name": "either.projects.network.network-resource.commonMain",
-      "languageLevel": 11
-    },
-    {
-      "name": "either.projects.network.network-resource.commonTest",
-      "languageLevel": 11
-    },
-    {
-      "name": "either.buildSrc.test",
-      "languageLevel": 11
-    },
-    {
-      "name": "either.buildSrc.main",
+      "name": "either.subprojects.network.network-resource.commonTest",
       "languageLevel": 11
     }
   ]

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > ResourceIsKt</title>
+  <title>Coverage Report > ResourceFoldKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -20,7 +20,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">com.javiersc.either.resource.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: ResourceIsKt (com.javiersc.either.resource.extensions)</h1>
+<h1>Coverage Summary for Class: ResourceFoldKt (com.javiersc.either.resource.extensions)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -47,45 +47,45 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">ResourceIsKt</td>
+  <td class="name">ResourceFoldKt</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/3)
+    (3/3)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    75%
   </span>
   <span class="absValue">
-    (0/8)
+    (6/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/3)
+    (8/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/25)
+    (86/86)
   </span>
 </td>
 </tr>
@@ -102,14 +102,22 @@ Current scope:     <a href="../../index.html">all classes</a>
 <i class="no-highlight">3</i>&nbsp;import com.javiersc.either.Either
 <i class="no-highlight">4</i>&nbsp;import com.javiersc.either.resource.ResourceEither
 <i class="no-highlight">5</i>&nbsp;
-<i class="no-highlight">6</i>&nbsp;public val &lt;F, S&gt; ResourceEither&lt;F, S&gt;.isFailure: Boolean
-<b class="nc"><i class="no-highlight">7</i>&nbsp;    get() = this is Either.Left</b>
-<i class="no-highlight">8</i>&nbsp;
-<i class="no-highlight">9</i>&nbsp;public val &lt;F, S&gt; ResourceEither&lt;F, S&gt;.isSuccess: Boolean
-<b class="nc"><i class="no-highlight">10</i>&nbsp;    get() = (this is Either.Right)</b>
-<i class="no-highlight">11</i>&nbsp;
-<i class="no-highlight">12</i>&nbsp;public val &lt;F, S&gt; ResourceEither&lt;F, S&gt;.isLoading: Boolean
-<b class="nc"><i class="no-highlight">13</i>&nbsp;    get() = (this is Either.Left &amp;&amp; left.isLoading) || (this is Either.Right &amp;&amp; right.isLoading)</b>
+<i class="no-highlight">6</i>&nbsp;public inline fun &lt;F, S&gt; ResourceEither&lt;F, S&gt;.fold(
+<i class="no-highlight">7</i>&nbsp;    failure: (F, S?, Boolean) -&gt; Unit,
+<i class="no-highlight">8</i>&nbsp;    success: (S, Boolean) -&gt; Unit,
+<i class="no-highlight">9</i>&nbsp;): Unit =
+<b class="fc"><i class="no-highlight">10</i>&nbsp;    when (this) {</b>
+<b class="fc"><i class="no-highlight">11</i>&nbsp;        is Either.Left -&gt; failure(left.failure, left.data, left.isLoading)</b>
+<b class="fc"><i class="no-highlight">12</i>&nbsp;        is Either.Right -&gt; success(right.data, right.isLoading)</b>
+<b class="fc"><i class="no-highlight">13</i>&nbsp;    }</b>
+<i class="no-highlight">14</i>&nbsp;
+<i class="no-highlight">15</i>&nbsp;public inline fun &lt;F, S&gt; ResourceEither&lt;F, S&gt;.ifFailure(failure: (F, S?, Boolean) -&gt; Unit) {
+<b class="pc"><i class="no-highlight">16</i>&nbsp;    if (this is Either.Left) failure(left.failure, left.data, left.isLoading)</b>
+<b class="fc"><i class="no-highlight">17</i>&nbsp;}</b>
+<i class="no-highlight">18</i>&nbsp;
+<i class="no-highlight">19</i>&nbsp;public inline fun &lt;F, S&gt; ResourceEither&lt;F, S&gt;.ifSuccess(data: (S, Boolean) -&gt; Unit) {
+<b class="pc"><i class="no-highlight">20</i>&nbsp;    if (this is Either.Right) data(right.data, right.isLoading)</b>
+<b class="fc"><i class="no-highlight">21</i>&nbsp;}</b>
 </div>
 </pre>
 </div>
@@ -136,7 +144,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-19 22:03</div>
+    <div style="float:right;">generated on 2022-07-22 21:59</div>
 </div>
 </body>
 </html>
