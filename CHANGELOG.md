@@ -8,6 +8,14 @@
 
 ### Changed
 
+- project name `network-core` to `network-either`
+- project name `network-logger` to `network-either-logger`
+- project name `network-resource` to `network-resource-either-extensions`
+- project name `resource-core` to `resource-either`
+- all projects  group to `com.javiersc.network`
+- `ResourceEither` is its own `sealed class`K
+- `ResourceEither` package to `com.javiersc.resource.either`
+- `ResourceEither` uses Arrow's `Either`
 - `NetworkEither` is its own `sealed class`
 - `NetworkEither` package to `com.javiersc.network.either`
 - `NetworkEither` uses Arrow's `Either`

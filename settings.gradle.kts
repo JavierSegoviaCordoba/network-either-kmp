@@ -19,10 +19,3 @@ pluginManagement {
 plugins {
     id("com.javiersc.hubdle.settings")
 }
-
-hubdleSettings {
-    autoInclude {
-        excludes(":subprojects:network:network-resource")
-        excludes(":subprojects:resource-core")
-    }
-}
