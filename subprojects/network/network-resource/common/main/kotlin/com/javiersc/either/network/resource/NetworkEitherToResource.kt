@@ -7,11 +7,15 @@ import com.javiersc.either.network.Failure
 import com.javiersc.either.network.Headers
 import com.javiersc.either.network.HttpStatusCode
 import com.javiersc.either.network.NetworkEither
+import com.javiersc.either.network.NetworkFailureHttp
+import com.javiersc.either.network.NetworkFailureLocal
+import com.javiersc.either.network.NetworkFailureRemote
+import com.javiersc.either.network.NetworkFailureUnknown
+import com.javiersc.either.network.NetworkSuccess
 import com.javiersc.either.network.Success
 import com.javiersc.either.resource.ResourceEither
 import com.javiersc.either.resource.buildResourceFailure
 import com.javiersc.either.resource.buildResourceSuccess
-import kotlin.jvm.JvmName
 
 /**
  * Map a `NetworkEither` to `ResourceEither` with the network `Failure` and `Success` as lambda
@@ -146,7 +150,7 @@ public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
 @JvmName("toResourceWithSuccessDataAndErrorCode")
 public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
     success: (NS) -> S,
-    httpError: (HttpStatusCode) -> F,
+    httpError: (NetworkEither.Failure<NF>) -> F,
     localError: () -> F,
     remoteError: () -> F,
     unknownError: (Throwable) -> F,
@@ -155,7 +159,7 @@ public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
     when (this) {
         is Either.Left ->
             when (val failure = this.left) {
-                is Failure.Http ->
+                is NetworkFailureHttp ->
                     with(failure) {
                         buildResourceFailure(failure = httpError(code), isLoading = isLoading)
                     }
@@ -171,4 +175,12 @@ public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
             }
         is Either.Right ->
             buildResourceSuccess(data = success(this.right.data), isLoading = isLoading)
+
+        is NetworkFailureHttp -> {
+            buildResourceFailure(failure = httpError(this), isLoading = isLoading)
+        }
+        is NetworkFailureLocal -> TODO()
+        is NetworkFailureRemote -> TODO()
+        is NetworkFailureUnknown -> TODO()
+        is NetworkSuccess -> buildResourceSuccess(data = success(this), isLoading = isLoading)
     }

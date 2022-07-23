@@ -19,7 +19,7 @@ hubdle {
                     dependencies {
                         api(projects.subprojects.eitherCore)
                         api(projects.subprojects.network.networkCore)
-                        api(projects.subprojects.resourceCore)
+//                        api(projects.subprojects.resourceCore)
                         api(ktorClientCore())
                     }
                 }

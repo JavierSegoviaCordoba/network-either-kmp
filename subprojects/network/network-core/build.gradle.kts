@@ -1,11 +1,10 @@
-plugins {
-    alias(libs.plugins.javiersc.hubdle)
-}
+plugins { alias(libs.plugins.javiersc.hubdle) }
 
 hubdle {
     config {
         explicitApi()
         languageSettings {
+            experimentalContracts()
             experimentalCoroutinesApi()
             experimentalSerializationApi()
             optIn("io.ktor.util.InternalAPI")
@@ -22,11 +21,11 @@ hubdle {
             common {
                 main {
                     dependencies {
-                        api(projects.subprojects.eitherCore)
-                        implementation(javierscKotlinxCoroutinesRunBlocking())
+                        api(arrowKtArrowCore())
                         api(ktorClientContentNegotiation())
                         api(ktorClientCore())
                         api(ktorSerializationKotlinxJson())
+                        implementation(javierscKotlinxCoroutinesRunBlocking())
                     }
                 }
 
@@ -59,6 +58,4 @@ hubdle {
     }
 }
 
-tasks.withType<Test>().configureEach  {
-    maxParallelForks = 1
-}
+tasks.withType<Test>().configureEach { maxParallelForks = 1 }

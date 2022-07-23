@@ -1,137 +1,130 @@
-public abstract class com/javiersc/either/network/Failure {
+public abstract class com/javiersc/network/either/NetworkEither {
+	public static final field Companion Lcom/javiersc/network/either/NetworkEither$Companion;
+	public final fun fold (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public final fun fold (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public final fun getCode1 ()I
+	public final fun getCodeOrNull ()Ljava/lang/Integer;
+	public final fun getSuccess ()Ljava/lang/Object;
+	public final fun getSuccessOrNull ()Ljava/lang/Object;
+	public final fun getThrowable1 ()Ljava/lang/Throwable;
+	public final fun getThrowableOrNull ()Ljava/lang/Throwable;
+	public final fun ifFailure (Lkotlin/jvm/functions/Function1;)V
+	public final fun ifFailureHttp (Lkotlin/jvm/functions/Function1;)V
+	public final fun ifFailureLocal (Lkotlin/jvm/functions/Function0;)V
+	public final fun ifFailureRemote (Lkotlin/jvm/functions/Function0;)V
+	public final fun ifFailureUnknown (Lkotlin/jvm/functions/Function1;)V
+	public final fun ifSuccess (Lkotlin/jvm/functions/Function1;)V
+	public final fun isFailure ()Z
+	public final fun isHttpFailure ()Z
+	public final fun isLocalFailure ()Z
+	public final fun isRemoteFailure ()Z
+	public final fun isSuccess ()Z
+	public final fun isUnknownFailure ()Z
+	public final fun toEither (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Larrow/core/Either;
 }
 
-public final class com/javiersc/either/network/Failure$Http : com/javiersc/either/network/Failure {
-	public fun <init> (Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;)V
+public final class com/javiersc/network/either/NetworkEither$Companion {
+	public final fun buildHttpFailure (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/network/either/NetworkEither$Failure$Http;
+	public final fun buildLocalFailure ()Lcom/javiersc/network/either/NetworkEither$Failure$Local;
+	public final fun buildRemoteFailure ()Lcom/javiersc/network/either/NetworkEither$Failure$Remote;
+	public final fun buildSuccess (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/network/either/NetworkEither$Success;
+	public final fun buildUnknownFailure (Ljava/lang/Throwable;)Lcom/javiersc/network/either/NetworkEither$Failure$Unknown;
+	public final fun httpFailure (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/network/either/NetworkEither;
+	public final fun localFailure ()Lcom/javiersc/network/either/NetworkEither;
+	public final fun remoteFailure ()Lcom/javiersc/network/either/NetworkEither;
+	public final fun success (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/network/either/NetworkEither;
+	public final fun unknownFailure (Ljava/lang/Throwable;)Lcom/javiersc/network/either/NetworkEither;
+}
+
+public abstract class com/javiersc/network/either/NetworkEither$Failure : com/javiersc/network/either/NetworkEither {
+}
+
+public final class com/javiersc/network/either/NetworkEither$Failure$Http : com/javiersc/network/either/NetworkEither$Failure {
+	public fun <init> (Ljava/lang/Object;ILjava/util/Map;)V
 	public final fun component1 ()Ljava/lang/Object;
-	public final fun component2 ()Lcom/javiersc/either/network/HttpStatusCode;
+	public final fun component2 ()I
 	public final fun component3 ()Ljava/util/Map;
-	public final fun copy (Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;)Lcom/javiersc/either/network/Failure$Http;
-	public static synthetic fun copy$default (Lcom/javiersc/either/network/Failure$Http;Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;ILjava/lang/Object;)Lcom/javiersc/either/network/Failure$Http;
+	public final fun copy (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/network/either/NetworkEither$Failure$Http;
+	public static synthetic fun copy$default (Lcom/javiersc/network/either/NetworkEither$Failure$Http;Ljava/lang/Object;ILjava/util/Map;ILjava/lang/Object;)Lcom/javiersc/network/either/NetworkEither$Failure$Http;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getCode ()Lcom/javiersc/either/network/HttpStatusCode;
+	public final fun getCode ()I
 	public final fun getError ()Ljava/lang/Object;
 	public final fun getHeaders ()Ljava/util/Map;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/javiersc/either/network/Failure$Local : com/javiersc/either/network/Failure {
-	public static final field INSTANCE Lcom/javiersc/either/network/Failure$Local;
+public final class com/javiersc/network/either/NetworkEither$Failure$Local : com/javiersc/network/either/NetworkEither$Failure {
+	public static final field INSTANCE Lcom/javiersc/network/either/NetworkEither$Failure$Local;
 }
 
-public final class com/javiersc/either/network/Failure$Remote : com/javiersc/either/network/Failure {
-	public static final field INSTANCE Lcom/javiersc/either/network/Failure$Remote;
+public final class com/javiersc/network/either/NetworkEither$Failure$Remote : com/javiersc/network/either/NetworkEither$Failure {
+	public static final field INSTANCE Lcom/javiersc/network/either/NetworkEither$Failure$Remote;
 }
 
-public final class com/javiersc/either/network/Failure$Unknown : com/javiersc/either/network/Failure {
+public final class com/javiersc/network/either/NetworkEither$Failure$Unknown : com/javiersc/network/either/NetworkEither$Failure {
 	public fun <init> (Ljava/lang/Throwable;)V
 	public final fun component1 ()Ljava/lang/Throwable;
-	public final fun copy (Ljava/lang/Throwable;)Lcom/javiersc/either/network/Failure$Unknown;
-	public static synthetic fun copy$default (Lcom/javiersc/either/network/Failure$Unknown;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/javiersc/either/network/Failure$Unknown;
+	public final fun copy (Ljava/lang/Throwable;)Lcom/javiersc/network/either/NetworkEither$Failure$Unknown;
+	public static synthetic fun copy$default (Lcom/javiersc/network/either/NetworkEither$Failure$Unknown;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/javiersc/network/either/NetworkEither$Failure$Unknown;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getThrowable ()Ljava/lang/Throwable;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/javiersc/either/network/HttpStatusCode {
-	public fun <init> (I)V
-	public final fun component1 ()I
-	public final fun copy (I)Lcom/javiersc/either/network/HttpStatusCode;
-	public static synthetic fun copy$default (Lcom/javiersc/either/network/HttpStatusCode;IILjava/lang/Object;)Lcom/javiersc/either/network/HttpStatusCode;
-	public fun equals (Ljava/lang/Object;)Z
-	public final fun getValue ()I
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
-}
-
-public final class com/javiersc/either/network/NetworkEitherCallAdapterFactory : retrofit2/CallAdapter$Factory {
-	public fun <init> ()V
-	public fun <init> (Lkotlin/jvm/functions/Function0;)V
-	public synthetic fun <init> (Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public fun get (Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;Lretrofit2/Retrofit;)Lretrofit2/CallAdapter;
-}
-
-public final class com/javiersc/either/network/NetworkEitherKt {
-	public static final fun buildNetworkFailureHttp (Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;)Lcom/javiersc/either/Either;
-	public static final fun buildNetworkFailureLocal ()Lcom/javiersc/either/Either;
-	public static final fun buildNetworkFailureRemote ()Lcom/javiersc/either/Either;
-	public static final fun buildNetworkFailureUnknown (Ljava/lang/Throwable;)Lcom/javiersc/either/Either;
-	public static final fun buildNetworkSuccess (Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;)Lcom/javiersc/either/Either;
-}
-
-public final class com/javiersc/either/network/Success {
-	public fun <init> (Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;)V
+public final class com/javiersc/network/either/NetworkEither$Success : com/javiersc/network/either/NetworkEither {
+	public fun <init> (Ljava/lang/Object;ILjava/util/Map;)V
 	public final fun component1 ()Ljava/lang/Object;
-	public final fun component2 ()Lcom/javiersc/either/network/HttpStatusCode;
+	public final fun component2 ()I
 	public final fun component3 ()Ljava/util/Map;
-	public final fun copy (Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;)Lcom/javiersc/either/network/Success;
-	public static synthetic fun copy$default (Lcom/javiersc/either/network/Success;Ljava/lang/Object;Lcom/javiersc/either/network/HttpStatusCode;Ljava/util/Map;ILjava/lang/Object;)Lcom/javiersc/either/network/Success;
+	public final fun copy (Ljava/lang/Object;ILjava/util/Map;)Lcom/javiersc/network/either/NetworkEither$Success;
+	public static synthetic fun copy$default (Lcom/javiersc/network/either/NetworkEither$Success;Ljava/lang/Object;ILjava/util/Map;ILjava/lang/Object;)Lcom/javiersc/network/either/NetworkEither$Success;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getCode ()Lcom/javiersc/either/network/HttpStatusCode;
+	public final fun getCode ()I
 	public final fun getData ()Ljava/lang/Object;
 	public final fun getHeaders ()Ljava/util/Map;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/javiersc/either/network/extensions/NetworkEitherFoldKt {
-	public static final fun fold (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
-	public static final fun fold (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
-	public static final fun foldOnlySuccessData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
-	public static final fun foldWithSuccessDataAndErrorCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+public final class com/javiersc/network/either/NetworkEitherCallAdapterFactory : retrofit2/CallAdapter$Factory {
+	public fun <init> ()V
+	public fun <init> (Lkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun get (Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;Lretrofit2/Retrofit;)Lretrofit2/CallAdapter;
 }
 
-public final class com/javiersc/either/network/extensions/NetworkEitherIfKt {
-	public static final fun ifFailure (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
-	public static final fun ifFailureHttp (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function3;)V
-	public static final fun ifFailureHttpOnlyCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
-	public static final fun ifFailureHttpOnlyError (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
-	public static final fun ifFailureLocal (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function0;)V
-	public static final fun ifFailureRemote (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function0;)V
-	public static final fun ifFailureUnknown (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
-	public static final fun ifSuccess (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function3;)V
-	public static final fun ifSuccessOnlyData (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;)V
-}
-
-public final class com/javiersc/either/network/extensions/NetworkEitherToEitherKt {
-	public static final fun toEither (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/Either;
-	public static final fun toEither (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/Either;
-	public static final fun toEither (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/Either;
-	public static final fun toEitherWithDataAndErrorCode (Lcom/javiersc/either/Either;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/Either;
-}
-
-public final class com/javiersc/either/network/internal/utils/HttpStatusCodeUtilsKt {
+public final class com/javiersc/network/either/internal/utils/HttpStatusCodeUtilsKt {
 	public static final fun getEmptyHeader ()Lio/ktor/http/Headers;
 }
 
-public final class com/javiersc/either/network/ktor/NetworkEitherPlugin {
-	public static final field Companion Lcom/javiersc/either/network/ktor/NetworkEitherPlugin$Companion;
+public final class com/javiersc/network/either/ktor/NetworkEitherPlugin {
+	public static final field Companion Lcom/javiersc/network/either/ktor/NetworkEitherPlugin$Companion;
 	public fun <init> ()V
 	public fun <init> (Lkotlin/jvm/functions/Function0;)V
 	public synthetic fun <init> (Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 }
 
-public final class com/javiersc/either/network/ktor/NetworkEitherPlugin$Companion : io/ktor/client/plugins/HttpClientPlugin {
+public final class com/javiersc/network/either/ktor/NetworkEitherPlugin$Companion : io/ktor/client/plugins/HttpClientPlugin {
 	public fun getKey ()Lio/ktor/util/AttributeKey;
-	public fun install (Lcom/javiersc/either/network/ktor/NetworkEitherPlugin;Lio/ktor/client/HttpClient;)V
+	public fun install (Lcom/javiersc/network/either/ktor/NetworkEitherPlugin;Lio/ktor/client/HttpClient;)V
 	public synthetic fun install (Ljava/lang/Object;Lio/ktor/client/HttpClient;)V
-	public fun prepare (Lkotlin/jvm/functions/Function1;)Lcom/javiersc/either/network/ktor/NetworkEitherPlugin;
+	public fun prepare (Lkotlin/jvm/functions/Function1;)Lcom/javiersc/network/either/ktor/NetworkEitherPlugin;
 	public synthetic fun prepare (Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
 }
 
-public final class com/javiersc/either/network/ktor/NetworkEitherPlugin$Config {
+public final class com/javiersc/network/either/ktor/NetworkEitherPlugin$Config {
 	public fun <init> ()V
 	public final fun getMockIsNetworkAvailable ()Lkotlin/jvm/functions/Function0;
 	public final fun setMockIsNetworkAvailable (Lkotlin/jvm/functions/Function0;)V
 }
 
-public final class com/javiersc/either/network/ktor/_internal/HttpStatusCodeExtensionsKt {
+public final class com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensionsKt {
 	public static final fun getEmptyHeader ()Lio/ktor/http/Headers;
 }
 
-public final class com/javiersc/either/network/utils/IsNetworkAvailableKt {
+public final class com/javiersc/network/either/utils/IsNetworkAvailableKt {
 	public static final fun isNetworkAvailable ()Z
 }
 

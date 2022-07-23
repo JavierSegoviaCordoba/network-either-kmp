@@ -8,12 +8,16 @@
 
 ### Changed
 
-- `alsoPrettyPrint` to `alsoLog`
+- `NetworkEither` is its own `sealed class`
+- `NetworkEither` package to `com.javiersc.network.either`
+- `NetworkEither` uses Arrow's `Either`
+- `alsoPrettyPrint` function to `alsoLog`
 
 ### Deprecated
 
 ### Removed
 
+- `either-core` artifacts (Arrow's `Either` is already migrated to Kotlin Multiplatform)
 - old `NetworkEitherKtor` implementation
 
 ### Fixed
