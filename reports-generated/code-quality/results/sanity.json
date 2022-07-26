@@ -6,6 +6,378 @@
     "Sanity"
   ],
   "severity": "Critical",
+  "comment": "Unresolved reference: mokoki",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either-logger/common/main/kotlin/com/javiersc/network/either/logger/NetworkEitherLogger.kt",
+      "language": "kotlin",
+      "line": 3,
+      "offset": 21,
+      "length": 6,
+      "code": {
+        "startLine": 1,
+        "length": 6,
+        "offset": 64,
+        "surroundingCode": "package com.javiersc.network.either.logger\n\nimport com.javiersc.mokoki.MokokiLogger\nimport com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either-logger.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "fefa6d5cd34a35563204095bfb562373ecc0fdb90ce320431bb15f2405b4034f"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: mokoki",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either-logger/common/main/kotlin/com/javiersc/network/either/logger/NetworkEitherLogger.kt",
+      "language": "kotlin",
+      "line": 4,
+      "offset": 21,
+      "length": 6,
+      "code": {
+        "startLine": 2,
+        "length": 6,
+        "offset": 61,
+        "surroundingCode": "\nimport com.javiersc.mokoki.MokokiLogger\nimport com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE\nimport com.javiersc.mokoki.logI"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either-logger.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "bdb4ac0a0f11c14c0eac38b4dc0ef24d6a9789212acc60f0283636ed927fb620"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: mokoki",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either-logger/common/main/kotlin/com/javiersc/network/either/logger/NetworkEitherLogger.kt",
+      "language": "kotlin",
+      "line": 5,
+      "offset": 21,
+      "length": 6,
+      "code": {
+        "startLine": 3,
+        "length": 6,
+        "offset": 96,
+        "surroundingCode": "import com.javiersc.mokoki.MokokiLogger\nimport com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE\nimport com.javiersc.mokoki.logI\nimport com.javiersc.mokoki.logWTF"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either-logger.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "4cc7cf1fab45bd5ca8d221dcd7faf1e6c44c24f4166d9893f6f4468c16ee7e8b"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: mokoki",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either-logger/common/main/kotlin/com/javiersc/network/either/logger/NetworkEitherLogger.kt",
+      "language": "kotlin",
+      "line": 6,
+      "offset": 21,
+      "length": 6,
+      "code": {
+        "startLine": 4,
+        "length": 6,
+        "offset": 88,
+        "surroundingCode": "import com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE\nimport com.javiersc.mokoki.logI\nimport com.javiersc.mokoki.logWTF\nimport com.javiersc.mokoki.serialization.PrintSerializableMokokiLogger"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either-logger.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "632e80b54b549399dbfc6e12bb9a7c24a9f6c25f34c7b4af2a46fe2edf30cb92"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: HttpClient",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt",
+      "language": "kotlin",
+      "line": 11,
+      "offset": 74,
+      "length": 10,
+      "code": {
+        "startLine": 9,
+        "length": 10,
+        "offset": 100,
+        "surroundingCode": "import io.ktor.util.toMap\n\ninternal fun interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope: HttpClient) {\n    scope.responsePipeline.intercept(HttpResponsePipeline.After) {\n        if (isNetworkEither) return@intercept"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "59f598dfdfe9f7afcf381e9ef51423e6765a60cda3b2c09d2764902bb27ae353"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: HttpResponsePipeline",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt",
+      "language": "kotlin",
+      "line": 12,
+      "offset": 38,
+      "length": 20,
+      "code": {
+        "startLine": 10,
+        "length": 20,
+        "offset": 125,
+        "surroundingCode": "\ninternal fun interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope: HttpClient) {\n    scope.responsePipeline.intercept(HttpResponsePipeline.After) {\n        if (isNetworkEither) return@intercept\n        val code: Int = context.response.status.value"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "8f306d7c2d6857b5839b7fcda4774ba63e4fd8614954fbc04998bb0620fb8236"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: isNetworkEither",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt",
+      "language": "kotlin",
+      "line": 13,
+      "offset": 13,
+      "length": 15,
+      "code": {
+        "startLine": 11,
+        "length": 15,
+        "offset": 166,
+        "surroundingCode": "internal fun interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope: HttpClient) {\n    scope.responsePipeline.intercept(HttpResponsePipeline.After) {\n        if (isNetworkEither) return@intercept\n        val code: Int = context.response.status.value\n        val headers: Map<String, List<String>> = context.response.headers.toMap()"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "0c0db9d24f1783147210e25815bad49cfdc941b46514193b4b747914cf7cc54e"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: context",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt",
+      "language": "kotlin",
+      "line": 14,
+      "offset": 25,
+      "length": 7,
+      "code": {
+        "startLine": 12,
+        "length": 7,
+        "offset": 137,
+        "surroundingCode": "    scope.responsePipeline.intercept(HttpResponsePipeline.After) {\n        if (isNetworkEither) return@intercept\n        val code: Int = context.response.status.value\n        val headers: Map<String, List<String>> = context.response.headers.toMap()\n        val response = subject.response"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "eeda6b753393ebfc2d694f64dc996691c370b0c4a658aa64151d94ecc1eba12c"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: HttpClient",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+      "language": "kotlin",
+      "line": 7,
+      "offset": 12,
+      "length": 10,
+      "code": {
+        "startLine": 5,
+        "length": 10,
+        "offset": 81,
+        "surroundingCode": "\ninternal fun interceptExceptionsAndReplaceWithNetworkEitherFailures(\n    scope: HttpClient,\n    isNetAvailable: () -> Boolean,\n) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "f995ebd0373f0b3183e3ff11606cca6cb73cf3c062a93a04b7ffd668cdbd0d0b"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: HttpSendPipeline",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+      "language": "kotlin",
+      "line": 10,
+      "offset": 34,
+      "length": 16,
+      "code": {
+        "startLine": 8,
+        "length": 16,
+        "offset": 72,
+        "surroundingCode": "    isNetAvailable: () -> Boolean,\n) {\n    scope.sendPipeline.intercept(HttpSendPipeline.State) {\n        if (!isNetAvailable()) {\n            val outgoingContent = LocalErrorOutgoing"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "6598985796844a5bd36e11bebb739a41c74a42e5cf1bdf1843fef96a30661754"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: proceedWith",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+      "language": "kotlin",
+      "line": 13,
+      "offset": 13,
+      "length": 11,
+      "code": {
+        "startLine": 11,
+        "length": 11,
+        "offset": 98,
+        "surroundingCode": "        if (!isNetAvailable()) {\n            val outgoingContent = LocalErrorOutgoing\n            proceedWith(outgoingContent)\n        } else {\n            try {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "be6f7371361341e41d2fdbed0277f2741b4219ffb27f952d48a8e8d520889047"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: proceed",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 17,
+      "length": 7,
+      "code": {
+        "startLine": 14,
+        "length": 7,
+        "offset": 51,
+        "surroundingCode": "        } else {\n            try {\n                proceed()\n            } catch (throwable: Throwable) {\n                val outgoingContent = RemoteErrorOutgoing"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "795f76e714fedeee3f4e4268b46d6fb8cf221b52779d310b9d6cffc574d43fce"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
   "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
@@ -246,6 +618,130 @@
     "inspectionName": "KotlinAnnotator"
   },
   "hash": "ee927a6d1eb944201f4dd4ce7594e8b74579ce89f6531be24fa0f5aa09bcef91"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: Either",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt",
+      "language": "kotlin",
+      "line": 55,
+      "offset": 8,
+      "length": 6,
+      "code": {
+        "startLine": 53,
+        "length": 6,
+        "offset": 82,
+        "surroundingCode": "        failure: (Failure<F, S>) -> L,\n        success: (Success<S>) -> R,\n    ): Either<L, R> =\n        fold(\n            failure = { failure(it).left() },"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "d2137da3dbafd413df016522c32274abfbae8a923cbcb564712588a16ac2c1ad"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: left",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt",
+      "language": "kotlin",
+      "line": 57,
+      "offset": 37,
+      "length": 4,
+      "code": {
+        "startLine": 55,
+        "length": 4,
+        "offset": 72,
+        "surroundingCode": "    ): Either<L, R> =\n        fold(\n            failure = { failure(it).left() },\n            success = { success(it).right() },\n        )"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "5cec4d85001fa2b7ff080a2ee1576bac42440169523a51923da44d3b0dd17874"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: right",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt",
+      "language": "kotlin",
+      "line": 58,
+      "offset": 37,
+      "length": 5,
+      "code": {
+        "startLine": 56,
+        "length": 5,
+        "offset": 96,
+        "surroundingCode": "        fold(\n            failure = { failure(it).left() },\n            success = { success(it).right() },\n        )\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "e17f592dd158fdade2f930df145d6368a0e1650536ff78357136804f7e64153a"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: arrow",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt",
+      "language": "kotlin",
+      "line": 5,
+      "offset": 8,
+      "length": 5,
+      "code": {
+        "startLine": 3,
+        "length": 5,
+        "offset": 45,
+        "surroundingCode": "package com.javiersc.resource.either\n\nimport arrow.core.Either\nimport arrow.core.left\nimport arrow.core.right"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "e58c1290a7742ed3b6ee5ba003163a206198b0f7048e329998fd9ec3aa48e99b"
 },{
   "tool": "Code Inspection",
   "category": "General",
