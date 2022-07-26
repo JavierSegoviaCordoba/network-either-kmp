@@ -1,0 +1,179 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > RemoteErrorOutgoing</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.javiersc.network.either.ktor._internal</a>
+</div>
+
+<h1>Coverage Summary for Class: RemoteErrorOutgoing (com.javiersc.network.either.ktor._internal)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+<th class="coverageStat 
+">
+  Instruction, %
+</th>
+</tr>
+<tr>
+  <td class="name">RemoteErrorOutgoing</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    60%
+  </span>
+  <span class="absValue">
+    (3/5)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    60%
+  </span>
+  <span class="absValue">
+    (3/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    88.5%
+  </span>
+  <span class="absValue">
+    (23/26)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.ktor._internal
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import io.ktor.http.ContentType
+<i class="no-highlight">4</i>&nbsp;import io.ktor.http.Headers
+<i class="no-highlight">5</i>&nbsp;import io.ktor.http.HttpHeaders
+<i class="no-highlight">6</i>&nbsp;import io.ktor.http.HttpStatusCode
+<i class="no-highlight">7</i>&nbsp;import io.ktor.http.content.OutgoingContent
+<i class="no-highlight">8</i>&nbsp;import io.ktor.http.headersOf
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;internal object UnknownOutgoing : OutgoingContent.NoContent() {
+<i class="no-highlight">11</i>&nbsp;
+<i class="no-highlight">12</i>&nbsp;    private const val key = &quot;NetworkEither.Failure.Unknown&quot;
+<i class="no-highlight">13</i>&nbsp;
+<i class="no-highlight">14</i>&nbsp;    override val contentLength: Long = 0
+<i class="no-highlight">15</i>&nbsp;
+<i class="no-highlight">16</i>&nbsp;    override fun toString(): String = key
+<i class="no-highlight">17</i>&nbsp;
+<i class="no-highlight">18</i>&nbsp;    override val status: HttpStatusCode = HttpStatusCode(NETWORK_EITHER_CODE, key)
+<i class="no-highlight">19</i>&nbsp;
+<i class="no-highlight">20</i>&nbsp;    override val headers: Headers =
+<i class="no-highlight">21</i>&nbsp;        headersOf(networkEitherHeader(&quot;Failure.Unknown&quot;), jsonContentTypeHeader)
+<i class="no-highlight">22</i>&nbsp;}
+<i class="no-highlight">23</i>&nbsp;
+<i class="no-highlight">24</i>&nbsp;internal object LocalErrorOutgoing : OutgoingContent.NoContent() {
+<i class="no-highlight">25</i>&nbsp;
+<i class="no-highlight">26</i>&nbsp;    private const val key = &quot;NetworkEither.Failure.Local&quot;
+<i class="no-highlight">27</i>&nbsp;
+<i class="no-highlight">28</i>&nbsp;    override val contentLength: Long = 0
+<i class="no-highlight">29</i>&nbsp;
+<i class="no-highlight">30</i>&nbsp;    override fun toString(): String = key
+<i class="no-highlight">31</i>&nbsp;
+<i class="no-highlight">32</i>&nbsp;    override val status: HttpStatusCode = HttpStatusCode(NETWORK_EITHER_CODE, key)
+<i class="no-highlight">33</i>&nbsp;
+<i class="no-highlight">34</i>&nbsp;    override val headers: Headers =
+<i class="no-highlight">35</i>&nbsp;        headersOf(networkEitherHeader(&quot;Failure.Local&quot;), jsonContentTypeHeader)
+<i class="no-highlight">36</i>&nbsp;}
+<i class="no-highlight">37</i>&nbsp;
+<i class="no-highlight">38</i>&nbsp;internal object RemoteErrorOutgoing : OutgoingContent.NoContent() {
+<i class="no-highlight">39</i>&nbsp;
+<i class="no-highlight">40</i>&nbsp;    private const val key = &quot;NetworkEither.Failure.Remote&quot;
+<i class="no-highlight">41</i>&nbsp;
+<b class="nc"><i class="no-highlight">42</i>&nbsp;    override val contentLength: Long = 0</b>
+<i class="no-highlight">43</i>&nbsp;
+<b class="nc"><i class="no-highlight">44</i>&nbsp;    override fun toString(): String = key</b>
+<i class="no-highlight">45</i>&nbsp;
+<b class="fc"><i class="no-highlight">46</i>&nbsp;    override val status: HttpStatusCode = HttpStatusCode(NETWORK_EITHER_CODE, key)</b>
+<i class="no-highlight">47</i>&nbsp;
+<b class="fc"><i class="no-highlight">48</i>&nbsp;    override val headers: Headers =</b>
+<b class="fc"><i class="no-highlight">49</i>&nbsp;        headersOf(networkEitherHeader(&quot;Failure.Remote&quot;), jsonContentTypeHeader)</b>
+<i class="no-highlight">50</i>&nbsp;}
+<i class="no-highlight">51</i>&nbsp;
+<i class="no-highlight">52</i>&nbsp;private fun networkEitherHeader(key: String) = &quot;NetworkEither&quot; to listOf(key)
+<i class="no-highlight">53</i>&nbsp;
+<i class="no-highlight">54</i>&nbsp;private val jsonContentTypeHeader =
+<i class="no-highlight">55</i>&nbsp;    HttpHeaders.ContentType to listOf(&quot;${ContentType.Application.Json}&quot;)
+<i class="no-highlight">56</i>&nbsp;
+<i class="no-highlight">57</i>&nbsp;private const val NETWORK_EITHER_CODE = 9345
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-07-26 21:04</div>
+</div>
+</body>
+</html>

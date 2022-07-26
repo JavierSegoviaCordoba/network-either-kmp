@@ -10,20 +10,20 @@
       "version": "1.7.10"
     },
     {
+      "ideaName": "Gradle: com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
+      "gradleName": "com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
+      "unresolved": false,
+      "groupId": "com.javiersc.mokoki",
+      "artifactId": "mokoki-serialization-jvm",
+      "version": "0.2.0-alpha.1"
+    },
+    {
       "ideaName": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
       "gradleName": "com.squareup.retrofit2:retrofit:2.9.0",
       "unresolved": false,
       "groupId": "com.squareup.retrofit2",
       "artifactId": "retrofit",
       "version": "2.9.0"
-    },
-    {
-      "ideaName": "Gradle: io.ktor:ktor-client-core-jvm:2.0.3",
-      "gradleName": "io.ktor:ktor-client-core-jvm:2.0.3",
-      "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-client-core-jvm",
-      "version": "2.0.3"
     },
     {
       "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.11",
@@ -48,14 +48,6 @@
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib",
       "version": "1.7.10"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-core-jvm",
-      "version": "1.6.4"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.3",
@@ -90,6 +82,14 @@
       "version": "2.0.3"
     },
     {
+      "ideaName": "Gradle: io.ktor:ktor-client-core-jvm:2.0.3",
+      "gradleName": "io.ktor:ktor-client-core-jvm:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-client-core-jvm",
+      "version": "2.0.3"
+    },
+    {
       "ideaName": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.0.3",
       "gradleName": "io.ktor:ktor-serialization-kotlinx-json-jvm:2.0.3",
       "unresolved": false,
@@ -106,20 +106,12 @@
       "version": "5.0.0-alpha.10"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+      "ideaName": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.2",
+      "gradleName": "io.arrow-kt:arrow-core-jvm:1.1.2",
       "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-jdk8",
-      "version": "1.6.4"
-    },
-    {
-      "ideaName": "Gradle: org.slf4j:slf4j-api:1.7.36",
-      "gradleName": "org.slf4j:slf4j-api:1.7.36",
-      "unresolved": false,
-      "groupId": "org.slf4j",
-      "artifactId": "slf4j-api",
-      "version": "1.7.36"
+      "groupId": "io.arrow-kt",
+      "artifactId": "arrow-core-jvm",
+      "version": "1.1.2"
     },
     {
       "ideaName": "Gradle: org.jetbrains:annotations:13.0",
@@ -130,28 +122,28 @@
       "version": "13.0"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-events-jvm:2.0.3",
-      "gradleName": "io.ktor:ktor-events-jvm:2.0.3",
+      "ideaName": "Gradle: com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
+      "gradleName": "com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-events-jvm",
-      "version": "2.0.3"
+      "groupId": "com.javiersc.mokoki",
+      "artifactId": "mokoki-jvm",
+      "version": "0.2.0-alpha.1"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.0.3",
-      "gradleName": "io.ktor:ktor-websocket-serialization-jvm:2.0.3",
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.2",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.2",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-websocket-serialization-jvm",
-      "version": "2.0.3"
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-jdk8",
+      "version": "1.6.2"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-http-jvm:2.0.3",
-      "gradleName": "io.ktor:ktor-http-jvm:2.0.3",
+      "ideaName": "Gradle: org.slf4j:slf4j-api:1.7.36",
+      "gradleName": "org.slf4j:slf4j-api:1.7.36",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-http-jvm",
-      "version": "2.0.3"
+      "groupId": "org.slf4j",
+      "artifactId": "slf4j-api",
+      "version": "1.7.36"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-serialization-jvm:2.0.3",
@@ -160,6 +152,14 @@
       "groupId": "io.ktor",
       "artifactId": "ktor-serialization-jvm",
       "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.2",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.2",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-core-jvm",
+      "version": "1.6.2"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-http-cio-jvm:2.0.3",
@@ -186,6 +186,30 @@
       "version": "2.0.3"
     },
     {
+      "ideaName": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.0.3",
+      "gradleName": "io.ktor:ktor-websocket-serialization-jvm:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-websocket-serialization-jvm",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-events-jvm:2.0.3",
+      "gradleName": "io.ktor:ktor-events-jvm:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-events-jvm",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-http-jvm:2.0.3",
+      "gradleName": "io.ktor:ktor-http-jvm:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-http-jvm",
+      "version": "2.0.3"
+    },
+    {
       "ideaName": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.0.3",
       "gradleName": "io.ktor:ktor-serialization-kotlinx-jvm:2.0.3",
       "unresolved": false,
@@ -202,12 +226,20 @@
       "version": "3.2.0"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-utils-jvm:2.0.3",
-      "gradleName": "io.ktor:ktor-utils-jvm:2.0.3",
+      "ideaName": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.2",
+      "gradleName": "io.arrow-kt:arrow-continuations-jvm:1.1.2",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-utils-jvm",
-      "version": "2.0.3"
+      "groupId": "io.arrow-kt",
+      "artifactId": "arrow-continuations-jvm",
+      "version": "1.1.2"
+    },
+    {
+      "ideaName": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.2",
+      "gradleName": "io.arrow-kt:arrow-annotations-jvm:1.1.2",
+      "unresolved": false,
+      "groupId": "io.arrow-kt",
+      "artifactId": "arrow-annotations-jvm",
+      "version": "1.1.2"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-network-jvm:2.0.3",
@@ -215,6 +247,14 @@
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-network-jvm",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-utils-jvm:2.0.3",
+      "gradleName": "io.ktor:ktor-utils-jvm:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-utils-jvm",
       "version": "2.0.3"
     },
     {
@@ -234,6 +274,30 @@
       "version": "0.1.0-rc.1"
     },
     {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-core-jvm",
+      "version": "1.6.4"
+    },
+    {
+      "ideaName": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+      "gradleName": "org.codehaus.mojo:animal-sniffer-annotations:1.21",
+      "unresolved": false,
+      "groupId": "org.codehaus.mojo",
+      "artifactId": "animal-sniffer-annotations",
+      "version": "1.21"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-jdk8",
+      "version": "1.6.4"
+    },
+    {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
       "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
       "unresolved": false,
@@ -250,28 +314,12 @@
       "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-mock-jvm:2.0.3",
-      "gradleName": "io.ktor:ktor-client-mock-jvm:2.0.3",
-      "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-client-mock-jvm",
-      "version": "2.0.3"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-test-jvm",
-      "version": "1.6.4"
-    },
-    {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.2",
-      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.3.2",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.0",
+      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.4.0",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-core-jvm",
-      "version": "5.3.2"
+      "version": "5.4.0"
     },
     {
       "ideaName": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.11",
@@ -298,12 +346,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.2",
-      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.3.2",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.0",
+      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.4.0",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-shared-jvm",
-      "version": "5.3.2"
+      "version": "5.4.0"
     },
     {
       "ideaName": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
@@ -330,12 +378,12 @@
       "version": "1.2.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.2",
-      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.3.2",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.0",
+      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.4.0",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-api-jvm",
-      "version": "5.3.2"
+      "version": "5.4.0"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
@@ -354,12 +402,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.3.2",
-      "gradleName": "io.kotest:kotest-common-jvm:5.3.2",
+      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.4.0",
+      "gradleName": "io.kotest:kotest-common-jvm:5.4.0",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-common-jvm",
-      "version": "5.3.2"
+      "version": "5.4.0"
     },
     {
       "ideaName": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
@@ -370,60 +418,44 @@
       "version": "1.6.0"
     },
     {
-      "ideaName": "Gradle: io.github.java-diff-utils:java-diff-utils:4.11",
-      "gradleName": "io.github.java-diff-utils:java-diff-utils:4.11",
+      "ideaName": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+      "gradleName": "io.github.java-diff-utils:java-diff-utils:4.12",
       "unresolved": false,
       "groupId": "io.github.java-diff-utils",
       "artifactId": "java-diff-utils",
-      "version": "4.11"
+      "version": "4.12"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-content-negotiation:commonMain:2.0.3",
-      "gradleName": "io.ktor:ktor-client-content-negotiation:commonMain:2.0.3",
+      "ideaName": "Gradle: com.javiersc.mokoki:mokoki-serialization:commonMain:0.2.0-alpha.1",
+      "gradleName": "com.javiersc.mokoki:mokoki-serialization:commonMain:0.2.0-alpha.1",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-client-content-negotiation",
-      "version": "2.0.3"
+      "groupId": "com.javiersc.mokoki",
+      "artifactId": "mokoki-serialization",
+      "version": "0.2.0-alpha.1"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-serialization-kotlinx-json:commonMain:2.0.3",
-      "gradleName": "io.ktor:ktor-serialization-kotlinx-json:commonMain:2.0.3",
+      "ideaName": "Gradle: com.javiersc.mokoki:mokoki:commonMain:0.2.0-alpha.1",
+      "gradleName": "com.javiersc.mokoki:mokoki:commonMain:0.2.0-alpha.1",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-serialization-kotlinx-json",
-      "version": "2.0.3"
+      "groupId": "com.javiersc.mokoki",
+      "artifactId": "mokoki",
+      "version": "0.2.0-alpha.1"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-serialization-kotlinx:commonMain:2.0.3",
-      "gradleName": "io.ktor:ktor-serialization-kotlinx:commonMain:2.0.3",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-serialization-kotlinx",
-      "version": "2.0.3"
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-common",
+      "version": "1.7.10"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-client-core:commonMain:2.0.3",
-      "gradleName": "io.ktor:ktor-client-core:commonMain:2.0.3",
+      "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib:commonMain:0.1.0-alpha.11",
+      "gradleName": "com.javiersc.kotlin:kotlin-stdlib:commonMain:0.1.0-alpha.11",
       "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-client-core",
-      "version": "2.0.3"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.4",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.4",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-core",
-      "version": "1.6.4"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.4",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.4",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-core",
-      "version": "1.6.4"
+      "groupId": "com.javiersc.kotlin",
+      "artifactId": "kotlin-stdlib",
+      "version": "0.1.0-alpha.11"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json:commonMain:1.3.3",
@@ -442,19 +474,43 @@
       "version": "1.3.3"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-events:commonMain:2.0.3",
-      "gradleName": "io.ktor:ktor-events:commonMain:2.0.3",
+      "ideaName": "Gradle: io.ktor:ktor-serialization-kotlinx-json:commonMain:2.0.3",
+      "gradleName": "io.ktor:ktor-serialization-kotlinx-json:commonMain:2.0.3",
       "unresolved": false,
       "groupId": "io.ktor",
-      "artifactId": "ktor-events",
+      "artifactId": "ktor-serialization-kotlinx-json",
       "version": "2.0.3"
     },
     {
-      "ideaName": "Gradle: io.ktor:ktor-websocket-serialization:commonMain:2.0.3",
-      "gradleName": "io.ktor:ktor-websocket-serialization:commonMain:2.0.3",
+      "ideaName": "Gradle: io.arrow-kt:arrow-core:commonMain:1.1.2",
+      "gradleName": "io.arrow-kt:arrow-core:commonMain:1.1.2",
+      "unresolved": false,
+      "groupId": "io.arrow-kt",
+      "artifactId": "arrow-core",
+      "version": "1.1.2"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-client-content-negotiation:commonMain:2.0.3",
+      "gradleName": "io.ktor:ktor-client-content-negotiation:commonMain:2.0.3",
       "unresolved": false,
       "groupId": "io.ktor",
-      "artifactId": "ktor-websocket-serialization",
+      "artifactId": "ktor-client-content-negotiation",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-client-core:commonMain:2.0.3",
+      "gradleName": "io.ktor:ktor-client-core:commonMain:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-client-core",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-serialization-kotlinx:commonMain:2.0.3",
+      "gradleName": "io.ktor:ktor-serialization-kotlinx:commonMain:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-serialization-kotlinx",
       "version": "2.0.3"
     },
     {
@@ -466,12 +522,36 @@
       "version": "2.0.3"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.2",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.2",
       "unresolved": false,
-      "groupId": "org.jetbrains.kotlin",
-      "artifactId": "kotlin-stdlib-common",
-      "version": "1.7.10"
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-core",
+      "version": "1.6.2"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.2",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.2",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-core",
+      "version": "1.6.2"
+    },
+    {
+      "ideaName": "Gradle: io.arrow-kt:arrow-continuations:commonMain:1.1.2",
+      "gradleName": "io.arrow-kt:arrow-continuations:commonMain:1.1.2",
+      "unresolved": false,
+      "groupId": "io.arrow-kt",
+      "artifactId": "arrow-continuations",
+      "version": "1.1.2"
+    },
+    {
+      "ideaName": "Gradle: io.arrow-kt:arrow-annotations:commonMain:1.1.2",
+      "gradleName": "io.arrow-kt:arrow-annotations:commonMain:1.1.2",
+      "unresolved": false,
+      "groupId": "io.arrow-kt",
+      "artifactId": "arrow-annotations",
+      "version": "1.1.2"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-serialization:commonMain:2.0.3",
@@ -479,6 +559,22 @@
       "unresolved": false,
       "groupId": "io.ktor",
       "artifactId": "ktor-serialization",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-websocket-serialization:commonMain:2.0.3",
+      "gradleName": "io.ktor:ktor-websocket-serialization:commonMain:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-websocket-serialization",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-events:commonMain:2.0.3",
+      "gradleName": "io.ktor:ktor-events:commonMain:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-events",
       "version": "2.0.3"
     },
     {
@@ -506,38 +602,6 @@
       "version": "2.0.3"
     },
     {
-      "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib:commonMain:0.1.0-alpha.11",
-      "gradleName": "com.javiersc.kotlin:kotlin-stdlib:commonMain:0.1.0-alpha.11",
-      "unresolved": false,
-      "groupId": "com.javiersc.kotlin",
-      "artifactId": "kotlin-stdlib",
-      "version": "0.1.0-alpha.11"
-    },
-    {
-      "ideaName": "Gradle: io.ktor:ktor-client-mock:commonMain:2.0.3",
-      "gradleName": "io.ktor:ktor-client-mock:commonMain:2.0.3",
-      "unresolved": false,
-      "groupId": "io.ktor",
-      "artifactId": "ktor-client-mock",
-      "version": "2.0.3"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.4",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.4",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-test",
-      "version": "1.6.4"
-    },
-    {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.3.2",
-      "gradleName": "io.kotest:kotest-assertions-core:commonMain:5.3.2",
-      "unresolved": false,
-      "groupId": "io.kotest",
-      "artifactId": "kotest-assertions-core",
-      "version": "5.3.2"
-    },
-    {
       "ideaName": "Gradle: com.javiersc.kotlin:kotlin-test-junit5:commonMain:0.1.0-alpha.11",
       "gradleName": "com.javiersc.kotlin:kotlin-test-junit5:commonMain:0.1.0-alpha.11",
       "unresolved": false,
@@ -546,20 +610,12 @@
       "version": "0.1.0-alpha.11"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.3.2",
-      "gradleName": "io.kotest:kotest-assertions-shared:commonMain:5.3.2",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-core:commonMain:5.4.0",
+      "gradleName": "io.kotest:kotest-assertions-core:commonMain:5.4.0",
       "unresolved": false,
       "groupId": "io.kotest",
-      "artifactId": "kotest-assertions-shared",
-      "version": "5.3.2"
-    },
-    {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.3.2",
-      "gradleName": "io.kotest:kotest-assertions-api:commonMain:5.3.2",
-      "unresolved": false,
-      "groupId": "io.kotest",
-      "artifactId": "kotest-assertions-api",
-      "version": "5.3.2"
+      "artifactId": "kotest-assertions-core",
+      "version": "5.4.0"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.21",
@@ -576,6 +632,70 @@
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-test-common",
       "version": "1.6.21"
+    },
+    {
+      "ideaName": "Gradle: io.kotest:kotest-assertions-shared:commonMain:5.4.0",
+      "gradleName": "io.kotest:kotest-assertions-shared:commonMain:5.4.0",
+      "unresolved": false,
+      "groupId": "io.kotest",
+      "artifactId": "kotest-assertions-shared",
+      "version": "5.4.0"
+    },
+    {
+      "ideaName": "Gradle: io.kotest:kotest-assertions-api:commonMain:5.4.0",
+      "gradleName": "io.kotest:kotest-assertions-api:commonMain:5.4.0",
+      "unresolved": false,
+      "groupId": "io.kotest",
+      "artifactId": "kotest-assertions-api",
+      "version": "5.4.0"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-client-mock-jvm:2.0.3",
+      "gradleName": "io.ktor:ktor-client-mock-jvm:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-client-mock-jvm",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-test-jvm",
+      "version": "1.6.4"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.4",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.4",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-core",
+      "version": "1.6.4"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.4",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.4",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-core",
+      "version": "1.6.4"
+    },
+    {
+      "ideaName": "Gradle: io.ktor:ktor-client-mock:commonMain:2.0.3",
+      "gradleName": "io.ktor:ktor-client-mock:commonMain:2.0.3",
+      "unresolved": false,
+      "groupId": "io.ktor",
+      "artifactId": "ktor-client-mock",
+      "version": "2.0.3"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.4",
+      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-test:commonMain:1.6.4",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlinx",
+      "artifactId": "kotlinx-coroutines-test",
+      "version": "1.6.4"
     },
     {
       "ideaName": "Gradle: io.ktor:ktor-client-cio:jvmAndNixMain:2.0.3",
@@ -626,20 +746,12 @@
       "version": "2.0.3"
     },
     {
-      "ideaName": "Gradle: com.squareup.okhttp3:mockwebserver:5.0.0-alpha.10",
-      "gradleName": "com.squareup.okhttp3:mockwebserver:5.0.0-alpha.10",
+      "ideaName": "Gradle: io.kotest.extensions:kotest-extensions-mockserver:1.2.1",
+      "gradleName": "io.kotest.extensions:kotest-extensions-mockserver:1.2.1",
       "unresolved": false,
-      "groupId": "com.squareup.okhttp3",
-      "artifactId": "mockwebserver",
-      "version": "5.0.0-alpha.10"
-    },
-    {
-      "ideaName": "Gradle: com.squareup.okhttp3:mockwebserver3-junit4:5.0.0-alpha.10",
-      "gradleName": "com.squareup.okhttp3:mockwebserver3-junit4:5.0.0-alpha.10",
-      "unresolved": false,
-      "groupId": "com.squareup.okhttp3",
-      "artifactId": "mockwebserver3-junit4",
-      "version": "5.0.0-alpha.10"
+      "groupId": "io.kotest.extensions",
+      "artifactId": "kotest-extensions-mockserver",
+      "version": "1.2.1"
     },
     {
       "ideaName": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
@@ -650,28 +762,788 @@
       "version": "0.8.0"
     },
     {
-      "ideaName": "Gradle: com.squareup.okhttp3:mockwebserver3:5.0.0-alpha.10",
-      "gradleName": "com.squareup.okhttp3:mockwebserver3:5.0.0-alpha.10",
+      "ideaName": "Gradle: org.mock-server:mockserver-netty:5.13.2",
+      "gradleName": "org.mock-server:mockserver-netty:5.13.2",
       "unresolved": false,
-      "groupId": "com.squareup.okhttp3",
-      "artifactId": "mockwebserver3",
-      "version": "5.0.0-alpha.10"
+      "groupId": "org.mock-server",
+      "artifactId": "mockserver-netty",
+      "version": "5.13.2"
     },
     {
-      "ideaName": "Gradle: junit:junit:4.13.2",
-      "gradleName": "junit:junit:4.13.2",
+      "ideaName": "Gradle: org.mock-server:mockserver-client-java:5.13.2",
+      "gradleName": "org.mock-server:mockserver-client-java:5.13.2",
       "unresolved": false,
-      "groupId": "junit",
-      "artifactId": "junit",
-      "version": "4.13.2"
+      "groupId": "org.mock-server",
+      "artifactId": "mockserver-client-java",
+      "version": "5.13.2"
     },
     {
-      "ideaName": "Gradle: org.hamcrest:hamcrest-core:1.3",
-      "gradleName": "org.hamcrest:hamcrest-core:1.3",
+      "ideaName": "Gradle: io.kotest:kotest-property-jvm:5.4.0",
+      "gradleName": "io.kotest:kotest-property-jvm:5.4.0",
+      "unresolved": false,
+      "groupId": "io.kotest",
+      "artifactId": "kotest-property-jvm",
+      "version": "5.4.0"
+    },
+    {
+      "ideaName": "Gradle: org.mock-server:mockserver-core:5.13.2",
+      "gradleName": "org.mock-server:mockserver-core:5.13.2",
+      "unresolved": false,
+      "groupId": "org.mock-server",
+      "artifactId": "mockserver-core",
+      "version": "5.13.2"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-codec-http:4.1.75.Final",
+      "gradleName": "io.netty:netty-codec-http:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-codec-http",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-handler:4.1.75.Final",
+      "gradleName": "io.netty:netty-handler:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-handler",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-codec:4.1.75.Final",
+      "gradleName": "io.netty:netty-codec:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-codec",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-transport:4.1.75.Final",
+      "gradleName": "io.netty:netty-transport:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-transport",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-buffer:4.1.75.Final",
+      "gradleName": "io.netty:netty-buffer:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-buffer",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-common:4.1.75.Final",
+      "gradleName": "io.netty:netty-common:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-common",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-tcnative-boringssl-static:2.0.51.Final",
+      "gradleName": "io.netty:netty-tcnative-boringssl-static:2.0.51.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-tcnative-boringssl-static",
+      "version": "2.0.51.Final"
+    },
+    {
+      "ideaName": "Gradle: commons-io:commons-io:2.11.0",
+      "gradleName": "commons-io:commons-io:2.11.0",
+      "unresolved": false,
+      "groupId": "commons-io",
+      "artifactId": "commons-io",
+      "version": "2.11.0"
+    },
+    {
+      "ideaName": "Gradle: com.google.guava:guava:31.1-jre",
+      "gradleName": "com.google.guava:guava:31.1-jre",
+      "unresolved": false,
+      "groupId": "com.google.guava",
+      "artifactId": "guava",
+      "version": "31.1-jre"
+    },
+    {
+      "ideaName": "Gradle: org.apache.commons:commons-lang3:3.12.0",
+      "gradleName": "org.apache.commons:commons-lang3:3.12.0",
+      "unresolved": false,
+      "groupId": "org.apache.commons",
+      "artifactId": "commons-lang3",
+      "version": "3.12.0"
+    },
+    {
+      "ideaName": "Gradle: com.github.curious-odd-man:rgxgen:1.3",
+      "gradleName": "com.github.curious-odd-man:rgxgen:1.3",
+      "unresolved": false,
+      "groupId": "com.github.curious-odd-man",
+      "artifactId": "rgxgen",
+      "version": "1.3"
+    },
+    {
+      "ideaName": "Gradle: com.fasterxml.uuid:java-uuid-generator:4.0.1",
+      "gradleName": "com.fasterxml.uuid:java-uuid-generator:4.0.1",
+      "unresolved": false,
+      "groupId": "com.fasterxml.uuid",
+      "artifactId": "java-uuid-generator",
+      "version": "4.0.1"
+    },
+    {
+      "ideaName": "Gradle: org.apache.velocity:velocity-engine-scripting:2.3",
+      "gradleName": "org.apache.velocity:velocity-engine-scripting:2.3",
+      "unresolved": false,
+      "groupId": "org.apache.velocity",
+      "artifactId": "velocity-engine-scripting",
+      "version": "2.3"
+    },
+    {
+      "ideaName": "Gradle: org.apache.velocity.tools:velocity-tools-generic:3.1",
+      "gradleName": "org.apache.velocity.tools:velocity-tools-generic:3.1",
+      "unresolved": false,
+      "groupId": "org.apache.velocity.tools",
+      "artifactId": "velocity-tools-generic",
+      "version": "3.1"
+    },
+    {
+      "ideaName": "Gradle: org.apache.velocity:velocity-engine-core:2.3",
+      "gradleName": "org.apache.velocity:velocity-engine-core:2.3",
+      "unresolved": false,
+      "groupId": "org.apache.velocity",
+      "artifactId": "velocity-engine-core",
+      "version": "2.3"
+    },
+    {
+      "ideaName": "Gradle: com.networknt:json-schema-validator:1.0.68",
+      "gradleName": "com.networknt:json-schema-validator:1.0.68",
+      "unresolved": false,
+      "groupId": "com.networknt",
+      "artifactId": "json-schema-validator",
+      "version": "1.0.68"
+    },
+    {
+      "ideaName": "Gradle: com.jayway.jsonpath:json-path:2.7.0",
+      "gradleName": "com.jayway.jsonpath:json-path:2.7.0",
+      "unresolved": false,
+      "groupId": "com.jayway.jsonpath",
+      "artifactId": "json-path",
+      "version": "2.7.0"
+    },
+    {
+      "ideaName": "Gradle: io.swagger.parser.v3:swagger-parser:2.0.32",
+      "gradleName": "io.swagger.parser.v3:swagger-parser:2.0.32",
+      "unresolved": false,
+      "groupId": "io.swagger.parser.v3",
+      "artifactId": "swagger-parser",
+      "version": "2.0.32"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-handler-proxy:4.1.75.Final",
+      "gradleName": "io.netty:netty-handler-proxy:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-handler-proxy",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-codec-socks:4.1.75.Final",
+      "gradleName": "io.netty:netty-codec-socks:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-codec-socks",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: com.lmax:disruptor:3.4.4",
+      "gradleName": "com.lmax:disruptor:3.4.4",
+      "unresolved": false,
+      "groupId": "com.lmax",
+      "artifactId": "disruptor",
+      "version": "3.4.4"
+    },
+    {
+      "ideaName": "Gradle: javax.servlet:javax.servlet-api:4.0.1",
+      "gradleName": "javax.servlet:javax.servlet-api:4.0.1",
+      "unresolved": false,
+      "groupId": "javax.servlet",
+      "artifactId": "javax.servlet-api",
+      "version": "4.0.1"
+    },
+    {
+      "ideaName": "Gradle: com.jcraft:jzlib:1.1.3",
+      "gradleName": "com.jcraft:jzlib:1.1.3",
+      "unresolved": false,
+      "groupId": "com.jcraft",
+      "artifactId": "jzlib",
+      "version": "1.1.3"
+    },
+    {
+      "ideaName": "Gradle: org.bouncycastle:bcpkix-jdk15on:1.70",
+      "gradleName": "org.bouncycastle:bcpkix-jdk15on:1.70",
+      "unresolved": false,
+      "groupId": "org.bouncycastle",
+      "artifactId": "bcpkix-jdk15on",
+      "version": "1.70"
+    },
+    {
+      "ideaName": "Gradle: org.bouncycastle:bcprov-jdk15on:1.70",
+      "gradleName": "org.bouncycastle:bcprov-jdk15on:1.70",
+      "unresolved": false,
+      "groupId": "org.bouncycastle",
+      "artifactId": "bcprov-jdk15on",
+      "version": "1.70"
+    },
+    {
+      "ideaName": "Gradle: com.nimbusds:nimbus-jose-jwt:9.21",
+      "gradleName": "com.nimbusds:nimbus-jose-jwt:9.21",
+      "unresolved": false,
+      "groupId": "com.nimbusds",
+      "artifactId": "nimbus-jose-jwt",
+      "version": "9.21"
+    },
+    {
+      "ideaName": "Gradle: com.samskivert:jmustache:1.15",
+      "gradleName": "com.samskivert:jmustache:1.15",
+      "unresolved": false,
+      "groupId": "com.samskivert",
+      "artifactId": "jmustache",
+      "version": "1.15"
+    },
+    {
+      "ideaName": "Gradle: com.fasterxml.jackson.core:jackson-databind:2.13.2.2",
+      "gradleName": "com.fasterxml.jackson.core:jackson-databind:2.13.2.2",
+      "unresolved": false,
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-databind",
+      "version": "2.13.2.2"
+    },
+    {
+      "ideaName": "Gradle: com.fasterxml.jackson.core:jackson-annotations:2.13.2",
+      "gradleName": "com.fasterxml.jackson.core:jackson-annotations:2.13.2",
+      "unresolved": false,
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-annotations",
+      "version": "2.13.2"
+    },
+    {
+      "ideaName": "Gradle: com.fasterxml.jackson.core:jackson-core:2.13.2",
+      "gradleName": "com.fasterxml.jackson.core:jackson-core:2.13.2",
+      "unresolved": false,
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-core",
+      "version": "2.13.2"
+    },
+    {
+      "ideaName": "Gradle: net.javacrumbs.json-unit:json-unit-core:2.33.0",
+      "gradleName": "net.javacrumbs.json-unit:json-unit-core:2.33.0",
+      "unresolved": false,
+      "groupId": "net.javacrumbs.json-unit",
+      "artifactId": "json-unit-core",
+      "version": "2.33.0"
+    },
+    {
+      "ideaName": "Gradle: jakarta.xml.bind:jakarta.xml.bind-api:3.0.1",
+      "gradleName": "jakarta.xml.bind:jakarta.xml.bind-api:3.0.1",
+      "unresolved": false,
+      "groupId": "jakarta.xml.bind",
+      "artifactId": "jakarta.xml.bind-api",
+      "version": "3.0.1"
+    },
+    {
+      "ideaName": "Gradle: org.xmlunit:xmlunit-placeholders:2.9.0",
+      "gradleName": "org.xmlunit:xmlunit-placeholders:2.9.0",
+      "unresolved": false,
+      "groupId": "org.xmlunit",
+      "artifactId": "xmlunit-placeholders",
+      "version": "2.9.0"
+    },
+    {
+      "ideaName": "Gradle: org.xmlunit:xmlunit-core:2.9.0",
+      "gradleName": "org.xmlunit:xmlunit-core:2.9.0",
+      "unresolved": false,
+      "groupId": "org.xmlunit",
+      "artifactId": "xmlunit-core",
+      "version": "2.9.0"
+    },
+    {
+      "ideaName": "Gradle: org.apache.commons:commons-text:1.9",
+      "gradleName": "org.apache.commons:commons-text:1.9",
+      "unresolved": false,
+      "groupId": "org.apache.commons",
+      "artifactId": "commons-text",
+      "version": "1.9"
+    },
+    {
+      "ideaName": "Gradle: commons-codec:commons-codec:1.15",
+      "gradleName": "commons-codec:commons-codec:1.15",
+      "unresolved": false,
+      "groupId": "commons-codec",
+      "artifactId": "commons-codec",
+      "version": "1.15"
+    },
+    {
+      "ideaName": "Gradle: io.github.classgraph:classgraph:4.8.143",
+      "gradleName": "io.github.classgraph:classgraph:4.8.143",
+      "unresolved": false,
+      "groupId": "io.github.classgraph",
+      "artifactId": "classgraph",
+      "version": "4.8.143"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-resolver:4.1.75.Final",
+      "gradleName": "io.netty:netty-resolver:4.1.75.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-resolver",
+      "version": "4.1.75.Final"
+    },
+    {
+      "ideaName": "Gradle: io.netty:netty-tcnative-classes:2.0.51.Final",
+      "gradleName": "io.netty:netty-tcnative-classes:2.0.51.Final",
+      "unresolved": false,
+      "groupId": "io.netty",
+      "artifactId": "netty-tcnative-classes",
+      "version": "2.0.51.Final"
+    },
+    {
+      "ideaName": "Gradle: com.google.guava:failureaccess:1.0.1",
+      "gradleName": "com.google.guava:failureaccess:1.0.1",
+      "unresolved": false,
+      "groupId": "com.google.guava",
+      "artifactId": "failureaccess",
+      "version": "1.0.1"
+    },
+    {
+      "ideaName": "Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+      "gradleName": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+      "unresolved": false,
+      "groupId": "com.google.guava",
+      "artifactId": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava"
+    },
+    {
+      "ideaName": "Gradle: com.google.code.findbugs:jsr305:3.0.2",
+      "gradleName": "com.google.code.findbugs:jsr305:3.0.2",
+      "unresolved": false,
+      "groupId": "com.google.code.findbugs",
+      "artifactId": "jsr305",
+      "version": "3.0.2"
+    },
+    {
+      "ideaName": "Gradle: org.checkerframework:checker-qual:3.12.0",
+      "gradleName": "org.checkerframework:checker-qual:3.12.0",
+      "unresolved": false,
+      "groupId": "org.checkerframework",
+      "artifactId": "checker-qual",
+      "version": "3.12.0"
+    },
+    {
+      "ideaName": "Gradle: com.google.errorprone:error_prone_annotations:2.11.0",
+      "gradleName": "com.google.errorprone:error_prone_annotations:2.11.0",
+      "unresolved": false,
+      "groupId": "com.google.errorprone",
+      "artifactId": "error_prone_annotations",
+      "version": "2.11.0"
+    },
+    {
+      "ideaName": "Gradle: com.google.j2objc:j2objc-annotations:1.3",
+      "gradleName": "com.google.j2objc:j2objc-annotations:1.3",
+      "unresolved": false,
+      "groupId": "com.google.j2objc",
+      "artifactId": "j2objc-annotations",
+      "version": "1.3"
+    },
+    {
+      "ideaName": "Gradle: org.apache.commons:commons-digester3:3.2",
+      "gradleName": "org.apache.commons:commons-digester3:3.2",
+      "unresolved": false,
+      "groupId": "org.apache.commons",
+      "artifactId": "commons-digester3",
+      "version": "3.2"
+    },
+    {
+      "ideaName": "Gradle: commons-beanutils:commons-beanutils:1.9.4",
+      "gradleName": "commons-beanutils:commons-beanutils:1.9.4",
+      "unresolved": false,
+      "groupId": "commons-beanutils",
+      "artifactId": "commons-beanutils",
+      "version": "1.9.4"
+    },
+    {
+      "ideaName": "Gradle: com.github.cliftonlabs:json-simple:3.0.2",
+      "gradleName": "com.github.cliftonlabs:json-simple:3.0.2",
+      "unresolved": false,
+      "groupId": "com.github.cliftonlabs",
+      "artifactId": "json-simple",
+      "version": "3.0.2"
+    },
+    {
+      "ideaName": "Gradle: com.ethlo.time:itu:1.5.1",
+      "gradleName": "com.ethlo.time:itu:1.5.1",
+      "unresolved": false,
+      "groupId": "com.ethlo.time",
+      "artifactId": "itu",
+      "version": "1.5.1"
+    },
+    {
+      "ideaName": "Gradle: net.minidev:json-smart:2.4.7",
+      "gradleName": "net.minidev:json-smart:2.4.7",
+      "unresolved": false,
+      "groupId": "net.minidev",
+      "artifactId": "json-smart",
+      "version": "2.4.7"
+    },
+    {
+      "ideaName": "Gradle: io.swagger.parser.v3:swagger-parser-v2-converter:2.0.32",
+      "gradleName": "io.swagger.parser.v3:swagger-parser-v2-converter:2.0.32",
+      "unresolved": false,
+      "groupId": "io.swagger.parser.v3",
+      "artifactId": "swagger-parser-v2-converter",
+      "version": "2.0.32"
+    },
+    {
+      "ideaName": "Gradle: io.swagger.parser.v3:swagger-parser-v3:2.0.32",
+      "gradleName": "io.swagger.parser.v3:swagger-parser-v3:2.0.32",
+      "unresolved": false,
+      "groupId": "io.swagger.parser.v3",
+      "artifactId": "swagger-parser-v3",
+      "version": "2.0.32"
+    },
+    {
+      "ideaName": "Gradle: org.bouncycastle:bcutil-jdk15on:1.70",
+      "gradleName": "org.bouncycastle:bcutil-jdk15on:1.70",
+      "unresolved": false,
+      "groupId": "org.bouncycastle",
+      "artifactId": "bcutil-jdk15on",
+      "version": "1.70"
+    },
+    {
+      "ideaName": "Gradle: com.github.stephenc.jcip:jcip-annotations:1.0-1",
+      "gradleName": "com.github.stephenc.jcip:jcip-annotations:1.0-1",
+      "unresolved": false,
+      "groupId": "com.github.stephenc.jcip",
+      "artifactId": "jcip-annotations",
+      "version": "1.0-1"
+    },
+    {
+      "ideaName": "Gradle: org.hamcrest:hamcrest-core:2.2",
+      "gradleName": "org.hamcrest:hamcrest-core:2.2",
       "unresolved": false,
       "groupId": "org.hamcrest",
       "artifactId": "hamcrest-core",
+      "version": "2.2"
+    },
+    {
+      "ideaName": "Gradle: com.sun.activation:jakarta.activation:2.0.1",
+      "gradleName": "com.sun.activation:jakarta.activation:2.0.1",
+      "unresolved": false,
+      "groupId": "com.sun.activation",
+      "artifactId": "jakarta.activation",
+      "version": "2.0.1"
+    },
+    {
+      "ideaName": "Gradle: commons-logging:commons-logging:1.2",
+      "gradleName": "commons-logging:commons-logging:1.2",
+      "unresolved": false,
+      "groupId": "commons-logging",
+      "artifactId": "commons-logging",
+      "version": "1.2"
+    },
+    {
+      "ideaName": "Gradle: commons-collections:commons-collections:3.2.2",
+      "gradleName": "commons-collections:commons-collections:3.2.2",
+      "unresolved": false,
+      "groupId": "commons-collections",
+      "artifactId": "commons-collections",
+      "version": "3.2.2"
+    },
+    {
+      "ideaName": "Gradle: net.minidev:accessors-smart:2.4.7",
+      "gradleName": "net.minidev:accessors-smart:2.4.7",
+      "unresolved": false,
+      "groupId": "net.minidev",
+      "artifactId": "accessors-smart",
+      "version": "2.4.7"
+    },
+    {
+      "ideaName": "Gradle: io.swagger:swagger-compat-spec-parser:1.0.59",
+      "gradleName": "io.swagger:swagger-compat-spec-parser:1.0.59",
+      "unresolved": false,
+      "groupId": "io.swagger",
+      "artifactId": "swagger-compat-spec-parser",
+      "version": "1.0.59"
+    },
+    {
+      "ideaName": "Gradle: io.swagger:swagger-parser:1.0.59",
+      "gradleName": "io.swagger:swagger-parser:1.0.59",
+      "unresolved": false,
+      "groupId": "io.swagger",
+      "artifactId": "swagger-parser",
+      "version": "1.0.59"
+    },
+    {
+      "ideaName": "Gradle: io.swagger:swagger-core:1.6.6",
+      "gradleName": "io.swagger:swagger-core:1.6.6",
+      "unresolved": false,
+      "groupId": "io.swagger",
+      "artifactId": "swagger-core",
+      "version": "1.6.6"
+    },
+    {
+      "ideaName": "Gradle: io.swagger.parser.v3:swagger-parser-core:2.0.32",
+      "gradleName": "io.swagger.parser.v3:swagger-parser-core:2.0.32",
+      "unresolved": false,
+      "groupId": "io.swagger.parser.v3",
+      "artifactId": "swagger-parser-core",
+      "version": "2.0.32"
+    },
+    {
+      "ideaName": "Gradle: io.swagger.core.v3:swagger-models:2.2.0",
+      "gradleName": "io.swagger.core.v3:swagger-models:2.2.0",
+      "unresolved": false,
+      "groupId": "io.swagger.core.v3",
+      "artifactId": "swagger-models",
+      "version": "2.2.0"
+    },
+    {
+      "ideaName": "Gradle: io.swagger.core.v3:swagger-core:2.2.0",
+      "gradleName": "io.swagger.core.v3:swagger-core:2.2.0",
+      "unresolved": false,
+      "groupId": "io.swagger.core.v3",
+      "artifactId": "swagger-core",
+      "version": "2.2.0"
+    },
+    {
+      "ideaName": "Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.2",
+      "gradleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.2",
+      "unresolved": false,
+      "groupId": "com.fasterxml.jackson.dataformat",
+      "artifactId": "jackson-dataformat-yaml",
+      "version": "2.13.2"
+    },
+    {
+      "ideaName": "Gradle: org.hamcrest:hamcrest:2.2",
+      "gradleName": "org.hamcrest:hamcrest:2.2",
+      "unresolved": false,
+      "groupId": "org.hamcrest",
+      "artifactId": "hamcrest",
+      "version": "2.2"
+    },
+    {
+      "ideaName": "Gradle: org.ow2.asm:asm:9.1",
+      "gradleName": "org.ow2.asm:asm:9.1",
+      "unresolved": false,
+      "groupId": "org.ow2.asm",
+      "artifactId": "asm",
+      "version": "9.1"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:json-schema-validator:2.2.14",
+      "gradleName": "com.github.java-json-tools:json-schema-validator:2.2.14",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "json-schema-validator",
+      "version": "2.2.14"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:json-patch:1.13",
+      "gradleName": "com.github.java-json-tools:json-patch:1.13",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "json-patch",
+      "version": "1.13"
+    },
+    {
+      "ideaName": "Gradle: org.apache.httpcomponents:httpclient:4.5.13",
+      "gradleName": "org.apache.httpcomponents:httpclient:4.5.13",
+      "unresolved": false,
+      "groupId": "org.apache.httpcomponents",
+      "artifactId": "httpclient",
+      "version": "4.5.13"
+    },
+    {
+      "ideaName": "Gradle: io.swagger:swagger-models:1.6.6",
+      "gradleName": "io.swagger:swagger-models:1.6.6",
+      "unresolved": false,
+      "groupId": "io.swagger",
+      "artifactId": "swagger-models",
+      "version": "1.6.6"
+    },
+    {
+      "ideaName": "Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2",
+      "gradleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2",
+      "unresolved": false,
+      "groupId": "com.fasterxml.jackson.datatype",
+      "artifactId": "jackson-datatype-jsr310",
+      "version": "2.13.2"
+    },
+    {
+      "ideaName": "Gradle: io.swagger.core.v3:swagger-annotations:2.2.0",
+      "gradleName": "io.swagger.core.v3:swagger-annotations:2.2.0",
+      "unresolved": false,
+      "groupId": "io.swagger.core.v3",
+      "artifactId": "swagger-annotations",
+      "version": "2.2.0"
+    },
+    {
+      "ideaName": "Gradle: jakarta.validation:jakarta.validation-api:2.0.2",
+      "gradleName": "jakarta.validation:jakarta.validation-api:2.0.2",
+      "unresolved": false,
+      "groupId": "jakarta.validation",
+      "artifactId": "jakarta.validation-api",
+      "version": "2.0.2"
+    },
+    {
+      "ideaName": "Gradle: org.yaml:snakeyaml:1.30",
+      "gradleName": "org.yaml:snakeyaml:1.30",
+      "unresolved": false,
+      "groupId": "org.yaml",
+      "artifactId": "snakeyaml",
+      "version": "1.30"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:json-schema-core:1.2.14",
+      "gradleName": "com.github.java-json-tools:json-schema-core:1.2.14",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "json-schema-core",
+      "version": "1.2.14"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:jackson-coreutils-equivalence:1.0",
+      "gradleName": "com.github.java-json-tools:jackson-coreutils-equivalence:1.0",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "jackson-coreutils-equivalence",
+      "version": "1.0"
+    },
+    {
+      "ideaName": "Gradle: com.sun.mail:mailapi:1.6.2",
+      "gradleName": "com.sun.mail:mailapi:1.6.2",
+      "unresolved": false,
+      "groupId": "com.sun.mail",
+      "artifactId": "mailapi",
+      "version": "1.6.2"
+    },
+    {
+      "ideaName": "Gradle: joda-time:joda-time:2.10.5",
+      "gradleName": "joda-time:joda-time:2.10.5",
+      "unresolved": false,
+      "groupId": "joda-time",
+      "artifactId": "joda-time",
+      "version": "2.10.5"
+    },
+    {
+      "ideaName": "Gradle: com.googlecode.libphonenumber:libphonenumber:8.11.1",
+      "gradleName": "com.googlecode.libphonenumber:libphonenumber:8.11.1",
+      "unresolved": false,
+      "groupId": "com.googlecode.libphonenumber",
+      "artifactId": "libphonenumber",
+      "version": "8.11.1"
+    },
+    {
+      "ideaName": "Gradle: net.sf.jopt-simple:jopt-simple:5.0.4",
+      "gradleName": "net.sf.jopt-simple:jopt-simple:5.0.4",
+      "unresolved": false,
+      "groupId": "net.sf.jopt-simple",
+      "artifactId": "jopt-simple",
+      "version": "5.0.4"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:msg-simple:1.2",
+      "gradleName": "com.github.java-json-tools:msg-simple:1.2",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "msg-simple",
+      "version": "1.2"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:jackson-coreutils:2.0",
+      "gradleName": "com.github.java-json-tools:jackson-coreutils:2.0",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "jackson-coreutils",
+      "version": "2.0"
+    },
+    {
+      "ideaName": "Gradle: org.apache.httpcomponents:httpcore:4.4.13",
+      "gradleName": "org.apache.httpcomponents:httpcore:4.4.13",
+      "unresolved": false,
+      "groupId": "org.apache.httpcomponents",
+      "artifactId": "httpcore",
+      "version": "4.4.13"
+    },
+    {
+      "ideaName": "Gradle: io.swagger:swagger-annotations:1.6.6",
+      "gradleName": "io.swagger:swagger-annotations:1.6.6",
+      "unresolved": false,
+      "groupId": "io.swagger",
+      "artifactId": "swagger-annotations",
+      "version": "1.6.6"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:uri-template:0.10",
+      "gradleName": "com.github.java-json-tools:uri-template:0.10",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "uri-template",
+      "version": "0.10"
+    },
+    {
+      "ideaName": "Gradle: org.mozilla:rhino:1.7.7.2",
+      "gradleName": "org.mozilla:rhino:1.7.7.2",
+      "unresolved": false,
+      "groupId": "org.mozilla",
+      "artifactId": "rhino",
+      "version": "1.7.7.2"
+    },
+    {
+      "ideaName": "Gradle: com.github.java-json-tools:btf:1.3",
+      "gradleName": "com.github.java-json-tools:btf:1.3",
+      "unresolved": false,
+      "groupId": "com.github.java-json-tools",
+      "artifactId": "btf",
       "version": "1.3"
+    },
+    {
+      "ideaName": "Gradle: io.kotest:kotest-framework-api-jvm:5.3.2",
+      "gradleName": "io.kotest:kotest-framework-api-jvm:5.3.2",
+      "unresolved": false,
+      "groupId": "io.kotest",
+      "artifactId": "kotest-framework-api-jvm",
+      "version": "5.3.2"
+    },
+    {
+      "ideaName": "Gradle: com.sun.xml.bind:jaxb-impl:3.0.2",
+      "gradleName": "com.sun.xml.bind:jaxb-impl:3.0.2",
+      "unresolved": false,
+      "groupId": "com.sun.xml.bind",
+      "artifactId": "jaxb-impl",
+      "version": "3.0.2"
+    },
+    {
+      "ideaName": "Gradle: com.sun.xml.bind:jaxb-core:3.0.2",
+      "gradleName": "com.sun.xml.bind:jaxb-core:3.0.2",
+      "unresolved": false,
+      "groupId": "com.sun.xml.bind",
+      "artifactId": "jaxb-core",
+      "version": "3.0.2"
+    },
+    {
+      "ideaName": "Gradle: io.kotest:kotest-property:commonMain:5.4.0",
+      "gradleName": "io.kotest:kotest-property:commonMain:5.4.0",
+      "unresolved": false,
+      "groupId": "io.kotest",
+      "artifactId": "kotest-property",
+      "version": "5.4.0"
+    },
+    {
+      "ideaName": "Gradle: io.kotest:kotest-common:commonMain:5.4.0",
+      "gradleName": "io.kotest:kotest-common:commonMain:5.4.0",
+      "unresolved": false,
+      "groupId": "io.kotest",
+      "artifactId": "kotest-common",
+      "version": "5.4.0"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-metadata:all:1.0.0",
@@ -688,86 +1560,6 @@
       "groupId": "com.javiersc.kotlinx",
       "artifactId": "coroutines-run-blocking",
       "version": "0.1.0-rc.1"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-jdk8",
-      "version": "1.6.1"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-core-jvm",
-      "version": "1.6.1"
-    },
-    {
-      "ideaName": "Gradle: com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
-      "gradleName": "com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
-      "unresolved": false,
-      "groupId": "com.javiersc.mokoki",
-      "artifactId": "mokoki-serialization-jvm",
-      "version": "0.2.0-alpha.1"
-    },
-    {
-      "ideaName": "Gradle: com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
-      "gradleName": "com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
-      "unresolved": false,
-      "groupId": "com.javiersc.mokoki",
-      "artifactId": "mokoki-jvm",
-      "version": "0.2.0-alpha.1"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.2",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-jdk8",
-      "version": "1.6.2"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.2",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-core-jvm",
-      "version": "1.6.2"
-    },
-    {
-      "ideaName": "Gradle: com.javiersc.mokoki:mokoki-serialization:commonMain:0.2.0-alpha.1",
-      "gradleName": "com.javiersc.mokoki:mokoki-serialization:commonMain:0.2.0-alpha.1",
-      "unresolved": false,
-      "groupId": "com.javiersc.mokoki",
-      "artifactId": "mokoki-serialization",
-      "version": "0.2.0-alpha.1"
-    },
-    {
-      "ideaName": "Gradle: com.javiersc.mokoki:mokoki:commonMain:0.2.0-alpha.1",
-      "gradleName": "com.javiersc.mokoki:mokoki:commonMain:0.2.0-alpha.1",
-      "unresolved": false,
-      "groupId": "com.javiersc.mokoki",
-      "artifactId": "mokoki",
-      "version": "0.2.0-alpha.1"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:commonMain:1.6.2",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-core",
-      "version": "1.6.2"
-    },
-    {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.2",
-      "gradleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core:concurrentMain:1.6.2",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlinx",
-      "artifactId": "kotlinx-coroutines-core",
-      "version": "1.6.2"
     }
   ]
 }

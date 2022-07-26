@@ -15,14 +15,37 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/NetworkEither.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 34,
+                  "endLine": 8,
+                  "startColumn": 21,
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Class 'NetworkEither' with '21' functions detected. Defined threshold inside classes is set to '11'"
+          },
+          "ruleId": "detekt.complexity.TooManyFunctions"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
                   "endColumn": 38,
-                  "endLine": 33,
+                  "endLine": 35,
                   "startColumn": 18,
-                  "startLine": 33
+                  "startLine": 35
                 }
               }
             }
@@ -38,14 +61,14 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 38,
-                  "endLine": 10,
-                  "startColumn": 18,
-                  "startLine": 10
+                  "endColumn": 42,
+                  "endLine": 17,
+                  "startColumn": 22,
+                  "startLine": 17
                 }
               }
             }
@@ -61,14 +84,14 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 38,
-                  "endLine": 10,
-                  "startColumn": 18,
-                  "startLine": 10
+                  "endColumn": 42,
+                  "endLine": 17,
+                  "startColumn": 22,
+                  "startLine": 17
                 }
               }
             }
@@ -84,1586 +107,22 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/suspend/HandleSuspend.kt",
+                  "uri": "subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/suspend/HttpExceptionSuspendHandler.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/suspend/NetworkEitherSuspendCallAdapter.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/suspend/ResponseSuspendHandler.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/suspend/NetworkEitherSuspendCall.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/deferred/NetworkEitherDeferredCall.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 54,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/deferred/HttpExceptionDeferredHandler.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 54,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/deferred/NetworkEitherDeferredCallAdapter.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 54,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/deferred/HandleDeferred.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 54,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/deferred/ResponseDeferredHandler.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 54,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/utils/HttpStatusCodeUtils.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/utils/RetrofitUtils.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/utils/Printers.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/NetworkEitherCallAdapterFactory.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 36,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error406Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error414Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error423Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error431Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error412Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error401Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error421Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error4xxTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error429Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error418Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error411Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error400Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error403Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error415Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error402Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error409Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error416Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error417Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error422Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error428Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error413Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error410Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error426Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error404Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error405Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error424Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error451Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/BaseTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 45,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success206Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success204Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success2xxTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success207Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success200Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success226Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success202Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success203Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success201Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success205Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 53,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/config/DogService.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 52,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/config/MockResponseUtil.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 52,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error501Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error511Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error502Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error508Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error505Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error509Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error503Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error500Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error504Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error507Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error506Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error5xxTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error510Test.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 57,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/other/RemoteErrorTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The package declaration does not match the actual file location."
-          },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/other/MalformedJsonTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 33,
-                  "endLine": 49,
-                  "startColumn": 19,
-                  "startLine": 49
+                  "endColumn": 35,
+                  "endLine": 10,
+                  "startColumn": 21,
+                  "startLine": 10
                 }
               }
             }
           ],
           "message": {
-            "text": "Top level constant names should match the pattern: [A-Z][_A-Z0-9]*"
+            "text": "The file name 'Resource' does not match the name of the single top-level declaration 'ResourceEither'."
           },
-          "ruleId": "detekt.naming.TopLevelPropertyNaming"
+          "ruleId": "detekt.naming.MatchingDeclarationName"
         },
         {
           "level": "warning",
@@ -1671,11 +130,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/other/MalformedJsonTest.kt",
+                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/fileSystem.jvm.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 51,
+                  "endColumn": 44,
                   "endLine": 1,
                   "startColumn": 1,
                   "startLine": 1
@@ -1684,9 +143,9 @@
             }
           ],
           "message": {
-            "text": "The package declaration does not match the actual file location."
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
           },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
+          "ruleId": "detekt.naming.PackageNaming"
         },
         {
           "level": "warning",
@@ -1694,11 +153,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/retrofit/other/LocalErrorTest.kt",
+                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/DogService.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 51,
+                  "endColumn": 44,
                   "endLine": 1,
                   "startColumn": 1,
                   "startLine": 1
@@ -1707,9 +166,9 @@
             }
           ],
           "message": {
-            "text": "The package declaration does not match the actual file location."
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
           },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
+          "ruleId": "detekt.naming.PackageNaming"
         },
         {
           "level": "warning",
@@ -1717,11 +176,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/test/kotlin/TestUtils.kt",
+                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/MockResponseUtil.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 36,
+                  "endColumn": 44,
                   "endLine": 1,
                   "startColumn": 1,
                   "startLine": 1
@@ -1730,9 +189,9 @@
             }
           ],
           "message": {
-            "text": "The package declaration does not match the actual file location."
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
           },
-          "ruleId": "detekt.naming.InvalidPackageDeclaration"
+          "ruleId": "detekt.naming.PackageNaming"
         },
         {
           "level": "warning",
@@ -1740,7 +199,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/HttpStatusCodeExtensions.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1763,7 +222,30 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 3,
+                  "startColumn": 1,
+                  "startLine": 3
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/NetworkEitherFailureOutgoings.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1786,7 +268,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1809,7 +291,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1832,7 +314,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/fakeFailureHttpClientCall.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/fakeFailureHttpClientCall.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1855,7 +337,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1878,7 +360,76 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptSuccessesAndReplaceWithNetworkEitherSuccess.kt",
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/CodeArb.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 50,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Headers.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 50,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Json.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 50,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/DogDTO.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1901,22 +452,22 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/test/kotlin/com/javiersc/either/network/ktor/other/MalformedJsonTest.kt",
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/ErrorDTO.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 33,
-                  "endLine": 37,
-                  "startColumn": 19,
-                  "startLine": 37
+                  "endColumn": 51,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
                 }
               }
             }
           ],
           "message": {
-            "text": "Top level constant names should match the pattern: [A-Z][_A-Z0-9]*"
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
           },
-          "ruleId": "detekt.naming.TopLevelPropertyNaming"
+          "ruleId": "detekt.naming.PackageNaming"
         },
         {
           "level": "warning",
@@ -1924,7 +475,53 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/utils/RetrofitUtils.kt",
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fileSystem.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 44,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/readResource.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 44,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/jvm/main/kotlin/com/javiersc/network/either/internal/utils/RetrofitUtils.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1947,7 +544,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network/network-core/jvm/main/kotlin/internal/utils/RetrofitUtils.kt",
+                  "uri": "subprojects/network-either/jvm/main/kotlin/com/javiersc/network/either/internal/utils/RetrofitUtils.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -1963,213 +560,6 @@
             "text": "In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty."
           },
           "ruleId": "detekt.performance.SpreadOperator"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 42,
-                  "endLine": 110,
-                  "startColumn": 39,
-                  "startLine": 110
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 47,
-                  "endLine": 110,
-                  "startColumn": 44,
-                  "startLine": 110
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 40,
-                  "endLine": 111,
-                  "startColumn": 37,
-                  "startLine": 111
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 45,
-                  "endLine": 111,
-                  "startColumn": 42,
-                  "startLine": 111
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 62,
-                  "endLine": 18,
-                  "startColumn": 58,
-                  "startLine": 18
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 62,
-                  "endLine": 32,
-                  "startColumn": 58,
-                  "startLine": 32
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptSuccessesAndReplaceWithNetworkEitherSuccess.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 19,
-                  "endLine": 20,
-                  "startColumn": 16,
-                  "startLine": 20
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptSuccessesAndReplaceWithNetworkEitherSuccess.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 24,
-                  "endLine": 20,
-                  "startColumn": 21,
-                  "startLine": 20
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This expression contains a magic number. Consider defining it to a well named constant."
-          },
-          "ruleId": "detekt.style.MagicNumber"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network/network-core/common/test/kotlin/com/javiersc/either/network/ktor/KtorPluginTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 17,
-                  "endLine": 5,
-                  "startColumn": 13,
-                  "startLine": 5
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Private property `TODO` is unused."
-          },
-          "ruleId": "detekt.style.UnusedPrivateMember"
         }
       ],
       "tool": {

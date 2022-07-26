@@ -6,43 +6,12 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "The feature \"multi platform projects\" is experimental and should be enabled explicitly",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/jvm/test/kotlin/TestUtils.kt",
-      "language": "kotlin",
-      "line": 5,
-      "offset": 10,
-      "length": 6,
-      "code": {
-        "startLine": 3,
-        "length": 6,
-        "offset": 33,
-        "surroundingCode": "import okio.FileSystem\n\ninternal actual val fileSystem: FileSystem = FileSystem.SYSTEM\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core.jvmTest",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "a70bcb029c11ce4d1f918f8389be87c506e3b33549e8eeb915165dd66e39df49"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
   "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/either-core/build.gradle.kts",
+      "path": "subprojects/network-resource-either-extensions/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -56,10 +25,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.either-core",
+    "module": "network-either-kmp.subprojects.network-resource-either-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "c527298494c5ec78650241abe65362050c7ad0808bf22d2211586b342a0a4bff"
+  "hash": "bdc99133fa5d7860b738bca26a73d19b2359ab595df151fc01630cd1f29f3e6b"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -73,7 +42,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/either-core/build.gradle.kts",
+      "path": "subprojects/network-resource-either-extensions/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -87,10 +56,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.either-core",
+    "module": "network-either-kmp.subprojects.network-resource-either-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "a9cffa05776339bc04fbdf5f75d6bcdb6c62ce8bcacdc820ebaab37097c136eb"
+  "hash": "667066c93142959d64dba0eb6f311eb928fceb722dc388f0039f430e67dc0f4a"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -104,7 +73,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/either-core/build.gradle.kts",
+      "path": "subprojects/network-resource-either-extensions/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 16,
@@ -118,10 +87,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.either-core",
+    "module": "network-either-kmp.subprojects.network-resource-either-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "04d83f4312df4a30360cd30910664ea1d873373f23dc35d54a8632ccba6c5d99"
+  "hash": "78ee44f915489244bdf4a49e919c6747b1b068b9d5a97edbe76e07a5ef874c5e"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -135,7 +104,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/either-core/build.gradle.kts",
+      "path": "subprojects/network-resource-either-extensions/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 16,
@@ -149,568 +118,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.either-core",
+    "module": "network-either-kmp.subprojects.network-resource-either-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "ef97d33247f39c6511692e451155bdf6b27f97d4c449fe3227509b307f5620b3"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: SerializationException",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/internal/ExceptionExtensions.kt",
-      "language": "kotlin",
-      "line": 3,
-      "offset": 30,
-      "length": 22,
-      "code": {
-        "startLine": 1,
-        "length": 22,
-        "offset": 75,
-        "surroundingCode": "package com.javiersc.either.network.internal\n\nimport kotlinx.serialization.SerializationException\n\ninternal val SerializationException.hasBody: Boolean"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "3fff2d61003652c730da9e356b415ee32ed42e71cfa9d09b5d20e69e83592362"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: SerializationException",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/internal/ExceptionExtensions.kt",
-      "language": "kotlin",
-      "line": 5,
-      "offset": 14,
-      "length": 22,
-      "code": {
-        "startLine": 3,
-        "length": 22,
-        "offset": 66,
-        "surroundingCode": "import kotlinx.serialization.SerializationException\n\ninternal val SerializationException.hasBody: Boolean\n    get() = !this.message?.substringAfter(\"JSON input:\").isNullOrBlank()\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "620c5f27443eb3e50e07594a3a22c0dd1a0d0551b2c71f5531825317b9f0fb73"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'contentLength' overrides nothing",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt",
-      "language": "kotlin",
-      "line": 28,
-      "offset": 5,
-      "length": 8,
-      "code": {
-        "startLine": 26,
-        "length": 8,
-        "offset": 64,
-        "surroundingCode": "    private const val key = \"NetworkEither.Failure.Remote\"\n\n    override val contentLength: Long = 0\n\n    override fun toString(): String = key"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "b60a20f77b9258cbbf7e52430002ae7b4cd9728a372f8e9212aa1918a4696b0e"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'status' overrides nothing",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt",
-      "language": "kotlin",
-      "line": 18,
-      "offset": 5,
-      "length": 8,
-      "code": {
-        "startLine": 16,
-        "length": 8,
-        "offset": 47,
-        "surroundingCode": "    override fun toString(): String = key\n\n    override val status: HttpStatusCode = HttpStatusCode(9345, key)\n\n    override val headers: Headers ="
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "dcb66aeeb9f9edfbfa7e5555a97e5c7571e14a6fd107a9b7caa3e8b7a6d4fb6c"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: HttpStatusCode",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt",
-      "language": "kotlin",
-      "line": 18,
-      "offset": 26,
-      "length": 14,
-      "code": {
-        "startLine": 16,
-        "length": 14,
-        "offset": 68,
-        "surroundingCode": "    override fun toString(): String = key\n\n    override val status: HttpStatusCode = HttpStatusCode(9345, key)\n\n    override val headers: Headers ="
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "5ccb81b9fab689170782670869f996e2e96ad81a009f176205a432159d6605b4"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: HttpStatusCode",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt",
-      "language": "kotlin",
-      "line": 18,
-      "offset": 43,
-      "length": 14,
-      "code": {
-        "startLine": 16,
-        "length": 14,
-        "offset": 85,
-        "surroundingCode": "    override fun toString(): String = key\n\n    override val status: HttpStatusCode = HttpStatusCode(9345, key)\n\n    override val headers: Headers ="
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "707cfc103d914e8ad2e7960895dc8511ed159191e3cb471dadd125e8a07783c0"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: mokoki",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-logger/common/main/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
-      "language": "kotlin",
-      "line": 7,
-      "offset": 21,
-      "length": 6,
-      "code": {
-        "startLine": 5,
-        "length": 6,
-        "offset": 120,
-        "surroundingCode": "import com.javiersc.either.network.NetworkEither\nimport com.javiersc.either.network.extensions.fold\nimport com.javiersc.mokoki.MokokiLogger\nimport com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-logger.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "9a8f26d98d8ffdc43bdd5cbc19be3d039283a76c40de8287407f702d263e87ba"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: mokoki",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-logger/common/main/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
-      "language": "kotlin",
-      "line": 8,
-      "offset": 21,
-      "length": 6,
-      "code": {
-        "startLine": 6,
-        "length": 6,
-        "offset": 111,
-        "surroundingCode": "import com.javiersc.either.network.extensions.fold\nimport com.javiersc.mokoki.MokokiLogger\nimport com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE\nimport com.javiersc.mokoki.logI"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-logger.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "715db33642295c8ae3c2800aa9fa2f31fecb8106a0980f16b5a85f63a1f5165e"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: mokoki",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-logger/common/main/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
-      "language": "kotlin",
-      "line": 9,
-      "offset": 21,
-      "length": 6,
-      "code": {
-        "startLine": 7,
-        "length": 6,
-        "offset": 96,
-        "surroundingCode": "import com.javiersc.mokoki.MokokiLogger\nimport com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE\nimport com.javiersc.mokoki.logI\nimport com.javiersc.mokoki.logWTF"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-logger.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "ffa4adc497fd2d88eba670cfffbde58b1548e3de4022e81d5a25dddea569b2bb"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: mokoki",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-logger/common/main/kotlin/com/javiersc/either/network/logger/NetworkEitherLogger.kt",
-      "language": "kotlin",
-      "line": 10,
-      "offset": 21,
-      "length": 6,
-      "code": {
-        "startLine": 8,
-        "length": 6,
-        "offset": 88,
-        "surroundingCode": "import com.javiersc.mokoki.Priority\nimport com.javiersc.mokoki.logE\nimport com.javiersc.mokoki.logI\nimport com.javiersc.mokoki.logWTF\nimport com.javiersc.mokoki.serialization.PrintSerializableMokokiLogger"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-logger.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "a4c3bbfbb8abad710063bd934c729ffde5003def84c0532a1945591fc62ed4e7"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "39075d3bd6b8bfab0b83146f27485fc73088aa458bc8342ff04abe609ced26e2"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "0a496c9ff79d94f0d40357399c8d82b9f616f8dca07bd4c703db54eca3ce6955"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Function invocation 'plugins(...)' expected",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 16,
-      "length": 7,
-      "code": {
-        "startLine": 1,
-        "length": 7,
-        "offset": 25,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "98e18ad6f3d205e2e613ca838da79c3cb5de5c8c12fcbb54822256500e2924e9"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: public fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network/network-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 16,
-      "length": 7,
-      "code": {
-        "startLine": 1,
-        "length": 7,
-        "offset": 25,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.network.network-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "2ff480e8b00508726cbcb326dbf6fb76ef458b6fc0ff8e0d091ec8da64b8e467"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/resource-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.resource-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "17bc6e060b97d11d3a3a4d9a5b47abecb190eafd6d772fc991bde0ae70002769"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/resource-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.resource-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "1959304ec78dca7366625b39e2b0579c7abb87038a465f11e9ae188d6abac50d"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Function invocation 'plugins(...)' expected",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/resource-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 16,
-      "length": 7,
-      "code": {
-        "startLine": 1,
-        "length": 7,
-        "offset": 25,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.resource-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "bf40e93a429d2de3b8a72e2284ea4016b783a66e43ae9da961e62ac00cdbfbc7"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: public fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/resource-core/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 16,
-      "length": 7,
-      "code": {
-        "startLine": 1,
-        "length": 7,
-        "offset": 25,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "either.subprojects.resource-core",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "4731afef75de12d531b2e7bed67a0fc46d5d463629f6a731e97b027f46bac385"
+  "hash": "bfcf44605f58ba9ee1aa5a1503a2256244b59937913f7809a8b0201a255f00fa"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -738,10 +149,10 @@
     }
   ],
   "attributes": {
-    "module": "either",
+    "module": "network-either-kmp",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "d3802d3389c40609f5ccb37117e628833bdd5f19178d36dc19773791509d6393"
+  "hash": "c1d828db99d47e222c779f7b79d4bb510ca52e537221461ec4c629759d79b345"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -769,10 +180,10 @@
     }
   ],
   "attributes": {
-    "module": "either",
+    "module": "network-either-kmp",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "d6117b10cd1d9b8b04cbfe42d0437f66c4fe4eeff28d02029225232e0aac5e6d"
+  "hash": "f3bb8a806f096ff9b41f6b5990106bb333dd4573cf5cec8ea0793d96fa3b51ea"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -800,10 +211,10 @@
     }
   ],
   "attributes": {
-    "module": "either",
+    "module": "network-either-kmp",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "2a2214974a1d7f13543cb5931f3122b506d62b0ecffd9317685dd21d534b91d8"
+  "hash": "76d927af4420143e332e7481c41a970b09fc78cfcb639e106e1c73cf863da6c3"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -831,10 +242,10 @@
     }
   ],
   "attributes": {
-    "module": "either",
+    "module": "network-either-kmp",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "898e01ec8b01ce049e15add1adf0742e295cc004e48c684bd517308ea6670d15"
+  "hash": "ee927a6d1eb944201f4dd4ce7594e8b74579ce89f6531be24fa0f5aa09bcef91"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -848,7 +259,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-resource/build.gradle.kts",
+      "path": "subprojects/network-either/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -862,10 +273,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-resource",
+    "module": "network-either-kmp.subprojects.network-either",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "a2dcadbae54cb60016dfe2f0923933d665e23f15d703d40b9f54eaca6aed9d60"
+  "hash": "c82bad7b21b7441d51252b728cca324e4b397890fec06797ffacb06c37702630"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -879,7 +290,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-resource/build.gradle.kts",
+      "path": "subprojects/network-either/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -893,10 +304,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-resource",
+    "module": "network-either-kmp.subprojects.network-either",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "f0f6c4014d6082baa15e3b1eb1252d5639e7ade682a346348b228a5905315734"
+  "hash": "ba9050c36b4669bb11780ebaff0e2ea771baf018c5a4ac2402d5ace0c2855a95"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -910,7 +321,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-resource/build.gradle.kts",
+      "path": "subprojects/network-either/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 16,
@@ -924,10 +335,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-resource",
+    "module": "network-either-kmp.subprojects.network-either",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "6db93cfbe591b3324c64d194ad33ecbd12859163cbd7d808def43cb7aff78747"
+  "hash": "ec4187a4938f1683a65f1464c4bc6f50b1dfafe8b59bfca60e57be7a7d3d52e3"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -941,7 +352,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-resource/build.gradle.kts",
+      "path": "subprojects/network-either/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 16,
@@ -955,10 +366,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-resource",
+    "module": "network-either-kmp.subprojects.network-either",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "d4364e782c3340f1ddff7c209434e700b61da8d1112b8c9a760be69a4ffa5c76"
+  "hash": "2c887993fff03c3ea6fa6d03e57639aac0ad3e9b4351a01ab67e37d7a7f352f9"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -972,7 +383,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-logger/build.gradle.kts",
+      "path": "subprojects/network-either-logger/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -986,10 +397,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-logger",
+    "module": "network-either-kmp.subprojects.network-either-logger",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "3d012c68fb2479771b3beba29c95affad47a7c0e921ec5d6c9bd38f5191cf098"
+  "hash": "98a3c55225b92c6b7e43a5e0b99a4de97d1cf9745911b0befa30990c007ce5c7"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -1003,7 +414,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-logger/build.gradle.kts",
+      "path": "subprojects/network-either-logger/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -1017,10 +428,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-logger",
+    "module": "network-either-kmp.subprojects.network-either-logger",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "cc4d3a3de139714eb6a3dff49c88f8b5a765f9a282c3e60c6655f83480f21cc1"
+  "hash": "30f8b788a44aa7548adf9507443ff997fbfbede1f37da91afd2a61d60ec27ed0"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -1034,7 +445,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-logger/build.gradle.kts",
+      "path": "subprojects/network-either-logger/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 16,
@@ -1048,10 +459,10 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-logger",
+    "module": "network-either-kmp.subprojects.network-either-logger",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "e288b8eea2301d15de8e9877f4a896e4f6dbbcfbccf0d842ba83f969a5deb58b"
+  "hash": "d225c147ce84b8d0deba7b87aaa8ac0f77622a4d5df8bde9490b868b5ae41dd9"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -1065,7 +476,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network/network-logger/build.gradle.kts",
+      "path": "subprojects/network-either-logger/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 16,
@@ -1079,8 +490,132 @@
     }
   ],
   "attributes": {
-    "module": "either.subprojects.network.network-logger",
+    "module": "network-either-kmp.subprojects.network-either-logger",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "1e9cd17a4264748396a4adace87cd4693a916a630281434236caadea6d94ccac"
+  "hash": "91c068dc3bf58dc25d5a44f0cd6029e413180b2f524449ce21e3f31e0c540b82"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 11,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "001c17e3c985c4ac39d6cc317774f6e74bc075f648d10fe81d7ab09b4517d65d"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 11,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "ae2f947a7ae625ed100b453644b50d421e3d3822ccbe33fe553c92a9ef33e96f"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 16,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "0b5823a86539c81ecf9ffece7e2aa4c11f829d176a2d845482d668ec7374eb56"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: public fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/resource-either/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 16,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.resource-either",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "1cf18086d1ccb98ae03e28d246196d5cbec710795d00438063ccfdef6ff02801"
 }]}

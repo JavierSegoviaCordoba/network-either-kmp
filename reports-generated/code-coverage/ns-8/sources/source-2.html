@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > PrintersKt</title>
+  <title>Coverage Report > Response</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,18 +17,15 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.either.network.internal.utils</a>
+    <a href="../index.html">com.javiersc.network.either.logger</a>
 </div>
 
-<h1>Coverage Summary for Class: PrintersKt (com.javiersc.either.network.internal.utils)</h1>
+<h1>Coverage Summary for Class: Response (com.javiersc.network.either.logger)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -47,7 +44,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">PrintersKt</td>
+  <td class="name">Response</td>
 <td class="coverageStat">
   <span class="percent">
     100%
@@ -58,31 +55,127 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    50%
+    0%
   </span>
   <span class="absValue">
-    (1/2)
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    83.5%
+  </span>
+  <span class="absValue">
+    (76/91)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Response$$serializer</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    46.9%
+  </span>
+  <span class="absValue">
+    (106/226)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">Response$Companion</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
   </span>
 </td>
     <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
-    50%
+    100%
   </span>
   <span class="absValue">
-    (1/2)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    50%
+    100%
   </span>
   <span class="absValue">
-    (11/22)
+    (7/7)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (5/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    58.3%
+  </span>
+  <span class="absValue">
+    (189/324)
   </span>
 </td>
 </tr>
-
 </table>
 
 <br/>
@@ -90,14 +183,38 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.network.internal.utils
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.logger
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;private const val BRIGHT_YELLOW = &quot;\u001B[93m&quot;
-<i class="no-highlight">4</i>&nbsp;private const val BRIGHT_RED = &quot;\u001B[91m&quot;
-<i class="no-highlight">5</i>&nbsp;
-<b class="nc"><i class="no-highlight">6</i>&nbsp;internal fun printlnWarning(message: String) = println(&quot;$BRIGHT_YELLOW$message&quot;)</b>
-<i class="no-highlight">7</i>&nbsp;
-<b class="fc"><i class="no-highlight">8</i>&nbsp;internal fun printlnError(message: String) = println(&quot;$BRIGHT_RED$message&quot;)</b>
+<i class="no-highlight">3</i>&nbsp;import com.javiersc.mokoki.MokokiLogger
+<i class="no-highlight">4</i>&nbsp;import com.javiersc.mokoki.Priority
+<i class="no-highlight">5</i>&nbsp;import com.javiersc.mokoki.logE
+<i class="no-highlight">6</i>&nbsp;import com.javiersc.mokoki.logI
+<i class="no-highlight">7</i>&nbsp;import com.javiersc.mokoki.logWTF
+<i class="no-highlight">8</i>&nbsp;import com.javiersc.mokoki.serialization.PrintSerializableMokokiLogger
+<i class="no-highlight">9</i>&nbsp;import com.javiersc.network.either.NetworkEither
+<i class="no-highlight">10</i>&nbsp;import kotlinx.serialization.Serializable
+<i class="no-highlight">11</i>&nbsp;
+<i class="no-highlight">12</i>&nbsp;public inline fun &lt;reified F, reified S&gt; NetworkEither&lt;F, S&gt;.alsoLog(
+<i class="no-highlight">13</i>&nbsp;    tag: String? = null
+<i class="no-highlight">14</i>&nbsp;): NetworkEither&lt;F, S&gt; {
+<i class="no-highlight">15</i>&nbsp;    if (MokokiLogger.loggers.isEmpty()) {
+<i class="no-highlight">16</i>&nbsp;        MokokiLogger.install(PrintSerializableMokokiLogger(Priority.VERBOSE))
+<i class="no-highlight">17</i>&nbsp;    }
+<i class="no-highlight">18</i>&nbsp;
+<i class="no-highlight">19</i>&nbsp;    fold(
+<i class="no-highlight">20</i>&nbsp;        httpFailure = { (error, code, headers) -&gt; logI(tag) { Response(error, code, headers) } },
+<i class="no-highlight">21</i>&nbsp;        localFailure = { logE(tag) { &quot;Internet not available&quot; } },
+<i class="no-highlight">22</i>&nbsp;        remoteFailure = { logE(tag) { &quot;Remote not available&quot; } },
+<i class="no-highlight">23</i>&nbsp;        unknownFailure = { throwable -&gt; logWTF(tag) { throwable.stackTraceToString() } },
+<i class="no-highlight">24</i>&nbsp;        success = { (data, code, headers) -&gt; logI(tag) { Response(data, code, headers) } },
+<i class="no-highlight">25</i>&nbsp;    )
+<i class="no-highlight">26</i>&nbsp;
+<i class="no-highlight">27</i>&nbsp;    return this
+<i class="no-highlight">28</i>&nbsp;}
+<i class="no-highlight">29</i>&nbsp;
+<b class="pc"><i class="no-highlight">30</i>&nbsp;@Serializable</b>
+<i class="no-highlight">31</i>&nbsp;@PublishedApi
+<b class="fc"><i class="no-highlight">32</i>&nbsp;internal data class Response&lt;T&gt;(val body: T, val code: Int, val headers: Map&lt;String, List&lt;String&gt;&gt;)</b>
 </div>
 </pre>
 </div>
@@ -124,7 +241,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-22 21:59</div>
+    <div style="float:right;">generated on 2022-07-26 21:04</div>
 </div>
 </body>
 </html>

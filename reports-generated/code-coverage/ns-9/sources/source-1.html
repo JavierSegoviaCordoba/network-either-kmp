@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > NetworkEitherPlugin</title>
+  <title>Coverage Report > NetworkEitherToResourceKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,15 +17,18 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.either.network.ktor</a>
+    <a href="../index.html">com.javiersc.network.either.resource</a>
 </div>
 
-<h1>Coverage Summary for Class: NetworkEitherPlugin (com.javiersc.either.network.ktor)</h1>
+<h1>Coverage Summary for Class: NetworkEitherToResourceKt (com.javiersc.network.either.resource)</h1>
 
 <table class="coverageStats">
-
 <tr>
   <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -44,91 +47,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">NetworkEitherPlugin</td>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (2/2)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (3/3)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (20/20)
-  </span>
-</td>
-</tr>
-  <tr>
-    <td class="name">NetworkEitherPlugin$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/2)
-  </span>
-</td>
-  </tr>
-  <tr>
-    <td class="name">NetworkEitherPlugin$Companion</td>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (3/3)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (6/6)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (24/24)
-  </span>
-</td>
-  </tr>
-  <tr>
-    <td class="name">NetworkEitherPlugin$Config</td>
+  <td class="name">NetworkEitherToResourceKt</td>
 <td class="coverageStat">
   <span class="percent">
     100%
@@ -137,7 +56,6 @@ Current scope:     <a href="../../index.html">all classes</a>
     (1/1)
   </span>
 </td>
-    <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
     100%
@@ -148,52 +66,12 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    62.5%
   </span>
   <span class="absValue">
-    (11/11)
+    (15/24)
   </span>
 </td>
-  </tr>
-  <tr>
-    <td class="name">NetworkEitherPlugin$Config$mockIsNetworkAvailable$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/2)
-  </span>
-</td>
-  </tr>
-<tr>
-  <td class="name"><strong>Total</strong></td>
-<td class="coverageStat">
-  <span class="percent">
-    75%
-  </span>
-  <span class="absValue">
-    (6/8)
-  </span>
-</td>
-    <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
     84.6%
@@ -204,13 +82,14 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    93.2%
+    61.3%
   </span>
   <span class="absValue">
-    (55/59)
+    (103/168)
   </span>
 </td>
 </tr>
+
 </table>
 
 <br/>
@@ -218,40 +97,73 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.network.ktor
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;@file:Suppress(&quot;LongParameterList&quot;)
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.either.network.ktor._internal.interceptBeforeTransformAndReplaceContainerWithNetworkEitherType
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.either.network.ktor._internal.interceptExceptionsAndReplaceWithNetworkEitherFailures
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.either.network.ktor._internal.interceptSuccessesAndReplaceWithNetworkEitherSuccess
-<i class="no-highlight">6</i>&nbsp;import com.javiersc.either.network.utils.isNetworkAvailable
-<i class="no-highlight">7</i>&nbsp;import io.ktor.client.HttpClient
-<i class="no-highlight">8</i>&nbsp;import io.ktor.client.plugins.HttpClientPlugin
-<i class="no-highlight">9</i>&nbsp;import io.ktor.util.AttributeKey
+<i class="no-highlight">3</i>&nbsp;package com.javiersc.network.either.resource
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;import com.javiersc.network.either.NetworkEither
+<i class="no-highlight">6</i>&nbsp;import com.javiersc.network.either.NetworkEither.Failure
+<i class="no-highlight">7</i>&nbsp;import com.javiersc.resource.either.ResourceEither
+<i class="no-highlight">8</i>&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.resourceFailure
+<i class="no-highlight">9</i>&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.resourceSuccess
 <i class="no-highlight">10</i>&nbsp;
-<b class="fc"><i class="no-highlight">11</i>&nbsp;public class NetworkEitherPlugin(</b>
-<b class="pc"><i class="no-highlight">12</i>&nbsp;    private val mockIsNetworkAvailable: () -&gt; Boolean = { isNetworkAvailable }</b>
-<i class="no-highlight">13</i>&nbsp;) {
-<i class="no-highlight">14</i>&nbsp;
-<b class="fc"><i class="no-highlight">15</i>&nbsp;    public class Config {</b>
-<b class="pc"><i class="no-highlight">16</i>&nbsp;        public var mockIsNetworkAvailable: () -&gt; Boolean = { isNetworkAvailable }</b>
-<i class="no-highlight">17</i>&nbsp;    }
-<i class="no-highlight">18</i>&nbsp;
-<i class="no-highlight">19</i>&nbsp;    public companion object : HttpClientPlugin&lt;Config, NetworkEitherPlugin&gt; {
-<i class="no-highlight">20</i>&nbsp;
-<b class="fc"><i class="no-highlight">21</i>&nbsp;        override val key: AttributeKey&lt;NetworkEitherPlugin&gt; = AttributeKey(&quot;NetworkEither&quot;)</b>
-<i class="no-highlight">22</i>&nbsp;
-<i class="no-highlight">23</i>&nbsp;        override fun install(plugin: NetworkEitherPlugin, scope: HttpClient) {
-<b class="fc"><i class="no-highlight">24</i>&nbsp;            interceptExceptionsAndReplaceWithNetworkEitherFailures(scope)</b>
-<b class="fc"><i class="no-highlight">25</i>&nbsp;            interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(scope)</b>
-<b class="fc"><i class="no-highlight">26</i>&nbsp;            interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope)</b>
-<i class="no-highlight">27</i>&nbsp;        }
-<i class="no-highlight">28</i>&nbsp;
-<i class="no-highlight">29</i>&nbsp;        override fun prepare(block: Config.() -&gt; Unit): NetworkEitherPlugin {
-<b class="fc"><i class="no-highlight">30</i>&nbsp;            val config = Config().apply { block() }</b>
-<b class="fc"><i class="no-highlight">31</i>&nbsp;            return NetworkEitherPlugin(config.mockIsNetworkAvailable)</b>
-<i class="no-highlight">32</i>&nbsp;        }
-<i class="no-highlight">33</i>&nbsp;    }
-<i class="no-highlight">34</i>&nbsp;}
+<i class="no-highlight">11</i>&nbsp;/**
+<i class="no-highlight">12</i>&nbsp; * Map a `NetworkEither` to `ResourceEither` with the network `Failure` and `Success` as lambda
+<i class="no-highlight">13</i>&nbsp; * params
+<i class="no-highlight">14</i>&nbsp; *
+<i class="no-highlight">15</i>&nbsp; * ```
+<i class="no-highlight">16</i>&nbsp; * networkEither.toResource(
+<i class="no-highlight">17</i>&nbsp; *     left = { failure: Failure&lt;SomeFailure&gt; -&gt;
+<i class="no-highlight">18</i>&nbsp; *         buildResource(failure)
+<i class="no-highlight">19</i>&nbsp; *     },
+<i class="no-highlight">20</i>&nbsp; *     right = { success: Success&lt;SomeSuccess&gt; -&gt;
+<i class="no-highlight">21</i>&nbsp; *         buildResource(failure)
+<i class="no-highlight">22</i>&nbsp; *     },
+<i class="no-highlight">23</i>&nbsp; * )
+<i class="no-highlight">24</i>&nbsp; * ```
+<i class="no-highlight">25</i>&nbsp; */
+<i class="no-highlight">26</i>&nbsp;public inline fun &lt;NF, NS, F, S&gt; NetworkEither&lt;NF, NS&gt;.toResource(
+<i class="no-highlight">27</i>&nbsp;    failure: (Failure&lt;NF&gt;) -&gt; ResourceEither&lt;F, S&gt;,
+<i class="no-highlight">28</i>&nbsp;    success: (NetworkEither.Success&lt;NS&gt;) -&gt; ResourceEither&lt;F, S&gt;,
+<i class="no-highlight">29</i>&nbsp;): ResourceEither&lt;F, S&gt; =
+<b class="fc"><i class="no-highlight">30</i>&nbsp;    when (this) {</b>
+<b class="fc"><i class="no-highlight">31</i>&nbsp;        is Failure -&gt; failure(this)</b>
+<b class="fc"><i class="no-highlight">32</i>&nbsp;        is NetworkEither.Success -&gt; success(this)</b>
+<b class="fc"><i class="no-highlight">33</i>&nbsp;    }</b>
+<i class="no-highlight">34</i>&nbsp;
+<i class="no-highlight">35</i>&nbsp;/**
+<i class="no-highlight">36</i>&nbsp; * Map a `NetworkEither` to `ResourceEither` with network `Failure` and `Success` unwrapped as
+<i class="no-highlight">37</i>&nbsp; * lambda params
+<i class="no-highlight">38</i>&nbsp; *
+<i class="no-highlight">39</i>&nbsp; * ```
+<i class="no-highlight">40</i>&nbsp; * networkEither.toResource(
+<i class="no-highlight">41</i>&nbsp; *     success = { data: Data, code: Int, headers: Headers -&gt;
+<i class="no-highlight">42</i>&nbsp; *         buildResource(data, code, headers)
+<i class="no-highlight">43</i>&nbsp; *     },
+<i class="no-highlight">44</i>&nbsp; *     httpError = { error: Error, code: Int, headers: Headers -&gt;
+<i class="no-highlight">45</i>&nbsp; *         buildResource(error, code, headers)
+<i class="no-highlight">46</i>&nbsp; *     },
+<i class="no-highlight">47</i>&nbsp; *     localError = { buildResource() },
+<i class="no-highlight">48</i>&nbsp; *     remoteError = { buildResource() }
+<i class="no-highlight">49</i>&nbsp; *     unknownError = { unknownError: Throwable -&gt; buildResource(unknownError) }
+<i class="no-highlight">50</i>&nbsp; * )
+<i class="no-highlight">51</i>&nbsp; * ```
+<i class="no-highlight">52</i>&nbsp; */
+<b class="nc"><i class="no-highlight">53</i>&nbsp;public inline fun &lt;NF, NS, F, S&gt; NetworkEither&lt;NF, NS&gt;.toResource(</b>
+<i class="no-highlight">54</i>&nbsp;    httpError: (Failure.Http&lt;NF&gt;) -&gt; F,
+<i class="no-highlight">55</i>&nbsp;    localError: () -&gt; F,
+<i class="no-highlight">56</i>&nbsp;    remoteError: () -&gt; F,
+<i class="no-highlight">57</i>&nbsp;    unknownError: (Throwable) -&gt; F,
+<i class="no-highlight">58</i>&nbsp;    success: (NetworkEither.Success&lt;NS&gt;) -&gt; S,
+<b class="nc"><i class="no-highlight">59</i>&nbsp;    isLoading: Boolean = false</b>
+<i class="no-highlight">60</i>&nbsp;): ResourceEither&lt;F, S&gt; =
+<b class="fc"><i class="no-highlight">61</i>&nbsp;    when (this) {</b>
+<b class="pc"><i class="no-highlight">62</i>&nbsp;        is Failure.Http -&gt; resourceFailure(httpError(this), null, isLoading)</b>
+<b class="pc"><i class="no-highlight">63</i>&nbsp;        is Failure.Local -&gt; resourceFailure(localError(), null, isLoading)</b>
+<b class="pc"><i class="no-highlight">64</i>&nbsp;        is Failure.Remote -&gt; resourceFailure(remoteError(), null, isLoading)</b>
+<b class="pc"><i class="no-highlight">65</i>&nbsp;        is Failure.Unknown -&gt; resourceFailure(unknownError(throwable), null, isLoading)</b>
+<b class="pc"><i class="no-highlight">66</i>&nbsp;        is NetworkEither.Success -&gt; resourceSuccess(success(this), isLoading)</b>
+<b class="fc"><i class="no-highlight">67</i>&nbsp;    }</b>
 </div>
 </pre>
 </div>
@@ -278,7 +190,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-22 21:59</div>
+    <div style="float:right;">generated on 2022-07-26 21:04</div>
 </div>
 </body>
 </html>

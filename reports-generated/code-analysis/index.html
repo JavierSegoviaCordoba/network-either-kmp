@@ -157,11 +157,11 @@
 
 <div>
   <ul>
-    <li>461 number of properties</li>
-    <li>323 number of functions</li>
-    <li>137 number of classes</li>
-    <li>27 number of packages</li>
-    <li>171 number of kt files</li>
+    <li>202 number of properties</li>
+    <li>158 number of functions</li>
+    <li>28 number of classes</li>
+    <li>16 number of packages</li>
+    <li>54 number of kt files</li>
   </ul>
 </div>
 
@@ -170,35 +170,52 @@
 
 <div>
   <ul>
-    <li>5,782 lines of code (loc)</li>
-    <li>4,592 source lines of code (sloc)</li>
-    <li>2,598 logical lines of code (lloc)</li>
-    <li>137 comment lines of code (cloc)</li>
-    <li>558 cyclomatic complexity (mcc)</li>
-    <li>151 cognitive complexity</li>
-    <li>94 number of total code smells</li>
-    <li>2% comment source ratio</li>
-    <li>214 mcc per 1,000 lloc</li>
-    <li>36 code smells per 1,000 lloc</li>
+    <li>2,807 lines of code (loc)</li>
+    <li>2,323 source lines of code (sloc)</li>
+    <li>1,590 logical lines of code (lloc)</li>
+    <li>36 comment lines of code (cloc)</li>
+    <li>297 cyclomatic complexity (mcc)</li>
+    <li>118 cognitive complexity</li>
+    <li>24 number of total code smells</li>
+    <li>1% comment source ratio</li>
+    <li>186 mcc per 1,000 lloc</li>
+    <li>15 code smells per 1,000 lloc</li>
   </ul>
 </div>
 
 
 <h2>Findings</h2>
-<div>Total: 94
+<div>Total: 24
+  <h3>complexity: 1</h3>
+  <details id="TooManyFunctions" open="open">
+    <summary class="rule-container"><span class="rule">TooManyFunctions: 1 </span><span class="description">Too many functions inside a/an file/class/object/interface always indicate a violation of the single responsibility principle. Maybe the file/class/object/interface wants to manage too many things at once. Extract functionality which clearly belongs together.</span></summary>
+<a href="https://detekt.dev/docs/rules/complexity#toomanyfunctions">Documentation</a>
+    <ul>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/NetworkEither.kt:8:21</span><span class="message">Class 'NetworkEither' with '21' functions detected. Defined threshold inside classes is set to '11'</span>
+        <pre><code><span class="lineno">   5 </span>import arrow.core.right
+<span class="lineno">   6 </span>import kotlin.contracts.contract
+<span class="lineno">   7 </span>
+<span class="lineno">   8 </span>public sealed class <span class="error">NetworkEither</span>&lt;out F, out S&gt; {
+<span class="lineno">   9 </span>
+<span class="lineno">  10 </span>    public sealed class Failure&lt;out F&gt; : NetworkEither&lt;F, Nothing&gt;() {
+<span class="lineno">  11 </span>
+</code></pre>
+      </li>
+    </ul>
+  </details>
   <h3>exceptions: 3</h3>
   <details id="SwallowedException" open="open">
     <summary class="rule-container"><span class="rule">SwallowedException: 1 </span><span class="description">The caught exception is swallowed. The original exception could be lost.</span></summary>
 <a href="https://detekt.dev/docs/rules/exceptions#swallowedexception">Documentation</a>
     <ul>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:10:18</span><span class="message">The caught exception is swallowed. The original exception could be lost.</span>
-        <pre><code><span class="lineno">   7 </span>    scope.sendPipeline.intercept(HttpSendPipeline.Before) {
-<span class="lineno">   8 </span>        try {
-<span class="lineno">   9 </span>            proceed()
-<span class="lineno">  10 </span>        } catch (<span class="error">throwable: Throwable</span>) {
-<span class="lineno">  11 </span>            val outgoingContent = RemoteErrorOutgoing
-<span class="lineno">  12 </span>            proceedWith(scope.fakeFailureHttpClientCall(outgoingContent))
-<span class="lineno">  13 </span>        }
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:17:22</span><span class="message">The caught exception is swallowed. The original exception could be lost.</span>
+        <pre><code><span class="lineno">  14 </span>        } else {
+<span class="lineno">  15 </span>            try {
+<span class="lineno">  16 </span>                proceed()
+<span class="lineno">  17 </span>            } catch (<span class="error">throwable: Throwable</span>) {
+<span class="lineno">  18 </span>                val outgoingContent = RemoteErrorOutgoing
+<span class="lineno">  19 </span>                proceedWith(fakeFailureHttpClientCall(scope, outgoingContent))
+<span class="lineno">  20 </span>            }
 </code></pre>
       </li>
     </ul>
@@ -207,605 +224,168 @@
     <summary class="rule-container"><span class="rule">TooGenericExceptionCaught: 2 </span><span class="description">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span></summary>
 <a href="https://detekt.dev/docs/rules/exceptions#toogenericexceptioncaught">Documentation</a>
     <ul>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt:33:18</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
-        <pre><code><span class="lineno">  30 </span>
-<span class="lineno">  31 </span>        try {
-<span class="lineno">  32 </span>            proceedWith(modifiedContainer)
-<span class="lineno">  33 </span>        } catch (<span class="error">throwable: Throwable</span>) {
-<span class="lineno">  34 </span>            val typeInfo = typeInfo&lt;Either.Left&lt;Nothing&gt;&gt;()
-<span class="lineno">  35 </span>            val networkEither: NetworkEither&lt;Any, Nothing&gt; = buildNetworkFailureUnknown(throwable)
-<span class="lineno">  36 </span>            proceedWith(HttpResponseContainer(typeInfo, networkEither))
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt:35:18</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
+        <pre><code><span class="lineno">  32 </span>
+<span class="lineno">  33 </span>        try {
+<span class="lineno">  34 </span>            proceedWith(modifiedContainer)
+<span class="lineno">  35 </span>        } catch (<span class="error">throwable: Throwable</span>) {
+<span class="lineno">  36 </span>            val typeInfo = typeInfo&lt;NetworkEither.Failure&lt;Nothing&gt;&gt;()
+<span class="lineno">  37 </span>            val networkEither: NetworkEither&lt;Any, Nothing&gt; = unknownFailure(throwable)
+<span class="lineno">  38 </span>            proceedWith(HttpResponseContainer(typeInfo, networkEither))
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:10:18</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
-        <pre><code><span class="lineno">   7 </span>    scope.sendPipeline.intercept(HttpSendPipeline.Before) {
-<span class="lineno">   8 </span>        try {
-<span class="lineno">   9 </span>            proceed()
-<span class="lineno">  10 </span>        } catch (<span class="error">throwable: Throwable</span>) {
-<span class="lineno">  11 </span>            val outgoingContent = RemoteErrorOutgoing
-<span class="lineno">  12 </span>            proceedWith(scope.fakeFailureHttpClientCall(outgoingContent))
-<span class="lineno">  13 </span>        }
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:17:22</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
+        <pre><code><span class="lineno">  14 </span>        } else {
+<span class="lineno">  15 </span>            try {
+<span class="lineno">  16 </span>                proceed()
+<span class="lineno">  17 </span>            } catch (<span class="error">throwable: Throwable</span>) {
+<span class="lineno">  18 </span>                val outgoingContent = RemoteErrorOutgoing
+<span class="lineno">  19 </span>                proceedWith(fakeFailureHttpClientCall(scope, outgoingContent))
+<span class="lineno">  20 </span>            }
 </code></pre>
       </li>
     </ul>
   </details>
-  <h3>naming: 80</h3>
-  <details id="InvalidPackageDeclaration" open="open">
-    <summary class="rule-container"><span class="rule">InvalidPackageDeclaration: 71 </span><span class="description">Kotlin source files should be stored in the directory corresponding to its package statement.</span></summary>
-<a href="https://detekt.dev/docs/rules/naming#invalidpackagedeclaration">Documentation</a>
+  <h3>naming: 18</h3>
+  <details id="MatchingDeclarationName" open="open">
+    <summary class="rule-container"><span class="rule">MatchingDeclarationName: 1 </span><span class="description">If a source file contains only a single non-private top-level class or object, the file name should reflect the case-sensitive name plus the .kt extension.</span></summary>
+<a href="https://detekt.dev/docs/rules/naming#matchingdeclarationname">Documentation</a>
     <ul>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/NetworkEitherCallAdapterFactory.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.Either
-<span class="lineno">   4 </span>import com.javiersc.either.network.internal.deferred.NetworkEitherDeferredCallAdapter
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/deferred/HandleDeferred.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.deferred</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.Headers
-<span class="lineno">   4 </span>import com.javiersc.either.network.HttpStatusCode
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/deferred/HttpExceptionDeferredHandler.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.deferred</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.internal.utils.headers
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/deferred/NetworkEitherDeferredCall.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.deferred</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.HttpStatusCode as NetworkHttpStatusCode
-<span class="lineno">   4 </span>import com.javiersc.either.network.NetworkEither
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/deferred/NetworkEitherDeferredCallAdapter.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.deferred</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import java.lang.reflect.Type
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/deferred/ResponseDeferredHandler.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.deferred</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.internal.utils.headers
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/suspend/HandleSuspend.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.suspend</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.Headers
-<span class="lineno">   4 </span>import com.javiersc.either.network.HttpStatusCode
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/suspend/HttpExceptionSuspendHandler.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.suspend</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.internal.utils.headers
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/suspend/NetworkEitherSuspendCall.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.suspend</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.HttpStatusCode as NetworkHttpStatusCode
-<span class="lineno">   4 </span>import com.javiersc.either.network.NetworkEither
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/suspend/NetworkEitherSuspendCallAdapter.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.suspend</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import java.lang.reflect.Type
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/suspend/ResponseSuspendHandler.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.suspend</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.internal.utils.headers
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/utils/HttpStatusCodeUtils.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.utils</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import io.ktor.http.Headers
-<span class="lineno">   4 </span>import io.ktor.http.HttpStatusCode
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/utils/Printers.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.utils</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>private const val BRIGHT_YELLOW = &quot;\u001B[93m&quot;
-<span class="lineno">   4 </span>private const val BRIGHT_RED = &quot;\u001B[91m&quot;
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/utils/RetrofitUtils.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.internal.utils</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import io.ktor.http.Headers
-<span class="lineno">   4 </span>import io.ktor.http.HttpStatusCode
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/TestUtils.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import okio.FileSystem
-<span class="lineno">   4 </span>
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/BaseTest.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.Headers
-<span class="lineno">   4 </span>import com.javiersc.either.network.HttpStatusCode
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error400Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error401Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error402Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error403Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error404Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error405Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error406Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error409Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error410Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error411Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error412Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error413Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error414Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error415Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error416Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error417Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error418Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error421Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error422Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error423Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error424Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error426Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error428Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error429Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error431Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error451Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error4xxTest.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.clientError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/config/DogService.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.config</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-<span class="lineno">   4 </span>import com.javiersc.either.network.NetworkEither
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/config/MockResponseUtil.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.config</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.Headers
-<span class="lineno">   4 </span>import com.javiersc.either.network.readResource
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/other/LocalErrorTest.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.other</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureLocal
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/other/MalformedJsonTest.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.other</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.NetworkFailureUnknown
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/other/RemoteErrorTest.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.other</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureRemote
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error500Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error501Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error502Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error503Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error504Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error505Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error506Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error507Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error508Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error509Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error510Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error511Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error5xxTest.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.serverError</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkFailureHttp
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success200Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success201Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success202Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success203Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success204Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success205Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success206Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success207Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success226Test.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success2xxTest.kt:1:1</span><span class="message">The package declaration does not match the actual file location.</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.retrofit.success</span>
-<span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.NetworkEither
-<span class="lineno">   4 </span>import com.javiersc.either.network.buildNetworkSuccess
+      <li><span class="location">subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt:10:21</span><span class="message">The file name 'Resource' does not match the name of the single top-level declaration 'ResourceEither'.</span>
+        <pre><code><span class="lineno">   7 </span>import arrow.core.right
+<span class="lineno">   8 </span>import kotlin.contracts.contract
+<span class="lineno">   9 </span>
+<span class="lineno">  10 </span>public sealed class <span class="error">ResourceEither</span>&lt;out F, out S&gt; {
+<span class="lineno">  11 </span>
+<span class="lineno">  12 </span>    public abstract val isLoading: Boolean
+<span class="lineno">  13 </span>
 </code></pre>
       </li>
     </ul>
   </details>
   <details id="PackageNaming" open="open">
-    <summary class="rule-container"><span class="rule">PackageNaming: 7 </span><span class="description">Package names should match the naming convention set in the configuration.</span></summary>
+    <summary class="rule-container"><span class="rule">PackageNaming: 17 </span><span class="description">Package names should match the naming convention set in the configuration.</span></summary>
 <a href="https://detekt.dev/docs/rules/naming#packagenaming">Documentation</a>
     <ul>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/HttpStatusCodeExtensions.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.ktor._internal</span>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensions.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either.ktor._internal</span>
 <span class="lineno">   2 </span>
 <span class="lineno">   3 </span>import io.ktor.http.Headers
 <span class="lineno">   4 </span>import io.ktor.http.HttpStatusCode
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.ktor._internal</span>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/NetworkEitherFailureOutgoings.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either.ktor._internal</span>
 <span class="lineno">   2 </span>
 <span class="lineno">   3 </span>import io.ktor.http.ContentType
 <span class="lineno">   4 </span>import io.ktor.http.Headers
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.ktor._internal</span>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt:3:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span>@file:Suppress(&quot;MagicNumber&quot;)
 <span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.Either
-<span class="lineno">   4 </span>import com.javiersc.either.network.NetworkEither
+<span class="lineno">   3 </span><span class="error">package com.javiersc.network.either.ktor._internal</span>
+<span class="lineno">   4 </span>
+<span class="lineno">   5 </span>import com.javiersc.kotlin.stdlib.secondOrNull
+<span class="lineno">   6 </span>import com.javiersc.network.either.NetworkEither
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/fakeFailureHttpClientCall.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.ktor._internal</span>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/fakeFailureHttpClientCall.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either.ktor._internal</span>
 <span class="lineno">   2 </span>
 <span class="lineno">   3 </span>import io.ktor.client.HttpClient
 <span class="lineno">   4 </span>import io.ktor.client.call.HttpClientCall
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.ktor._internal</span>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either.ktor._internal</span>
 <span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.Either
-<span class="lineno">   4 </span>import com.javiersc.either.network.NetworkEither
+<span class="lineno">   3 </span>import com.javiersc.network.either.NetworkEither
+<span class="lineno">   4 </span>import com.javiersc.network.either.NetworkEither.Companion.localFailure
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.ktor._internal</span>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either.ktor._internal</span>
 <span class="lineno">   2 </span>
 <span class="lineno">   3 </span>import io.ktor.client.HttpClient
 <span class="lineno">   4 </span>import io.ktor.client.request.HttpSendPipeline
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptSuccessesAndReplaceWithNetworkEitherSuccess.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
-        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.either.network.ktor._internal</span>
+      <li><span class="location">subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either.ktor._internal</span>
 <span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import com.javiersc.either.network.HttpStatusCode as NetworkEitherHttpStatusCode
-<span class="lineno">   4 </span>import com.javiersc.either.network.NetworkEither
+<span class="lineno">   3 </span>import com.javiersc.network.either.NetworkEither
+<span class="lineno">   4 </span>import com.javiersc.network.either.NetworkEither.Companion.httpFailure
 </code></pre>
       </li>
-    </ul>
-  </details>
-  <details id="TopLevelPropertyNaming" open="open">
-    <summary class="rule-container"><span class="rule">TopLevelPropertyNaming: 2 </span><span class="description">Top level property names should follow the naming convention set in the projects configuration.</span></summary>
-<a href="https://detekt.dev/docs/rules/naming#toplevelpropertynaming">Documentation</a>
-    <ul>
-      <li><span class="location">subprojects/network/network-core/common/test/kotlin/com/javiersc/either/network/ktor/other/MalformedJsonTest.kt:37:19</span><span class="message">Top level constant names should match the pattern: [A-Z][_A-Z0-9]*</span>
-        <pre><code><span class="lineno">  34 </span>    }
-<span class="lineno">  35 </span>}
-<span class="lineno">  36 </span>
-<span class="lineno">  37 </span>private const val <span class="error">partialMessage</span> = &quot;Unexpected JSON token at offset&quot;
-<span class="lineno">  38 </span>
+      <li><span class="location">subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/CodeArb.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config.fakes</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import io.kotest.property.Arb
+<span class="lineno">   4 </span>import io.kotest.property.arbitrary.filter
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/jvm/test/kotlin/retrofit/other/MalformedJsonTest.kt:49:19</span><span class="message">Top level constant names should match the pattern: [A-Z][_A-Z0-9]*</span>
-        <pre><code><span class="lineno">  46 </span>    }
-<span class="lineno">  47 </span>}
-<span class="lineno">  48 </span>
-<span class="lineno">  49 </span>private const val <span class="error">partialMessage</span> = &quot;Unexpected JSON token at offset&quot;
-<span class="lineno">  50 </span>
+      <li><span class="location">subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Headers.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config.fakes</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import com.javiersc.network.either.Headers
+<span class="lineno">   4 </span>import com.javiersc.network.either._config.readResource
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Json.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config.fakes</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import kotlinx.serialization.json.Json
+<span class="lineno">   4 </span>
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fileSystem.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import okio.FileSystem
+<span class="lineno">   4 </span>
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/DogDTO.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config.models</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import kotlinx.serialization.Serializable
+<span class="lineno">   4 </span>
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/ErrorDTO.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config.models</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import kotlinx.serialization.Serializable
+<span class="lineno">   4 </span>
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/readResource.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import okio.Path
+<span class="lineno">   4 </span>import okio.Path.Companion.toPath
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/DogService.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+<span class="lineno">   4 </span>import com.javiersc.network.either.NetworkEither
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/MockResponseUtil.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import com.javiersc.network.either.Headers
+<span class="lineno">   4 </span>import org.mockserver.model.HttpResponse
+</code></pre>
+      </li>
+      <li><span class="location">subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/fileSystem.jvm.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.network.either._config</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import okio.FileSystem
+<span class="lineno">   4 </span>
 </code></pre>
       </li>
     </ul>
@@ -815,7 +395,7 @@
     <summary class="rule-container"><span class="rule">SpreadOperator: 2 </span><span class="description">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span></summary>
 <a href="https://detekt.dev/docs/rules/performance#spreadoperator">Documentation</a>
     <ul>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/utils/RetrofitUtils.kt:16:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
+      <li><span class="location">subprojects/network-either/jvm/main/kotlin/com/javiersc/network/either/internal/utils/RetrofitUtils.kt:16:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
         <pre><code><span class="lineno">  13 </span>    get() = code() toHttpStatusCode message()
 <span class="lineno">  14 </span>
 <span class="lineno">  15 </span>internal val HttpException.headers: Headers
@@ -825,7 +405,7 @@
 <span class="lineno">  19 </span>    get() = headersOf(*headers().toOkHttpHeaders())
 </code></pre>
       </li>
-      <li><span class="location">subprojects/network/network-core/jvm/main/kotlin/internal/utils/RetrofitUtils.kt:19:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
+      <li><span class="location">subprojects/network-either/jvm/main/kotlin/com/javiersc/network/either/internal/utils/RetrofitUtils.kt:19:22</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
         <pre><code><span class="lineno">  16 </span>    get() = headersOf(*response()?.headers().toOkHttpHeaders())
 <span class="lineno">  17 </span>
 <span class="lineno">  18 </span>internal val Response&lt;*&gt;.headers: Headers
@@ -837,107 +417,10 @@
       </li>
     </ul>
   </details>
-  <h3>style: 9</h3>
-  <details id="MagicNumber" open="open">
-    <summary class="rule-container"><span class="rule">MagicNumber: 8 </span><span class="description">Report magic numbers. Magic number is a numeric literal that is not defined as a constant and hence it's unclear what the purpose of this number is. It's better to declare such numbers as constants and give them a proper name. By default, -1, 0, 1, and 2 are not considered to be magic numbers.</span></summary>
-<a href="https://detekt.dev/docs/rules/style#magicnumber">Documentation</a>
-    <ul>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt:18:58</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno">  15 </span>
-<span class="lineno">  16 </span>    override fun toString(): String = key
-<span class="lineno">  17 </span>
-<span class="lineno">  18 </span>    override val status: HttpStatusCode = HttpStatusCode(<span class="error">9345</span>, key)
-<span class="lineno">  19 </span>
-<span class="lineno">  20 </span>    override val headers: Headers =
-<span class="lineno">  21 </span>        headersOf(networkEitherHeader(&quot;Failure.Remote&quot;), jsonContentTypeHeader)
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt:32:58</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno">  29 </span>
-<span class="lineno">  30 </span>    override fun toString(): String = key
-<span class="lineno">  31 </span>
-<span class="lineno">  32 </span>    override val status: HttpStatusCode = HttpStatusCode(<span class="error">9345</span>, key)
-<span class="lineno">  33 </span>
-<span class="lineno">  34 </span>    override val headers: Headers =
-<span class="lineno">  35 </span>        headersOf(networkEitherHeader(&quot;Failure.Remote&quot;), jsonContentTypeHeader)
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt:110:39</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno"> 107 </span>internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.httpResponse: HttpResponse
-<span class="lineno"> 108 </span>    get() = context.response
-<span class="lineno"> 109 </span>
-<span class="lineno"> 110 </span>internal val successRange: IntRange = <span class="error">200</span>..299
-<span class="lineno"> 111 </span>internal val errorRange: IntRange = 400..599
-<span class="lineno"> 112 </span>
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt:110:44</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno"> 107 </span>internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.httpResponse: HttpResponse
-<span class="lineno"> 108 </span>    get() = context.response
-<span class="lineno"> 109 </span>
-<span class="lineno"> 110 </span>internal val successRange: IntRange = 200..<span class="error">299</span>
-<span class="lineno"> 111 </span>internal val errorRange: IntRange = 400..599
-<span class="lineno"> 112 </span>
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt:111:37</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno"> 108 </span>    get() = context.response
-<span class="lineno"> 109 </span>
-<span class="lineno"> 110 </span>internal val successRange: IntRange = 200..299
-<span class="lineno"> 111 </span>internal val errorRange: IntRange = <span class="error">400</span>..599
-<span class="lineno"> 112 </span>
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt:111:42</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno"> 108 </span>    get() = context.response
-<span class="lineno"> 109 </span>
-<span class="lineno"> 110 </span>internal val successRange: IntRange = 200..299
-<span class="lineno"> 111 </span>internal val errorRange: IntRange = 400..<span class="error">599</span>
-<span class="lineno"> 112 </span>
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptSuccessesAndReplaceWithNetworkEitherSuccess.kt:20:16</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno">  17 </span>        val response = subject.response
-<span class="lineno">  18 </span>        val code = NetworkEitherHttpStatusCode(statusCode)
-<span class="lineno">  19 </span>        when (statusCode) {
-<span class="lineno">  20 </span>            in <span class="error">200</span>..299 -&gt; {
-<span class="lineno">  21 </span>                val networkEither: NetworkEither&lt;Nothing, *&gt; =
-<span class="lineno">  22 </span>                    buildNetworkSuccess(data = response, code = code, headers = headers.toMap())
-<span class="lineno">  23 </span>                proceedWith(HttpResponseContainer(subject.expectedType, networkEither))
-</code></pre>
-      </li>
-      <li><span class="location">subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptSuccessesAndReplaceWithNetworkEitherSuccess.kt:20:21</span><span class="message">This expression contains a magic number. Consider defining it to a well named constant.</span>
-        <pre><code><span class="lineno">  17 </span>        val response = subject.response
-<span class="lineno">  18 </span>        val code = NetworkEitherHttpStatusCode(statusCode)
-<span class="lineno">  19 </span>        when (statusCode) {
-<span class="lineno">  20 </span>            in 200..<span class="error">299</span> -&gt; {
-<span class="lineno">  21 </span>                val networkEither: NetworkEither&lt;Nothing, *&gt; =
-<span class="lineno">  22 </span>                    buildNetworkSuccess(data = response, code = code, headers = headers.toMap())
-<span class="lineno">  23 </span>                proceedWith(HttpResponseContainer(subject.expectedType, networkEither))
-</code></pre>
-      </li>
-    </ul>
-  </details>
-  <details id="UnusedPrivateMember" open="open">
-    <summary class="rule-container"><span class="rule">UnusedPrivateMember: 1 </span><span class="description">Private member is unused and should be removed.</span></summary>
-<a href="https://detekt.dev/docs/rules/style#unusedprivatemember">Documentation</a>
-    <ul>
-      <li><span class="location">subprojects/network/network-core/common/test/kotlin/com/javiersc/either/network/ktor/KtorPluginTest.kt:5:13</span><span class="message">Private property `TODO` is unused.</span>
-        <pre><code><span class="lineno">   2 </span>
-<span class="lineno">   3 </span>import io.ktor.client.request.get
-<span class="lineno">   4 </span>
-<span class="lineno">   5 </span>private val <span class="error">TODO</span>: String
-<span class="lineno">   6 </span>    get() =
-<span class="lineno">   7 </span>        &quot;&quot;&quot;
-<span class="lineno">   8 </span>            |{
-</code></pre>
-      </li>
-    </ul>
-  </details>
 </div>
 
 
-generated with <a href="https://detekt.dev/">detekt version 1.21.0</a> on 2022-07-22 21:58:41 UTC.
+generated with <a href="https://detekt.dev/">detekt version 1.21.0</a> on 2022-07-26 21:03:38 UTC.
 
 </body>
 </html>

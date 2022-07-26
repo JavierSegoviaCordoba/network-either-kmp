@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > EitherCombineKt</title>
+  <title>Coverage Report > ExceptionExtensionsKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,10 +17,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.either.extensions</a>
+    <a href="../index.html">com.javiersc.network.either.internal</a>
 </div>
 
-<h1>Coverage Summary for Class: EitherCombineKt (com.javiersc.either.extensions)</h1>
+<h1>Coverage Summary for Class: ExceptionExtensionsKt (com.javiersc.network.either.internal)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -47,7 +47,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">EitherCombineKt</td>
+  <td class="name">ExceptionExtensionsKt</td>
 <td class="coverageStat">
   <span class="percent">
     100%
@@ -58,34 +58,34 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/3)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    25%
+    50%
   </span>
   <span class="absValue">
-    (9/36)
+    (4/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/30)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    11%
+    80.8%
   </span>
   <span class="absValue">
-    (24/218)
+    (21/26)
   </span>
 </td>
 </tr>
@@ -97,74 +97,12 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.extensions
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.internal
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.either.Either
-<i class="no-highlight">4</i>&nbsp;import kotlin.jvm.JvmName
-<i class="no-highlight">5</i>&nbsp;
-<i class="no-highlight">6</i>&nbsp;/** Combine an Either with another Either where both and the resulting Either have the same type */
-<i class="no-highlight">7</i>&nbsp;public inline fun &lt;L, R&gt; Either&lt;L, R&gt;.combine(
-<i class="no-highlight">8</i>&nbsp;    either: Either&lt;L, R&gt;,
-<i class="no-highlight">9</i>&nbsp;    left: (L, L) -&gt; L,
-<i class="no-highlight">10</i>&nbsp;    right: (R, R) -&gt; R,
-<i class="no-highlight">11</i>&nbsp;): Either&lt;L, R&gt; =
-<b class="nc"><i class="no-highlight">12</i>&nbsp;    when (this) {</b>
-<b class="nc"><i class="no-highlight">13</i>&nbsp;        is Either.Left -&gt;</b>
-<b class="nc"><i class="no-highlight">14</i>&nbsp;            when (either) {</b>
-<b class="nc"><i class="no-highlight">15</i>&nbsp;                is Either.Left -&gt; Either.Left(left(this.left, either.left))</b>
-<b class="nc"><i class="no-highlight">16</i>&nbsp;                is Either.Right -&gt; this</b>
-<i class="no-highlight">17</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">18</i>&nbsp;        is Either.Right -&gt;</b>
-<b class="nc"><i class="no-highlight">19</i>&nbsp;            when (either) {</b>
-<b class="nc"><i class="no-highlight">20</i>&nbsp;                is Either.Left -&gt; either</b>
-<b class="nc"><i class="no-highlight">21</i>&nbsp;                is Either.Right -&gt; Either.Right(right(this.right, either.right))</b>
-<i class="no-highlight">22</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">23</i>&nbsp;    }</b>
-<i class="no-highlight">24</i>&nbsp;
-<i class="no-highlight">25</i>&nbsp;/** Combine an Either with another Either where all Either have different types */
-<i class="no-highlight">26</i>&nbsp;@JvmName(&quot;combine2&quot;)
-<i class="no-highlight">27</i>&nbsp;public inline fun &lt;L1, R1, L2, R2, R, L&gt; Either&lt;L1, R1&gt;.combine(
-<i class="no-highlight">28</i>&nbsp;    another: Either&lt;L2, R2&gt;,
-<i class="no-highlight">29</i>&nbsp;    left: (L1, L2) -&gt; L,
-<i class="no-highlight">30</i>&nbsp;    thisLeft: (L1) -&gt; L,
-<i class="no-highlight">31</i>&nbsp;    anotherLeft: (L2) -&gt; L,
-<i class="no-highlight">32</i>&nbsp;    right: (R1, R2) -&gt; R,
-<i class="no-highlight">33</i>&nbsp;): Either&lt;L, R&gt; =
-<b class="nc"><i class="no-highlight">34</i>&nbsp;    when (this) {</b>
-<b class="nc"><i class="no-highlight">35</i>&nbsp;        is Either.Left -&gt;</b>
-<b class="nc"><i class="no-highlight">36</i>&nbsp;            when (another) {</b>
-<b class="nc"><i class="no-highlight">37</i>&nbsp;                is Either.Left -&gt; Either.Left(left(this.left, another.left))</b>
-<b class="nc"><i class="no-highlight">38</i>&nbsp;                is Either.Right -&gt; Either.Left(thisLeft(this.left))</b>
-<i class="no-highlight">39</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">40</i>&nbsp;        is Either.Right -&gt;</b>
-<b class="nc"><i class="no-highlight">41</i>&nbsp;            when (another) {</b>
-<b class="nc"><i class="no-highlight">42</i>&nbsp;                is Either.Left -&gt; Either.Left(anotherLeft(another.left))</b>
-<b class="nc"><i class="no-highlight">43</i>&nbsp;                is Either.Right -&gt; Either.Right(right(this.right, another.right))</b>
-<i class="no-highlight">44</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">45</i>&nbsp;    }</b>
-<i class="no-highlight">46</i>&nbsp;
-<i class="no-highlight">47</i>&nbsp;/**
-<i class="no-highlight">48</i>&nbsp; * Combine an Either with another Either where all Either have different right type and same left
-<i class="no-highlight">49</i>&nbsp; * type
-<i class="no-highlight">50</i>&nbsp; */
-<i class="no-highlight">51</i>&nbsp;@JvmName(&quot;combine3&quot;)
-<i class="no-highlight">52</i>&nbsp;public inline fun &lt;L, R1, R2, R&gt; Either&lt;L, R1&gt;.combine(
-<i class="no-highlight">53</i>&nbsp;    either: Either&lt;L, R2&gt;,
-<i class="no-highlight">54</i>&nbsp;    left: (L, L) -&gt; L,
-<i class="no-highlight">55</i>&nbsp;    right: (R1, R2) -&gt; R,
-<i class="no-highlight">56</i>&nbsp;): Either&lt;L, R&gt; =
-<b class="nc"><i class="no-highlight">57</i>&nbsp;    when (this) {</b>
-<b class="nc"><i class="no-highlight">58</i>&nbsp;        is Either.Left -&gt;</b>
-<b class="nc"><i class="no-highlight">59</i>&nbsp;            when (either) {</b>
-<b class="nc"><i class="no-highlight">60</i>&nbsp;                is Either.Left -&gt; Either.Left(left(this.left, either.left))</b>
-<b class="nc"><i class="no-highlight">61</i>&nbsp;                is Either.Right -&gt; this</b>
-<i class="no-highlight">62</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">63</i>&nbsp;        is Either.Right -&gt;</b>
-<b class="nc"><i class="no-highlight">64</i>&nbsp;            when (either) {</b>
-<b class="nc"><i class="no-highlight">65</i>&nbsp;                is Either.Left -&gt; either</b>
-<b class="nc"><i class="no-highlight">66</i>&nbsp;                is Either.Right -&gt; Either.Right(right(this.right, either.right))</b>
-<i class="no-highlight">67</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">68</i>&nbsp;    }</b>
+<i class="no-highlight">3</i>&nbsp;import kotlinx.serialization.SerializationException
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;internal val SerializationException.hasBody: Boolean
+<b class="pc"><i class="no-highlight">6</i>&nbsp;    get() = !this.message?.substringAfter(&quot;JSON input:&quot;).isNullOrBlank()</b>
 </div>
 </pre>
 </div>
@@ -191,7 +129,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-22 21:59</div>
+    <div style="float:right;">generated on 2022-07-26 21:04</div>
 </div>
 </body>
 </html>

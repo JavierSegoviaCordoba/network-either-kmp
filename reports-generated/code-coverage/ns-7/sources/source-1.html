@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > HandleSuspendKt</title>
+  <title>Coverage Report > FakeFailureHttpClientCallKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,18 +17,15 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.either.network.internal.suspend</a>
+    <a href="../index.html">com.javiersc.network.either.ktor._internal</a>
 </div>
 
-<h1>Coverage Summary for Class: HandleSuspendKt (com.javiersc.either.network.internal.suspend)</h1>
+<h1>Coverage Summary for Class: FakeFailureHttpClientCallKt (com.javiersc.network.either.ktor._internal)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -47,49 +44,103 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">HandleSuspendKt</td>
+  <td class="name">FakeFailureHttpClientCallKt</td>
 <td class="coverageStat">
   <span class="percent">
     100%
   </span>
   <span class="absValue">
-    (1/1)
+    (2/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    66.7%
+    50%
   </span>
   <span class="absValue">
-    (2/3)
+    (2/4)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    68.8%
+    93.8%
   </span>
   <span class="absValue">
-    (11/16)
+    (15/16)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    59.4%
+    94.5%
   </span>
   <span class="absValue">
-    (19/32)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    71.8%
-  </span>
-  <span class="absValue">
-    (79/110)
+    (69/73)
   </span>
 </td>
 </tr>
-
+  <tr>
+    <td class="name">FakeFailureHttpClientCallKt$fakeFailureHttpClientCall$call$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/2)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    91.7%
+  </span>
+  <span class="absValue">
+    (11/12)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    96.3%
+  </span>
+  <span class="absValue">
+    (52/54)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    75%
+  </span>
+  <span class="absValue">
+    (3/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (2/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92.9%
+  </span>
+  <span class="absValue">
+    (26/28)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    95.3%
+  </span>
+  <span class="absValue">
+    (121/127)
+  </span>
+</td>
+</tr>
 </table>
 
 <br/>
@@ -97,98 +148,65 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.either.network.internal.suspend
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.ktor._internal
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.either.network.Headers
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.either.network.HttpStatusCode
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.either.network.NetworkEither
-<i class="no-highlight">6</i>&nbsp;import com.javiersc.either.network.buildNetworkFailureHttp
-<i class="no-highlight">7</i>&nbsp;import com.javiersc.either.network.buildNetworkFailureUnknown
-<i class="no-highlight">8</i>&nbsp;import com.javiersc.either.network.buildNetworkSuccess
-<i class="no-highlight">9</i>&nbsp;import com.javiersc.either.network.internal.utils.printlnError
-<i class="no-highlight">10</i>&nbsp;import retrofit2.Callback
-<i class="no-highlight">11</i>&nbsp;import retrofit2.Response
-<i class="no-highlight">12</i>&nbsp;
-<i class="no-highlight">13</i>&nbsp;@Suppress(&quot;LongParameterList&quot;)
-<i class="no-highlight">14</i>&nbsp;internal fun &lt;F : Any, S : Any&gt; handleSuspend(
-<i class="no-highlight">15</i>&nbsp;    call: NetworkEitherSuspendCall&lt;F, S&gt;,
-<i class="no-highlight">16</i>&nbsp;    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;,
-<i class="no-highlight">17</i>&nbsp;    code: Int,
-<i class="no-highlight">18</i>&nbsp;    body: S?,
-<i class="no-highlight">19</i>&nbsp;    errorBody: F?,
-<i class="no-highlight">20</i>&nbsp;    headers: Headers,
-<i class="no-highlight">21</i>&nbsp;) =
-<b class="fc"><i class="no-highlight">22</i>&nbsp;    with(callback) {</b>
-<i class="no-highlight">23</i>&nbsp;        @Suppress(&quot;MagicNumber&quot;)
-<b class="fc"><i class="no-highlight">24</i>&nbsp;        when (code) {</b>
-<b class="pc"><i class="no-highlight">25</i>&nbsp;            in 200..299 -&gt; {</b>
-<b class="fc"><i class="no-highlight">26</i>&nbsp;                if (body != null)</b>
-<b class="fc"><i class="no-highlight">27</i>&nbsp;                    onResponse(</b>
-<b class="fc"><i class="no-highlight">28</i>&nbsp;                        call,</b>
-<b class="fc"><i class="no-highlight">29</i>&nbsp;                        Response.success(buildNetworkSuccess(body, HttpStatusCode(code), headers))</b>
-<i class="no-highlight">30</i>&nbsp;                    )
-<b class="fc"><i class="no-highlight">31</i>&nbsp;                else handleNullBody(callback, call, code, headers)</b>
-<i class="no-highlight">32</i>&nbsp;            }
-<b class="pc"><i class="no-highlight">33</i>&nbsp;            in 400..599 -&gt; {</b>
-<b class="pc"><i class="no-highlight">34</i>&nbsp;                if (errorBody != null)</b>
-<b class="fc"><i class="no-highlight">35</i>&nbsp;                    onResponse(</b>
-<b class="fc"><i class="no-highlight">36</i>&nbsp;                        call,</b>
-<b class="fc"><i class="no-highlight">37</i>&nbsp;                        Response.success(</b>
-<b class="fc"><i class="no-highlight">38</i>&nbsp;                            buildNetworkFailureHttp(errorBody, HttpStatusCode(code), headers)</b>
-<i class="no-highlight">39</i>&nbsp;                        )
-<i class="no-highlight">40</i>&nbsp;                    )
-<b class="nc"><i class="no-highlight">41</i>&nbsp;                else handleNullErrorBody(callback, call)</b>
-<i class="no-highlight">42</i>&nbsp;            }
-<i class="no-highlight">43</i>&nbsp;        }
-<b class="fc"><i class="no-highlight">44</i>&nbsp;    }</b>
-<i class="no-highlight">45</i>&nbsp;
-<i class="no-highlight">46</i>&nbsp;@Suppress(&quot;UNCHECKED_CAST&quot;)
-<i class="no-highlight">47</i>&nbsp;private fun &lt;F : Any, S : Any&gt; handleNullBody(
-<i class="no-highlight">48</i>&nbsp;    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;,
-<i class="no-highlight">49</i>&nbsp;    call: NetworkEitherSuspendCall&lt;F, S&gt;,
-<i class="no-highlight">50</i>&nbsp;    code: Int,
-<i class="no-highlight">51</i>&nbsp;    headers: Headers,
-<i class="no-highlight">52</i>&nbsp;) {
-<b class="fc"><i class="no-highlight">53</i>&nbsp;    try {</b>
-<b class="fc"><i class="no-highlight">54</i>&nbsp;        callback.onResponse(</b>
-<b class="fc"><i class="no-highlight">55</i>&nbsp;            call,</b>
-<b class="fc"><i class="no-highlight">56</i>&nbsp;            Response.success(buildNetworkSuccess(Unit as S, HttpStatusCode(code), headers))</b>
-<i class="no-highlight">57</i>&nbsp;        )
-<b class="nc"><i class="no-highlight">58</i>&nbsp;    } catch (e: ClassCastException) {</b>
-<b class="nc"><i class="no-highlight">59</i>&nbsp;        printlnError(</b>
-<i class="no-highlight">60</i>&nbsp;            &quot;&quot;&quot;
-<i class="no-highlight">61</i>&nbsp;               | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
-<i class="no-highlight">62</i>&nbsp;               | # NetworkResponse should use Unit as Success type when body is null #
-<i class="no-highlight">63</i>&nbsp;               | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-<b class="nc"><i class="no-highlight">64</i>&nbsp;            &quot;&quot;&quot;.trimMargin()</b>
-<i class="no-highlight">65</i>&nbsp;        )
-<b class="nc"><i class="no-highlight">66</i>&nbsp;        callback.onResponse(call, Response.success(buildNetworkFailureUnknown(e)))</b>
-<i class="no-highlight">67</i>&nbsp;    }
-<i class="no-highlight">68</i>&nbsp;}
-<i class="no-highlight">69</i>&nbsp;
-<i class="no-highlight">70</i>&nbsp;@Suppress(&quot;UNCHECKED_CAST&quot;)
-<i class="no-highlight">71</i>&nbsp;private fun &lt;F : Any, S : Any&gt; handleNullErrorBody(
-<i class="no-highlight">72</i>&nbsp;    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;,
-<i class="no-highlight">73</i>&nbsp;    call: NetworkEitherSuspendCall&lt;F, S&gt;,
-<i class="no-highlight">74</i>&nbsp;) {
-<b class="nc"><i class="no-highlight">75</i>&nbsp;    printlnError(</b>
-<i class="no-highlight">76</i>&nbsp;        &quot;&quot;&quot;
-<i class="no-highlight">77</i>&nbsp;           | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # 
-<i class="no-highlight">78</i>&nbsp;           | # NetworkResponse should use Unit as Error type when body is null # 
-<i class="no-highlight">79</i>&nbsp;           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-<b class="nc"><i class="no-highlight">80</i>&nbsp;        &quot;&quot;&quot;.trimMargin()</b>
-<i class="no-highlight">81</i>&nbsp;    )
-<b class="nc"><i class="no-highlight">82</i>&nbsp;    callback.onResponse(</b>
-<b class="nc"><i class="no-highlight">83</i>&nbsp;        call,</b>
-<b class="nc"><i class="no-highlight">84</i>&nbsp;        Response.success(</b>
-<b class="nc"><i class="no-highlight">85</i>&nbsp;            buildNetworkFailureUnknown(</b>
-<b class="nc"><i class="no-highlight">86</i>&nbsp;                ClassCastException(</b>
-<b class="nc"><i class="no-highlight">87</i>&nbsp;                    &quot;NetworkResponse should use Unit as Error type when body is null&quot;</b>
-<i class="no-highlight">88</i>&nbsp;                )
-<i class="no-highlight">89</i>&nbsp;            )
-<i class="no-highlight">90</i>&nbsp;        )
-<i class="no-highlight">91</i>&nbsp;    )
-<i class="no-highlight">92</i>&nbsp;}
+<i class="no-highlight">3</i>&nbsp;import io.ktor.client.HttpClient
+<i class="no-highlight">4</i>&nbsp;import io.ktor.client.call.HttpClientCall
+<i class="no-highlight">5</i>&nbsp;import io.ktor.client.request.DefaultHttpRequest
+<i class="no-highlight">6</i>&nbsp;import io.ktor.client.request.HttpRequestBuilder
+<i class="no-highlight">7</i>&nbsp;import io.ktor.client.request.HttpRequestData
+<i class="no-highlight">8</i>&nbsp;import io.ktor.client.request.HttpResponseData
+<i class="no-highlight">9</i>&nbsp;import io.ktor.client.request.setBody
+<i class="no-highlight">10</i>&nbsp;import io.ktor.client.statement.DefaultHttpResponse
+<i class="no-highlight">11</i>&nbsp;import io.ktor.http.HttpProtocolVersion
+<i class="no-highlight">12</i>&nbsp;import io.ktor.http.content.OutgoingContent
+<i class="no-highlight">13</i>&nbsp;import io.ktor.util.AttributeKey
+<i class="no-highlight">14</i>&nbsp;import io.ktor.util.date.GMTDate
+<i class="no-highlight">15</i>&nbsp;import io.ktor.util.pipeline.PipelineContext
+<i class="no-highlight">16</i>&nbsp;import io.ktor.util.toMap
+<i class="no-highlight">17</i>&nbsp;import io.ktor.utils.io.ByteReadChannel
+<i class="no-highlight">18</i>&nbsp;
+<i class="no-highlight">19</i>&nbsp;internal fun PipelineContext&lt;Any, HttpRequestBuilder&gt;.fakeFailureHttpClientCall(
+<i class="no-highlight">20</i>&nbsp;    client: HttpClient,
+<i class="no-highlight">21</i>&nbsp;    outgoingContent: OutgoingContent,
+<i class="no-highlight">22</i>&nbsp;): HttpClientCall {
+<b class="fc"><i class="no-highlight">23</i>&nbsp;    val responseData: HttpResponseData = failureHttpResponseData(outgoingContent)</b>
+<b class="fc"><i class="no-highlight">24</i>&nbsp;    val call: HttpClientCall =</b>
+<b class="fc"><i class="no-highlight">25</i>&nbsp;        object : HttpClientCall(client) {</b>
+<b class="nc"><i class="no-highlight">26</i>&nbsp;            val httpRequestData: HttpRequestData =</b>
+<b class="fc"><i class="no-highlight">27</i>&nbsp;                HttpRequestBuilder()</b>
+<b class="fc"><i class="no-highlight">28</i>&nbsp;                    .apply {</b>
+<b class="fc"><i class="no-highlight">29</i>&nbsp;                        setBody(outgoingContent)</b>
+<b class="fc"><i class="no-highlight">30</i>&nbsp;                        attributes.put(AttributeKey(&quot;ExpectSuccessAttributeKey&quot;), false)</b>
+<b class="fc"><i class="no-highlight">31</i>&nbsp;                    }</b>
+<b class="fc"><i class="no-highlight">32</i>&nbsp;                    .build()</b>
+<b class="fc"><i class="no-highlight">33</i>&nbsp;            init {</b>
+<b class="fc"><i class="no-highlight">34</i>&nbsp;                request = DefaultHttpRequest(this, httpRequestData)</b>
+<b class="fc"><i class="no-highlight">35</i>&nbsp;                response = DefaultHttpResponse(this, responseData)</b>
+<b class="fc"><i class="no-highlight">36</i>&nbsp;            }</b>
+<i class="no-highlight">37</i>&nbsp;        }
+<i class="no-highlight">38</i>&nbsp;
+<b class="fc"><i class="no-highlight">39</i>&nbsp;    return call</b>
+<i class="no-highlight">40</i>&nbsp;}
+<i class="no-highlight">41</i>&nbsp;
+<i class="no-highlight">42</i>&nbsp;internal fun PipelineContext&lt;Any, HttpRequestBuilder&gt;.failureHttpResponseData(
+<i class="no-highlight">43</i>&nbsp;    outgoingContent: OutgoingContent
+<i class="no-highlight">44</i>&nbsp;): HttpResponseData {
+<b class="fc"><i class="no-highlight">45</i>&nbsp;    val status = outgoingContent.status</b>
+<b class="pc"><i class="no-highlight">46</i>&nbsp;    checkNotNull(status) { &quot;Status must not be null and this should not be happening&quot; }</b>
+<b class="fc"><i class="no-highlight">47</i>&nbsp;    val headers = outgoingContent.headers</b>
+<b class="pc"><i class="no-highlight">48</i>&nbsp;    check(headers.toMap().keys.contains(&quot;NetworkEither&quot;)) {</b>
+<b class="nc"><i class="no-highlight">49</i>&nbsp;        &quot;Headers must contain `NetworkEither` key and this should not be happening&quot;</b>
+<i class="no-highlight">50</i>&nbsp;    }
+<b class="fc"><i class="no-highlight">51</i>&nbsp;    return HttpResponseData(</b>
+<b class="fc"><i class="no-highlight">52</i>&nbsp;        statusCode = status,</b>
+<b class="fc"><i class="no-highlight">53</i>&nbsp;        requestTime = GMTDate(),</b>
+<b class="fc"><i class="no-highlight">54</i>&nbsp;        headers = outgoingContent.headers,</b>
+<b class="fc"><i class="no-highlight">55</i>&nbsp;        version = HttpProtocolVersion.HTTP_1_1,</b>
+<b class="fc"><i class="no-highlight">56</i>&nbsp;        body = ByteReadChannel(&quot;&quot;.toByteArray(Charsets.UTF_8)),</b>
+<b class="fc"><i class="no-highlight">57</i>&nbsp;        callContext = context.executionContext,</b>
+<i class="no-highlight">58</i>&nbsp;    )
+<i class="no-highlight">59</i>&nbsp;}
 </div>
 </pre>
 </div>
@@ -215,7 +233,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-22 21:59</div>
+    <div style="float:right;">generated on 2022-07-26 21:04</div>
 </div>
 </body>
 </html>

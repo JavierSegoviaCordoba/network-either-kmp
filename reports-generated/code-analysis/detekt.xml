@@ -1,257 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="4.3">
-<file name="subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt">
-	<error line="33" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/NetworkEither.kt">
+	<error line="8" column="21" severity="warning" message="Class &apos;NetworkEither&apos; with &apos;21&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+</file>
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt">
+	<error line="35" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
 	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt">
-	<error line="10" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
-	<error line="10" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt">
+	<error line="17" column="22" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="17" column="22" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
 	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/suspend/HandleSuspend.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt">
+	<error line="10" column="21" severity="warning" message="The file name &apos;Resource&apos; does not match the name of the single top-level declaration &apos;ResourceEither&apos;." source="detekt.MatchingDeclarationName" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/suspend/HttpExceptionSuspendHandler.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/fileSystem.jvm.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/suspend/NetworkEitherSuspendCallAdapter.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/DogService.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/suspend/ResponseSuspendHandler.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/MockResponseUtil.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/suspend/NetworkEitherSuspendCall.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensions.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/deferred/NetworkEitherDeferredCall.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt">
+	<error line="3" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/deferred/HttpExceptionDeferredHandler.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/NetworkEitherFailureOutgoings.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/deferred/NetworkEitherDeferredCallAdapter.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/deferred/HandleDeferred.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/fakeFailureHttpClientCall.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/deferred/ResponseDeferredHandler.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/CodeArb.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/utils/HttpStatusCodeUtils.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Headers.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/utils/RetrofitUtils.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
+<file name="subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Json.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
+</file>
+<file name="subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/DogDTO.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
+</file>
+<file name="subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/ErrorDTO.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
+</file>
+<file name="subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fileSystem.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
+</file>
+<file name="subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/readResource.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
+</file>
+<file name="subprojects/network-either/jvm/main/kotlin/com/javiersc/network/either/internal/utils/RetrofitUtils.kt">
 	<error line="16" column="22" severity="warning" message="In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty." source="detekt.SpreadOperator" />
 	<error line="19" column="22" severity="warning" message="In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty." source="detekt.SpreadOperator" />
-</file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/internal/utils/Printers.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/main/kotlin/NetworkEitherCallAdapterFactory.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error406Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error414Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error423Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error431Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error412Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error401Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error421Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error4xxTest.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error429Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error418Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error411Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error400Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error403Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error415Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error402Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error409Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error416Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error417Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error422Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error428Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error413Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error410Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error426Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error404Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error405Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error424Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/clientError/Error451Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/BaseTest.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success206Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success204Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success2xxTest.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success207Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success200Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success226Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success202Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success203Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success201Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/success/Success205Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/config/DogService.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/config/MockResponseUtil.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error501Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error511Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error502Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error508Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error505Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error509Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error503Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error500Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error504Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error507Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error506Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error5xxTest.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/serverError/Error510Test.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/other/RemoteErrorTest.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/other/MalformedJsonTest.kt">
-	<error line="49" column="19" severity="warning" message="Top level constant names should match the pattern: [A-Z][_A-Z0-9]*" source="detekt.TopLevelPropertyNaming" />
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/retrofit/other/LocalErrorTest.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/jvm/test/kotlin/TestUtils.kt">
-	<error line="1" column="1" severity="warning" message="The package declaration does not match the actual file location." source="detekt.InvalidPackageDeclaration" />
-</file>
-<file name="subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/HttpStatusCodeExtensions.kt">
-	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
-</file>
-<file name="subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/PipelineContextExtensions.kt">
-	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
-	<error line="110" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-	<error line="110" column="44" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-	<error line="111" column="37" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-	<error line="111" column="42" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-</file>
-<file name="subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/NetworkEitherFailureOutgoings.kt">
-	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
-	<error line="18" column="58" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-	<error line="32" column="58" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-</file>
-<file name="subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/fakeFailureHttpClientCall.kt">
-	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
-</file>
-<file name="subprojects/network/network-core/common/main/kotlin/com/javiersc/either/network/ktor/_internal/interceptSuccessesAndReplaceWithNetworkEitherSuccess.kt">
-	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
-	<error line="20" column="16" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-	<error line="20" column="21" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
-</file>
-<file name="subprojects/network/network-core/common/test/kotlin/com/javiersc/either/network/ktor/other/MalformedJsonTest.kt">
-	<error line="37" column="19" severity="warning" message="Top level constant names should match the pattern: [A-Z][_A-Z0-9]*" source="detekt.TopLevelPropertyNaming" />
-</file>
-<file name="subprojects/network/network-core/common/test/kotlin/com/javiersc/either/network/ktor/KtorPluginTest.kt">
-	<error line="5" column="13" severity="warning" message="Private property `TODO` is unused." source="detekt.UnusedPrivateMember" />
 </file>
 </checkstyle>
