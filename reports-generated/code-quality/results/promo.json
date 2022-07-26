@@ -10,14 +10,14 @@
       "type": "file",
       "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
       "language": "kotlin",
-      "line": 29,
+      "line": 114,
       "offset": 14,
-      "length": 54,
+      "length": 59,
       "code": {
-        "startLine": 27,
-        "length": 54,
-        "offset": 20,
-        "surroundingCode": "    }\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.failureTypeInfo: TypeInfo?\n    get() =\n        if (isNetworkEither) {"
+        "startLine": 112,
+        "length": 59,
+        "offset": 70,
+        "surroundingCode": "    get() = subject.expectedType.kotlinType?.classifier\n\ninternal val PipelineContext<\n    HttpResponseContainer, HttpClientCall>.requestContentIsNetworkFailureLocal: Boolean\n    get() = context.request.content is LocalErrorOutgoing\n"
       }
     }
   ],
@@ -25,7 +25,35 @@
     "module": "network-either-kmp.subprojects.network-either.commonMain",
     "inspectionName": "UnusedReceiverParameter"
   },
-  "hash": "6f9be8ac36408fa223d0bcf230d79e1d524518981c437ef268c87358b69b059f"
+  "hash": "69e5b930f48a2501baa4005f1926cba8884e142003193783cc5ab36c61858a74"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+      "language": "kotlin",
+      "line": 18,
+      "offset": 14,
+      "length": 54,
+      "code": {
+        "startLine": 16,
+        "length": 54,
+        "offset": 43,
+        "surroundingCode": "import kotlin.reflect.typeOf\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.networkEitherTypeInfo: TypeInfo\n    get() {\n        val typeInfo ="
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "5f7f728aa1106816b545124297441ef1f7c0dbd4db7e0cf1be3701140be00d1a"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -94,6 +122,34 @@
       "type": "file",
       "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
       "language": "kotlin",
+      "line": 71,
+      "offset": 14,
+      "length": 54,
+      "code": {
+        "startLine": 69,
+        "length": 54,
+        "offset": 78,
+        "surroundingCode": "    get() = kClassifier == networkEitherFailureLocalKClassifier\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherFailureRemote:\n    Boolean\n    get() = kClassifier == networkEitherFailureRemoteKClassifier"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "e8db3f878f556c2cf070f7e62bfa265ec93ac62dcba348efa3412a2e7651a2c2"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+      "language": "kotlin",
       "line": 44,
       "offset": 14,
       "length": 54,
@@ -110,6 +166,90 @@
     "inspectionName": "UnusedReceiverParameter"
   },
   "hash": "a84a282765567d2a9b96a0d9462f734a0d65a1238e3a90fbe6d5b8f6c39f10ff"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+      "language": "kotlin",
+      "line": 78,
+      "offset": 14,
+      "length": 54,
+      "code": {
+        "startLine": 76,
+        "length": 54,
+        "offset": 73,
+        "surroundingCode": "    get() = kClassifier == networkEitherFailureKClassifier\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherSuccess: Boolean\n    get() = kClassifier == networkEitherSuccessKClassifier\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "cf502b9dc55a8e6cf4c71d45dd30ae4a4375b9f00531e9b644afb85163240dd7"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+      "language": "kotlin",
+      "line": 29,
+      "offset": 14,
+      "length": 54,
+      "code": {
+        "startLine": 27,
+        "length": 54,
+        "offset": 20,
+        "surroundingCode": "    }\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.failureTypeInfo: TypeInfo?\n    get() =\n        if (isNetworkEither) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "6f9be8ac36408fa223d0bcf230d79e1d524518981c437ef268c87358b69b059f"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+      "language": "kotlin",
+      "line": 111,
+      "offset": 14,
+      "length": 54,
+      "code": {
+        "startLine": 109,
+        "length": 54,
+        "offset": 24,
+        "surroundingCode": "        }\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.kClassifier: KClassifier?\n    get() = subject.expectedType.kotlinType?.classifier\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "00b8cbc6b084a24f416d99186ee3a355cb04238011534b0829388575fc01773a"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -176,16 +316,16 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/fakeFailureHttpClientCall.kt",
       "language": "kotlin",
-      "line": 71,
+      "line": 19,
       "offset": 14,
-      "length": 54,
+      "length": 40,
       "code": {
-        "startLine": 69,
-        "length": 54,
-        "offset": 78,
-        "surroundingCode": "    get() = kClassifier == networkEitherFailureLocalKClassifier\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherFailureRemote:\n    Boolean\n    get() = kClassifier == networkEitherFailureRemoteKClassifier"
+        "startLine": 17,
+        "length": 40,
+        "offset": 54,
+        "surroundingCode": "import io.ktor.utils.io.ByteReadChannel\n\ninternal fun PipelineContext<Any, HttpRequestBuilder>.fakeFailureHttpClientCall(\n    client: HttpClient,\n    outgoingContent: OutgoingContent,"
       }
     }
   ],
@@ -193,7 +333,7 @@
     "module": "network-either-kmp.subprojects.network-either.commonMain",
     "inspectionName": "UnusedReceiverParameter"
   },
-  "hash": "e8db3f878f556c2cf070f7e62bfa265ec93ac62dcba348efa3412a2e7651a2c2"
+  "hash": "ac94733a0c5a0c0e458fcd6384b238c342ebbab5a74b66c0a7cedee925f923e6"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -204,16 +344,16 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/fakeFailureHttpClientCall.kt",
       "language": "kotlin",
-      "line": 78,
+      "line": 42,
       "offset": 14,
-      "length": 54,
+      "length": 40,
       "code": {
-        "startLine": 76,
-        "length": 54,
-        "offset": 73,
-        "surroundingCode": "    get() = kClassifier == networkEitherFailureKClassifier\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherSuccess: Boolean\n    get() = kClassifier == networkEitherSuccessKClassifier\n"
+        "startLine": 40,
+        "length": 40,
+        "offset": 16,
+        "surroundingCode": "}\n\ninternal fun PipelineContext<Any, HttpRequestBuilder>.failureHttpResponseData(\n    outgoingContent: OutgoingContent\n): HttpResponseData {"
       }
     }
   ],
@@ -221,89 +361,5 @@
     "module": "network-either-kmp.subprojects.network-either.commonMain",
     "inspectionName": "UnusedReceiverParameter"
   },
-  "hash": "cf502b9dc55a8e6cf4c71d45dd30ae4a4375b9f00531e9b644afb85163240dd7"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused receiver parameter",
-  "severity": "High",
-  "comment": "Receiver parameter is never used",
-  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
-      "language": "kotlin",
-      "line": 18,
-      "offset": 14,
-      "length": 54,
-      "code": {
-        "startLine": 16,
-        "length": 54,
-        "offset": 43,
-        "surroundingCode": "import kotlin.reflect.typeOf\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.networkEitherTypeInfo: TypeInfo\n    get() {\n        val typeInfo ="
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp.subprojects.network-either.commonMain",
-    "inspectionName": "UnusedReceiverParameter"
-  },
-  "hash": "5f7f728aa1106816b545124297441ef1f7c0dbd4db7e0cf1be3701140be00d1a"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused receiver parameter",
-  "severity": "High",
-  "comment": "Receiver parameter is never used",
-  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
-      "language": "kotlin",
-      "line": 114,
-      "offset": 14,
-      "length": 59,
-      "code": {
-        "startLine": 112,
-        "length": 59,
-        "offset": 70,
-        "surroundingCode": "    get() = subject.expectedType.kotlinType?.classifier\n\ninternal val PipelineContext<\n    HttpResponseContainer, HttpClientCall>.requestContentIsNetworkFailureLocal: Boolean\n    get() = context.request.content is LocalErrorOutgoing\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp.subprojects.network-either.commonMain",
-    "inspectionName": "UnusedReceiverParameter"
-  },
-  "hash": "69e5b930f48a2501baa4005f1926cba8884e142003193783cc5ab36c61858a74"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused receiver parameter",
-  "severity": "High",
-  "comment": "Receiver parameter is never used",
-  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
-      "language": "kotlin",
-      "line": 111,
-      "offset": 14,
-      "length": 54,
-      "code": {
-        "startLine": 109,
-        "length": 54,
-        "offset": 24,
-        "surroundingCode": "        }\n\ninternal val PipelineContext<HttpResponseContainer, HttpClientCall>.kClassifier: KClassifier?\n    get() = subject.expectedType.kotlinType?.classifier\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp.subprojects.network-either.commonMain",
-    "inspectionName": "UnusedReceiverParameter"
-  },
-  "hash": "00b8cbc6b084a24f416d99186ee3a355cb04238011534b0829388575fc01773a"
+  "hash": "a7ea468001299dde99f20aaf05ec961f833e95ff763df9f7b5860b0a932f99e2"
 }]}

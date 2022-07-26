@@ -254,68 +254,6 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: ktor",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
-      "language": "kotlin",
-      "line": 3,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 62,
-        "surroundingCode": "package com.javiersc.network.either.ktor._internal\n\nimport io.ktor.client.HttpClient\nimport io.ktor.client.request.HttpSendPipeline\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp.subprojects.network-either.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "9dc9c245a489e420f54625c98e2c212d983b143f57c2ca990089a39f6fd18e08"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "Unresolved reference: ktor",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
-      "language": "kotlin",
-      "line": 4,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 2,
-        "length": 4,
-        "offset": 44,
-        "surroundingCode": "\nimport io.ktor.client.HttpClient\nimport io.ktor.client.request.HttpSendPipeline\n\ninternal fun interceptExceptionsAndReplaceWithNetworkEitherFailures("
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp.subprojects.network-either.commonMain",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "5fed12e35e5308f46717754d1525c39ec54512cb748e5b13349a97be8e71ba1c"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
   "comment": "Unresolved reference: HttpClient",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
@@ -370,6 +308,68 @@
     "inspectionName": "KotlinAnnotator"
   },
   "hash": "6598985796844a5bd36e11bebb739a41c74a42e5cf1bdf1843fef96a30661754"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: proceedWith",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+      "language": "kotlin",
+      "line": 13,
+      "offset": 13,
+      "length": 11,
+      "code": {
+        "startLine": 11,
+        "length": 11,
+        "offset": 98,
+        "surroundingCode": "        if (!isNetAvailable()) {\n            val outgoingContent = LocalErrorOutgoing\n            proceedWith(outgoingContent)\n        } else {\n            try {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "be6f7371361341e41d2fdbed0277f2741b4219ffb27f952d48a8e8d520889047"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: proceed",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 17,
+      "length": 7,
+      "code": {
+        "startLine": 14,
+        "length": 7,
+        "offset": 51,
+        "surroundingCode": "        } else {\n            try {\n                proceed()\n            } catch (throwable: Throwable) {\n                val outgoingContent = RemoteErrorOutgoing"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "795f76e714fedeee3f4e4268b46d6fb8cf221b52779d310b9d6cffc574d43fce"
 },{
   "tool": "Code Inspection",
   "category": "General",
