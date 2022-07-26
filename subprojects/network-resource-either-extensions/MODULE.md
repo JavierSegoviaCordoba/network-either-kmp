@@ -5,5 +5,5 @@ Map from `NetworkEither` to `ResourceEither`.
 ### Download from MavenCentral
 
 ```kotlin
-implementation("com.javiersc.either:network-resource:$version")
+implementation("com.javiersc.network:network-resource-either-extensions:$version")
 ```

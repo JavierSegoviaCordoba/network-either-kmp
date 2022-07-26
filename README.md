@@ -28,13 +28,12 @@ implementation("com.javiersc.either:either-core:$version")
 - NetworkEither, pretty printing logger and ResourceEither mapper
 
 ```kotlin
-implementation("com.javiersc.either:network-core:$version")
-implementation("com.javiersc.either:network-logger:$version")
-implementation("com.javiersc.either:network-resource:$version")
+implementation("com.javiersc.network:network-either:$version")
+implementation("com.javiersc.network:network-resource-either-extensions:$version")
 ```
 
 - ResourceEither
 
 ```kotlin
-implementation("com.javiersc.either:resource-core:$version")
+implementation("com.javiersc.network:resource-either:$version")
 ```

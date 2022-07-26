@@ -5,5 +5,5 @@ Utilities for handling `Failure` and `Success` with `Data` and/or `Loading` stat
 ### Download from MavenCentral
 
 ```kotlin
-implementation("com.javiersc.either:resource-core:$version")
+implementation("com.javiersc.network:resource-either:$version")
 ```
