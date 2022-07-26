@@ -116,8 +116,8 @@ public final class com/javiersc/network/either/ktor/NetworkEitherPlugin$Companio
 
 public final class com/javiersc/network/either/ktor/NetworkEitherPlugin$Config {
 	public fun <init> ()V
-	public final fun getMockIsNetworkAvailable ()Lkotlin/jvm/functions/Function0;
-	public final fun setMockIsNetworkAvailable (Lkotlin/jvm/functions/Function0;)V
+	public final fun isNetworkAvailable ()Lkotlin/jvm/functions/Function0;
+	public final fun setNetworkAvailable (Lkotlin/jvm/functions/Function0;)V
 }
 
 public final class com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensionsKt {

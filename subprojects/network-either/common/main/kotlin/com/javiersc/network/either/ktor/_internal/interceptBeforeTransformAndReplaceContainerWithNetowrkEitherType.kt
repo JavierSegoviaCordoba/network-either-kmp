@@ -1,7 +1,11 @@
 package com.javiersc.network.either.ktor._internal
 
 import com.javiersc.network.either.NetworkEither
+import com.javiersc.network.either.NetworkEither.Companion.localFailure
+import com.javiersc.network.either.NetworkEither.Companion.remoteFailure
 import com.javiersc.network.either.NetworkEither.Companion.unknownFailure
+import com.javiersc.network.either.NetworkFailureLocal
+import com.javiersc.network.either.NetworkFailureRemote
 import io.ktor.client.HttpClient
 import io.ktor.client.statement.HttpResponseContainer
 import io.ktor.client.statement.HttpResponsePipeline
@@ -16,6 +20,8 @@ internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(sc
         beforeTransformPipelinePhase
     )
     scope.responsePipeline.intercept(beforeTransformPipelinePhase) { container ->
+        if (requestContentIsNetworkFailureLocal) return@intercept
+        if (requestContentIsNetworkFailureRemote) return@intercept
         if (!isNetworkEither) return@intercept
 
         val response =
@@ -31,5 +37,20 @@ internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(sc
             val networkEither: NetworkEither<Any, Nothing> = unknownFailure(throwable)
             proceedWith(HttpResponseContainer(typeInfo, networkEither))
         }
+    }
+
+    scope.responsePipeline.intercept(HttpResponsePipeline.Transform) {
+        val failure =
+            when {
+                requestContentIsNetworkFailureLocal -> {
+                    HttpResponseContainer(typeInfo<NetworkFailureLocal>(), localFailure())
+                }
+                requestContentIsNetworkFailureRemote -> {
+                    HttpResponseContainer(typeInfo<NetworkFailureRemote>(), remoteFailure())
+                }
+                else -> null
+            }
+
+        if (failure != null) proceedWith(failure) else proceed()
     }
 }

@@ -44,7 +44,6 @@ internal val PipelineContext<HttpResponseContainer, HttpClientCall>.failureTypeI
 internal val PipelineContext<HttpResponseContainer, HttpClientCall>.successTypeInfo: TypeInfo?
     get() =
         if (isNetworkEither) {
-            println()
             val successKotlinType: KType =
                 checkNotNull(subject.expectedType.kotlinType?.arguments?.secondOrNull()?.type)
             val successType: KClass<*> = successKotlinType.classifier as KClass<*>
@@ -61,13 +60,35 @@ internal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEit
     get() =
         (kClassifier == networkEitherKClassifier) ||
             isNetworkEitherFailure ||
-            isNetworkEitherSuccess
+            isNetworkEitherSuccess ||
+            isNetworkEitherFailureLocal ||
+            isNetworkEitherFailureRemote
+
+internal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherFailureLocal:
+    Boolean
+    get() = kClassifier == networkEitherFailureLocalKClassifier
+
+internal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherFailureRemote:
+    Boolean
+    get() = kClassifier == networkEitherFailureRemoteKClassifier
 
 internal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherFailure: Boolean
     get() = kClassifier == networkEitherFailureKClassifier
 
 internal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEitherSuccess: Boolean
     get() = kClassifier == networkEitherSuccessKClassifier
+
+internal val networkEitherFailureLocalKClassifier: KClassifier
+    get() =
+        checkNotNull(typeOf<NetworkEither.Failure.Local>().classifier) {
+            "`NetworkEither.Failure.Local should be denotable in Kotlin"
+        }
+
+internal val networkEitherFailureRemoteKClassifier: KClassifier
+    get() =
+        checkNotNull(typeOf<NetworkEither.Failure.Remote>().classifier) {
+            "`NetworkEither.Failure.Local should be denotable in Kotlin"
+        }
 
 internal val networkEitherFailureKClassifier: KClassifier
     get() =
@@ -89,6 +110,14 @@ internal val networkEitherKClassifier: KClassifier
 
 internal val PipelineContext<HttpResponseContainer, HttpClientCall>.kClassifier: KClassifier?
     get() = subject.expectedType.kotlinType?.classifier
+
+internal val PipelineContext<
+    HttpResponseContainer, HttpClientCall>.requestContentIsNetworkFailureLocal: Boolean
+    get() = context.request.content is LocalErrorOutgoing
+
+internal val PipelineContext<
+    HttpResponseContainer, HttpClientCall>.requestContentIsNetworkFailureRemote: Boolean
+    get() = context.request.content is RemoteErrorOutgoing
 
 internal val SUCCESS_RANGE: IntRange = 200..299
 

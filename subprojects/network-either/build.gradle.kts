@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.javiersc.hubdle)
-    id("org.gradle.test-retry") version "1.4.0"
 }
 
 hubdle {
@@ -52,20 +51,11 @@ hubdle {
                 test {
                     dependencies {
                         implementation(jakewhartonRetrofit2KotlinxSerializationConverter())
-                        implementation(squareupOkhttp3Mockwebserver())
-                        implementation(squareupOkhttp3Mockwebserver3Junit4())
+                        implementation(kotestExtensionsMockserver())
+                        implementation(kotestProperty())
                     }
                 }
             }
         }
     }
-}
-
-tasks.withType<Test>().configureEach {
-    retry {
-        maxRetries.set(5)
-        maxFailures.set(100)
-        failOnPassedAfterRetry.set(false)
-    }
-    maxParallelForks = 1
 }

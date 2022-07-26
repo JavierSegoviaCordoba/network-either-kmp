@@ -12,16 +12,17 @@ import io.ktor.http.HttpProtocolVersion
 import io.ktor.http.content.OutgoingContent
 import io.ktor.util.AttributeKey
 import io.ktor.util.date.GMTDate
+import io.ktor.util.pipeline.PipelineContext
 import io.ktor.util.toMap
 import io.ktor.utils.io.ByteReadChannel
-import kotlinx.coroutines.Job
 
-internal fun HttpClient.fakeFailureHttpClientCall(
-    outgoingContent: OutgoingContent
+internal fun PipelineContext<Any, HttpRequestBuilder>.fakeFailureHttpClientCall(
+    client: HttpClient,
+    outgoingContent: OutgoingContent,
 ): HttpClientCall {
     val responseData: HttpResponseData = failureHttpResponseData(outgoingContent)
     val call: HttpClientCall =
-        object : HttpClientCall(this@fakeFailureHttpClientCall) {
+        object : HttpClientCall(client) {
             val httpRequestData: HttpRequestData =
                 HttpRequestBuilder()
                     .apply {
@@ -38,7 +39,9 @@ internal fun HttpClient.fakeFailureHttpClientCall(
     return call
 }
 
-private fun failureHttpResponseData(outgoingContent: OutgoingContent): HttpResponseData {
+internal fun PipelineContext<Any, HttpRequestBuilder>.failureHttpResponseData(
+    outgoingContent: OutgoingContent
+): HttpResponseData {
     val status = outgoingContent.status
     checkNotNull(status) { "Status must not be null and this should not be happening" }
     val headers = outgoingContent.headers
@@ -51,6 +54,6 @@ private fun failureHttpResponseData(outgoingContent: OutgoingContent): HttpRespo
         headers = outgoingContent.headers,
         version = HttpProtocolVersion.HTTP_1_1,
         body = ByteReadChannel("".toByteArray(Charsets.UTF_8)),
-        callContext = Job(),
+        callContext = context.executionContext,
     )
 }
