@@ -4,13 +4,6 @@
     "Code Inspection": 0
   },
   "attributes": {
-    "vcs": {
-      "sarifIdea": {
-        "repositoryUri": "https://github.com/JavierSegoviaCordoba/network-either-kmp",
-        "revisionId": "c99ed87d4c812637fe7e109b624ff2a33810b0f8",
-        "branch": "main"
-      }
-    },
     "deviceId": "200820300000000-941b-f4ad-11ed-0b6f10ffa7fe"
   }
 }
