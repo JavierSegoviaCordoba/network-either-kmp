@@ -27,7 +27,7 @@
 - project name `network-resource` to `network-resource-either-extensions`
 - project name `resource-core` to `resource-either`
 - all projects  group to `com.javiersc.network`
-- `ResourceEither` is its own `sealed class`K
+- `ResourceEither` is its own `sealed class`
 - `ResourceEither` package to `com.javiersc.resource.either`
 - `ResourceEither` uses Arrow's `Either`
 - `NetworkEither` is its own `sealed class`
