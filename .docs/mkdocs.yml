@@ -1,10 +1,10 @@
-site_name: Either
-site_description: Either sealed class, ResourceEither for domain layer and NetworkEither for networking
+site_name: Netwoek Either
+site_description: ResourceEither for domain layer and NetworkEither for networking sealed classes
 site_author: Javier Segovia Córdoba
 remote_branch: gh-pages
 
 repo_name: Either
-repo_url: https://github.com/JavierSegoviaCordoba/either
+repo_url: https://github.com/JavierSegoviaCordoba/network-either-kmp
 
 copyright: 'Copyright &copy; 2021 Javier Segovia Córdoba'
 
