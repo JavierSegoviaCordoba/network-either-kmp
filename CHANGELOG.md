@@ -4,6 +4,20 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Updated
+
+## [0.2.0-alpha.1] - 2022-07-26
+
+### Added
+
 - `NetworkEitherPlugin` ktor plugin
 
 ### Changed
@@ -21,14 +35,10 @@
 - `NetworkEither` uses Arrow's `Either`
 - `alsoPrettyPrint` function to `alsoLog`
 
-### Deprecated
-
 ### Removed
 
 - `either-core` artifacts (Arrow's `Either` is already migrated to Kotlin Multiplatform)
 - old `NetworkEitherKtor` implementation
-
-### Fixed
 
 ### Updated
 
