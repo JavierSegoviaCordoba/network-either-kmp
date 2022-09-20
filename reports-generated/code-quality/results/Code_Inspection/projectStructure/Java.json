@@ -1,23 +1,15 @@
 {
   "modules": [
     {
-      "name": "network-either-kmp.subprojects.resource-either.jvmTest",
+      "name": "network-either-kmp",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects",
       "languageLevel": 11
     },
     {
       "name": "network-either-kmp.subprojects.network-either",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp.subprojects.resource-either.commonTest",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp.subprojects.resource-either",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp.subprojects.network-either.jvmMain",
       "languageLevel": 11
     },
     {
@@ -29,6 +21,34 @@
       "languageLevel": 11
     },
     {
+      "name": "network-either-kmp.subprojects.resource-either",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.jvmTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.commonMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.commonTest",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either-logger.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either-logger.jvmTest",
+      "languageLevel": 11
+    },
+    {
       "name": "network-either-kmp.subprojects.network-either-logger.commonMain",
       "languageLevel": 11
     },
@@ -37,23 +57,7 @@
       "languageLevel": 11
     },
     {
-      "name": "network-either-kmp.subprojects.network-either-logger.jvmTest",
-      "languageLevel": 11
-    },
-    {
       "name": "network-either-kmp.subprojects.network-resource-either-extensions.jvmMain",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonMain",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp.subprojects.resource-either.jvmMain",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonTest",
       "languageLevel": 11
     },
     {
@@ -61,15 +65,19 @@
       "languageLevel": 11
     },
     {
-      "name": "network-either-kmp.subprojects.network-either.commonTest",
+      "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonMain",
       "languageLevel": 11
     },
     {
-      "name": "network-either-kmp.subprojects",
+      "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonTest",
       "languageLevel": 11
     },
     {
-      "name": "network-either-kmp.subprojects.network-either-logger.jvmMain",
+      "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+      "languageLevel": 11
+    },
+    {
+      "name": "network-either-kmp.subprojects.resource-either.jvmTest",
       "languageLevel": 11
     },
     {
@@ -77,15 +85,7 @@
       "languageLevel": 11
     },
     {
-      "name": "network-either-kmp.subprojects.network-either.commonMain",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp",
-      "languageLevel": 11
-    },
-    {
-      "name": "network-either-kmp.subprojects.network-either.jvmTest",
+      "name": "network-either-kmp.subprojects.resource-either.commonTest",
       "languageLevel": 11
     }
   ]

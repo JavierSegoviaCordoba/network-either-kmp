@@ -7,9 +7,10 @@
   <title>Coverage Report > NetworkEitherPlugin</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -218,41 +219,41 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.ktor
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.network.either.ktor._internal.interceptBeforeTransformAndReplaceContainerWithNetworkEitherType
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.network.either.ktor._internal.interceptExceptionsAndReplaceWithNetworkEitherFailures
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.network.either.ktor._internal.interceptSuccessesAndReplaceWithNetworkEitherSuccess
-<i class="no-highlight">6</i>&nbsp;import com.javiersc.network.either.utils.isNetworkAvailable as isNetAvailable
-<i class="no-highlight">7</i>&nbsp;import io.ktor.client.HttpClient
-<i class="no-highlight">8</i>&nbsp;import io.ktor.client.plugins.HttpClientPlugin
-<i class="no-highlight">9</i>&nbsp;import io.ktor.util.AttributeKey
-<i class="no-highlight">10</i>&nbsp;
-<b class="fc"><i class="no-highlight">11</i>&nbsp;public class NetworkEitherPlugin(</b>
-<b class="pc"><i class="no-highlight">12</i>&nbsp;    private val isNetworkAvailable: () -&gt; Boolean = { isNetAvailable }</b>
-<i class="no-highlight">13</i>&nbsp;) {
-<i class="no-highlight">14</i>&nbsp;
-<b class="fc"><i class="no-highlight">15</i>&nbsp;    public class Config {</b>
-<b class="fc"><i class="no-highlight">16</i>&nbsp;        public var isNetworkAvailable: () -&gt; Boolean = { isNetAvailable }</b>
-<i class="no-highlight">17</i>&nbsp;    }
-<i class="no-highlight">18</i>&nbsp;
-<i class="no-highlight">19</i>&nbsp;    public companion object : HttpClientPlugin&lt;Config, NetworkEitherPlugin&gt; {
-<i class="no-highlight">20</i>&nbsp;
-<b class="fc"><i class="no-highlight">21</i>&nbsp;        override val key: AttributeKey&lt;NetworkEitherPlugin&gt; = AttributeKey(&quot;NetworkEither&quot;)</b>
-<i class="no-highlight">22</i>&nbsp;
-<i class="no-highlight">23</i>&nbsp;        override fun install(plugin: NetworkEitherPlugin, scope: HttpClient) {
-<b class="fc"><i class="no-highlight">24</i>&nbsp;            interceptExceptionsAndReplaceWithNetworkEitherFailures(scope, plugin.isNetworkAvailable)</b>
-<b class="fc"><i class="no-highlight">25</i>&nbsp;            interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(scope)</b>
-<b class="fc"><i class="no-highlight">26</i>&nbsp;            interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope)</b>
-<i class="no-highlight">27</i>&nbsp;        }
-<i class="no-highlight">28</i>&nbsp;
-<i class="no-highlight">29</i>&nbsp;        override fun prepare(block: Config.() -&gt; Unit): NetworkEitherPlugin {
-<b class="fc"><i class="no-highlight">30</i>&nbsp;            val config = Config().apply { block() }</b>
-<b class="fc"><i class="no-highlight">31</i>&nbsp;            return NetworkEitherPlugin(config.isNetworkAvailable)</b>
-<i class="no-highlight">32</i>&nbsp;        }
-<i class="no-highlight">33</i>&nbsp;    }
-<i class="no-highlight">34</i>&nbsp;}
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.network.either.ktor
+&nbsp;
+&nbsp;import com.javiersc.network.either.ktor._internal.interceptBeforeTransformAndReplaceContainerWithNetworkEitherType
+&nbsp;import com.javiersc.network.either.ktor._internal.interceptExceptionsAndReplaceWithNetworkEitherFailures
+&nbsp;import com.javiersc.network.either.ktor._internal.interceptSuccessesAndReplaceWithNetworkEitherSuccess
+&nbsp;import com.javiersc.network.either.utils.isNetworkAvailable as isNetAvailable
+&nbsp;import io.ktor.client.HttpClient
+&nbsp;import io.ktor.client.plugins.HttpClientPlugin
+&nbsp;import io.ktor.util.AttributeKey
+&nbsp;
+<b class="fc">&nbsp;public class NetworkEitherPlugin(</b>
+<b class="pc">&nbsp;    private val isNetworkAvailable: () -&gt; Boolean = { isNetAvailable }</b>
+&nbsp;) {
+&nbsp;
+<b class="fc">&nbsp;    public class Config {</b>
+<b class="fc">&nbsp;        public var isNetworkAvailable: () -&gt; Boolean = { isNetAvailable }</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public companion object : HttpClientPlugin&lt;Config, NetworkEitherPlugin&gt; {
+&nbsp;
+<b class="fc">&nbsp;        override val key: AttributeKey&lt;NetworkEitherPlugin&gt; = AttributeKey(&quot;NetworkEither&quot;)</b>
+&nbsp;
+&nbsp;        override fun install(plugin: NetworkEitherPlugin, scope: HttpClient) {
+<b class="fc">&nbsp;            interceptExceptionsAndReplaceWithNetworkEitherFailures(scope, plugin.isNetworkAvailable)</b>
+<b class="fc">&nbsp;            interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(scope)</b>
+<b class="fc">&nbsp;            interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope)</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        override fun prepare(block: Config.() -&gt; Unit): NetworkEitherPlugin {
+<b class="fc">&nbsp;            val config = Config().apply { block() }</b>
+<b class="fc">&nbsp;            return NetworkEitherPlugin(config.isNetworkAvailable)</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+</code>
 </pre>
 </div>
 
@@ -267,18 +268,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-26 21:04</div>
+    <div style="float:right;">generated on 2022-09-20 23:37</div>
 </div>
 </body>
 </html>

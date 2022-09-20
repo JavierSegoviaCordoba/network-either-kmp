@@ -38,29 +38,6 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 38,
-                  "endLine": 35,
-                  "startColumn": 18,
-                  "startLine": 35
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled."
-          },
-          "ruleId": "detekt.exceptions.TooGenericExceptionCaught"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
                   "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
@@ -107,6 +84,29 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 38,
+                  "endLine": 35,
+                  "startColumn": 18,
+                  "startLine": 35
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled."
+          },
+          "ruleId": "detekt.exceptions.TooGenericExceptionCaught"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
                   "uri": "subprojects/resource-either/common/main/kotlin/com/javiersc/resource/either/Resource.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
@@ -130,7 +130,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/fileSystem.jvm.kt",
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/readResource.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -153,7 +153,53 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/DogService.kt",
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/ErrorDTO.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/DogDTO.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fileSystem.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -176,172 +222,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/MockResponseUtil.kt",
+                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Json.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 44,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensions.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 3,
-                  "startColumn": 1,
-                  "startLine": 3
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/NetworkEitherFailureOutgoings.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/fakeFailureHttpClientCall.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 51,
+                  "endColumn": 50,
                   "endLine": 1,
                   "startColumn": 1,
                   "startLine": 1
@@ -406,30 +291,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fakes/Json.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 50,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
-          },
-          "ruleId": "detekt.naming.PackageNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/DogDTO.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptResponsesAndReplaceWithNetworkEither.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -452,7 +314,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/models/ErrorDTO.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -475,7 +337,122 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/fileSystem.kt",
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/fakeFailureHttpClientCall.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptBeforeTransformAndReplaceContainerWithNetowrkEitherType.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/PipelineContextExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 3,
+                  "startColumn": 1,
+                  "startLine": 3
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/NetworkEitherFailureOutgoings.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/fileSystem.jvm.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -498,7 +475,30 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "subprojects/network-either/common/test/kotlin/com/javiersc/network/either/_config/readResource.kt",
+                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/DogService.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 44,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Package name should match the pattern: [a-z]+(\\.[a-z][A-Za-z0-9]*)*"
+          },
+          "ruleId": "detekt.naming.PackageNaming"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/_config/MockResponseUtil.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {

@@ -7,9 +7,10 @@
   <title>Coverage Report > RetrofitUtilsKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -97,31 +98,31 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.internal.utils
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import io.ktor.http.Headers
-<i class="no-highlight">4</i>&nbsp;import io.ktor.http.HttpStatusCode
-<i class="no-highlight">5</i>&nbsp;import io.ktor.http.headersOf
-<i class="no-highlight">6</i>&nbsp;import retrofit2.HttpException
-<i class="no-highlight">7</i>&nbsp;import retrofit2.Response
-<i class="no-highlight">8</i>&nbsp;
-<i class="no-highlight">9</i>&nbsp;internal val HttpException.httpStatusCode: HttpStatusCode
-<b class="nc"><i class="no-highlight">10</i>&nbsp;    get() = code() toHttpStatusCode message()</b>
-<i class="no-highlight">11</i>&nbsp;
-<i class="no-highlight">12</i>&nbsp;internal val Response&lt;*&gt;.httpStatusCode: HttpStatusCode
-<b class="fc"><i class="no-highlight">13</i>&nbsp;    get() = code() toHttpStatusCode message()</b>
-<i class="no-highlight">14</i>&nbsp;
-<i class="no-highlight">15</i>&nbsp;internal val HttpException.headers: Headers
-<b class="nc"><i class="no-highlight">16</i>&nbsp;    get() = headersOf(*response()?.headers().toOkHttpHeaders())</b>
-<i class="no-highlight">17</i>&nbsp;
-<i class="no-highlight">18</i>&nbsp;internal val Response&lt;*&gt;.headers: Headers
-<b class="fc"><i class="no-highlight">19</i>&nbsp;    get() = headersOf(*headers().toOkHttpHeaders())</b>
-<i class="no-highlight">20</i>&nbsp;
-<i class="no-highlight">21</i>&nbsp;private fun okhttp3.Headers?.toOkHttpHeaders(): Array&lt;Pair&lt;String, List&lt;String&gt;&gt;&gt; {
-<b class="pc"><i class="no-highlight">22</i>&nbsp;    return this?.toMultimap()?.map { header -&gt; header.key to header.value }?.toTypedArray()</b>
-<b class="nc"><i class="no-highlight">23</i>&nbsp;        ?: arrayOf(&quot;Content-Length&quot; to listOf(&quot;0&quot;))</b>
-<i class="no-highlight">24</i>&nbsp;}
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.network.either.internal.utils
+&nbsp;
+&nbsp;import io.ktor.http.Headers
+&nbsp;import io.ktor.http.HttpStatusCode
+&nbsp;import io.ktor.http.headersOf
+&nbsp;import retrofit2.HttpException
+&nbsp;import retrofit2.Response
+&nbsp;
+&nbsp;internal val HttpException.httpStatusCode: HttpStatusCode
+<b class="nc">&nbsp;    get() = code() toHttpStatusCode message()</b>
+&nbsp;
+&nbsp;internal val Response&lt;*&gt;.httpStatusCode: HttpStatusCode
+<b class="fc">&nbsp;    get() = code() toHttpStatusCode message()</b>
+&nbsp;
+&nbsp;internal val HttpException.headers: Headers
+<b class="nc">&nbsp;    get() = headersOf(*response()?.headers().toOkHttpHeaders())</b>
+&nbsp;
+&nbsp;internal val Response&lt;*&gt;.headers: Headers
+<b class="fc">&nbsp;    get() = headersOf(*headers().toOkHttpHeaders())</b>
+&nbsp;
+&nbsp;private fun okhttp3.Headers?.toOkHttpHeaders(): Array&lt;Pair&lt;String, List&lt;String&gt;&gt;&gt; {
+<b class="pc">&nbsp;    return this?.toMultimap()?.map { header -&gt; header.key to header.value }?.toTypedArray()</b>
+<b class="nc">&nbsp;        ?: arrayOf(&quot;Content-Length&quot; to listOf(&quot;0&quot;))</b>
+&nbsp;}
+</code>
 </pre>
 </div>
 
@@ -136,18 +137,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-26 21:04</div>
+    <div style="float:right;">generated on 2022-09-20 23:37</div>
 </div>
 </body>
 </html>

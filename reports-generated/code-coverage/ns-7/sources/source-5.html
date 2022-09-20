@@ -7,9 +7,10 @@
   <title>Coverage Report > InterceptResponsesAndReplaceWithNetworkEitherKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -148,37 +149,37 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.ktor._internal
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.network.either.NetworkEither
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.network.either.NetworkEither.Companion.httpFailure
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.network.either.NetworkEither.Companion.success
-<i class="no-highlight">6</i>&nbsp;import io.ktor.client.HttpClient
-<i class="no-highlight">7</i>&nbsp;import io.ktor.client.statement.HttpResponseContainer
-<i class="no-highlight">8</i>&nbsp;import io.ktor.client.statement.HttpResponsePipeline
-<i class="no-highlight">9</i>&nbsp;import io.ktor.util.toMap
-<i class="no-highlight">10</i>&nbsp;
-<i class="no-highlight">11</i>&nbsp;internal fun interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope: HttpClient) {
-<b class="fc"><i class="no-highlight">12</i>&nbsp;    scope.responsePipeline.intercept(HttpResponsePipeline.After) {</b>
-<b class="fc"><i class="no-highlight">13</i>&nbsp;        if (isNetworkEither) return@intercept</b>
-<b class="fc"><i class="no-highlight">14</i>&nbsp;        val code: Int = context.response.status.value</b>
-<b class="fc"><i class="no-highlight">15</i>&nbsp;        val headers: Map&lt;String, List&lt;String&gt;&gt; = context.response.headers.toMap()</b>
-<b class="fc"><i class="no-highlight">16</i>&nbsp;        val response = subject.response</b>
-<b class="fc"><i class="no-highlight">17</i>&nbsp;        when (code) {</b>
-<b class="pc"><i class="no-highlight">18</i>&nbsp;            in SUCCESS_RANGE -&gt; {</b>
-<b class="fc"><i class="no-highlight">19</i>&nbsp;                val networkEither: NetworkEither&lt;Nothing, *&gt; =</b>
-<b class="fc"><i class="no-highlight">20</i>&nbsp;                    success(data = response, code = code, headers = headers.toMap())</b>
-<b class="fc"><i class="no-highlight">21</i>&nbsp;                proceedWith(HttpResponseContainer(subject.expectedType, networkEither))</b>
-<i class="no-highlight">22</i>&nbsp;            }
-<i class="no-highlight">23</i>&nbsp;            else -&gt; {
-<b class="fc"><i class="no-highlight">24</i>&nbsp;                val networkEither: NetworkEither&lt;*, Nothing&gt; =</b>
-<b class="fc"><i class="no-highlight">25</i>&nbsp;                    httpFailure(error = response, code = code, headers = headers.toMap())</b>
-<b class="fc"><i class="no-highlight">26</i>&nbsp;                proceedWith(HttpResponseContainer(subject.expectedType, networkEither))</b>
-<i class="no-highlight">27</i>&nbsp;            }
-<i class="no-highlight">28</i>&nbsp;        }
-<i class="no-highlight">29</i>&nbsp;    }
-<i class="no-highlight">30</i>&nbsp;}
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.network.either.ktor._internal
+&nbsp;
+&nbsp;import com.javiersc.network.either.NetworkEither
+&nbsp;import com.javiersc.network.either.NetworkEither.Companion.httpFailure
+&nbsp;import com.javiersc.network.either.NetworkEither.Companion.success
+&nbsp;import io.ktor.client.HttpClient
+&nbsp;import io.ktor.client.statement.HttpResponseContainer
+&nbsp;import io.ktor.client.statement.HttpResponsePipeline
+&nbsp;import io.ktor.util.toMap
+&nbsp;
+&nbsp;internal fun interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope: HttpClient) {
+<b class="fc">&nbsp;    scope.responsePipeline.intercept(HttpResponsePipeline.After) {</b>
+<b class="fc">&nbsp;        if (isNetworkEither) return@intercept</b>
+<b class="fc">&nbsp;        val code: Int = context.response.status.value</b>
+<b class="fc">&nbsp;        val headers: Map&lt;String, List&lt;String&gt;&gt; = context.response.headers.toMap()</b>
+<b class="fc">&nbsp;        val response = subject.response</b>
+<b class="fc">&nbsp;        when (code) {</b>
+<b class="pc">&nbsp;            in SUCCESS_RANGE -&gt; {</b>
+<b class="fc">&nbsp;                val networkEither: NetworkEither&lt;Nothing, *&gt; =</b>
+<b class="fc">&nbsp;                    success(data = response, code = code, headers = headers.toMap())</b>
+<b class="fc">&nbsp;                proceedWith(HttpResponseContainer(subject.expectedType, networkEither))</b>
+&nbsp;            }
+&nbsp;            else -&gt; {
+<b class="fc">&nbsp;                val networkEither: NetworkEither&lt;*, Nothing&gt; =</b>
+<b class="fc">&nbsp;                    httpFailure(error = response, code = code, headers = headers.toMap())</b>
+<b class="fc">&nbsp;                proceedWith(HttpResponseContainer(subject.expectedType, networkEither))</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+</code>
 </pre>
 </div>
 
@@ -193,18 +194,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-26 21:04</div>
+    <div style="float:right;">generated on 2022-09-20 23:37</div>
 </div>
 </body>
 </html>

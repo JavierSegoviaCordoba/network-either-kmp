@@ -7,9 +7,10 @@
   <title>Coverage Report > NetworkEitherLoggerKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -97,39 +98,39 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.logger
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.mokoki.MokokiLogger
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.mokoki.Priority
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.mokoki.logE
-<i class="no-highlight">6</i>&nbsp;import com.javiersc.mokoki.logI
-<i class="no-highlight">7</i>&nbsp;import com.javiersc.mokoki.logWTF
-<i class="no-highlight">8</i>&nbsp;import com.javiersc.mokoki.serialization.PrintSerializableMokokiLogger
-<i class="no-highlight">9</i>&nbsp;import com.javiersc.network.either.NetworkEither
-<i class="no-highlight">10</i>&nbsp;import kotlinx.serialization.Serializable
-<i class="no-highlight">11</i>&nbsp;
-<b class="nc"><i class="no-highlight">12</i>&nbsp;public inline fun &lt;reified F, reified S&gt; NetworkEither&lt;F, S&gt;.alsoLog(</b>
-<b class="nc"><i class="no-highlight">13</i>&nbsp;    tag: String? = null</b>
-<i class="no-highlight">14</i>&nbsp;): NetworkEither&lt;F, S&gt; {
-<b class="pc"><i class="no-highlight">15</i>&nbsp;    if (MokokiLogger.loggers.isEmpty()) {</b>
-<b class="fc"><i class="no-highlight">16</i>&nbsp;        MokokiLogger.install(PrintSerializableMokokiLogger(Priority.VERBOSE))</b>
-<i class="no-highlight">17</i>&nbsp;    }
-<i class="no-highlight">18</i>&nbsp;
-<b class="fc"><i class="no-highlight">19</i>&nbsp;    fold(</b>
-<b class="fc"><i class="no-highlight">20</i>&nbsp;        httpFailure = { (error, code, headers) -&gt; logI(tag) { Response(error, code, headers) } },</b>
-<b class="fc"><i class="no-highlight">21</i>&nbsp;        localFailure = { logE(tag) { &quot;Internet not available&quot; } },</b>
-<b class="fc"><i class="no-highlight">22</i>&nbsp;        remoteFailure = { logE(tag) { &quot;Remote not available&quot; } },</b>
-<b class="fc"><i class="no-highlight">23</i>&nbsp;        unknownFailure = { throwable -&gt; logWTF(tag) { throwable.stackTraceToString() } },</b>
-<b class="fc"><i class="no-highlight">24</i>&nbsp;        success = { (data, code, headers) -&gt; logI(tag) { Response(data, code, headers) } },</b>
-<i class="no-highlight">25</i>&nbsp;    )
-<i class="no-highlight">26</i>&nbsp;
-<b class="fc"><i class="no-highlight">27</i>&nbsp;    return this</b>
-<i class="no-highlight">28</i>&nbsp;}
-<i class="no-highlight">29</i>&nbsp;
-<i class="no-highlight">30</i>&nbsp;@Serializable
-<i class="no-highlight">31</i>&nbsp;@PublishedApi
-<i class="no-highlight">32</i>&nbsp;internal data class Response&lt;T&gt;(val body: T, val code: Int, val headers: Map&lt;String, List&lt;String&gt;&gt;)
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.network.either.logger
+&nbsp;
+&nbsp;import com.javiersc.mokoki.MokokiLogger
+&nbsp;import com.javiersc.mokoki.Priority
+&nbsp;import com.javiersc.mokoki.logE
+&nbsp;import com.javiersc.mokoki.logI
+&nbsp;import com.javiersc.mokoki.logWTF
+&nbsp;import com.javiersc.mokoki.serialization.PrintSerializableMokokiLogger
+&nbsp;import com.javiersc.network.either.NetworkEither
+&nbsp;import kotlinx.serialization.Serializable
+&nbsp;
+<b class="nc">&nbsp;public inline fun &lt;reified F, reified S&gt; NetworkEither&lt;F, S&gt;.alsoLog(</b>
+<b class="nc">&nbsp;    tag: String? = null</b>
+&nbsp;): NetworkEither&lt;F, S&gt; {
+<b class="pc">&nbsp;    if (MokokiLogger.loggers.isEmpty()) {</b>
+<b class="fc">&nbsp;        MokokiLogger.install(PrintSerializableMokokiLogger(Priority.VERBOSE))</b>
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    fold(</b>
+<b class="fc">&nbsp;        httpFailure = { (error, code, headers) -&gt; logI(tag) { Response(error, code, headers) } },</b>
+<b class="fc">&nbsp;        localFailure = { logE(tag) { &quot;Internet not available&quot; } },</b>
+<b class="fc">&nbsp;        remoteFailure = { logE(tag) { &quot;Remote not available&quot; } },</b>
+<b class="fc">&nbsp;        unknownFailure = { throwable -&gt; logWTF(tag) { throwable.stackTraceToString() } },</b>
+<b class="fc">&nbsp;        success = { (data, code, headers) -&gt; logI(tag) { Response(data, code, headers) } },</b>
+&nbsp;    )
+&nbsp;
+<b class="fc">&nbsp;    return this</b>
+&nbsp;}
+&nbsp;
+&nbsp;@Serializable
+&nbsp;@PublishedApi
+&nbsp;internal data class Response&lt;T&gt;(val body: T, val code: Int, val headers: Map&lt;String, List&lt;String&gt;&gt;)
+</code>
 </pre>
 </div>
 
@@ -144,18 +145,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-26 21:04</div>
+    <div style="float:right;">generated on 2022-09-20 23:37</div>
 </div>
 </body>
 </html>

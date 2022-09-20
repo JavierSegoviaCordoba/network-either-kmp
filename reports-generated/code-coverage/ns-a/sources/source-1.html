@@ -7,9 +7,10 @@
   <title>Coverage Report > IsNetworkAvailableKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -134,18 +135,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.utils
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.network.either.internal.Constants
-<i class="no-highlight">4</i>&nbsp;import io.ktor.client.HttpClient
-<i class="no-highlight">5</i>&nbsp;import io.ktor.client.request.head
-<i class="no-highlight">6</i>&nbsp;import kotlinx.coroutines.runBlocking
-<i class="no-highlight">7</i>&nbsp;
-<i class="no-highlight">8</i>&nbsp;public val isNetworkAvailable: Boolean
-<b class="fc"><i class="no-highlight">9</i>&nbsp;    get() = runBlocking { runCatching { httpClient.head(urlString = Constants.DnsUrl) }.isSuccess }</b>
-<i class="no-highlight">10</i>&nbsp;
-<b class="fc"><i class="no-highlight">11</i>&nbsp;private val httpClient = HttpClient()</b>
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.network.either.utils
+&nbsp;
+&nbsp;import com.javiersc.network.either.internal.Constants
+&nbsp;import io.ktor.client.HttpClient
+&nbsp;import io.ktor.client.request.head
+&nbsp;import kotlinx.coroutines.runBlocking
+&nbsp;
+&nbsp;public val isNetworkAvailable: Boolean
+<b class="fc">&nbsp;    get() = runBlocking { runCatching { httpClient.head(urlString = Constants.DnsUrl) }.isSuccess }</b>
+&nbsp;
+<b class="fc">&nbsp;private val httpClient = HttpClient()</b>
+</code>
 </pre>
 </div>
 
@@ -160,18 +161,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-26 21:04</div>
+    <div style="float:right;">generated on 2022-09-20 23:37</div>
 </div>
 </body>
 </html>

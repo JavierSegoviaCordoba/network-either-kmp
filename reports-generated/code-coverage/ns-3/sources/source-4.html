@@ -7,9 +7,10 @@
   <title>Coverage Report > NetworkEitherDeferredCallKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -190,131 +191,131 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.network.either.internal.deferred
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.network.either.NetworkEither
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.network.either.NetworkEither.Companion.localFailure
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.network.either.NetworkEither.Companion.remoteFailure
-<i class="no-highlight">6</i>&nbsp;import com.javiersc.network.either.NetworkEither.Companion.success
-<i class="no-highlight">7</i>&nbsp;import com.javiersc.network.either.NetworkEither.Companion.unknownFailure
-<i class="no-highlight">8</i>&nbsp;import com.javiersc.network.either.internal.hasBody
-<i class="no-highlight">9</i>&nbsp;import com.javiersc.network.either.internal.utils.emptyHeader
-<i class="no-highlight">10</i>&nbsp;import com.javiersc.network.either.internal.utils.printlnError
-<i class="no-highlight">11</i>&nbsp;import com.javiersc.network.either.internal.utils.printlnWarning
-<i class="no-highlight">12</i>&nbsp;import io.ktor.http.HttpStatusCode.Companion.NoContent
-<i class="no-highlight">13</i>&nbsp;import io.ktor.util.toMap
-<i class="no-highlight">14</i>&nbsp;import java.io.EOFException
-<i class="no-highlight">15</i>&nbsp;import java.io.InterruptedIOException
-<i class="no-highlight">16</i>&nbsp;import java.net.ConnectException
-<i class="no-highlight">17</i>&nbsp;import java.net.UnknownHostException
-<i class="no-highlight">18</i>&nbsp;import kotlinx.coroutines.CompletableDeferred
-<i class="no-highlight">19</i>&nbsp;import kotlinx.serialization.SerializationException
-<i class="no-highlight">20</i>&nbsp;import okhttp3.ResponseBody
-<i class="no-highlight">21</i>&nbsp;import retrofit2.Call
-<i class="no-highlight">22</i>&nbsp;import retrofit2.Callback
-<i class="no-highlight">23</i>&nbsp;import retrofit2.Converter
-<i class="no-highlight">24</i>&nbsp;import retrofit2.HttpException
-<i class="no-highlight">25</i>&nbsp;import retrofit2.Response
-<i class="no-highlight">26</i>&nbsp;
-<i class="no-highlight">27</i>&nbsp;internal fun &lt;F : Any, S : Any&gt; deferredAdapt(
-<i class="no-highlight">28</i>&nbsp;    call: Call&lt;S&gt;,
-<i class="no-highlight">29</i>&nbsp;    errorConverter: Converter&lt;ResponseBody, F&gt;,
-<i class="no-highlight">30</i>&nbsp;    isNetworkAvailable: () -&gt; Boolean,
-<i class="no-highlight">31</i>&nbsp;): CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt; {
-<b class="fc"><i class="no-highlight">32</i>&nbsp;    val deferred = CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;()</b>
-<i class="no-highlight">33</i>&nbsp;
-<b class="pc"><i class="no-highlight">34</i>&nbsp;    deferred.invokeOnCompletion { if (deferred.isCancelled) call.cancel() }</b>
-<i class="no-highlight">35</i>&nbsp;
-<b class="fc"><i class="no-highlight">36</i>&nbsp;    call.enqueue(</b>
-<b class="fc"><i class="no-highlight">37</i>&nbsp;        object : Callback&lt;S&gt; {</b>
-<i class="no-highlight">38</i>&nbsp;            override fun onResponse(call: Call&lt;S&gt;, response: Response&lt;S&gt;) {
-<b class="fc"><i class="no-highlight">39</i>&nbsp;                response.responseDeferredHandler(errorConverter, deferred)</b>
-<i class="no-highlight">40</i>&nbsp;            }
-<i class="no-highlight">41</i>&nbsp;
-<i class="no-highlight">42</i>&nbsp;            override fun onFailure(call: Call&lt;S&gt;, throwable: Throwable) {
-<b class="fc"><i class="no-highlight">43</i>&nbsp;                when (throwable) {</b>
-<b class="pc"><i class="no-highlight">44</i>&nbsp;                    is UnknownHostException,</b>
-<b class="fc"><i class="no-highlight">45</i>&nbsp;                    is ConnectException,</b>
-<b class="fc"><i class="no-highlight">46</i>&nbsp;                    is InterruptedIOException -&gt; {</b>
-<b class="fc"><i class="no-highlight">47</i>&nbsp;                        onCommonConnectionException(deferred, isNetworkAvailable())</b>
-<i class="no-highlight">48</i>&nbsp;                    }
-<b class="pc"><i class="no-highlight">49</i>&nbsp;                    is EOFException -&gt; {</b>
-<b class="nc"><i class="no-highlight">50</i>&nbsp;                        onEOFException(deferred)</b>
-<i class="no-highlight">51</i>&nbsp;                    }
-<b class="pc"><i class="no-highlight">52</i>&nbsp;                    is IllegalStateException -&gt; {</b>
-<b class="nc"><i class="no-highlight">53</i>&nbsp;                        onIllegalStateException(deferred, throwable)</b>
-<i class="no-highlight">54</i>&nbsp;                    }
-<b class="pc"><i class="no-highlight">55</i>&nbsp;                    is HttpException -&gt; {</b>
-<b class="nc"><i class="no-highlight">56</i>&nbsp;                        onHttpException(deferred, errorConverter, throwable)</b>
-<i class="no-highlight">57</i>&nbsp;                    }
-<b class="pc"><i class="no-highlight">58</i>&nbsp;                    is SerializationException -&gt; {</b>
-<b class="pc"><i class="no-highlight">59</i>&nbsp;                        if (throwable.hasBody) onIllegalStateException(deferred, throwable)</b>
-<b class="nc"><i class="no-highlight">60</i>&nbsp;                        else onEOFException(deferred)</b>
-<i class="no-highlight">61</i>&nbsp;                    }
-<i class="no-highlight">62</i>&nbsp;                    else -&gt; {
-<b class="nc"><i class="no-highlight">63</i>&nbsp;                        deferred.complete(unknownFailure(throwable))</b>
-<i class="no-highlight">64</i>&nbsp;                    }
-<i class="no-highlight">65</i>&nbsp;                }
-<i class="no-highlight">66</i>&nbsp;            }
-<i class="no-highlight">67</i>&nbsp;        }
-<i class="no-highlight">68</i>&nbsp;    )
-<b class="fc"><i class="no-highlight">69</i>&nbsp;    return deferred</b>
-<i class="no-highlight">70</i>&nbsp;}
-<i class="no-highlight">71</i>&nbsp;
-<i class="no-highlight">72</i>&nbsp;private fun &lt;F, S&gt; onEOFException(deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;) {
-<b class="nc"><i class="no-highlight">73</i>&nbsp;    printlnWarning(</b>
-<i class="no-highlight">74</i>&nbsp;        &quot;&quot;&quot;
-<i class="no-highlight">75</i>&nbsp;           | # # # # # # # # # # # # # # WARNING # # # # # # # # # # # # # # # # # # #
-<i class="no-highlight">76</i>&nbsp;           | # Every 2XX response should have a body except 204/205, as the response #
-<i class="no-highlight">77</i>&nbsp;           | # was empty, the response is transformed to Success with code 204 and   #
-<i class="no-highlight">78</i>&nbsp;           | # the headers are lost. The type should be Unit.                        #
-<i class="no-highlight">79</i>&nbsp;           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-<b class="nc"><i class="no-highlight">80</i>&nbsp;        &quot;&quot;&quot;.trimMargin()</b>
-<i class="no-highlight">81</i>&nbsp;    )
-<i class="no-highlight">82</i>&nbsp;
-<i class="no-highlight">83</i>&nbsp;    @Suppress(&quot;UNCHECKED_CAST&quot;)
-<b class="nc"><i class="no-highlight">84</i>&nbsp;    try {</b>
-<b class="nc"><i class="no-highlight">85</i>&nbsp;        val success = success(Unit as S, NoContent.value, emptyHeader.toMap())</b>
-<b class="nc"><i class="no-highlight">86</i>&nbsp;        deferred.complete(success)</b>
-<b class="nc"><i class="no-highlight">87</i>&nbsp;    } catch (e: ClassCastException) {</b>
-<b class="nc"><i class="no-highlight">88</i>&nbsp;        printlnError(</b>
-<i class="no-highlight">89</i>&nbsp;            &quot;&quot;&quot;
-<i class="no-highlight">90</i>&nbsp;               | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
-<i class="no-highlight">91</i>&nbsp;               | # NetworkResponse should use Unit as Success type when body is null #
-<i class="no-highlight">92</i>&nbsp;               | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-<b class="nc"><i class="no-highlight">93</i>&nbsp;            &quot;&quot;&quot;.trimMargin()</b>
-<i class="no-highlight">94</i>&nbsp;        )
-<b class="nc"><i class="no-highlight">95</i>&nbsp;        deferred.complete(unknownFailure(e))</b>
-<i class="no-highlight">96</i>&nbsp;    }
-<i class="no-highlight">97</i>&nbsp;}
-<i class="no-highlight">98</i>&nbsp;
-<i class="no-highlight">99</i>&nbsp;private fun &lt;F, S&gt; onIllegalStateException(
-<i class="no-highlight">100</i>&nbsp;    deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;,
-<i class="no-highlight">101</i>&nbsp;    throwable: Throwable
-<i class="no-highlight">102</i>&nbsp;) {
-<b class="fc"><i class="no-highlight">103</i>&nbsp;    printlnError(</b>
-<i class="no-highlight">104</i>&nbsp;        &quot;&quot;&quot;
-<i class="no-highlight">105</i>&nbsp;           | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # #
-<i class="no-highlight">106</i>&nbsp;           | # Response body can&#39;t be serialized with the object provided  #
-<i class="no-highlight">107</i>&nbsp;           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-<b class="fc"><i class="no-highlight">108</i>&nbsp;        &quot;&quot;&quot;.trimMargin()</b>
-<i class="no-highlight">109</i>&nbsp;    )
-<b class="fc"><i class="no-highlight">110</i>&nbsp;    deferred.complete(unknownFailure(throwable))</b>
-<i class="no-highlight">111</i>&nbsp;}
-<i class="no-highlight">112</i>&nbsp;
-<i class="no-highlight">113</i>&nbsp;private fun &lt;F, S&gt; onCommonConnectionException(
-<i class="no-highlight">114</i>&nbsp;    deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;,
-<i class="no-highlight">115</i>&nbsp;    isNetworkAvailable: Boolean
-<i class="no-highlight">116</i>&nbsp;) {
-<b class="fc"><i class="no-highlight">117</i>&nbsp;    deferred.complete(if (isNetworkAvailable) remoteFailure() else localFailure())</b>
-<i class="no-highlight">118</i>&nbsp;}
-<i class="no-highlight">119</i>&nbsp;
-<i class="no-highlight">120</i>&nbsp;private fun &lt;F : Any, S : Any&gt; onHttpException(
-<i class="no-highlight">121</i>&nbsp;    deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;,
-<i class="no-highlight">122</i>&nbsp;    errorConverter: Converter&lt;ResponseBody, F&gt;,
-<i class="no-highlight">123</i>&nbsp;    exception: HttpException,
-<b class="nc"><i class="no-highlight">124</i>&nbsp;) = exception.httpExceptionDeferredHandler(errorConverter, deferred)</b>
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.network.either.internal.deferred
+&nbsp;
+&nbsp;import com.javiersc.network.either.NetworkEither
+&nbsp;import com.javiersc.network.either.NetworkEither.Companion.localFailure
+&nbsp;import com.javiersc.network.either.NetworkEither.Companion.remoteFailure
+&nbsp;import com.javiersc.network.either.NetworkEither.Companion.success
+&nbsp;import com.javiersc.network.either.NetworkEither.Companion.unknownFailure
+&nbsp;import com.javiersc.network.either.internal.hasBody
+&nbsp;import com.javiersc.network.either.internal.utils.emptyHeader
+&nbsp;import com.javiersc.network.either.internal.utils.printlnError
+&nbsp;import com.javiersc.network.either.internal.utils.printlnWarning
+&nbsp;import io.ktor.http.HttpStatusCode.Companion.NoContent
+&nbsp;import io.ktor.util.toMap
+&nbsp;import java.io.EOFException
+&nbsp;import java.io.InterruptedIOException
+&nbsp;import java.net.ConnectException
+&nbsp;import java.net.UnknownHostException
+&nbsp;import kotlinx.coroutines.CompletableDeferred
+&nbsp;import kotlinx.serialization.SerializationException
+&nbsp;import okhttp3.ResponseBody
+&nbsp;import retrofit2.Call
+&nbsp;import retrofit2.Callback
+&nbsp;import retrofit2.Converter
+&nbsp;import retrofit2.HttpException
+&nbsp;import retrofit2.Response
+&nbsp;
+&nbsp;internal fun &lt;F : Any, S : Any&gt; deferredAdapt(
+&nbsp;    call: Call&lt;S&gt;,
+&nbsp;    errorConverter: Converter&lt;ResponseBody, F&gt;,
+&nbsp;    isNetworkAvailable: () -&gt; Boolean,
+&nbsp;): CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt; {
+<b class="fc">&nbsp;    val deferred = CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;()</b>
+&nbsp;
+<b class="pc">&nbsp;    deferred.invokeOnCompletion { if (deferred.isCancelled) call.cancel() }</b>
+&nbsp;
+<b class="fc">&nbsp;    call.enqueue(</b>
+<b class="fc">&nbsp;        object : Callback&lt;S&gt; {</b>
+&nbsp;            override fun onResponse(call: Call&lt;S&gt;, response: Response&lt;S&gt;) {
+<b class="fc">&nbsp;                response.responseDeferredHandler(errorConverter, deferred)</b>
+&nbsp;            }
+&nbsp;
+&nbsp;            override fun onFailure(call: Call&lt;S&gt;, throwable: Throwable) {
+<b class="fc">&nbsp;                when (throwable) {</b>
+<b class="pc">&nbsp;                    is UnknownHostException,</b>
+<b class="fc">&nbsp;                    is ConnectException,</b>
+<b class="fc">&nbsp;                    is InterruptedIOException -&gt; {</b>
+<b class="fc">&nbsp;                        onCommonConnectionException(deferred, isNetworkAvailable())</b>
+&nbsp;                    }
+<b class="pc">&nbsp;                    is EOFException -&gt; {</b>
+<b class="nc">&nbsp;                        onEOFException(deferred)</b>
+&nbsp;                    }
+<b class="pc">&nbsp;                    is IllegalStateException -&gt; {</b>
+<b class="nc">&nbsp;                        onIllegalStateException(deferred, throwable)</b>
+&nbsp;                    }
+<b class="pc">&nbsp;                    is HttpException -&gt; {</b>
+<b class="nc">&nbsp;                        onHttpException(deferred, errorConverter, throwable)</b>
+&nbsp;                    }
+<b class="pc">&nbsp;                    is SerializationException -&gt; {</b>
+<b class="pc">&nbsp;                        if (throwable.hasBody) onIllegalStateException(deferred, throwable)</b>
+<b class="nc">&nbsp;                        else onEOFException(deferred)</b>
+&nbsp;                    }
+&nbsp;                    else -&gt; {
+<b class="nc">&nbsp;                        deferred.complete(unknownFailure(throwable))</b>
+&nbsp;                    }
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+&nbsp;    )
+<b class="fc">&nbsp;    return deferred</b>
+&nbsp;}
+&nbsp;
+&nbsp;private fun &lt;F, S&gt; onEOFException(deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;) {
+<b class="nc">&nbsp;    printlnWarning(</b>
+&nbsp;        &quot;&quot;&quot;
+&nbsp;           | # # # # # # # # # # # # # # WARNING # # # # # # # # # # # # # # # # # # #
+&nbsp;           | # Every 2XX response should have a body except 204/205, as the response #
+&nbsp;           | # was empty, the response is transformed to Success with code 204 and   #
+&nbsp;           | # the headers are lost. The type should be Unit.                        #
+&nbsp;           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+<b class="nc">&nbsp;        &quot;&quot;&quot;.trimMargin()</b>
+&nbsp;    )
+&nbsp;
+&nbsp;    @Suppress(&quot;UNCHECKED_CAST&quot;)
+<b class="nc">&nbsp;    try {</b>
+<b class="nc">&nbsp;        val success = success(Unit as S, NoContent.value, emptyHeader.toMap())</b>
+<b class="nc">&nbsp;        deferred.complete(success)</b>
+<b class="nc">&nbsp;    } catch (e: ClassCastException) {</b>
+<b class="nc">&nbsp;        printlnError(</b>
+&nbsp;            &quot;&quot;&quot;
+&nbsp;               | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
+&nbsp;               | # NetworkResponse should use Unit as Success type when body is null #
+&nbsp;               | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+<b class="nc">&nbsp;            &quot;&quot;&quot;.trimMargin()</b>
+&nbsp;        )
+<b class="nc">&nbsp;        deferred.complete(unknownFailure(e))</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;private fun &lt;F, S&gt; onIllegalStateException(
+&nbsp;    deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;,
+&nbsp;    throwable: Throwable
+&nbsp;) {
+<b class="fc">&nbsp;    printlnError(</b>
+&nbsp;        &quot;&quot;&quot;
+&nbsp;           | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # #
+&nbsp;           | # Response body can&#39;t be serialized with the object provided  #
+&nbsp;           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+<b class="fc">&nbsp;        &quot;&quot;&quot;.trimMargin()</b>
+&nbsp;    )
+<b class="fc">&nbsp;    deferred.complete(unknownFailure(throwable))</b>
+&nbsp;}
+&nbsp;
+&nbsp;private fun &lt;F, S&gt; onCommonConnectionException(
+&nbsp;    deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;,
+&nbsp;    isNetworkAvailable: Boolean
+&nbsp;) {
+<b class="fc">&nbsp;    deferred.complete(if (isNetworkAvailable) remoteFailure() else localFailure())</b>
+&nbsp;}
+&nbsp;
+&nbsp;private fun &lt;F : Any, S : Any&gt; onHttpException(
+&nbsp;    deferred: CompletableDeferred&lt;NetworkEither&lt;F, S&gt;&gt;,
+&nbsp;    errorConverter: Converter&lt;ResponseBody, F&gt;,
+&nbsp;    exception: HttpException,
+<b class="nc">&nbsp;) = exception.httpExceptionDeferredHandler(errorConverter, deferred)</b>
+</code>
 </pre>
 </div>
 
@@ -329,18 +330,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-26 21:04</div>
+    <div style="float:right;">generated on 2022-09-20 23:37</div>
 </div>
 </body>
 </html>

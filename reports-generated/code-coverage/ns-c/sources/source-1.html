@@ -7,9 +7,10 @@
   <title>Coverage Report > ResourceEitherAsKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -90,24 +91,24 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.resource.either.extensions
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import com.javiersc.resource.either.ResourceEither
-<i class="no-highlight">4</i>&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.buildResourceFailure
-<i class="no-highlight">5</i>&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.buildResourceSuccess
-<i class="no-highlight">6</i>&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.buildResourceSuccessLoading
-<i class="no-highlight">7</i>&nbsp;
-<i class="no-highlight">8</i>&nbsp;/** Transform this in Failure */
-<b class="nc"><i class="no-highlight">9</i>&nbsp;public fun &lt;F, S&gt; F.asFailure(data: S? = null, isLoading: Boolean = false): ResourceEither&lt;F, S&gt; =</b>
-<b class="nc"><i class="no-highlight">10</i>&nbsp;    buildResourceFailure(this, data, isLoading)</b>
-<i class="no-highlight">11</i>&nbsp;
-<i class="no-highlight">12</i>&nbsp;/** Transform this in SuccessLoading */
-<b class="nc"><i class="no-highlight">13</i>&nbsp;public fun &lt;F, S&gt; S.asSuccessLoading(): ResourceEither&lt;F, S&gt; = buildResourceSuccessLoading(this)</b>
-<i class="no-highlight">14</i>&nbsp;
-<i class="no-highlight">15</i>&nbsp;/** Transform this in Success */
-<b class="nc"><i class="no-highlight">16</i>&nbsp;public fun &lt;F, S&gt; S.asSuccess(isLoading: Boolean = false): ResourceEither&lt;F, S&gt; =</b>
-<b class="nc"><i class="no-highlight">17</i>&nbsp;    buildResourceSuccess(this, isLoading)</b>
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.resource.either.extensions
+&nbsp;
+&nbsp;import com.javiersc.resource.either.ResourceEither
+&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.buildResourceFailure
+&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.buildResourceSuccess
+&nbsp;import com.javiersc.resource.either.ResourceEither.Companion.buildResourceSuccessLoading
+&nbsp;
+&nbsp;/** Transform this in Failure */
+<b class="nc">&nbsp;public fun &lt;F, S&gt; F.asFailure(data: S? = null, isLoading: Boolean = false): ResourceEither&lt;F, S&gt; =</b>
+<b class="nc">&nbsp;    buildResourceFailure(this, data, isLoading)</b>
+&nbsp;
+&nbsp;/** Transform this in SuccessLoading */
+<b class="nc">&nbsp;public fun &lt;F, S&gt; S.asSuccessLoading(): ResourceEither&lt;F, S&gt; = buildResourceSuccessLoading(this)</b>
+&nbsp;
+&nbsp;/** Transform this in Success */
+<b class="nc">&nbsp;public fun &lt;F, S&gt; S.asSuccess(isLoading: Boolean = false): ResourceEither&lt;F, S&gt; =</b>
+<b class="nc">&nbsp;    buildResourceSuccess(this, isLoading)</b>
+</code>
 </pre>
 </div>
 
@@ -122,18 +123,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-26 21:04</div>
+    <div style="float:right;">generated on 2022-09-20 23:37</div>
 </div>
 </body>
 </html>

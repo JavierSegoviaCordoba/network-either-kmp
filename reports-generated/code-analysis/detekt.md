@@ -407,4 +407,4 @@ In most cases using a spread operator causes a full copy of the array to be crea
 
 ```
 
-generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-07-26 21:24:40 UTC
+generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-09-20 23:37:22 UTC
