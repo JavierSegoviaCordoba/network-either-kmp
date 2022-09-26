@@ -212,11 +212,13 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="pc">&nbsp;    get() = subject.expectedType.kotlinType?.classifier</b>
 &nbsp;
 &nbsp;internal val PipelineContext&lt;
-&nbsp;    HttpResponseContainer, HttpClientCall&gt;.requestContentIsNetworkFailureLocal: Boolean
+&nbsp;    HttpResponseContainer, HttpClientCall
+&nbsp;&gt;.requestContentIsNetworkFailureLocal: Boolean
 <b class="fc">&nbsp;    get() = context.request.content is LocalErrorOutgoing</b>
 &nbsp;
 &nbsp;internal val PipelineContext&lt;
-&nbsp;    HttpResponseContainer, HttpClientCall&gt;.requestContentIsNetworkFailureRemote: Boolean
+&nbsp;    HttpResponseContainer, HttpClientCall
+&nbsp;&gt;.requestContentIsNetworkFailureRemote: Boolean
 <b class="fc">&nbsp;    get() = context.request.content is RemoteErrorOutgoing</b>
 &nbsp;
 <b class="fc">&nbsp;internal val SUCCESS_RANGE: IntRange = 200..299</b>
@@ -245,7 +247,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-20 23:37</div>
+    <div style="float:right;">generated on 2022-09-26 18:05</div>
 </div>
 </body>
 </html>
