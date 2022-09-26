@@ -112,11 +112,13 @@ internal val PipelineContext<HttpResponseContainer, HttpClientCall>.kClassifier:
     get() = subject.expectedType.kotlinType?.classifier
 
 internal val PipelineContext<
-    HttpResponseContainer, HttpClientCall>.requestContentIsNetworkFailureLocal: Boolean
+    HttpResponseContainer, HttpClientCall
+>.requestContentIsNetworkFailureLocal: Boolean
     get() = context.request.content is LocalErrorOutgoing
 
 internal val PipelineContext<
-    HttpResponseContainer, HttpClientCall>.requestContentIsNetworkFailureRemote: Boolean
+    HttpResponseContainer, HttpClientCall
+>.requestContentIsNetworkFailureRemote: Boolean
     get() = context.request.content is RemoteErrorOutgoing
 
 internal val SUCCESS_RANGE: IntRange = 200..299

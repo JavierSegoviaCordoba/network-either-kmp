@@ -104,7 +104,8 @@ private fun <F, S> Call<NetworkEither<F, S>>.onEOFException(
            | # was empty, the response is transformed to Success with code 204 and   #
            | # the headers are lost. The type should be Unit.                        #
            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-        """.trimMargin()
+        """
+            .trimMargin()
     )
 
     @Suppress("UNCHECKED_CAST")
@@ -117,7 +118,8 @@ private fun <F, S> Call<NetworkEither<F, S>>.onEOFException(
                | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
                | # NetworkResponse should use Unit as Success type when body is null #
                | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-            """.trimMargin()
+            """
+                .trimMargin()
         )
         callback.onResponse(this, Response.success(unknownFailure(e)))
     }
@@ -132,7 +134,8 @@ private fun <F, S> Call<NetworkEither<F, S>>.onIllegalStateException(
            | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # #
            | # Response body can't be serialized with the object provided  #
            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-        """.trimMargin()
+        """
+            .trimMargin()
     )
     callback.onResponse(this, Response.success(unknownFailure(throwable)))
 }
