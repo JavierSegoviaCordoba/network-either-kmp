@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.704s</div>
+<div class="counter">2.529s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,25 +81,25 @@
 <tr>
 <td class="success">Pretty print Http failure()[jvm]</td>
 <td class="success">Pretty print Http failure()</td>
-<td class="success">0.288s</td>
+<td class="success">0.285s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Pretty print Local failure()[jvm]</td>
 <td class="success">Pretty print Local failure()</td>
-<td class="success">0.025s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Pretty print Remote failure()[jvm]</td>
 <td class="success">Pretty print Remote failure()</td>
-<td class="success">2.211s</td>
+<td class="success">2.071s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Pretty print Success()[jvm]</td>
 <td class="success">Pretty print Success()</td>
-<td class="success">0.069s</td>
+<td class="success">0.041s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -114,12 +114,12 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[91m ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
-?[91m │ Remote not available test │ ERROR.(NetworkEitherLoggerTest.kt:230) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Remote failure │ line 230 │ ?[0m
+?[91m │ Remote not available test │ ERROR.(NetworkEitherLoggerTest.kt:233) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Remote failure │ line 233 │ ?[0m
 ?[91m ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
 ?[91m │ Remote not available                                                                                                                                                              │ ?[0m
 ?[91m └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
 ?[93m ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
-?[93m │ Error test │ INFO.(NetworkEitherLoggerTest.kt:120) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Http failure │ line 120 │ ?[0m
+?[93m │ Error test │ INFO.(NetworkEitherLoggerTest.kt:123) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Http failure │ line 123 │ ?[0m
 ?[93m ├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
 ?[93m │ {                                                                                                                                                               │ ?[0m
 ?[93m │     &quot;body&quot;: {                                                                                                                                                   │ ?[0m
@@ -134,7 +134,7 @@
 ?[93m │ }                                                                                                                                                               │ ?[0m
 ?[93m └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
 ?[93m ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
-?[93m │ Success test │ INFO.(NetworkEitherLoggerTest.kt:105) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Success │ line 105 │ ?[0m
+?[93m │ Success test │ INFO.(NetworkEitherLoggerTest.kt:107) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Success │ line 107 │ ?[0m
 ?[93m ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
 ?[93m │ {                                                                                                                                                            │ ?[0m
 ?[93m │     &quot;body&quot;: {                                                                                                                                                │ ?[0m
@@ -149,7 +149,7 @@
 ?[93m │ }                                                                                                                                                            │ ?[0m
 ?[93m └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
 ?[31m ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
-?[31m │ Unknown error test │ ASSERT.(NetworkEitherLoggerTest.kt:285) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Unknown failure │ line 285         │ ?[0m
+?[31m │ Unknown error test │ ASSERT.(NetworkEitherLoggerTest.kt:288) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Unknown failure │ line 288         │ ?[0m
 ?[31m ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
 ?[31m │ java.lang.IllegalStateException: Unknown error                                                                                                                                       │ ?[0m
 ?[31m │ 	at com.javiersc.network.either.logger.NetworkEitherLoggerTest.Pretty print Unknown failure(NetworkEitherLoggerTest.kt:54)                                                           │ ?[0m
@@ -241,7 +241,7 @@
 ?[31m │                                                                                                                                                                                      │ ?[0m
 ?[31m └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
 ?[91m ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
-?[91m │ Internet not available test │ ERROR.(NetworkEitherLoggerTest.kt:175) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Local failure │ line 175 │ ?[0m
+?[91m │ Internet not available test │ ERROR.(NetworkEitherLoggerTest.kt:178) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Local failure │ line 178 │ ?[0m
 ?[91m ├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
 ?[91m │ Internet not available                                                                                                                                                             │ ?[0m
 ?[91m └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
@@ -256,7 +256,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at Sep 26, 2022, 6:05:23 PM</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Oct 12, 2022, 11:04:57 PM</p>
 </div>
 </div>
 </body>
