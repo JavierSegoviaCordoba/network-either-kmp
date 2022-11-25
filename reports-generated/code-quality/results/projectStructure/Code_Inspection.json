@@ -113,6 +113,3767 @@
           "type": "Own sources"
         }
       ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.jvmMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either/jvm/main",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-either/jvm/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.jvmTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either/jvm/test",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-either/jvm/test/kotlin",
+              "type": "TestSource",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonTest",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: io.kotest.extensions:kotest-extensions-mockserver:1.2.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-mock-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mock-server:mockserver-netty:5.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mock-server:mockserver-client-java:5.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-property-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mock-server:mockserver-core:5.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-codec-http:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-handler:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-framework-api-jvm:5.3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-codec:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-transport:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-buffer:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-common:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-tcnative-boringssl-static:2.0.51.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-io:commons-io:2.11.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.guava:guava:31.1-jre",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.commons:commons-lang3:3.12.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.curious-odd-man:rgxgen:1.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.uuid:java-uuid-generator:4.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.velocity:velocity-engine-scripting:2.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.velocity.tools:velocity-tools-generic:3.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.velocity:velocity-engine-core:2.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.networknt:json-schema-validator:1.0.68",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.jayway.jsonpath:json-path:2.7.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-handler-proxy:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-codec-socks:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.lmax:disruptor:3.4.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: javax.servlet:javax.servlet-api:4.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.jcraft:jzlib:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.bouncycastle:bcpkix-jdk15on:1.70",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.bouncycastle:bcprov-jdk15on:1.70",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.nimbusds:nimbus-jose-jwt:9.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.samskivert:jmustache:1.15",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.core:jackson-databind:2.13.2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.core:jackson-annotations:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.core:jackson-core:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.javacrumbs.json-unit:json-unit-core:2.33.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: jakarta.xml.bind:jakarta.xml.bind-api:3.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.xmlunit:xmlunit-placeholders:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.xmlunit:xmlunit-core:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.commons:commons-text:1.9",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-codec:commons-codec:1.15",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.classgraph:classgraph:4.8.143",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-resolver:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.xml.bind:jaxb-impl:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-tcnative-classes:2.0.51.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.guava:failureaccess:1.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.code.findbugs:jsr305:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.checkerframework:checker-qual:3.12.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.errorprone:error_prone_annotations:2.11.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.j2objc:j2objc-annotations:1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.commons:commons-digester3:3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-beanutils:commons-beanutils:1.9.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.cliftonlabs:json-simple:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.ethlo.time:itu:1.5.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.minidev:json-smart:2.4.7",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser-v2-converter:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser-v3:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.bouncycastle:bcutil-jdk15on:1.70",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.stephenc.jcip:jcip-annotations:1.0-1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.hamcrest:hamcrest-core:2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.activation:jakarta.activation:2.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-logging:commons-logging:1.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-collections:commons-collections:3.2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.minidev:accessors-smart:2.4.7",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-compat-spec-parser:1.0.59",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-parser:1.0.59",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-core:1.6.6",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser-core:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.xml.bind:jaxb-core:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.core.v3:swagger-models:2.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.core.v3:swagger-core:2.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.hamcrest:hamcrest:2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.ow2.asm:asm:9.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:json-schema-validator:2.2.14",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:json-patch:1.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.httpcomponents:httpclient:4.5.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-models:1.6.6",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.core.v3:swagger-annotations:2.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: jakarta.validation:jakarta.validation-api:2.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.yaml:snakeyaml:1.30",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:json-schema-core:1.2.14",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:jackson-coreutils-equivalence:1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.mail:mailapi:1.6.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: joda-time:joda-time:2.10.5",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.googlecode.libphonenumber:libphonenumber:8.11.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.sf.jopt-simple:jopt-simple:5.0.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:msg-simple:1.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:jackson-coreutils:2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.httpcomponents:httpcore:4.4.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-annotations:1.6.6",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:uri-template:0.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mozilla:rhino:1.7.7.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:btf:1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.commonMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either/common/main",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-either/common/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either.commonTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either/common/test",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-either/common/test/kotlin",
+              "type": "TestSource",
+              "packagePrefix": ""
+            },
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-either/common/test/resources",
+              "type": "TestResource",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest.extensions:kotest-extensions-mockserver:1.2.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-mock-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mock-server:mockserver-netty:5.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mock-server:mockserver-client-java:5.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-property-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mock-server:mockserver-core:5.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-codec-http:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-handler:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-framework-api-jvm:5.3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-codec:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-transport:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-buffer:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-common:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-tcnative-boringssl-static:2.0.51.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-io:commons-io:2.11.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.guava:guava:31.1-jre",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.commons:commons-lang3:3.12.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.curious-odd-man:rgxgen:1.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.uuid:java-uuid-generator:4.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.velocity:velocity-engine-scripting:2.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.velocity.tools:velocity-tools-generic:3.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.velocity:velocity-engine-core:2.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.networknt:json-schema-validator:1.0.68",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.jayway.jsonpath:json-path:2.7.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-handler-proxy:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-codec-socks:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.lmax:disruptor:3.4.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: javax.servlet:javax.servlet-api:4.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.jcraft:jzlib:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.bouncycastle:bcpkix-jdk15on:1.70",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.bouncycastle:bcprov-jdk15on:1.70",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.nimbusds:nimbus-jose-jwt:9.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.samskivert:jmustache:1.15",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.core:jackson-databind:2.13.2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.core:jackson-annotations:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.core:jackson-core:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.javacrumbs.json-unit:json-unit-core:2.33.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: jakarta.xml.bind:jakarta.xml.bind-api:3.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.xmlunit:xmlunit-placeholders:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.xmlunit:xmlunit-core:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.commons:commons-text:1.9",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-codec:commons-codec:1.15",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.classgraph:classgraph:4.8.143",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-resolver:4.1.75.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.xml.bind:jaxb-impl:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.netty:netty-tcnative-classes:2.0.51.Final",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.guava:failureaccess:1.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.code.findbugs:jsr305:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.checkerframework:checker-qual:3.12.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.errorprone:error_prone_annotations:2.11.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.google.j2objc:j2objc-annotations:1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.commons:commons-digester3:3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-beanutils:commons-beanutils:1.9.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.cliftonlabs:json-simple:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.ethlo.time:itu:1.5.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.minidev:json-smart:2.4.7",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser-v2-converter:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser-v3:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.bouncycastle:bcutil-jdk15on:1.70",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.stephenc.jcip:jcip-annotations:1.0-1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.hamcrest:hamcrest-core:2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.activation:jakarta.activation:2.0.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-logging:commons-logging:1.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: commons-collections:commons-collections:3.2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.minidev:accessors-smart:2.4.7",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-compat-spec-parser:1.0.59",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-parser:1.0.59",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-core:1.6.6",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.parser.v3:swagger-parser-core:2.0.32",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.xml.bind:jaxb-core:3.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.core.v3:swagger-models:2.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.core.v3:swagger-core:2.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.hamcrest:hamcrest:2.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.ow2.asm:asm:9.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:json-schema-validator:2.2.14",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:json-patch:1.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.httpcomponents:httpclient:4.5.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-models:1.6.6",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger.core.v3:swagger-annotations:2.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: jakarta.validation:jakarta.validation-api:2.0.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.yaml:snakeyaml:1.30",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:json-schema-core:1.2.14",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:jackson-coreutils-equivalence:1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.sun.mail:mailapi:1.6.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: joda-time:joda-time:2.10.5",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.googlecode.libphonenumber:libphonenumber:8.11.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: net.sf.jopt-simple:jopt-simple:5.0.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:msg-simple:1.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:jackson-coreutils:2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apache.httpcomponents:httpcore:4.4.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.swagger:swagger-annotations:1.6.6",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:uri-template:0.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.mozilla:rhino:1.7.7.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.github.java-json-tools:btf:1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either-logger.jvmMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either-logger/jvm/main",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either-logger.jvmTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either-logger/jvm/test",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.commonTest",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either-logger.commonMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either-logger/common/main",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-either-logger/common/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-either-logger.commonTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-either-logger/common/test",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-either-logger/common/test/kotlin",
+              "type": "TestSource",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either-logger.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-serialization-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.mokoki:mokoki-jvm:0.2.0-alpha.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-resource-either-extensions.jvmMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-resource-either-extensions/jvm/main",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-resource-either-extensions.jvmTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-resource-either-extensions/jvm/test",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonTest",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-mock-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-resource-either-extensions/common/main",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-resource-either-extensions/common/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/network-resource-either-extensions/common/test",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/network-resource-either-extensions/common/test/kotlin",
+              "type": "TestSource",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-resource-either-extensions.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.network-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.retrofit2:retrofit:2.9.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-core-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-mock-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.slf4j:slf4j-api:1.7.36",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-events-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlinx:coroutines-run-blocking-jvm:0.1.0-rc.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-websockets-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.squareup.okio:okio-jvm:3.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-utils-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-network-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.ktor:ktor-io-jvm:2.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/resource-either/jvm/main",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.resource-either.jvmTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/resource-either/jvm/test",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonTest",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.resource-either.commonMain",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/resource-either/common/main",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/resource-either/common/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "network-either-kmp.subprojects.resource-either.commonTest",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/subprojects/resource-either/common/test",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/subprojects/resource-either/common/test/kotlin",
+              "type": "TestSource",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.commonMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "network-either-kmp.subprojects.resource-either.jvmMain",
+          "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-core-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-test-junit5-jvm:0.1.0-alpha.12",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-continuations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.arrow-kt:arrow-annotations-jvm:1.1.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.12",
+          "type": "Library"
+        }
+      ]
     }
   ]
 }
