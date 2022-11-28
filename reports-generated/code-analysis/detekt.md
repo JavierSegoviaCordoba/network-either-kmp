@@ -24,7 +24,7 @@
 
 * 297 cyclomatic complexity (mcc)
 
-* 118 cognitive complexity
+* 133 cognitive complexity
 
 * 24 number of total code smells
 
@@ -407,4 +407,4 @@ In most cases using a spread operator causes a full copy of the array to be crea
 
 ```
 
-generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-11-25 15:34:14 UTC
+generated with [detekt version 1.22.0](https://detekt.dev/) on 2022-11-28 10:00:38 UTC
