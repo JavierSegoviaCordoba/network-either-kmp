@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NetworkEitherSuspendCall.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">:</a> &gt; <a href="index.source.html" class="el_package">com.javiersc.network.either.internal.suspend</a> &gt; <span class="el_source">NetworkEitherSuspendCall.kt</span></div><h1>NetworkEitherSuspendCall.kt</h1><pre class="source lang-java linenums">package com.javiersc.network.either.internal.suspend
+
+import com.javiersc.network.either.NetworkEither
+import com.javiersc.network.either.NetworkEither.Companion.localFailure
+import com.javiersc.network.either.NetworkEither.Companion.remoteFailure
+import com.javiersc.network.either.NetworkEither.Companion.success
+import com.javiersc.network.either.NetworkEither.Companion.unknownFailure
+import com.javiersc.network.either.internal.hasBody
+import com.javiersc.network.either.internal.utils.emptyHeader
+import com.javiersc.network.either.internal.utils.printlnError
+import com.javiersc.network.either.internal.utils.printlnWarning
+import io.ktor.http.HttpStatusCode.Companion.NoContent
+import io.ktor.util.toMap
+import java.io.EOFException
+import java.io.InterruptedIOException
+import java.net.ConnectException
+import java.net.UnknownHostException
+import kotlinx.serialization.SerializationException
+import okhttp3.Request
+import okhttp3.ResponseBody
+import okio.Timeout
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Converter
+import retrofit2.HttpException
+import retrofit2.Response
+
+<span class="fc" id="L28">internal class NetworkEitherSuspendCall&lt;F : Any, S : Any&gt;(</span>
+<span class="fc" id="L29">    private val backingCall: Call&lt;S&gt;,</span>
+<span class="fc" id="L30">    private val errorConverter: Converter&lt;ResponseBody, F&gt;,</span>
+<span class="fc" id="L31">    private val isNetworkAvailable: () -&gt; Boolean,</span>
+) : Call&lt;NetworkEither&lt;F, S&gt;&gt; {
+
+    override fun enqueue(callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;) =
+<span class="fc" id="L35">        synchronized(this) {</span>
+<span class="fc" id="L36">            backingCall.enqueue(</span>
+<span class="fc" id="L37">                object : Callback&lt;S&gt; {</span>
+                    override fun onResponse(call: Call&lt;S&gt;, response: Response&lt;S&gt;) {
+<span class="fc" id="L39">                        response.responseSuspendHandler(</span>
+<span class="fc" id="L40">                            errorConverter,</span>
+<span class="fc" id="L41">                            this@NetworkEitherSuspendCall,</span>
+<span class="fc" id="L42">                            callback</span>
+                        )
+<span class="fc" id="L44">                    }</span>
+
+                    override fun onFailure(call: Call&lt;S&gt;, throwable: Throwable) {
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                        if (!isNetworkAvailable()) {</span>
+<span class="fc" id="L48">                            onCommonConnectionExceptions(callback, isNetworkAvailable())</span>
+                        } else {
+<span class="fc" id="L50">                            when (throwable) {</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">                                is UnknownHostException,</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">                                is ConnectException,</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">                                is InterruptedIOException -&gt; {</span>
+<span class="fc" id="L54">                                    onCommonConnectionExceptions(callback, isNetworkAvailable())</span>
+                                }
+<span class="pc bpc" id="L56" title="1 of 2 branches missed.">                                is EOFException -&gt; onEOFException(callback)</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">                                is IllegalStateException -&gt; {</span>
+<span class="nc" id="L58">                                    onIllegalStateException(callback, throwable)</span>
+                                }
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">                                is HttpException -&gt; {</span>
+<span class="nc" id="L61">                                    onHttpException(callback, errorConverter, throwable)</span>
+                                }
+<span class="pc bpc" id="L63" title="1 of 2 branches missed.">                                is SerializationException -&gt; {</span>
+<span class="pc bpc" id="L64" title="1 of 2 branches missed.">                                    if (throwable.hasBody) {</span>
+<span class="fc" id="L65">                                        onIllegalStateException(callback, throwable)</span>
+                                    } else {
+<span class="nc" id="L67">                                        onEOFException(callback)</span>
+                                    }
+                                }
+                                else -&gt; {
+<span class="nc" id="L71">                                    Response.success(unknownFailure(throwable))</span>
+                                }
+                            }
+                        }
+<span class="fc" id="L75">                    }</span>
+                }
+            )
+<span class="fc" id="L78">        }</span>
+
+<span class="nc" id="L80">    override fun isExecuted(): Boolean = synchronized(this) { backingCall.isExecuted }</span>
+
+    override fun clone(): Call&lt;NetworkEither&lt;F, S&gt;&gt; =
+<span class="nc" id="L83">        NetworkEitherSuspendCall(backingCall.clone(), errorConverter, isNetworkAvailable)</span>
+
+<span class="nc" id="L85">    override fun isCanceled(): Boolean = synchronized(this) { backingCall.isCanceled }</span>
+
+<span class="nc" id="L87">    override fun cancel() = synchronized(this) { backingCall.cancel() }</span>
+
+    override fun execute(): Response&lt;NetworkEither&lt;F, S&gt;&gt; =
+<span class="nc" id="L90">        throw UnsupportedOperationException(&quot;Suspend call does not support synchronous execution&quot;)</span>
+
+<span class="nc" id="L92">    override fun request(): Request = backingCall.request()</span>
+
+<span class="nc" id="L94">    override fun timeout(): Timeout = backingCall.timeout()</span>
+}
+
+private fun &lt;F, S&gt; Call&lt;NetworkEither&lt;F, S&gt;&gt;.onEOFException(
+    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;
+) {
+<span class="nc" id="L100">    printlnWarning(</span>
+        &quot;&quot;&quot;
+           | # # # # # # # # # # # # # # WARNING # # # # # # # # # # # # # # # # # # #
+           | # Every 2XX response should have a body except 204/205, as the response #
+           | # was empty, the response is transformed to Success with code 204 and   #
+           | # the headers are lost. The type should be Unit.                        #
+           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+        &quot;&quot;&quot;
+<span class="nc" id="L108">            .trimMargin()</span>
+    )
+
+    @Suppress(&quot;UNCHECKED_CAST&quot;)
+<span class="nc" id="L112">    try {</span>
+<span class="nc" id="L113">        val success = success(Unit as S, NoContent.value, emptyHeader.toMap())</span>
+<span class="nc" id="L114">        callback.onResponse(this, Response.success(success))</span>
+<span class="nc" id="L115">    } catch (e: ClassCastException) {</span>
+<span class="nc" id="L116">        printlnError(</span>
+            &quot;&quot;&quot;
+               | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
+               | # NetworkResponse should use Unit as Success type when body is null #
+               | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+            &quot;&quot;&quot;
+<span class="nc" id="L122">                .trimMargin()</span>
+        )
+<span class="nc" id="L124">        callback.onResponse(this, Response.success(unknownFailure(e)))</span>
+    }
+<span class="nc" id="L126">}</span>
+
+private fun &lt;F, S&gt; Call&lt;NetworkEither&lt;F, S&gt;&gt;.onIllegalStateException(
+    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;,
+    throwable: Throwable,
+) {
+<span class="fc" id="L132">    printlnError(</span>
+        &quot;&quot;&quot;
+           | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # #
+           | # Response body can't be serialized with the object provided  #
+           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+        &quot;&quot;&quot;
+<span class="fc" id="L138">            .trimMargin()</span>
+    )
+<span class="fc" id="L140">    callback.onResponse(this, Response.success(unknownFailure(throwable)))</span>
+<span class="fc" id="L141">}</span>
+
+private fun &lt;F : Any, S : Any&gt; NetworkEitherSuspendCall&lt;F, S&gt;.onCommonConnectionExceptions(
+    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;,
+    isNetworkAvailable: Boolean,
+) {
+<span class="fc" id="L147">    callback.onResponse(</span>
+<span class="fc" id="L148">        this,</span>
+<span class="fc bfc" id="L149" title="All 2 branches covered.">        if (isNetworkAvailable) Response.success(remoteFailure())</span>
+<span class="fc" id="L150">        else Response.success(localFailure())</span>
+    )
+<span class="fc" id="L152">}</span>
+
+private fun &lt;F : Any, S : Any&gt; NetworkEitherSuspendCall&lt;F, S&gt;.onHttpException(
+    callback: Callback&lt;NetworkEither&lt;F, S&gt;&gt;,
+    errorConverter: Converter&lt;ResponseBody, F&gt;,
+    exception: HttpException,
+<span class="nc" id="L158">) = exception.httpExceptionSuspendHandler(errorConverter, this, callback)</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

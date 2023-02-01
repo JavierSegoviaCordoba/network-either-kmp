@@ -3,16 +3,17 @@
   "tools inspection": {
     "Code Inspection": 0
   },
+  "linter": "QDJVMC",
   "attributes": {
     "vcs": {
       "sarifIdea": {
-        "repositoryUri": "https://github.com/JavierSegoviaCordoba/network-either-kmp",
-        "revisionId": "98f1b63b064f63769edb9abb397b3248f1d74850",
-        "branch": "main"
+        "repositoryUri": "ssh://git@github.com/JavierSegoviaCordoba/network-either-kmp.git",
+        "revisionId": "a2c4d8d866b239d61cd1aa033fb270a58f534418",
+        "branch": "refs/heads/main"
       }
     },
     "deviceId": "200820300000000-941b-f4ad-11ed-0b6f10ffa7fe",
-    "jobUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp/actions/runs/3563653946",
+    "jobUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp/actions/runs/4065038850",
     "repoUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp"
   }
 }

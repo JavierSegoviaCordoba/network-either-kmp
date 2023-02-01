@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Resource.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">:</a> &gt; <a href="index.source.html" class="el_package">com.javiersc.resource.either</a> &gt; <span class="el_source">Resource.kt</span></div><h1>Resource.kt</h1><pre class="source lang-java linenums">@file:Suppress(&quot;FunctionName&quot;)
+
+package com.javiersc.resource.either
+
+import arrow.core.Either
+import arrow.core.left
+import arrow.core.right
+import kotlin.contracts.contract
+
+public sealed class ResourceEither&lt;out F, out S&gt; {
+
+    public abstract val isLoading: Boolean
+
+<span class="pc" id="L14">    public data class Failure&lt;out F, out S&gt;(</span>
+<span class="pc" id="L15">        val failure: F,</span>
+<span class="pc" id="L16">        val data: S? = null,</span>
+<span class="pc" id="L17">        override val isLoading: Boolean = false</span>
+<span class="pc" id="L18">    ) : ResourceEither&lt;F, S&gt;()</span>
+
+<span class="pc" id="L20">    public data class Success&lt;out S&gt;(</span>
+<span class="pc" id="L21">        val data: S,</span>
+<span class="pc" id="L22">        override val isLoading: Boolean = false,</span>
+<span class="pc" id="L23">    ) : ResourceEither&lt;Nothing, S&gt;()</span>
+
+    public inline fun &lt;A&gt; fold(
+        failure: (Failure&lt;F, S&gt;) -&gt; A,
+        success: (Success&lt;S&gt;) -&gt; A,
+    ): A =
+<span class="nc" id="L29">        when (this) {</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">            is Failure -&gt; failure(this)</span>
+<span class="nc" id="L31">            is Success -&gt; success(this)</span>
+<span class="nc" id="L32">        }</span>
+
+    public inline fun ifFailure(block: (Failure&lt;F, S&gt;) -&gt; Unit) {
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (this is Failure) block(this)</span>
+<span class="nc" id="L36">    }</span>
+
+    public inline fun ifSuccess(block: (Success&lt;S&gt;) -&gt; Unit) {
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (this is Success) block(this)</span>
+<span class="nc" id="L40">    }</span>
+
+    public fun isFailure(): Boolean {
+<span class="fc" id="L43">        contract { returns(true) implies (this@ResourceEither is Failure&lt;F, S&gt;) }</span>
+<span class="fc" id="L44">        return this is Failure&lt;F, S&gt;</span>
+    }
+
+    public fun isSuccess(): Boolean {
+<span class="fc" id="L48">        contract { returns(true) implies (this@ResourceEither is Success&lt;S&gt;) }</span>
+<span class="fc" id="L49">        return this is Success&lt;S&gt;</span>
+    }
+
+    public inline fun &lt;L, R&gt; toEither(
+        failure: (Failure&lt;F, S&gt;) -&gt; L,
+        success: (Success&lt;S&gt;) -&gt; R,
+    ): Either&lt;L, R&gt; =
+<span class="nc" id="L56">        fold(</span>
+<span class="nc" id="L57">            failure = { failure(it).left() },</span>
+<span class="nc" id="L58">            success = { success(it).right() },</span>
+<span class="nc" id="L59">        )</span>
+
+    @JvmName(&quot;getIsLoading&quot;)
+    public fun isLoading(): Boolean {
+<span class="fc" id="L63">        return this.isLoading</span>
+    }
+
+    public fun successOrNull(): ResourceSuccess&lt;S&gt;? {
+<span class="nc" id="L67">        contract { returnsNotNull() implies (this@ResourceEither is ResourceSuccess) }</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        return (this as? ResourceSuccess&lt;S&gt;)</span>
+    }
+
+    public fun successDataOrNull(): S? {
+<span class="nc" id="L72">        contract { returnsNotNull() implies (this@ResourceEither is ResourceSuccess) }</span>
+<span class="nc bnc" id="L73" title="All 4 branches missed.">        return (this as? ResourceSuccess&lt;S&gt;)?.data</span>
+    }
+
+    public companion object {
+<span class="fc" id="L77">        public fun &lt;F, S&gt; resourceFailure(</span>
+            failure: F,
+<span class="fc" id="L79">            data: S? = null,</span>
+<span class="fc" id="L80">            isLoading: Boolean = false</span>
+<span class="fc" id="L81">        ): ResourceEither&lt;F, S&gt; = Failure(failure, data, isLoading)</span>
+
+<span class="nc" id="L83">        public fun &lt;F, S&gt; buildResourceFailure(</span>
+            failure: F,
+<span class="nc" id="L85">            data: S? = null,</span>
+<span class="nc" id="L86">            isLoading: Boolean = false</span>
+<span class="nc" id="L87">        ): Failure&lt;F, S&gt; = Failure(failure, data, isLoading)</span>
+
+<span class="nc" id="L89">        public fun &lt;F, S&gt; resourceFailureLoading(</span>
+            failure: F,
+<span class="nc" id="L91">            data: S? = null</span>
+<span class="nc" id="L92">        ): ResourceEither&lt;F, S&gt; = Failure(failure, data, true)</span>
+
+<span class="nc" id="L94">        public fun &lt;F, S&gt; buildResourceFailureLoading(failure: F, data: S? = null): Failure&lt;F, S&gt; =</span>
+<span class="nc" id="L95">            Failure(failure, data, true)</span>
+
+<span class="fc" id="L97">        public fun &lt;S&gt; resourceSuccess(</span>
+            data: S,
+<span class="fc" id="L99">            isLoading: Boolean = false</span>
+<span class="fc" id="L100">        ): ResourceEither&lt;Nothing, S&gt; = Success(data, isLoading)</span>
+
+<span class="nc" id="L102">        public fun &lt;S&gt; buildResourceSuccess(data: S, isLoading: Boolean = false): Success&lt;S&gt; =</span>
+<span class="nc" id="L103">            Success(data, isLoading)</span>
+
+        public fun &lt;S&gt; resourceSuccessLoading(data: S): ResourceEither&lt;Nothing, S&gt; =
+<span class="fc" id="L106">            Success(data, true)</span>
+
+<span class="nc" id="L108">        public fun &lt;S&gt; buildResourceSuccessLoading(data: S): Success&lt;S&gt; = Success(data, true)</span>
+    }
+}
+
+public typealias ResourceFailure&lt;F, S&gt; = ResourceEither.Failure&lt;F, S&gt;
+
+public typealias ResourceSuccess&lt;S&gt; = ResourceEither.Success&lt;S&gt;
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

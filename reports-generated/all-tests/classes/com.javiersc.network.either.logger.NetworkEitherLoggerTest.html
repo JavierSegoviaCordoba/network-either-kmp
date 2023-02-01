@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.443s</div>
+<div class="counter">2.391s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,33 +79,33 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Pretty print Http failure()[jvm]</td>
-<td class="success">Pretty print Http failure()</td>
-<td class="success">0.351s</td>
+<td class="success">Pretty print Http failure[jvm]</td>
+<td class="success">Pretty print Http failure</td>
+<td class="success">0.148s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Pretty print Local failure()[jvm]</td>
-<td class="success">Pretty print Local failure()</td>
-<td class="success">0.024s</td>
+<td class="success">Pretty print Local failure[jvm]</td>
+<td class="success">Pretty print Local failure</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Pretty print Remote failure()[jvm]</td>
-<td class="success">Pretty print Remote failure()</td>
-<td class="success">2.907s</td>
+<td class="success">Pretty print Remote failure[jvm]</td>
+<td class="success">Pretty print Remote failure</td>
+<td class="success">2.101s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Pretty print Success()[jvm]</td>
-<td class="success">Pretty print Success()</td>
-<td class="success">0.050s</td>
+<td class="success">Pretty print Success[jvm]</td>
+<td class="success">Pretty print Success</td>
+<td class="success">0.047s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Pretty print Unknown failure()[jvm]</td>
-<td class="success">Pretty print Unknown failure()</td>
-<td class="success">0.111s</td>
+<td class="success">Pretty print Unknown failure[jvm]</td>
+<td class="success">Pretty print Unknown failure</td>
+<td class="success">0.083s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -148,98 +148,56 @@
 ?[93m │     }                                                                                                                                                        │ ?[0m
 ?[93m │ }                                                                                                                                                            │ ?[0m
 ?[93m └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
-?[31m ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
-?[31m │ Unknown error test │ ASSERT.(NetworkEitherLoggerTest.kt:288) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Unknown failure │ line 288         │ ?[0m
-?[31m ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
-?[31m │ java.lang.IllegalStateException: Unknown error                                                                                                                                       │ ?[0m
-?[31m │ 	at com.javiersc.network.either.logger.NetworkEitherLoggerTest.Pretty print Unknown failure(NetworkEitherLoggerTest.kt:54)                                                           │ ?[0m
-?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)                                                                                                   │ ?[0m
-?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)                                                                                 │ ?[0m
-?[31m │ 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)                                                                         │ ?[0m
-?[31m │ 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)                                                                                                                       │ ?[0m
-?[31m │ 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)                                                                                           │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)                                                                                            │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)                                                  │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)                                                                                         │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)                                                                           │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)                                                                                │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)                                                 │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)                                                                                 │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)                                                 │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)                                                                        │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)                                                                 │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)                                                                         │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)                                                                                          │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)                                                                                           │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)                                                                            │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)                                                                 │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)                                                                          │ ?[0m
-?[31m │ 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)                                                                           │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)                                                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)                                                                                        │ ?[0m
-?[31m │ 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)                                                                                                                       │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)                                                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)                                                                                        │ ?[0m
-?[31m │ 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)                                                                                                                       │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)                                                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)                                                                   │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)                                                                            │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)                                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)                               │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)                                                                │ ?[0m
-?[31m │ 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)                                                                    │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)                                                                       │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)                                                               │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)                                                         │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)                                                                        │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)                                                                                               │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)                                                                                                │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)                                                               │ ?[0m
-?[31m │ 	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)                                                                            │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)            │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)                                                │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)                                                                              │ ?[0m
-?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)                                                                                                   │ ?[0m
-?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)                                                                                 │ ?[0m
-?[31m │ 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)                                                                         │ ?[0m
-?[31m │ 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)                                                                                                                       │ ?[0m
-?[31m │ 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)                                                                                             │ ?[0m
-?[31m │ 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)                                                                                             │ ?[0m
-?[31m │ 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)                                                                             │ ?[0m
-?[31m │ 	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)                                                              │ ?[0m
-?[31m │ 	at com.sun.proxy.$Proxy2.stop(Unknown Source)                                                                                                                                       │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)                                                                                               │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)                                                                        │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)                                                                                             │ ?[0m
-?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)                                                                                              │ ?[0m
-?[31m │ 	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)                                                                            │ ?[0m
-?[31m │ 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)                                                    │ ?[0m
-?[31m │ 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)                                                     │ ?[0m
-?[31m │ 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)                                                                                         │ ?[0m
-?[31m │ 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)                                                                                        │ ?[0m
-?[31m │                                                                                                                                                                                      │ ?[0m
-?[31m └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
+?[31m ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
+?[31m │ Unknown error test │ ASSERT.(NetworkEitherLoggerTest.kt:288) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Unknown failure │ line 288 │ ?[0m
+?[31m ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
+?[31m │ java.lang.IllegalStateException: Unknown error                                                                                                                               │ ?[0m
+?[31m │ 	at com.javiersc.network.either.logger.NetworkEitherLoggerTest.Pretty print Unknown failure(NetworkEitherLoggerTest.kt:54)                                                   │ ?[0m
+?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)                                                                                           │ ?[0m
+?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)                                                                         │ ?[0m
+?[31m │ 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)                                                                 │ ?[0m
+?[31m │ 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)                                                                                                               │ ?[0m
+?[31m │ 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)                                                                                     │ ?[0m
+?[31m │ 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)                                                                                      │ ?[0m
+?[31m │ 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)                                                                                       │ ?[0m
+?[31m │ 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)                                                                                        │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)                                                                                                         │ ?[0m
+?[31m │ 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)                                                                                     │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)                                                                                                            │ ?[0m
+?[31m │ 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)                                                                                       │ ?[0m
+?[31m │ 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)                                                                                        │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)                                                                                                              │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)                                                                                                          │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)                                                                                                        │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)                                                                                                          │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)                                                                                                         │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)                                                                                                         │ ?[0m
+?[31m │ 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)                                                                                                                │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:108)                                                         │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:57)                                                               │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:39)                                                               │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)                                    │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)                                                          │ ?[0m
+?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)                                                                                           │ ?[0m
+?[31m │ 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)                                                                         │ ?[0m
+?[31m │ 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)                                                                 │ ?[0m
+?[31m │ 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)                                                                                                               │ ?[0m
+?[31m │ 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)                                                                                     │ ?[0m
+?[31m │ 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)                                                                                     │ ?[0m
+?[31m │ 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)                                                                     │ ?[0m
+?[31m │ 	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)                                                      │ ?[0m
+?[31m │ 	at com.sun.proxy.$Proxy5.processTestClass(Unknown Source)                                                                                                                   │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)                                                                                       │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)                                                                │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)                                                                                     │ ?[0m
+?[31m │ 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)                                                                                      │ ?[0m
+?[31m │ 	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)                                                                    │ ?[0m
+?[31m │ 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)                                            │ ?[0m
+?[31m │ 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)                                             │ ?[0m
+?[31m │ 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)                                                                                 │ ?[0m
+?[31m │ 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)                                                                                │ ?[0m
+?[31m │                                                                                                                                                                              │ ?[0m
+?[31m └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ ?[0m
 ?[91m ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ ?[0m
 ?[91m │ Internet not available test │ ERROR.(NetworkEitherLoggerTest.kt:178) │ file NetworkEitherLoggerTest.kt │ class NetworkEitherLoggerTest │ fun Pretty print Local failure │ line 178 │ ?[0m
 ?[91m ├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ?[0m
@@ -256,7 +214,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at Nov 28, 2022, 10:01:47 AM</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at Feb 1, 2023, 1:52:44 PM</p>
 </div>
 </div>
 </body>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NetworkEither.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">:</a> &gt; <a href="index.source.html" class="el_package">com.javiersc.network.either</a> &gt; <span class="el_source">NetworkEither.kt</span></div><h1>NetworkEither.kt</h1><pre class="source lang-java linenums">package com.javiersc.network.either
+
+import arrow.core.Either
+import arrow.core.left
+import arrow.core.right
+import kotlin.contracts.contract
+
+public sealed class NetworkEither&lt;out F, out S&gt; {
+
+<span class="fc" id="L10">    public sealed class Failure&lt;out F&gt; : NetworkEither&lt;F, Nothing&gt;() {</span>
+
+<span class="fc" id="L12">        public data class Http&lt;out F&gt;(</span>
+<span class="fc" id="L13">            val error: F,</span>
+<span class="fc" id="L14">            val code: Int,</span>
+<span class="fc" id="L15">            val headers: Headers,</span>
+<span class="fc" id="L16">        ) : Failure&lt;F&gt;()</span>
+
+<span class="fc" id="L18">        public object Local : Failure&lt;Nothing&gt;()</span>
+
+<span class="fc" id="L20">        public object Remote : Failure&lt;Nothing&gt;()</span>
+
+<span class="fc" id="L22">        public data class Unknown(val throwable: Throwable) : Failure&lt;Nothing&gt;()</span>
+    }
+
+<span class="fc" id="L25">    public data class Success&lt;out S&gt;(</span>
+<span class="fc" id="L26">        val data: S,</span>
+<span class="pc" id="L27">        val code: Int,</span>
+<span class="pc" id="L28">        val headers: Headers,</span>
+<span class="fc" id="L29">    ) : NetworkEither&lt;Nothing, S&gt;()</span>
+
+    public inline fun &lt;A&gt; fold(
+        failure: () -&gt; A,
+        success: (S) -&gt; A,
+    ): A =
+<span class="nc" id="L35">        when (this) {</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">            is Failure.Http&lt;F&gt; -&gt; failure()</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            is Failure.Local -&gt; failure()</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">            is Failure.Remote -&gt; failure()</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">            is Failure.Unknown -&gt; failure()</span>
+<span class="nc" id="L40">            is Success -&gt; success(data)</span>
+<span class="nc" id="L41">        }</span>
+
+    public inline fun &lt;A&gt; fold(
+        httpFailure: (Failure.Http&lt;F&gt;) -&gt; A,
+        localFailure: () -&gt; A,
+        remoteFailure: () -&gt; A,
+        unknownFailure: (Throwable) -&gt; A,
+        success: (Success&lt;S&gt;) -&gt; A,
+    ): A =
+<span class="nc" id="L50">        when (this) {</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">            is Failure.Http&lt;F&gt; -&gt; httpFailure(this)</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            is Failure.Local -&gt; localFailure()</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">            is Failure.Remote -&gt; remoteFailure()</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">            is Failure.Unknown -&gt; unknownFailure(throwable)</span>
+<span class="nc" id="L55">            is Success -&gt; success(this)</span>
+<span class="nc" id="L56">        }</span>
+
+    public fun isFailure(): Boolean {
+<span class="nc" id="L59">        contract { returns(true) implies (this@NetworkEither is Failure&lt;F&gt;) }</span>
+<span class="nc" id="L60">        return this is Failure&lt;F&gt;</span>
+    }
+
+    public fun isHttpFailure(): Boolean {
+<span class="nc" id="L64">        contract { returns(true) implies (this@NetworkEither is Failure.Http&lt;F&gt;) }</span>
+<span class="nc" id="L65">        return this is Failure.Http&lt;F&gt;</span>
+    }
+
+    public fun isLocalFailure(): Boolean {
+<span class="nc" id="L69">        contract { returns(true) implies (this@NetworkEither is Failure.Local) }</span>
+<span class="nc" id="L70">        return this is Failure.Local</span>
+    }
+
+    public fun isRemoteFailure(): Boolean {
+<span class="nc" id="L74">        contract { returns(true) implies (this@NetworkEither is Failure.Remote) }</span>
+<span class="nc" id="L75">        return this is Failure.Remote</span>
+    }
+
+    public fun isUnknownFailure(): Boolean {
+<span class="nc" id="L79">        contract { returns(true) implies (this@NetworkEither is Failure.Unknown) }</span>
+<span class="nc" id="L80">        return this is Failure.Unknown</span>
+    }
+
+    public fun isSuccess(): Boolean {
+<span class="nc" id="L84">        contract { returns(true) implies (this@NetworkEither is Success&lt;S&gt;) }</span>
+<span class="nc" id="L85">        return this is Success&lt;S&gt;</span>
+    }
+
+    @JvmName(&quot;getCode1&quot;)
+    public fun getCode(): Int =
+<span class="nc" id="L90">        when (this) {</span>
+<span class="nc bnc" id="L91" title="All 2 branches missed.">            is Failure.Http -&gt; this.code</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">            is Success -&gt; this.code</span>
+<span class="nc" id="L93">            else -&gt; error(&quot;There is no response with code&quot;)</span>
+<span class="nc" id="L94">        }</span>
+
+<span class="nc bnc" id="L96" title="All 2 branches missed.">    public fun getCodeOrNull(): Int? = runCatching { getCode() }.getOrNull()</span>
+
+    public fun getSuccess(): S {
+<span class="nc" id="L99">        contract { returns() implies (this@NetworkEither is Success) }</span>
+<span class="nc" id="L100">        return (this as Success&lt;S&gt;).data</span>
+    }
+
+    public fun getSuccessOrNull(): S? {
+<span class="nc" id="L104">        contract { returnsNotNull() implies (this@NetworkEither is Success) }</span>
+<span class="nc bnc" id="L105" title="All 4 branches missed.">        return (this as? Success&lt;S&gt;)?.data</span>
+    }
+
+    @JvmName(&quot;getThrowable1&quot;)
+    public fun getThrowable(): Throwable {
+<span class="nc" id="L110">        contract { returns() implies (this@NetworkEither is Failure.Unknown) }</span>
+<span class="nc" id="L111">        return (this as Failure.Unknown).throwable</span>
+    }
+
+    public fun getThrowableOrNull(): Throwable? {
+<span class="nc" id="L115">        contract { returnsNotNull() implies (this@NetworkEither is Failure.Unknown) }</span>
+<span class="nc bnc" id="L116" title="All 4 branches missed.">        return (this as? Failure.Unknown)?.throwable</span>
+    }
+
+    public inline fun &lt;L, R&gt; toEither(
+        crossinline httpFailure: (Failure.Http&lt;F&gt;) -&gt; L,
+        localFailure: () -&gt; L,
+        remoteFailure: () -&gt; L,
+        crossinline unknownFailure: (Throwable) -&gt; L,
+        crossinline success: (Success&lt;S&gt;) -&gt; R,
+    ): Either&lt;L, R&gt; =
+<span class="nc" id="L126">        fold(</span>
+<span class="nc" id="L127">            httpFailure = { f: Failure.Http&lt;F&gt; -&gt; httpFailure(f).left() },</span>
+<span class="nc" id="L128">            localFailure = localFailure()::left,</span>
+<span class="nc" id="L129">            remoteFailure = remoteFailure()::left,</span>
+<span class="nc" id="L130">            unknownFailure = { throwable: Throwable -&gt; unknownFailure(throwable).left() },</span>
+<span class="nc" id="L131">            success = { s: Success&lt;S&gt; -&gt; success(s).right() },</span>
+<span class="nc" id="L132">        )</span>
+
+    public fun ifFailure(block: (Failure&lt;F&gt;) -&gt; Unit) {
+<span class="pc bpc" id="L135" title="1 of 2 branches missed.">        if (this is Failure&lt;F&gt;) block(this)</span>
+<span class="fc" id="L136">    }</span>
+
+    public fun ifFailureHttp(block: (Failure.Http&lt;F&gt;) -&gt; Unit) {
+<span class="pc bpc" id="L139" title="1 of 2 branches missed.">        if (this is Failure.Http&lt;F&gt;) block(this)</span>
+<span class="fc" id="L140">    }</span>
+
+    public fun ifFailureLocal(block: () -&gt; Unit) {
+<span class="pc bpc" id="L143" title="1 of 2 branches missed.">        if (this is Failure.Local) block()</span>
+<span class="fc" id="L144">    }</span>
+
+    public fun ifFailureRemote(block: () -&gt; Unit) {
+<span class="pc bpc" id="L147" title="1 of 2 branches missed.">        if (this is Failure.Remote) block()</span>
+<span class="fc" id="L148">    }</span>
+
+    public fun ifFailureUnknown(block: (Throwable) -&gt; Unit) {
+<span class="pc bpc" id="L151" title="1 of 2 branches missed.">        if (this is Failure.Unknown) block(throwable)</span>
+<span class="fc" id="L152">    }</span>
+
+    public fun ifSuccess(block: (Success&lt;S&gt;) -&gt; Unit) {
+<span class="pc bpc" id="L155" title="1 of 2 branches missed.">        if (this is Success&lt;S&gt;) block(this)</span>
+<span class="fc" id="L156">    }</span>
+
+    public companion object {
+        public fun &lt;S&gt; buildSuccess(data: S, code: Int, headers: Headers): Success&lt;S&gt; =
+<span class="nc" id="L160">            Success(data, code, headers)</span>
+
+        public fun &lt;S&gt; success(data: S, code: Int, headers: Headers): NetworkEither&lt;Nothing, S&gt; =
+<span class="fc" id="L163">            Success(data, code, headers)</span>
+
+        public fun &lt;F&gt; buildHttpFailure(error: F, code: Int, headers: Headers): Failure.Http&lt;F&gt; =
+<span class="fc" id="L166">            Failure.Http(error, code, headers)</span>
+
+        public fun &lt;F&gt; httpFailure(
+            error: F,
+            code: Int,
+            headers: Headers
+<span class="fc" id="L172">        ): NetworkEither&lt;F, Nothing&gt; = Failure.Http(error, code, headers)</span>
+
+<span class="nc" id="L174">        public fun buildLocalFailure(): Failure.Local = Failure.Local</span>
+
+<span class="fc" id="L176">        public fun localFailure(): NetworkEither&lt;Nothing, Nothing&gt; = Failure.Local</span>
+
+<span class="nc" id="L178">        public fun buildRemoteFailure(): Failure.Remote = Failure.Remote</span>
+
+<span class="fc" id="L180">        public fun remoteFailure(): NetworkEither&lt;Nothing, Nothing&gt; = Failure.Remote</span>
+
+        public fun buildUnknownFailure(throwable: Throwable): Failure.Unknown =
+<span class="nc" id="L183">            Failure.Unknown(throwable)</span>
+
+        public fun unknownFailure(throwable: Throwable): NetworkEither&lt;Nothing, Nothing&gt; =
+<span class="fc" id="L186">            Failure.Unknown(throwable)</span>
+    }
+}
+
+public typealias NetworkFailure&lt;F&gt; = NetworkEither.Failure&lt;F&gt;
+
+public typealias NetworkFailureHttp&lt;F&gt; = NetworkEither.Failure.Http&lt;F&gt;
+
+public typealias NetworkFailureLocal = NetworkEither.Failure.Local
+
+public typealias NetworkFailureRemote = NetworkEither.Failure.Remote
+
+public typealias NetworkFailureUnknown = NetworkEither.Failure.Unknown
+
+public typealias NetworkSuccess&lt;S&gt; = NetworkEither.Success&lt;S&gt;
+
+public typealias Headers = Map&lt;String, List&lt;String&gt;&gt;
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
