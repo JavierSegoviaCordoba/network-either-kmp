@@ -104,37 +104,6 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network-either-logger/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp.subprojects.network-either-logger",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "98a3c55225b92c6b7e43a5e0b99a4de97d1cf9745911b0befa30990c007ce5c7"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
       "path": "subprojects/resource-either/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
@@ -153,4 +122,35 @@
     "inspectionName": "KotlinAnnotator"
   },
   "hash": "001c17e3c985c4ac39d6cc317774f6e74bc075f648d10fe81d7ab09b4517d65d"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either-logger/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 11,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either-logger",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "98a3c55225b92c6b7e43a5e0b99a4de97d1cf9745911b0befa30990c007ce5c7"
 }]}

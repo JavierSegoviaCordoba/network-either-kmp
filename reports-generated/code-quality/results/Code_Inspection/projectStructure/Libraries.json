@@ -145,27 +145,27 @@
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-content-negotiation-jvm/2.2.2/3ef04cb7207acf7d84e667623baeb1e1999f02ba/ktor-client-content-negotiation-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-content-negotiation-jvm/2.2.3/1b761a7cce702c2dba35d0f5fa9444fec8538ac0/ktor-client-content-negotiation-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-client-cio-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-cio-jvm/2.2.2/c76f78c544ee26d2759310e5976b893ef3842be1/ktor-client-cio-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-cio-jvm/2.2.3/b27a21ccea150b0e126068a5f3170583d963efe7/ktor-client-cio-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-client-core-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-client-core-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-core-jvm/2.2.2/ba71596a4ba4ae67e9107089476ef7b37006fd56/ktor-client-core-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-core-jvm/2.2.3/51751cb68f9f18ee996a10f534f3895da78bd3f1/ktor-client-core-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-serialization-kotlinx-json-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-json-jvm/2.2.2/8736f471f0929988293bf46c2d521d421a0a3974/ktor-serialization-kotlinx-json-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-json-jvm/2.2.3/a50f6d3c4e04976b08eca298d3716d1a185d09db/ktor-serialization-kotlinx-json-jvm-2.2.3.jar!/"
       ]
     },
     {
@@ -205,51 +205,51 @@
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-serialization-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-serialization-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-jvm/2.2.2/d1dbaa1cc2b731d2765f55fc7f8aed19ccf692ab/ktor-serialization-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-jvm/2.2.3/df764980953c0cee69febdfc1d5d633558e41274/ktor-serialization-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-http-cio-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-cio-jvm/2.2.2/a83b866e54f054161e4ee17acdc4b3a5c3252fb9/ktor-http-cio-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-cio-jvm/2.2.3/12e42f2438d2f780968ac44cddf206108c2f6d19/ktor-http-cio-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-websockets-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-websockets-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-websockets-jvm/2.2.2/777acec031f49ea7b14d107bb13c76f9835d19/ktor-websockets-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-websockets-jvm/2.2.3/7f806915f527aa6230128c55ba242ffb346d8110/ktor-websockets-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-network-tls-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-network-tls-jvm/2.2.2/5555e04fb3f6c82282add8a9f915b0579f1b96aa/ktor-network-tls-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-network-tls-jvm/2.2.3/9cd7614d67dad5c6972810e442ca4a98968fdbf0/ktor-network-tls-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-websocket-serialization-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-websocket-serialization-jvm/2.2.2/173f9cd45cc70d6a0619a7463c85d76a4b50422a/ktor-websocket-serialization-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-websocket-serialization-jvm/2.2.3/c51d1eabd82e3b87c67d769ba96d05b0784c96f7/ktor-websocket-serialization-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-events-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-events-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-events-jvm/2.2.2/77a0ee9d29590367ff180f2ced0fc3b791c208ff/ktor-events-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-events-jvm/2.2.3/646465db9b9e9c9b0b79403c24d7df51427615aa/ktor-events-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-http-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-http-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-jvm/2.2.2/af795b8b8f2a296d8e9e01cdc5e632d922b70872/ktor-http-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-jvm/2.2.3/39394d60d80f32388bf7fef5fffc82efb976c503/ktor-http-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-serialization-kotlinx-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-jvm/2.2.2/e8cf2d978ad8eb53113eb05f360cbc64a323c9d2/ktor-serialization-kotlinx-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-jvm/2.2.3/e6cd6c166ea194493037b214fd0fca7b34eb065a/ktor-serialization-kotlinx-jvm-2.2.3.jar!/"
       ]
     },
     {
@@ -259,27 +259,27 @@
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-network-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-network-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-network-jvm/2.2.2/8673cbecf9c0c91ed811f12484d4f860e0ed883/ktor-network-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-network-jvm/2.2.3/22f9d17bbda0b90e7ea03b551434810c1212f5f7/ktor-network-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-utils-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-utils-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils-jvm/2.2.2/6b5c092a5af1c544ab14f524c7f109612f4b27f6/ktor-utils-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils-jvm/2.2.3/9df64768888af11bff0d564e2e01405cad8cacf7/ktor-utils-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-io-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-io-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-io-jvm/2.2.2/fb8c4e8feac5b0e26b7856d4d86b79f97a595126/ktor-io-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-io-jvm/2.2.3/9b35aff15b0ca6bd6281bb6c8f51d392cf40207a/ktor-io-jvm-2.2.3.jar!/"
       ]
     },
     {
-      "name": "Gradle: io.ktor:ktor-client-mock-jvm:2.2.2",
+      "name": "Gradle: io.ktor:ktor-client-mock-jvm:2.2.3",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-mock-jvm/2.2.2/e42ae5027142e28be43af4baac24828b6772e9cb/ktor-client-mock-jvm-2.2.2.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-mock-jvm/2.2.3/e5eefe14e825bbebc42c93289ac336241352e6da/ktor-client-mock-jvm-2.2.3.jar!/"
       ]
     },
     {
