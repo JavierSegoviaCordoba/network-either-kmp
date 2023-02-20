@@ -12,6 +12,12 @@
 
 ### Fixed
 
+### Updated
+
+## [0.2.0-alpha.2] - 2023-02-20
+
+### Fixed
+
 - crashing when getting `Network.Local`
 
 ### Updated
@@ -67,3 +73,17 @@
 ## [0.0.0] - 2021-01-01
 
 - No changes
+
+[Unreleased]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.2.0-alpha.2...HEAD
+
+[0.2.0-alpha.2]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.2.0-alpha.1...0.2.0-alpha.2
+
+[0.2.0-alpha.1]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.1.0-alpha.3...0.2.0-alpha.1
+
+[0.1.0-alpha.3]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.1.0-alpha.2...0.1.0-alpha.3
+
+[0.1.0-alpha.2]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.1.0-alpha.1...0.1.0-alpha.2
+
+[0.1.0-alpha.1]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.0.0...0.1.0-alpha.1
+
+[0.0.0]: https://github.com/JavierSegoviaCordoba/network-either-kmp/commits/0.0.0
