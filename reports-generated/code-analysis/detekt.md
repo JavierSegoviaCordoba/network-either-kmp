@@ -2,9 +2,9 @@
 
 ## Metrics
 
-* 202 number of properties
+* 203 number of properties
 
-* 158 number of functions
+* 159 number of functions
 
 * 28 number of classes
 
@@ -14,27 +14,27 @@
 
 ## Complexity Report
 
-* 2,813 lines of code (loc)
+* 2,835 lines of code (loc)
 
-* 2,330 source lines of code (sloc)
+* 2,351 source lines of code (sloc)
 
-* 1,599 logical lines of code (lloc)
+* 1,615 logical lines of code (lloc)
 
 * 36 comment lines of code (cloc)
 
-* 297 cyclomatic complexity (mcc)
+* 300 cyclomatic complexity (mcc)
 
-* 133 cognitive complexity
+* 136 cognitive complexity
 
-* 24 number of total code smells
+* 26 number of total code smells
 
 * 1% comment source ratio
 
 * 185 mcc per 1,000 lloc
 
-* 15 code smells per 1,000 lloc
+* 16 code smells per 1,000 lloc
 
-## Findings (24)
+## Findings (26)
 
 ### complexity, TooManyFunctions (1)
 
@@ -58,29 +58,45 @@ Class 'NetworkEither' with '21' functions detected. Defined threshold inside cla
 
 ```
 
-### exceptions, SwallowedException (1)
+### exceptions, SwallowedException (2)
 
 The caught exception is swallowed. The original exception could be lost.
 
 [Documentation](https://detekt.dev/docs/rules/exceptions#swallowedexception)
 
-* subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:17:22
+* subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:14:22
 ```
 The caught exception is swallowed. The original exception could be lost.
 ```
 ```kotlin
-14         } else {
-15             try {
-16                 proceed()
-17             } catch (throwable: Throwable) {
+11         if (isNetAvailable()) {
+12             try {
+13                 proceed()
+14             } catch (throwable: Throwable) {
 !!                      ^ error
-18                 val outgoingContent = RemoteErrorOutgoing
-19                 proceedWith(fakeFailureHttpClientCall(scope, outgoingContent))
-20             }
+15                 proceedWith(fakeHttpFailureClientCall(client))
+16             }
+17         } else {
 
 ```
 
-### exceptions, TooGenericExceptionCaught (2)
+* subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:20:22
+```
+The caught exception is swallowed. The original exception could be lost.
+```
+```kotlin
+17         } else {
+18             try {
+19                 proceedWith(fakeLocalFailureClientCall(client))
+20             } catch (throwable: Throwable) {
+!!                      ^ error
+21                 proceedWith(fakeLocalFailureClientCall(client))
+22             }
+23         }
+
+```
+
+### exceptions, TooGenericExceptionCaught (3)
 
 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.
 
@@ -102,19 +118,35 @@ The caught exception is too generic. Prefer catching specific exceptions to the 
 
 ```
 
-* subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:17:22
+* subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:14:22
 ```
 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.
 ```
 ```kotlin
-14         } else {
-15             try {
-16                 proceed()
-17             } catch (throwable: Throwable) {
+11         if (isNetAvailable()) {
+12             try {
+13                 proceed()
+14             } catch (throwable: Throwable) {
 !!                      ^ error
-18                 val outgoingContent = RemoteErrorOutgoing
-19                 proceedWith(fakeFailureHttpClientCall(scope, outgoingContent))
-20             }
+15                 proceedWith(fakeHttpFailureClientCall(client))
+16             }
+17         } else {
+
+```
+
+* subprojects/network-either/common/main/kotlin/com/javiersc/network/either/ktor/_internal/interceptExceptionsAndReplaceWithNetworkEitherFailures.kt:20:22
+```
+The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.
+```
+```kotlin
+17         } else {
+18             try {
+19                 proceedWith(fakeLocalFailureClientCall(client))
+20             } catch (throwable: Throwable) {
+!!                      ^ error
+21                 proceedWith(fakeLocalFailureClientCall(client))
+22             }
+23         }
 
 ```
 
@@ -407,4 +439,4 @@ In most cases using a spread operator causes a full copy of the array to be crea
 
 ```
 
-generated with [detekt version 1.22.0](https://detekt.dev/) on 2023-02-13 17:57:32 UTC
+generated with [detekt version 1.22.0](https://detekt.dev/) on 2023-02-20 13:42:27 UTC

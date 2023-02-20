@@ -13,13 +13,13 @@ import io.ktor.util.pipeline.PipelinePhase
 import io.ktor.util.reflect.typeInfo
 import kotlin.reflect.typeOf
 
-internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(scope: HttpClient) {
+internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(client: HttpClient) {
 <span class="fc" id="L17">    val beforeTransformPipelinePhase = PipelinePhase(&quot;NetworkEitherBeforeTransform&quot;)</span>
-<span class="fc" id="L18">    scope.responsePipeline.insertPhaseBefore(</span>
+<span class="fc" id="L18">    client.responsePipeline.insertPhaseBefore(</span>
 <span class="fc" id="L19">        HttpResponsePipeline.Transform,</span>
 <span class="fc" id="L20">        beforeTransformPipelinePhase</span>
     )
-<span class="fc" id="L22">    scope.responsePipeline.intercept(beforeTransformPipelinePhase) { container -&gt;</span>
+<span class="fc" id="L22">    client.responsePipeline.intercept(beforeTransformPipelinePhase) { container -&gt;</span>
 <span class="fc bfc" id="L23" title="All 2 branches covered.">        if (requestContentIsNetworkFailureLocal) return@intercept</span>
 <span class="fc bfc" id="L24" title="All 2 branches covered.">        if (requestContentIsNetworkFailureRemote) return@intercept</span>
 <span class="pc bpc" id="L25" title="1 of 2 branches missed.">        if (!isNetworkEither) return@intercept</span>
@@ -39,7 +39,7 @@ internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(sc
         }
 <span class="fc" id="L40">    }</span>
 
-<span class="fc" id="L42">    scope.responsePipeline.intercept(HttpResponsePipeline.Transform) {</span>
+<span class="fc" id="L42">    client.responsePipeline.intercept(HttpResponsePipeline.Transform) {</span>
 <span class="fc" id="L43">        val failure =</span>
 <span class="fc" id="L44">            when {</span>
 <span class="fc bfc" id="L45" title="All 2 branches covered.">                requestContentIsNetworkFailureLocal -&gt; {</span>

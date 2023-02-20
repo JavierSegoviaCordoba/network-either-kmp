@@ -8,8 +8,8 @@ import io.ktor.client.statement.HttpResponseContainer
 import io.ktor.client.statement.HttpResponsePipeline
 import io.ktor.util.toMap
 
-internal fun interceptSuccessesAndReplaceWithNetworkEitherSuccess(scope: HttpClient) {
-<span class="fc" id="L12">    scope.responsePipeline.intercept(HttpResponsePipeline.After) {</span>
+internal fun interceptSuccessesAndReplaceWithNetworkEitherSuccess(client: HttpClient) {
+<span class="fc" id="L12">    client.responsePipeline.intercept(HttpResponsePipeline.After) {</span>
 <span class="fc bfc" id="L13" title="All 2 branches covered.">        if (isNetworkEither) return@intercept</span>
 <span class="fc" id="L14">        val code: Int = context.response.status.value</span>
 <span class="fc" id="L15">        val headers: Map&lt;String, List&lt;String&gt;&gt; = context.response.headers.toMap()</span>

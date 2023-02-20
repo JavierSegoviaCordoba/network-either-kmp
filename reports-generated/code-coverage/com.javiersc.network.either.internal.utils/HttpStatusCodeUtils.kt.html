@@ -5,7 +5,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 
 internal infix fun Int.toHttpStatusCode(message: String): HttpStatusCode {
-<span class="pc bpc" id="L8" title="3 of 8 branches missed.">    return HttpStatusCode.allStatusCodes.find { it.value == this } ?: HttpStatusCode(this, message)</span>
+<span class="fc bfc" id="L8" title="All 8 branches covered.">    return HttpStatusCode.allStatusCodes.find { it.value == this } ?: HttpStatusCode(this, message)</span>
 }
 
 @PublishedApi

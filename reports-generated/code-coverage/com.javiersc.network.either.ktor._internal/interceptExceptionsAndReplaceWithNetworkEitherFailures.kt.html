@@ -4,21 +4,23 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.HttpSendPipeline
 
 internal fun interceptExceptionsAndReplaceWithNetworkEitherFailures(
-    scope: HttpClient,
+    client: HttpClient,
     isNetAvailable: () -&gt; Boolean,
 ) {
-<span class="fc" id="L10">    scope.sendPipeline.intercept(HttpSendPipeline.State) {</span>
-<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (!isNetAvailable()) {</span>
-<span class="fc" id="L12">            val outgoingContent = LocalErrorOutgoing</span>
-<span class="fc" id="L13">            proceedWith(outgoingContent)</span>
+<span class="fc" id="L10">    client.sendPipeline.intercept(HttpSendPipeline.State) {</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (isNetAvailable()) {</span>
+<span class="fc" id="L12">            try {</span>
+<span class="fc" id="L13">                proceed()</span>
+<span class="fc" id="L14">            } catch (throwable: Throwable) {</span>
+<span class="fc" id="L15">                proceedWith(fakeHttpFailureClientCall(client))</span>
+            }
         } else {
-<span class="fc" id="L15">            try {</span>
-<span class="fc" id="L16">                proceed()</span>
-<span class="fc" id="L17">            } catch (throwable: Throwable) {</span>
-<span class="fc" id="L18">                val outgoingContent = RemoteErrorOutgoing</span>
-<span class="fc" id="L19">                proceedWith(fakeFailureHttpClientCall(scope, outgoingContent))</span>
+<span class="fc" id="L18">            try {</span>
+<span class="pc" id="L19">                proceedWith(fakeLocalFailureClientCall(client))</span>
+<span class="fc" id="L20">            } catch (throwable: Throwable) {</span>
+<span class="fc" id="L21">                proceedWith(fakeLocalFailureClientCall(client))</span>
             }
         }
-<span class="fc" id="L22">    }</span>
-<span class="fc" id="L23">}</span>
+<span class="fc" id="L24">    }</span>
+<span class="fc" id="L25">}</span>
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

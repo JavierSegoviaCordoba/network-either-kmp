@@ -16,45 +16,66 @@ import io.ktor.util.pipeline.PipelineContext
 import io.ktor.util.toMap
 import io.ktor.utils.io.ByteReadChannel
 
-internal fun PipelineContext&lt;Any, HttpRequestBuilder&gt;.fakeFailureHttpClientCall(
-    client: HttpClient,
-    outgoingContent: OutgoingContent,
+internal fun PipelineContext&lt;Any, HttpRequestBuilder&gt;.fakeHttpFailureClientCall(
+    client: HttpClient
 ): HttpClientCall {
-<span class="fc" id="L23">    val responseData: HttpResponseData = failureHttpResponseData(outgoingContent)</span>
-<span class="fc" id="L24">    val call: HttpClientCall =</span>
-<span class="fc" id="L25">        object : HttpClientCall(client) {</span>
-<span class="nc" id="L26">            val httpRequestData: HttpRequestData =</span>
-<span class="fc" id="L27">                HttpRequestBuilder()</span>
-<span class="fc" id="L28">                    .apply {</span>
-<span class="fc" id="L29">                        setBody(outgoingContent)</span>
-<span class="fc" id="L30">                        attributes.put(AttributeKey(&quot;ExpectSuccessAttributeKey&quot;), false)</span>
-<span class="fc" id="L31">                    }</span>
-<span class="fc" id="L32">                    .build()</span>
-<span class="fc" id="L33">            init {</span>
-<span class="fc" id="L34">                request = DefaultHttpRequest(this, httpRequestData)</span>
-<span class="fc" id="L35">                response = DefaultHttpResponse(this, responseData)</span>
-<span class="fc" id="L36">            }</span>
+<span class="fc" id="L22">    val responseData: HttpResponseData = failureHttpResponseData(RemoteErrorOutgoing)</span>
+<span class="fc" id="L23">    val call: HttpClientCall =</span>
+<span class="fc" id="L24">        object : HttpClientCall(client) {</span>
+<span class="nc" id="L25">            val httpRequestData: HttpRequestData =</span>
+<span class="fc" id="L26">                HttpRequestBuilder()</span>
+<span class="fc" id="L27">                    .apply {</span>
+<span class="fc" id="L28">                        setBody(RemoteErrorOutgoing)</span>
+<span class="fc" id="L29">                        attributes.put(AttributeKey(&quot;ExpectSuccessAttributeKey&quot;), false)</span>
+<span class="fc" id="L30">                    }</span>
+<span class="fc" id="L31">                    .build()</span>
+<span class="fc" id="L32">            init {</span>
+<span class="fc" id="L33">                request = DefaultHttpRequest(this, httpRequestData)</span>
+<span class="fc" id="L34">                response = DefaultHttpResponse(this, responseData)</span>
+<span class="fc" id="L35">            }</span>
         }
 
-<span class="fc" id="L39">    return call</span>
+<span class="fc" id="L38">    return call</span>
+}
+
+internal fun PipelineContext&lt;Any, HttpRequestBuilder&gt;.fakeLocalFailureClientCall(
+    client: HttpClient
+): HttpClientCall {
+<span class="fc" id="L44">    val responseData: HttpResponseData = failureHttpResponseData(LocalErrorOutgoing)</span>
+<span class="fc" id="L45">    val call: HttpClientCall =</span>
+<span class="fc" id="L46">        object : HttpClientCall(client) {</span>
+<span class="nc" id="L47">            val httpRequestData: HttpRequestData =</span>
+<span class="fc" id="L48">                HttpRequestBuilder()</span>
+<span class="fc" id="L49">                    .apply {</span>
+<span class="fc" id="L50">                        setBody(LocalErrorOutgoing)</span>
+<span class="fc" id="L51">                        attributes.put(AttributeKey(&quot;ExpectSuccessAttributeKey&quot;), false)</span>
+<span class="fc" id="L52">                    }</span>
+<span class="fc" id="L53">                    .build()</span>
+<span class="fc" id="L54">            init {</span>
+<span class="fc" id="L55">                request = DefaultHttpRequest(this, httpRequestData)</span>
+<span class="fc" id="L56">                response = DefaultHttpResponse(this, responseData)</span>
+<span class="fc" id="L57">            }</span>
+        }
+
+<span class="fc" id="L60">    return call</span>
 }
 
 internal fun PipelineContext&lt;Any, HttpRequestBuilder&gt;.failureHttpResponseData(
     outgoingContent: OutgoingContent
 ): HttpResponseData {
-<span class="fc" id="L45">    val status = outgoingContent.status</span>
-<span class="pc bpc" id="L46" title="1 of 2 branches missed.">    checkNotNull(status) { &quot;Status must not be null and this should not be happening&quot; }</span>
-<span class="fc" id="L47">    val headers = outgoingContent.headers</span>
-<span class="pc bpc" id="L48" title="1 of 2 branches missed.">    check(headers.toMap().keys.contains(&quot;NetworkEither&quot;)) {</span>
-<span class="nc" id="L49">        &quot;Headers must contain `NetworkEither` key and this should not be happening&quot;</span>
+<span class="fc" id="L66">    val status = outgoingContent.status</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">    checkNotNull(status) { &quot;Status must not be null and this should not be happening&quot; }</span>
+<span class="fc" id="L68">    val headers = outgoingContent.headers</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">    check(headers.toMap().keys.contains(&quot;NetworkEither&quot;)) {</span>
+<span class="nc" id="L70">        &quot;Headers must contain `NetworkEither` key and this should not be happening&quot;</span>
     }
-<span class="fc" id="L51">    return HttpResponseData(</span>
-<span class="fc" id="L52">        statusCode = status,</span>
-<span class="fc" id="L53">        requestTime = GMTDate(),</span>
-<span class="fc" id="L54">        headers = outgoingContent.headers,</span>
-<span class="fc" id="L55">        version = HttpProtocolVersion.HTTP_1_1,</span>
-<span class="fc" id="L56">        body = ByteReadChannel(&quot;&quot;.toByteArray(Charsets.UTF_8)),</span>
-<span class="fc" id="L57">        callContext = context.executionContext,</span>
+<span class="fc" id="L72">    return HttpResponseData(</span>
+<span class="fc" id="L73">        statusCode = status,</span>
+<span class="fc" id="L74">        requestTime = GMTDate(),</span>
+<span class="fc" id="L75">        headers = outgoingContent.headers,</span>
+<span class="fc" id="L76">        version = HttpProtocolVersion.HTTP_1_1,</span>
+<span class="fc" id="L77">        body = ByteReadChannel(&quot;&quot;.toByteArray(Charsets.UTF_8)),</span>
+<span class="fc" id="L78">        callContext = context.executionContext,</span>
     )
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
