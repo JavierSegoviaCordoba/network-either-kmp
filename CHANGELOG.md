@@ -12,6 +12,8 @@
 
 ### Fixed
 
+- crashing when getting `Network.Local`
+
 ### Updated
 
 - `gradle -> 8.0`

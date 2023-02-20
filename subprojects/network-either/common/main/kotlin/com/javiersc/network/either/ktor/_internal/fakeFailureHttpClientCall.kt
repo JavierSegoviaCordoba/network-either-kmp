@@ -16,17 +16,38 @@ import io.ktor.util.pipeline.PipelineContext
 import io.ktor.util.toMap
 import io.ktor.utils.io.ByteReadChannel
 
-internal fun PipelineContext<Any, HttpRequestBuilder>.fakeFailureHttpClientCall(
-    client: HttpClient,
-    outgoingContent: OutgoingContent,
+internal fun PipelineContext<Any, HttpRequestBuilder>.fakeHttpFailureClientCall(
+    client: HttpClient
 ): HttpClientCall {
-    val responseData: HttpResponseData = failureHttpResponseData(outgoingContent)
+    val responseData: HttpResponseData = failureHttpResponseData(RemoteErrorOutgoing)
     val call: HttpClientCall =
         object : HttpClientCall(client) {
             val httpRequestData: HttpRequestData =
                 HttpRequestBuilder()
                     .apply {
-                        setBody(outgoingContent)
+                        setBody(RemoteErrorOutgoing)
+                        attributes.put(AttributeKey("ExpectSuccessAttributeKey"), false)
+                    }
+                    .build()
+            init {
+                request = DefaultHttpRequest(this, httpRequestData)
+                response = DefaultHttpResponse(this, responseData)
+            }
+        }
+
+    return call
+}
+
+internal fun PipelineContext<Any, HttpRequestBuilder>.fakeLocalFailureClientCall(
+    client: HttpClient
+): HttpClientCall {
+    val responseData: HttpResponseData = failureHttpResponseData(LocalErrorOutgoing)
+    val call: HttpClientCall =
+        object : HttpClientCall(client) {
+            val httpRequestData: HttpRequestData =
+                HttpRequestBuilder()
+                    .apply {
+                        setBody(LocalErrorOutgoing)
                         attributes.put(AttributeKey("ExpectSuccessAttributeKey"), false)
                     }
                     .build()

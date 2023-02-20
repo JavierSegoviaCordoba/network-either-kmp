@@ -124,7 +124,6 @@ internal class KtorTest {
                     }
                 }
             }
-
         val expected: NetworkEither<ErrorDTO, DogDTO> = NetworkEither.localFailure()
         val actual: NetworkEither<ErrorDTO, DogDTO> = localClient.get("dog/$code").body()
         actual shouldBe expected

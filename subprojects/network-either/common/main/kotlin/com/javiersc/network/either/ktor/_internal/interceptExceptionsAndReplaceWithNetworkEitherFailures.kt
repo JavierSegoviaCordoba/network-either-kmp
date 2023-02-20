@@ -4,19 +4,21 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.HttpSendPipeline
 
 internal fun interceptExceptionsAndReplaceWithNetworkEitherFailures(
-    scope: HttpClient,
+    client: HttpClient,
     isNetAvailable: () -> Boolean,
 ) {
-    scope.sendPipeline.intercept(HttpSendPipeline.State) {
-        if (!isNetAvailable()) {
-            val outgoingContent = LocalErrorOutgoing
-            proceedWith(outgoingContent)
-        } else {
+    client.sendPipeline.intercept(HttpSendPipeline.State) {
+        if (isNetAvailable()) {
             try {
                 proceed()
             } catch (throwable: Throwable) {
-                val outgoingContent = RemoteErrorOutgoing
-                proceedWith(fakeFailureHttpClientCall(scope, outgoingContent))
+                proceedWith(fakeHttpFailureClientCall(client))
+            }
+        } else {
+            try {
+                proceedWith(fakeLocalFailureClientCall(client))
+            } catch (throwable: Throwable) {
+                proceedWith(fakeLocalFailureClientCall(client))
             }
         }
     }

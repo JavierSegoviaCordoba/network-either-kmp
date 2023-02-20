@@ -13,13 +13,13 @@ import io.ktor.util.pipeline.PipelinePhase
 import io.ktor.util.reflect.typeInfo
 import kotlin.reflect.typeOf
 
-internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(scope: HttpClient) {
+internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(client: HttpClient) {
     val beforeTransformPipelinePhase = PipelinePhase("NetworkEitherBeforeTransform")
-    scope.responsePipeline.insertPhaseBefore(
+    client.responsePipeline.insertPhaseBefore(
         HttpResponsePipeline.Transform,
         beforeTransformPipelinePhase
     )
-    scope.responsePipeline.intercept(beforeTransformPipelinePhase) { container ->
+    client.responsePipeline.intercept(beforeTransformPipelinePhase) { container ->
         if (requestContentIsNetworkFailureLocal) return@intercept
         if (requestContentIsNetworkFailureRemote) return@intercept
         if (!isNetworkEither) return@intercept
@@ -39,7 +39,7 @@ internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(sc
         }
     }
 
-    scope.responsePipeline.intercept(HttpResponsePipeline.Transform) {
+    client.responsePipeline.intercept(HttpResponsePipeline.Transform) {
         val failure =
             when {
                 requestContentIsNetworkFailureLocal -> {
