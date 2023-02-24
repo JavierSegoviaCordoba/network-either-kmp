@@ -6,9 +6,14 @@
   "linter": "QDJVMC",
   "attributes": {
     "vcs": {
-      "sarifIdea": {}
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/JavierSegoviaCordoba/network-either-kmp.git",
+        "revisionId": "180c808520f88e2deaba20e123fa0324780047d7",
+        "branch": "main"
+      }
     },
     "deviceId": "200820300000000-941b-f4ad-11ed-0b6f10ffa7fe",
-    "jobUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp/actions/runs/4224011224"
+    "jobUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp/actions/runs/4265307327",
+    "repoUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp.git"
   }
 }
