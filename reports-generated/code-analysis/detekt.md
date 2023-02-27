@@ -14,11 +14,11 @@
 
 ## Complexity Report
 
-* 2,835 lines of code (loc)
+* 2,848 lines of code (loc)
 
-* 2,351 source lines of code (sloc)
+* 2,364 source lines of code (sloc)
 
-* 1,615 logical lines of code (lloc)
+* 1,624 logical lines of code (lloc)
 
 * 36 comment lines of code (cloc)
 
@@ -30,7 +30,7 @@
 
 * 1% comment source ratio
 
-* 185 mcc per 1,000 lloc
+* 184 mcc per 1,000 lloc
 
 * 16 code smells per 1,000 lloc
 
@@ -439,4 +439,4 @@ In most cases using a spread operator causes a full copy of the array to be crea
 
 ```
 
-generated with [detekt version 1.22.0](https://detekt.dev/) on 2023-02-27 12:18:30 UTC
+generated with [detekt version 1.22.0](https://detekt.dev/) on 2023-02-27 12:43:32 UTC
