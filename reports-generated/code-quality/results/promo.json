@@ -1,1 +1,57 @@
-{"version":"3","listProblem":[]}
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Property \"DnsTimeout\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/internal/Constants.kt",
+      "language": "kotlin",
+      "line": 4,
+      "offset": 15,
+      "length": 10,
+      "code": {
+        "startLine": 2,
+        "length": 10,
+        "offset": 43,
+        "surroundingCode": "\ninternal object Constants {\n    const val DnsTimeout = 2000\n    const val DnsUrl = \"https://8.8.8.8/\"\n    const val DnsPort = 53"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "a2db3069231bffeca77f5dca7771f0c21494bd480e50ac0ad1bd5b37c26dab7d"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Property \"DnsPort\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/common/main/kotlin/com/javiersc/network/either/internal/Constants.kt",
+      "language": "kotlin",
+      "line": 6,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 4,
+        "length": 7,
+        "offset": 88,
+        "surroundingCode": "    const val DnsTimeout = 2000\n    const val DnsUrl = \"https://8.8.8.8/\"\n    const val DnsPort = 53\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either.commonMain",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "7004b7ba0fc99b467debf2e7e4c210ec164021456b6f4b8922ddda3997d3d301"
+}]}

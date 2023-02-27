@@ -169,15 +169,15 @@
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm/1.4.1/e6430b33f06dcdff88998abfcb2e78bc3cd0a1f6/kotlinx-serialization-json-jvm-1.4.1.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm/1.5.0/f2355f60f5c027da0326c8af2d9c724d39aa0ce9/kotlinx-serialization-json-jvm-1.5.0.jar!/"
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+      "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.4.1/e0c2c11e5d0d541ca343c8f09602c0c2287d15a1/kotlinx-serialization-core-jvm-1.4.1.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.5.0/d701e8cccd443a7cc1a0bcac53432f2745dcdbda/kotlinx-serialization-core-jvm-1.5.0.jar!/"
       ]
     },
     {

@@ -1,0 +1,253 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PipelineContextExtensionsKt</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.javiersc.network.either.ktor._internal</a>
+</div>
+
+<h1>Coverage Summary for Class: PipelineContextExtensionsKt (com.javiersc.network.either.ktor._internal)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+<th class="coverageStat 
+">
+  Instruction, %
+</th>
+</tr>
+<tr>
+  <td class="name">PipelineContextExtensionsKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (18/18)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    60.7%
+  </span>
+  <span class="absValue">
+    (34/56)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    84%
+  </span>
+  <span class="absValue">
+    (42/50)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    83%
+  </span>
+  <span class="absValue">
+    (258/311)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;@file:Suppress(&quot;MagicNumber&quot;)
+&nbsp;
+&nbsp;package com.javiersc.network.either.ktor._internal
+&nbsp;
+&nbsp;import com.javiersc.kotlin.stdlib.secondOrNull
+&nbsp;import com.javiersc.network.either.NetworkEither
+&nbsp;import io.ktor.client.call.HttpClientCall
+&nbsp;import io.ktor.client.statement.HttpResponseContainer
+&nbsp;import io.ktor.util.pipeline.PipelineContext
+&nbsp;import io.ktor.util.reflect.Type
+&nbsp;import io.ktor.util.reflect.TypeInfo
+&nbsp;import io.ktor.util.reflect.platformType
+&nbsp;import kotlin.reflect.KClass
+&nbsp;import kotlin.reflect.KClassifier
+&nbsp;import kotlin.reflect.KType
+&nbsp;import kotlin.reflect.typeOf
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.networkEitherTypeInfo: TypeInfo
+&nbsp;    get() {
+<b class="fc">&nbsp;        val typeInfo =</b>
+<b class="fc">&nbsp;            when (context.response.status.value) {</b>
+<b class="pc">&nbsp;                in SUCCESS_RANGE -&gt; successTypeInfo</b>
+<b class="pc">&nbsp;                in ERROR_RANGE -&gt; failureTypeInfo</b>
+<b class="nc">&nbsp;                else -&gt; null</b>
+&nbsp;            }
+<b class="pc">&nbsp;        return checkNotNull(typeInfo) { &quot;TypeInfo must not be null, this should not be happening&quot; }</b>
+&nbsp;    }
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.failureTypeInfo: TypeInfo?
+&nbsp;    get() =
+<b class="pc">&nbsp;        if (isNetworkEither) {</b>
+<b class="fc">&nbsp;            val failureKotlinType: KType =</b>
+<b class="pc">&nbsp;                checkNotNull(subject.expectedType.kotlinType?.arguments?.firstOrNull()?.type)</b>
+<b class="fc">&nbsp;            val failureType: KClass&lt;*&gt; = failureKotlinType.classifier as KClass&lt;*&gt;</b>
+<b class="fc">&nbsp;            val failureReifiedType: Type = failureKotlinType.platformType</b>
+&nbsp;
+<b class="fc">&nbsp;            TypeInfo(</b>
+<b class="fc">&nbsp;                type = failureType,</b>
+<b class="fc">&nbsp;                reifiedType = failureReifiedType,</b>
+<b class="fc">&nbsp;                kotlinType = failureKotlinType,</b>
+&nbsp;            )
+<b class="nc">&nbsp;        } else null</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.successTypeInfo: TypeInfo?
+&nbsp;    get() =
+<b class="pc">&nbsp;        if (isNetworkEither) {</b>
+<b class="fc">&nbsp;            val successKotlinType: KType =</b>
+<b class="pc">&nbsp;                checkNotNull(subject.expectedType.kotlinType?.arguments?.secondOrNull()?.type)</b>
+<b class="fc">&nbsp;            val successType: KClass&lt;*&gt; = successKotlinType.classifier as KClass&lt;*&gt;</b>
+<b class="fc">&nbsp;            val successReifiedType: Type = successKotlinType.platformType</b>
+&nbsp;
+<b class="fc">&nbsp;            TypeInfo(</b>
+<b class="fc">&nbsp;                type = successType,</b>
+<b class="fc">&nbsp;                reifiedType = successReifiedType,</b>
+<b class="fc">&nbsp;                kotlinType = successKotlinType,</b>
+&nbsp;            )
+<b class="nc">&nbsp;        } else null</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.isNetworkEither: Boolean
+&nbsp;    get() =
+<b class="fc">&nbsp;        (kClassifier == networkEitherKClassifier) ||</b>
+<b class="fc">&nbsp;            isNetworkEitherFailure ||</b>
+<b class="pc">&nbsp;            isNetworkEitherSuccess ||</b>
+<b class="fc">&nbsp;            isNetworkEitherFailureLocal ||</b>
+<b class="fc">&nbsp;            isNetworkEitherFailureRemote</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.isNetworkEitherFailureLocal:
+&nbsp;    Boolean
+<b class="fc">&nbsp;    get() = kClassifier == networkEitherFailureLocalKClassifier</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.isNetworkEitherFailureRemote:
+&nbsp;    Boolean
+<b class="fc">&nbsp;    get() = kClassifier == networkEitherFailureRemoteKClassifier</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.isNetworkEitherFailure: Boolean
+<b class="fc">&nbsp;    get() = kClassifier == networkEitherFailureKClassifier</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.isNetworkEitherSuccess: Boolean
+<b class="fc">&nbsp;    get() = kClassifier == networkEitherSuccessKClassifier</b>
+&nbsp;
+&nbsp;internal val networkEitherFailureLocalKClassifier: KClassifier
+&nbsp;    get() =
+<b class="pc">&nbsp;        checkNotNull(typeOf&lt;NetworkEither.Failure.Local&gt;().classifier) {</b>
+<b class="nc">&nbsp;            &quot;`NetworkEither.Failure.Local should be denotable in Kotlin&quot;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;internal val networkEitherFailureRemoteKClassifier: KClassifier
+&nbsp;    get() =
+<b class="pc">&nbsp;        checkNotNull(typeOf&lt;NetworkEither.Failure.Remote&gt;().classifier) {</b>
+<b class="nc">&nbsp;            &quot;`NetworkEither.Failure.Local should be denotable in Kotlin&quot;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;internal val networkEitherFailureKClassifier: KClassifier
+&nbsp;    get() =
+<b class="pc">&nbsp;        checkNotNull(typeOf&lt;NetworkEither.Failure&lt;*&gt;&gt;().classifier) {</b>
+<b class="nc">&nbsp;            &quot;`NetworkEither.Failure should be denotable in Kotlin&quot;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;internal val networkEitherSuccessKClassifier: KClassifier
+&nbsp;    get() =
+<b class="pc">&nbsp;        checkNotNull(typeOf&lt;NetworkEither.Success&lt;*&gt;&gt;().classifier) {</b>
+<b class="nc">&nbsp;            &quot;`NetworkEither.Failure should be denotable in Kotlin&quot;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;internal val networkEitherKClassifier: KClassifier
+&nbsp;    get() =
+<b class="pc">&nbsp;        checkNotNull(typeOf&lt;NetworkEither&lt;*, *&gt;&gt;().classifier) {</b>
+<b class="nc">&nbsp;            &quot;`NetworkEither should be denotable in Kotlin&quot;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;internal val PipelineContext&lt;HttpResponseContainer, HttpClientCall&gt;.kClassifier: KClassifier?
+<b class="pc">&nbsp;    get() = subject.expectedType.kotlinType?.classifier</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;
+&nbsp;    HttpResponseContainer, HttpClientCall
+&nbsp;&gt;.requestContentIsNetworkFailureLocal: Boolean
+<b class="fc">&nbsp;    get() = context.request.content is LocalErrorOutgoing</b>
+&nbsp;
+&nbsp;internal val PipelineContext&lt;
+&nbsp;    HttpResponseContainer, HttpClientCall
+&nbsp;&gt;.requestContentIsNetworkFailureRemote: Boolean
+<b class="fc">&nbsp;    get() = context.request.content is RemoteErrorOutgoing</b>
+&nbsp;
+<b class="fc">&nbsp;internal val SUCCESS_RANGE: IntRange = 200..299</b>
+&nbsp;
+<b class="fc">&nbsp;internal val ERROR_RANGE: IntRange = 400..599</b>
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-02-27 12:19</div>
+</div>
+</body>
+</html>

@@ -178,11 +178,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -319,15 +319,15 @@
           "type": "Module"
         },
         {
+          "name": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.8.10",
           "type": "Library"
         },
         {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.8.10",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
           "type": "Library"
         },
         {
@@ -379,11 +379,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -392,10 +396,6 @@
         },
         {
           "name": "Gradle: junit:junit:4.13.2",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.10",
           "type": "Library"
         },
         {
@@ -443,11 +443,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.hamcrest:hamcrest-core:2.2",
+          "name": "Gradle: org.jetbrains:annotations:13.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "name": "Gradle: org.hamcrest:hamcrest-core:2.2",
           "type": "Library"
         },
         {
@@ -960,11 +960,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -1106,11 +1106,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10",
+          "name": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.8.10",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10",
           "type": "Library"
         },
         {
@@ -1118,15 +1118,15 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.8.10",
-          "type": "Library"
-        },
-        {
-          "name": "Gradle: com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.8.10",
           "type": "Library"
         },
         {
           "name": "Gradle: io.ktor:ktor-client-content-negotiation-jvm:2.2.3",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.8.10",
           "type": "Library"
         },
         {
@@ -1158,11 +1158,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -1206,11 +1206,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: junit:junit:4.13.2",
+          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.2.3",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.ktor:ktor-serialization-jvm:2.2.3",
+          "name": "Gradle: junit:junit:4.13.2",
           "type": "Library"
         },
         {
@@ -1737,11 +1737,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -1936,11 +1936,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -2157,11 +2157,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -2358,11 +2358,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -2593,11 +2593,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -2804,11 +2804,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -3029,11 +3029,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
@@ -3238,11 +3238,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.1",
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0",
           "type": "Library"
         },
         {
