@@ -8,12 +8,12 @@
     "vcs": {
       "sarifIdea": {
         "repositoryUri": "https://github.com/JavierSegoviaCordoba/network-either-kmp.git",
-        "revisionId": "4da2a79d868f59e5a0dc2e1c2d4cdb266e2ae338",
+        "revisionId": "f34b459a781bf3b65e76fe37d4eb4717debc1465",
         "branch": "main"
       }
     },
     "deviceId": "200820300000000-941b-f4ad-11ed-0b6f10ffa7fe",
-    "jobUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp/actions/runs/4282472973",
+    "jobUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp/actions/runs/4332729017",
     "repoUrl": "https://github.com/JavierSegoviaCordoba/network-either-kmp.git"
   }
 }
