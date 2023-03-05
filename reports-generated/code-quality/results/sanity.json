@@ -11,7 +11,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/network-resource-either-extensions/build.gradle.kts",
+      "path": "subprojects/resource-either/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -25,72 +25,10 @@
     }
   ],
   "attributes": {
-    "module": "network-either-kmp.subprojects.network-resource-either-extensions",
+    "module": "network-either-kmp.subprojects.resource-either",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "bdc99133fa5d7860b738bca26a73d19b2359ab595df151fc01630cd1f29f3e6b"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "subprojects/network-either/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp.subprojects.network-either",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "c82bad7b21b7441d51252b728cca324e4b397890fec06797ffacb06c37702630"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
-      "path": "build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "network-either-kmp",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "8a1e1fc5bb0123b33da5c8cd8f4bae0815cf2b06ac6207fc991fca3f5a092626"
+  "hash": "001c17e3c985c4ac39d6cc317774f6e74bc075f648d10fe81d7ab09b4517d65d"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -135,7 +73,7 @@
   "sources": [
     {
       "type": "file",
-      "path": "subprojects/resource-either/build.gradle.kts",
+      "path": "build.gradle.kts",
       "language": "kotlin",
       "line": 2,
       "offset": 11,
@@ -149,8 +87,70 @@
     }
   ],
   "attributes": {
-    "module": "network-either-kmp.subprojects.resource-either",
+    "module": "network-either-kmp",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "001c17e3c985c4ac39d6cc317774f6e74bc075f648d10fe81d7ab09b4517d65d"
+  "hash": "8a1e1fc5bb0123b33da5c8cd8f4bae0815cf2b06ac6207fc991fca3f5a092626"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-either/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 11,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-either",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "c82bad7b21b7441d51252b728cca324e4b397890fec06797ffacb06c37702630"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "subprojects/network-resource-either-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 11,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "network-either-kmp.subprojects.network-resource-either-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "bdc99133fa5d7860b738bca26a73d19b2359ab595df151fc01630cd1f29f3e6b"
 }]}
