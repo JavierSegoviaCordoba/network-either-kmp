@@ -19,13 +19,13 @@ hubdle {
                     dependencies {
                         api(projects.subprojects.networkEither)
                         api(projects.subprojects.resourceEither)
-                        api(ktorClientCore())
+                        api(hubdle.ktor.ktorClientCore)
                     }
                 }
 
                 test {
                     dependencies {
-                        implementation(ktorClientMock())
+                        implementation(hubdle.ktor.ktorClientMock)
                     }
                 }
             }

@@ -17,7 +17,7 @@ hubdle {
                 main {
                     dependencies {
                         implementation(projects.subprojects.networkEither)
-                        api(javierscMokokiSerialization())
+                        api(hubdle.javiersc.mokoki.mokokiSerialization)
                     }
                 }
             }
