@@ -15,7 +15,7 @@ hubdle {
             common {
                 main {
                     dependencies {
-                        implementation(arrowKtArrowCore())
+                        implementation(hubdle.arrowKt.arrowCore)
                     }
                 }
             }
