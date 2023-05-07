@@ -29,6 +29,7 @@ internal fun PipelineContext<Any, HttpRequestBuilder>.fakeHttpFailureClientCall(
                         attributes.put(AttributeKey("ExpectSuccessAttributeKey"), false)
                     }
                     .build()
+
             init {
                 request = DefaultHttpRequest(this, httpRequestData)
                 response = DefaultHttpResponse(this, responseData)
@@ -51,6 +52,7 @@ internal fun PipelineContext<Any, HttpRequestBuilder>.fakeLocalFailureClientCall
                         attributes.put(AttributeKey("ExpectSuccessAttributeKey"), false)
                     }
                     .build()
+
             init {
                 request = DefaultHttpRequest(this, httpRequestData)
                 response = DefaultHttpResponse(this, responseData)
