@@ -28,7 +28,6 @@ import io.ktor.serialization.kotlinx.json.json
 import io.ktor.utils.io.errors.IOException
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
-import kotlinx.serialization.SerializationException
 
 internal class KtorTest {
 
@@ -142,7 +141,7 @@ internal class KtorTest {
     fun `call malformed json`() = runTest {
         val code = 200
         val expected: NetworkEither<ErrorDTO, DogDTO> =
-            NetworkEither.unknownFailure(SerializationException("Unexpected JSON token at offset"))
+            NetworkEither.unknownFailure(Exception("Expected end of the object"))
         val actual: NetworkEither<ErrorDTO, DogDTO> = client.get("dog/malformed/$code").body()
         actual
             .shouldBeTypeOf<NetworkFailureUnknown>()

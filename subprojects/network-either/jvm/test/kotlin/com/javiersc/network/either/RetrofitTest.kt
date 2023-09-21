@@ -22,7 +22,6 @@ import io.kotest.matchers.types.shouldBeTypeOf
 import io.kotest.property.checkAll
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
-import kotlinx.serialization.SerializationException
 import org.mockserver.integration.ClientAndServer
 import org.mockserver.model.HttpRequest
 
@@ -126,7 +125,7 @@ internal class RetrofitTest {
 
         val service = DogService.getService(port)
         val expected: NetworkEither<ErrorDTO, DogDTO> =
-            unknownFailure(SerializationException("Unexpected JSON token at offset"))
+            unknownFailure(Exception("Expected end of the object"))
         service
             .getDog(code)
             .shouldBeTypeOf<NetworkFailureUnknown>()
