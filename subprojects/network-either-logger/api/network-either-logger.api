@@ -1,6 +1,5 @@
 public final class com/javiersc/network/either/logger/Response {
 	public static final field Companion Lcom/javiersc/network/either/logger/Response$Companion;
-	public synthetic fun <init> (ILjava/lang/Object;ILjava/util/Map;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
 	public fun <init> (Ljava/lang/Object;ILjava/util/Map;)V
 	public final fun component1 ()Ljava/lang/Object;
 	public final fun component2 ()I
@@ -13,7 +12,6 @@ public final class com/javiersc/network/either/logger/Response {
 	public final fun getHeaders ()Ljava/util/Map;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final synthetic fun write$Self (Lcom/javiersc/network/either/logger/Response;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlinx/serialization/KSerializer;)V
 }
 
 public final class com/javiersc/network/either/logger/Response$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
