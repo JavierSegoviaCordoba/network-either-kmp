@@ -24,18 +24,18 @@ hubdle {
             common {
                 main {
                     dependencies {
-                        api(hubdle.arrowKt.arrowCore)
-                        api(hubdle.ktor.ktorClientCore)
-                        api(hubdle.ktor.ktorClientContentNegotiation)
-                        api(hubdle.ktor.ktorSerializationKotlinxJson)
-                        implementation(hubdle.javiersc.kotlinx.coroutinesRunBlocking)
+                        api(hubdle.arrow.kt.arrow.core)
+                        api(hubdle.ktor.client.core)
+                        api(hubdle.ktor.client.content.negotiation)
+                        api(hubdle.ktor.serialization.kotlinx.json)
+                        implementation(hubdle.javiersc.kotlinx.coroutines.run.blocking)
                     }
                 }
 
                 test {
                     dependencies {
-                        implementation(hubdle.ktor.ktorClientMock)
-                        implementation(hubdle.squareup.okio.okio)
+                        implementation(hubdle.ktor.client.mock)
+                        implementation(hubdle.squareup.okio)
                     }
                 }
             }
@@ -43,7 +43,7 @@ hubdle {
             jvm {
                 main {
                     dependencies {
-                        api(hubdle.ktor.ktorClientCio)
+                        api(hubdle.ktor.client.cio)
                         api(hubdle.squareup.okhttp3.okhttp)
                         api(hubdle.squareup.retrofit2.retrofit)
                     }
@@ -51,9 +51,9 @@ hubdle {
 
                 test {
                     dependencies {
-                        implementation(hubdle.squareup.retrofit2.converterKotlinxSerialization)
-                        implementation(hubdle.kotest.extensions.kotestExtensionsMockserver)
-                        implementation(hubdle.kotest.kotestProperty)
+                        implementation(hubdle.squareup.retrofit2.converter.kotlinx.serialization)
+                        implementation(hubdle.kotest.extensions.kotest.extensions.mockserver)
+                        implementation(hubdle.kotest.property)
                     }
                 }
             }
