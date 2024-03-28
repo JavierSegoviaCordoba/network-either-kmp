@@ -1,6 +1,5 @@
 package com.javiersc.network.either._config
 
-import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.javiersc.network.either.NetworkEither
 import com.javiersc.network.either.NetworkEitherCallAdapterFactory
 import com.javiersc.network.either._config.models.DogDTO
@@ -11,6 +10,7 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.converter.kotlinx.serialization.asConverterFactory
 import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Path
