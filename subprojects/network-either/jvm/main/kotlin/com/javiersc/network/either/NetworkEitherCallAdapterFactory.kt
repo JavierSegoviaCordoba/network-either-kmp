@@ -37,16 +37,10 @@ public class NetworkEitherCallAdapterFactory(
         return when (getRawType(returnType)) {
             Deferred::class.java ->
                 NetworkEitherDeferredCallAdapter<Any, Any>(
-                    successBodyType,
-                    errorBodyConverter,
-                    isNetworkAvailable
-                )
+                    successBodyType, errorBodyConverter, isNetworkAvailable)
             Call::class.java ->
                 NetworkEitherSuspendCallAdapter<Any, Any>(
-                    successBodyType,
-                    errorBodyConverter,
-                    isNetworkAvailable
-                )
+                    successBodyType, errorBodyConverter, isNetworkAvailable)
             else -> null
         }
     }

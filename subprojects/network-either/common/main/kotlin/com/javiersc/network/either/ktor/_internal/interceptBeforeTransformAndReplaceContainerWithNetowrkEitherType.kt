@@ -16,9 +16,7 @@ import kotlin.reflect.typeOf
 internal fun interceptBeforeTransformAndReplaceContainerWithNetworkEitherType(client: HttpClient) {
     val beforeTransformPipelinePhase = PipelinePhase("NetworkEitherBeforeTransform")
     client.responsePipeline.insertPhaseBefore(
-        HttpResponsePipeline.Transform,
-        beforeTransformPipelinePhase
-    )
+        HttpResponsePipeline.Transform, beforeTransformPipelinePhase)
     client.responsePipeline.intercept(beforeTransformPipelinePhase) { container ->
         if (requestContentIsNetworkFailureLocal) return@intercept
         if (requestContentIsNetworkFailureRemote) return@intercept
