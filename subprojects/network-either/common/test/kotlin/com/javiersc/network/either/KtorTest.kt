@@ -48,16 +48,14 @@ internal class KtorTest {
                             respond(
                                 content = readResource("malformed.json"),
                                 status = code.toHttpStatusCode("Custom HttpStatusCode"),
-                                headers = headersOf(*headers.toList().toTypedArray())
-                            )
+                                headers = headersOf(*headers.toList().toTypedArray()))
                         }
                         "/dog/$code" -> {
                             checkNotNull(code) { "Code must not be null at this point" }
                             respond(
                                 content = readResource(code.toResourceJsonFile()),
                                 status = code.toHttpStatusCode("Custom HttpStatusCode"),
-                                headers = headersOf(*headers(code).toList().toTypedArray())
-                            )
+                                headers = headersOf(*headers(code).toList().toTypedArray()))
                         }
                         else -> error("Unhandled ${request.url}")
                     }
@@ -118,8 +116,7 @@ internal class KtorTest {
                         respond(
                             content = readResource(code.toResourceJsonFile()),
                             status = code.toHttpStatusCode("Custom HttpStatusCode"),
-                            headers = headersOf(*headers(code).toList().toTypedArray())
-                        )
+                            headers = headersOf(*headers(code).toList().toTypedArray()))
                     }
                 }
             }

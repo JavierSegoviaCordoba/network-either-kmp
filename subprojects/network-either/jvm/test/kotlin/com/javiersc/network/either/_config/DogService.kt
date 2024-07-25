@@ -49,8 +49,8 @@ internal interface DogService {
                     baseUrl("http://localhost:$port/")
                     client(okHttpClient(timeoutMillis))
                     addCallAdapterFactory(
-                        NetworkEitherCallAdapterFactory(isNetworkAvailable = { isNetworkAvailable })
-                    )
+                        NetworkEitherCallAdapterFactory(
+                            isNetworkAvailable = { isNetworkAvailable }))
                     addConverterFactory(converter)
                 }
                 .build()

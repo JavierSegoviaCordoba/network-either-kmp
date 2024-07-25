@@ -45,8 +45,7 @@ private fun <F, S> handleNullBody(
                | # NetworkResponse should use Unit as Success type when body is null #
                | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
-                .trimMargin()
-        )
+                .trimMargin())
         deferred.complete(unknownFailure(e))
     }
 }
@@ -66,8 +65,7 @@ private fun <F, S> handleNullErrorBody(
                | # NetworkResponse should use Unit as Error type when body is null #
                | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
-                .trimMargin()
-        )
+                .trimMargin())
         deferred.complete(unknownFailure(e))
     }
 }

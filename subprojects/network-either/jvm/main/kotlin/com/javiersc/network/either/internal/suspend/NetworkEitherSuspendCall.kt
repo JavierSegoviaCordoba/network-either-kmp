@@ -37,10 +37,7 @@ internal class NetworkEitherSuspendCall<F : Any, S : Any>(
                 object : Callback<S> {
                     override fun onResponse(call: Call<S>, response: Response<S>) {
                         response.responseSuspendHandler(
-                            errorConverter,
-                            this@NetworkEitherSuspendCall,
-                            callback
-                        )
+                            errorConverter, this@NetworkEitherSuspendCall, callback)
                     }
 
                     override fun onFailure(call: Call<S>, throwable: Throwable) {
@@ -73,8 +70,7 @@ internal class NetworkEitherSuspendCall<F : Any, S : Any>(
                             }
                         }
                     }
-                }
-            )
+                })
         }
 
     override fun isExecuted(): Boolean = synchronized(this) { backingCall.isExecuted }
@@ -105,8 +101,7 @@ private fun <F, S> Call<NetworkEither<F, S>>.onEOFException(
            | # the headers are lost. The type should be Unit.                        #
            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         """
-            .trimMargin()
-    )
+            .trimMargin())
 
     @Suppress("UNCHECKED_CAST")
     try {
@@ -119,8 +114,7 @@ private fun <F, S> Call<NetworkEither<F, S>>.onEOFException(
                | # NetworkResponse should use Unit as Success type when body is null #
                | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
-                .trimMargin()
-        )
+                .trimMargin())
         callback.onResponse(this, Response.success(unknownFailure(e)))
     }
 }
@@ -135,8 +129,7 @@ private fun <F, S> Call<NetworkEither<F, S>>.onIllegalStateException(
            | # Response body can't be serialized with the object provided  #
            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         """
-            .trimMargin()
-    )
+            .trimMargin())
     callback.onResponse(this, Response.success(unknownFailure(throwable)))
 }
 
@@ -147,8 +140,7 @@ private fun <F : Any, S : Any> NetworkEitherSuspendCall<F, S>.onCommonConnection
     callback.onResponse(
         this,
         if (isNetworkAvailable) Response.success(remoteFailure())
-        else Response.success(localFailure())
-    )
+        else Response.success(localFailure()))
 }
 
 private fun <F : Any, S : Any> NetworkEitherSuspendCall<F, S>.onHttpException(
