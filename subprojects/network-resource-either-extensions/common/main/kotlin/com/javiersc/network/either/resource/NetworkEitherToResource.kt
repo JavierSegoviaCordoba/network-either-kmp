@@ -56,7 +56,7 @@ public inline fun <NF, NS, F, S> NetworkEither<NF, NS>.toResource(
     remoteError: () -> F,
     unknownError: (Throwable) -> F,
     success: (NetworkEither.Success<NS>) -> S,
-    isLoading: Boolean = false
+    isLoading: Boolean = false,
 ): ResourceEither<F, S> =
     when (this) {
         is Failure.Http -> resourceFailure(httpError(this), null, isLoading)

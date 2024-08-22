@@ -11,7 +11,7 @@ import retrofit2.HttpException
 
 internal fun <F : Any, S : Any> HttpException.httpExceptionDeferredHandler(
     errorConverter: Converter<ResponseBody, F>,
-    deferred: CompletableDeferred<NetworkEither<F, S>>
+    deferred: CompletableDeferred<NetworkEither<F, S>>,
 ) {
     val errorBody: F? = response()?.errorBody()?.let(errorConverter::convert)
     handleDeferred(deferred, httpStatusCode.value, body = null, errorBody, headers.toMap())
