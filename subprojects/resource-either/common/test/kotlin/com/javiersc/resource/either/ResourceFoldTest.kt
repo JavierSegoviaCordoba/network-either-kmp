@@ -100,19 +100,13 @@ internal class ResourceFoldTest {
         val failureResource: ResourceEither<Int, Int> = resourceFailure(success, failure, true)
 
         failureResource
-            .toEither(
-                failure = { "ERROR" },
-                success = { "SUCCESS" },
-            )
+            .toEither(failure = { "ERROR" }, success = { "SUCCESS" })
             .shouldBe(Either.Left("ERROR"))
 
         val successResource: ResourceEither<Int, Int> = resourceSuccess(success, true)
 
         successResource
-            .toEither(
-                failure = { "ERROR" },
-                success = { "SUCCESS" },
-            )
+            .toEither(failure = { "ERROR" }, success = { "SUCCESS" })
             .shouldBe(Either.Right("SUCCESS"))
     }
 }

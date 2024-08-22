@@ -49,7 +49,8 @@ private fun <F : Any, S : Any> handleNullBody(
                | # NetworkResponse should use Unit as Success type when body is null #
                | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
-                .trimMargin())
+                .trimMargin()
+        )
         callback.onResponse(call, Response.success(unknownFailure(e)))
     }
 }
@@ -64,7 +65,8 @@ private fun <F : Any, S : Any> handleNullErrorBody(
            | # NetworkResponse should use Unit as Error type when body is null # 
            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
         """
-            .trimMargin())
+            .trimMargin()
+    )
     val classCastException =
         ClassCastException("NetworkResponse should use Unit as Error type when body is null")
     callback.onResponse(call, Response.success(unknownFailure(classCastException)))

@@ -18,23 +18,19 @@ import retrofit2.http.Path
 internal interface DogService {
 
     @GET("dog/{testNumber}")
-    suspend fun getDog(
-        @Path("testNumber") testNumber: Int,
-    ): NetworkEither<ErrorDTO, DogDTO>
+    suspend fun getDog(@Path("testNumber") testNumber: Int): NetworkEither<ErrorDTO, DogDTO>
 
     @GET("dog/{testNumber}")
-    fun getDogAsync(
-        @Path("testNumber") testNumber: Int,
-    ): Deferred<NetworkEither<ErrorDTO, DogDTO>>
+    fun getDogAsync(@Path("testNumber") testNumber: Int): Deferred<NetworkEither<ErrorDTO, DogDTO>>
 
     @GET("dog/{testNumber}")
     suspend fun getDogWithoutBody(
-        @Path("testNumber") testNumber: Int,
+        @Path("testNumber") testNumber: Int
     ): NetworkEither<ErrorDTO, Unit>
 
     @GET("dog/{testNumber}")
     fun getDogWithoutBodyAsync(
-        @Path("testNumber") testNumber: Int,
+        @Path("testNumber") testNumber: Int
     ): Deferred<NetworkEither<ErrorDTO, Unit>>
 
     companion object {
@@ -42,15 +38,15 @@ internal interface DogService {
         fun getService(
             port: Int,
             isNetworkAvailable: Boolean = true,
-            timeoutMillis: Long = 200
+            timeoutMillis: Long = 200,
         ): DogService =
             Retrofit.Builder()
                 .apply {
                     baseUrl("http://localhost:$port/")
                     client(okHttpClient(timeoutMillis))
                     addCallAdapterFactory(
-                        NetworkEitherCallAdapterFactory(
-                            isNetworkAvailable = { isNetworkAvailable }))
+                        NetworkEitherCallAdapterFactory(isNetworkAvailable = { isNetworkAvailable })
+                    )
                     addConverterFactory(converter)
                 }
                 .build()

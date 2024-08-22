@@ -64,7 +64,8 @@ internal fun <F : Any, S : Any> deferredAdapt(
                     }
                 }
             }
-        })
+        }
+    )
     return deferred
 }
 
@@ -77,7 +78,8 @@ private fun <F, S> onEOFException(deferred: CompletableDeferred<NetworkEither<F,
            | # the headers are lost. The type should be Unit.                        #
            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         """
-            .trimMargin())
+            .trimMargin()
+    )
 
     @Suppress("UNCHECKED_CAST")
     try {
@@ -90,14 +92,15 @@ private fun <F, S> onEOFException(deferred: CompletableDeferred<NetworkEither<F,
                | # NetworkResponse should use Unit as Success type when body is null #
                | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
-                .trimMargin())
+                .trimMargin()
+        )
         deferred.complete(unknownFailure(e))
     }
 }
 
 private fun <F, S> onIllegalStateException(
     deferred: CompletableDeferred<NetworkEither<F, S>>,
-    throwable: Throwable
+    throwable: Throwable,
 ) {
     printlnError(
         """
@@ -105,13 +108,14 @@ private fun <F, S> onIllegalStateException(
            | # Response body can't be serialized with the object provided  #
            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         """
-            .trimMargin())
+            .trimMargin()
+    )
     deferred.complete(unknownFailure(throwable))
 }
 
 private fun <F, S> onCommonConnectionException(
     deferred: CompletableDeferred<NetworkEither<F, S>>,
-    isNetworkAvailable: Boolean
+    isNetworkAvailable: Boolean,
 ) {
     deferred.complete(if (isNetworkAvailable) remoteFailure() else localFailure())
 }

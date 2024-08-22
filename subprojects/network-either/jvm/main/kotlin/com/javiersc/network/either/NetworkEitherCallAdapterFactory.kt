@@ -17,7 +17,7 @@ public class NetworkEitherCallAdapterFactory(
     override fun get(
         returnType: Type,
         annotations: Array<Annotation>,
-        retrofit: Retrofit
+        retrofit: Retrofit,
     ): CallAdapter<*, *>? {
         check(returnType is ParameterizedType) {
             "$returnType must be parameterized. Raw types are not supported"
@@ -37,10 +37,16 @@ public class NetworkEitherCallAdapterFactory(
         return when (getRawType(returnType)) {
             Deferred::class.java ->
                 NetworkEitherDeferredCallAdapter<Any, Any>(
-                    successBodyType, errorBodyConverter, isNetworkAvailable)
+                    successBodyType,
+                    errorBodyConverter,
+                    isNetworkAvailable,
+                )
             Call::class.java ->
                 NetworkEitherSuspendCallAdapter<Any, Any>(
-                    successBodyType, errorBodyConverter, isNetworkAvailable)
+                    successBodyType,
+                    errorBodyConverter,
+                    isNetworkAvailable,
+                )
             else -> null
         }
     }

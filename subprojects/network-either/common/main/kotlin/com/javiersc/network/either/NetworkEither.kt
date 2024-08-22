@@ -9,11 +9,8 @@ public sealed class NetworkEither<out F, out S> {
 
     public sealed class Failure<out F> : NetworkEither<F, Nothing>() {
 
-        public data class Http<out F>(
-            val error: F,
-            val code: Int,
-            val headers: Headers,
-        ) : Failure<F>()
+        public data class Http<out F>(val error: F, val code: Int, val headers: Headers) :
+            Failure<F>()
 
         public object Local : Failure<Nothing>()
 
@@ -22,16 +19,10 @@ public sealed class NetworkEither<out F, out S> {
         public data class Unknown(val throwable: Throwable) : Failure<Nothing>()
     }
 
-    public data class Success<out S>(
-        val data: S,
-        val code: Int,
-        val headers: Headers,
-    ) : NetworkEither<Nothing, S>()
+    public data class Success<out S>(val data: S, val code: Int, val headers: Headers) :
+        NetworkEither<Nothing, S>()
 
-    public inline fun <A> fold(
-        failure: () -> A,
-        success: (S) -> A,
-    ): A =
+    public inline fun <A> fold(failure: () -> A, success: (S) -> A): A =
         when (this) {
             is Failure.Http<F> -> failure()
             is Failure.Local -> failure()
@@ -168,7 +159,7 @@ public sealed class NetworkEither<out F, out S> {
         public fun <F> httpFailure(
             error: F,
             code: Int,
-            headers: Headers
+            headers: Headers,
         ): NetworkEither<F, Nothing> = Failure.Http(error, code, headers)
 
         public fun buildLocalFailure(): Failure.Local = Failure.Local
