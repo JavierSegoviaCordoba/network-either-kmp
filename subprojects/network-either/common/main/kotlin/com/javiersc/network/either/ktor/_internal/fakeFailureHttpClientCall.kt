@@ -15,7 +15,9 @@ import io.ktor.util.date.GMTDate
 import io.ktor.util.pipeline.PipelineContext
 import io.ktor.util.toMap
 import io.ktor.utils.io.ByteReadChannel
+import io.ktor.utils.io.InternalAPI
 
+@OptIn(InternalAPI::class)
 internal fun PipelineContext<Any, HttpRequestBuilder>.fakeHttpFailureClientCall(
     client: HttpClient
 ): HttpClientCall {
@@ -39,10 +41,10 @@ internal fun PipelineContext<Any, HttpRequestBuilder>.fakeHttpFailureClientCall(
     return call
 }
 
+@OptIn(InternalAPI::class)
 internal fun PipelineContext<Any, HttpRequestBuilder>.fakeLocalFailureClientCall(
     client: HttpClient
 ): HttpClientCall {
-    val responseData: HttpResponseData = failureHttpResponseData(LocalErrorOutgoing)
     val call: HttpClientCall =
         object : HttpClientCall(client) {
             val httpRequestData: HttpRequestData =
@@ -52,6 +54,7 @@ internal fun PipelineContext<Any, HttpRequestBuilder>.fakeLocalFailureClientCall
                         attributes.put(AttributeKey("ExpectSuccessAttributeKey"), false)
                     }
                     .build()
+            val responseData: HttpResponseData = failureHttpResponseData(LocalErrorOutgoing)
 
             init {
                 request = DefaultHttpRequest(this, httpRequestData)
