@@ -35,7 +35,7 @@ hubdle {
                 test {
                     dependencies {
                         implementation(hubdle.ktor.client.mock)
-                        implementation(hubdle.squareup.okio)
+                        implementation(hubdle.jetbrains.kotlinx.io.core)
                     }
                 }
             }
