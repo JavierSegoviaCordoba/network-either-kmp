@@ -12,7 +12,7 @@ import io.ktor.util.toMap
 import kotlin.test.Test
 import kotlinx.serialization.Serializable
 
-internal class NetworkEitherLoggerTest {
+class NetworkEitherLoggerTest {
 
     private val headers = headersOf("ContentType" to listOf("application/json")).toMap()
 

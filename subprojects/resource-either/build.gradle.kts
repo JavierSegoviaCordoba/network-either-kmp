@@ -2,11 +2,11 @@ hubdle {
     config {
         analysis()
         coverage()
-        documentation {
+        documentation { //
             api()
         }
         explicitApi()
-        languageSettings {
+        languageSettings { //
             experimentalContracts()
         }
         publishing()
@@ -15,13 +15,29 @@ hubdle {
         multiplatform {
             common {
                 main {
-                    dependencies {
+                    dependencies { //
                         implementation(hubdle.arrow.kt.arrow.core)
                     }
                 }
             }
 
             jvm()
+
+            js {
+                // browser()
+                nodejs()
+            }
+
+            linux {
+                // linuxArm64()
+                // linuxX64()
+            }
+
+            mingw { //
+                mingwX64()
+            }
+
+            native()
         }
     }
 }

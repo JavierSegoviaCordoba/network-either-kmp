@@ -11,7 +11,7 @@ import retrofit2.CallAdapter
 import retrofit2.Retrofit
 
 public class NetworkEitherCallAdapterFactory(
-    private val isNetworkAvailable: () -> Boolean = { internalIsNetworkAvailable }
+    private val isNetworkAvailable: suspend () -> Boolean = { internalIsNetworkAvailable() }
 ) : CallAdapter.Factory() {
 
     override fun get(

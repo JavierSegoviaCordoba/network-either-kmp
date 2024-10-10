@@ -5,6 +5,7 @@ import com.javiersc.network.either.NetworkEither.Companion.localFailure
 import com.javiersc.network.either.NetworkEither.Companion.remoteFailure
 import com.javiersc.network.either.NetworkEither.Companion.success
 import com.javiersc.network.either.NetworkEither.Companion.unknownFailure
+import com.javiersc.network.either.internal.backgroundCoroutineScope
 import com.javiersc.network.either.internal.hasBody
 import com.javiersc.network.either.internal.utils.emptyHeader
 import com.javiersc.network.either.internal.utils.printlnError
@@ -16,6 +17,7 @@ import java.io.InterruptedIOException
 import java.net.ConnectException
 import java.net.UnknownHostException
 import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.launch
 import kotlinx.serialization.SerializationException
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -27,7 +29,7 @@ import retrofit2.Response
 internal fun <F : Any, S : Any> deferredAdapt(
     call: Call<S>,
     errorConverter: Converter<ResponseBody, F>,
-    isNetworkAvailable: () -> Boolean,
+    isNetworkAvailable: suspend () -> Boolean,
 ): CompletableDeferred<NetworkEither<F, S>> {
     val deferred = CompletableDeferred<NetworkEither<F, S>>()
 
@@ -44,7 +46,7 @@ internal fun <F : Any, S : Any> deferredAdapt(
                     is UnknownHostException,
                     is ConnectException,
                     is InterruptedIOException -> {
-                        onCommonConnectionException(deferred, isNetworkAvailable())
+                        onCommonConnectionException(deferred, isNetworkAvailable)
                     }
                     is EOFException -> {
                         onEOFException(deferred)
@@ -115,9 +117,11 @@ private fun <F, S> onIllegalStateException(
 
 private fun <F, S> onCommonConnectionException(
     deferred: CompletableDeferred<NetworkEither<F, S>>,
-    isNetworkAvailable: Boolean,
+    isNetworkAvailable: suspend () -> Boolean,
 ) {
-    deferred.complete(if (isNetworkAvailable) remoteFailure() else localFailure())
+    backgroundCoroutineScope.launch {
+        deferred.complete(if (isNetworkAvailable()) remoteFailure() else localFailure())
+    }
 }
 
 private fun <F : Any, S : Any> onHttpException(

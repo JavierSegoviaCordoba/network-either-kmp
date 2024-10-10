@@ -4,7 +4,16 @@
 
 ### Added
 
+- `ios` support
+- `macos` support
+- `watchos` support
+- `tvos` support
+- `nodejs` support
+- `mingw` support
+
 ### Changed
+
+- `isNetworkAvailable` function to be `suspend`
 
 ### Deprecated
 
