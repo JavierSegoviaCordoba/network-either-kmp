@@ -1,10 +1,15 @@
 package com.javiersc.network.either._config
 
-import okio.Path
-import okio.Path.Companion.toPath
+import kotlinx.io.Source
+import kotlinx.io.buffered
+import kotlinx.io.files.Path
+import kotlinx.io.files.SystemFileSystem
+import kotlinx.io.readString
 
 internal fun readResource(file: String): String =
-    fileSystem.read("$resourcesFolderAbsolutePath/$file".toPath()) { readUtf8() }
+    SystemFileSystem.source(Path(resourcesFolderAbsolutePath, file))
+        .buffered()
+        .use(Source::readString)
 
 private val resourcesFolderAbsolutePath: Path
-    get() = fileSystem.canonicalize("./common/test/resources".toPath())
+    get() = SystemFileSystem.resolve(Path(path = "./common/test/resources"))
