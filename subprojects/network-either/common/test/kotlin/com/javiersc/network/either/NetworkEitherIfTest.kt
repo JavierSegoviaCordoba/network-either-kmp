@@ -9,7 +9,7 @@ import kotlin.test.Test
 class NetworkEitherIfTest {
 
     @Test
-    fun `if Failure`() {
+    fun if_Failure() {
         val expected: NetworkEither<String, String> =
             NetworkEither.httpFailure("error", 400, emptyHeader.toMap())
         var actual: NetworkEither<String, String>? = null
@@ -22,7 +22,7 @@ class NetworkEitherIfTest {
     }
 
     @Test
-    fun `if Failure Http`() {
+    fun if_Failure_Http() {
         val expected: NetworkEither<String, String> =
             NetworkEither.httpFailure("error", 400, emptyHeader.toMap())
         var actual: NetworkEither<String, String>? = null
@@ -34,7 +34,7 @@ class NetworkEitherIfTest {
     }
 
     @Test
-    fun `if Failure Local`() {
+    fun if_Failure_Local() {
         val expected: NetworkEither<String, String> = NetworkEither.localFailure()
         var actual: NetworkEither<String, String>? = null
 
@@ -43,7 +43,7 @@ class NetworkEitherIfTest {
     }
 
     @Test
-    fun `if Failure Remote`() {
+    fun if_Failure_Remote() {
         val expected: NetworkEither<String, String> = NetworkEither.remoteFailure()
         var actual: NetworkEither<String, String>? = null
 
@@ -52,7 +52,7 @@ class NetworkEitherIfTest {
     }
 
     @Test
-    fun `if Failure Unknown`() {
+    fun if_Failure_Unknown() {
         val expected: NetworkEither<String, String> =
             NetworkEither.unknownFailure(IllegalStateException("Error"))
         var actual: NetworkEither<String, String>? = null
@@ -62,7 +62,7 @@ class NetworkEitherIfTest {
     }
 
     @Test
-    fun `if Success`() {
+    fun if_Success() {
         val expected: NetworkEither<String, String> =
             NetworkEither.success("success", 200, emptyHeader.toMap())
         var actual: NetworkEither<String, String>? = null

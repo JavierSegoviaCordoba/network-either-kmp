@@ -10,7 +10,7 @@ import retrofit2.Converter
 internal class NetworkEitherSuspendCallAdapter<F : Any, S : Any>(
     private val successType: Type,
     private val errorBodyConverter: Converter<ResponseBody, F>,
-    private val isNetworkAvailable: () -> Boolean,
+    private val isNetworkAvailable: suspend () -> Boolean,
 ) : CallAdapter<S, Call<NetworkEither<F, S>>> {
 
     override fun responseType(): Type = successType

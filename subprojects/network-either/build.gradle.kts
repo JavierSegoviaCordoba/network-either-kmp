@@ -2,7 +2,7 @@ hubdle {
     config {
         analysis()
         coverage()
-        documentation {
+        documentation { //
             api()
         }
         explicitApi()
@@ -10,7 +10,6 @@ hubdle {
             experimentalContracts()
             experimentalCoroutinesApi()
             experimentalSerializationApi()
-            optIn("io.ktor.util.InternalAPI")
         }
         publishing()
     }
@@ -28,15 +27,42 @@ hubdle {
                         api(hubdle.ktor.client.core)
                         api(hubdle.ktor.client.content.negotiation)
                         api(hubdle.ktor.serialization.kotlinx.json)
-                        implementation(hubdle.javiersc.kotlinx.coroutines.run.blocking)
                     }
                 }
 
                 test {
                     dependencies {
                         implementation(hubdle.ktor.client.mock)
-                        implementation(hubdle.jetbrains.kotlinx.io.core)
+                        implementation(hubdle.kotest.property)
                     }
+                }
+            }
+
+            apple {
+                main {
+                    dependencies {
+                        api(hubdle.ktor.client.darwin)
+                    }
+                }
+
+                ios {
+                    iosArm64()
+                    iosSimulatorArm64()
+                    iosX64()
+                }
+                macos {
+                    macosArm64()
+                    macosX64()
+                }
+                tvos {
+                    tvosArm64()
+                    tvosSimulatorArm64()
+                    tvosX64()
+                }
+                watchos {
+                    watchosArm64()
+                    watchosSimulatorArm64()
+                    watchosX64()
                 }
             }
 
@@ -53,10 +79,37 @@ hubdle {
                     dependencies {
                         implementation(hubdle.squareup.retrofit2.converter.kotlinx.serialization)
                         implementation(hubdle.kotest.extensions.kotest.extensions.mockserver)
-                        implementation(hubdle.kotest.property)
                     }
                 }
             }
+
+            js {
+                // browser()
+                nodejs()
+            }
+
+            linux {
+                // linuxArm64()
+                // linuxX64 {
+                //     main {
+                //         dependencies { //
+                //             api(hubdle.ktor.client.curl)
+                //         }
+                //     }
+                // }
+            }
+
+            mingw {
+                mingwX64 {
+                    main {
+                        dependencies { //
+                            api(hubdle.ktor.client.winhttp)
+                        }
+                    }
+                }
+            }
+
+            native()
         }
     }
 }

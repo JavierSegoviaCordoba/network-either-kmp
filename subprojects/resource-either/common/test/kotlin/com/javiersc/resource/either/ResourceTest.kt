@@ -8,27 +8,28 @@ import com.javiersc.resource.either.ResourceEither.Success
 import io.kotest.matchers.shouldBe
 import kotlin.test.Test
 
-internal class ResourceTest {
+class ResourceTest {
+
     private val failure = "Error"
     private val success = "Success"
 
     @Test
-    fun `Create Resource Failure`() {
+    fun Create_Resource_Failure() {
         resourceFailure(failure, success, true).shouldBe(Failure(failure, success, true))
     }
 
     @Test
-    fun `Create Resource SuccessLoading`() {
+    fun Create_Resource_SuccessLoading() {
         resourceSuccessLoading(success).shouldBe(Success(success, true))
     }
 
     @Test
-    fun `Create Resource Success`() {
+    fun Create_Resource_Success() {
         resourceSuccess(success, true).shouldBe(Success(success, true))
     }
 
     @Test
-    fun `Resource isFailure`() {
+    fun Resource_isFailure() {
         val resource = resourceFailure(success, null, true)
         var counter = 0
         if (resource.isLoading()) {
@@ -44,7 +45,7 @@ internal class ResourceTest {
     }
 
     @Test
-    fun `Resource isSuccess`() {
+    fun Resource_isSuccess() {
         val resource = resourceSuccess(success, true)
         var counter = 0
         if (resource.isLoading()) {

@@ -5,6 +5,7 @@ import com.javiersc.network.either.NetworkEither.Companion.localFailure
 import com.javiersc.network.either.NetworkEither.Companion.remoteFailure
 import com.javiersc.network.either.NetworkEither.Companion.success
 import com.javiersc.network.either.NetworkEither.Companion.unknownFailure
+import com.javiersc.network.either.internal.backgroundCoroutineScope
 import com.javiersc.network.either.internal.hasBody
 import com.javiersc.network.either.internal.utils.emptyHeader
 import com.javiersc.network.either.internal.utils.printlnError
@@ -15,6 +16,7 @@ import java.io.EOFException
 import java.io.InterruptedIOException
 import java.net.ConnectException
 import java.net.UnknownHostException
+import kotlinx.coroutines.launch
 import kotlinx.serialization.SerializationException
 import okhttp3.Request
 import okhttp3.ResponseBody
@@ -28,7 +30,7 @@ import retrofit2.Response
 internal class NetworkEitherSuspendCall<F : Any, S : Any>(
     private val backingCall: Call<S>,
     private val errorConverter: Converter<ResponseBody, F>,
-    private val isNetworkAvailable: () -> Boolean,
+    private val isNetworkAvailable: suspend () -> Boolean,
 ) : Call<NetworkEither<F, S>> {
 
     override fun enqueue(callback: Callback<NetworkEither<F, S>>) =
@@ -44,31 +46,37 @@ internal class NetworkEitherSuspendCall<F : Any, S : Any>(
                     }
 
                     override fun onFailure(call: Call<S>, throwable: Throwable) {
-                        if (!isNetworkAvailable()) {
-                            onCommonConnectionExceptions(callback, isNetworkAvailable())
-                        } else {
-                            when (throwable) {
-                                is UnknownHostException,
-                                is ConnectException,
-                                is InterruptedIOException -> {
-                                    onCommonConnectionExceptions(callback, isNetworkAvailable())
-                                }
-                                is EOFException -> onEOFException(callback)
-                                is IllegalStateException -> {
-                                    onIllegalStateException(callback, throwable)
-                                }
-                                is HttpException -> {
-                                    onHttpException(callback, errorConverter, throwable)
-                                }
-                                is SerializationException -> {
-                                    if (throwable.hasBody) {
-                                        onIllegalStateException(callback, throwable)
-                                    } else {
-                                        onEOFException(callback)
+                        backgroundCoroutineScope.launch {
+                            val isNetworkAvailable: Boolean = isNetworkAvailable()
+                            if (!isNetworkAvailable) {
+                                onCommonConnectionExceptions(
+                                    callback = callback,
+                                    isNetworkAvailable = isNetworkAvailable,
+                                )
+                            } else {
+                                when (throwable) {
+                                    is UnknownHostException,
+                                    is ConnectException,
+                                    is InterruptedIOException -> {
+                                        onCommonConnectionExceptions(callback, isNetworkAvailable())
                                     }
-                                }
-                                else -> {
-                                    Response.success(unknownFailure(throwable))
+                                    is EOFException -> onEOFException(callback)
+                                    is IllegalStateException -> {
+                                        onIllegalStateException(callback, throwable)
+                                    }
+                                    is HttpException -> {
+                                        onHttpException(callback, errorConverter, throwable)
+                                    }
+                                    is SerializationException -> {
+                                        if (throwable.hasBody) {
+                                            onIllegalStateException(callback, throwable)
+                                        } else {
+                                            onEOFException(callback)
+                                        }
+                                    }
+                                    else -> {
+                                        Response.success(unknownFailure(throwable))
+                                    }
                                 }
                             }
                         }

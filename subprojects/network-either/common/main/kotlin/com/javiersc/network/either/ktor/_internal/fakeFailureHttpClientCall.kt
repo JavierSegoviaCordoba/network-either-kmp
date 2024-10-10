@@ -16,6 +16,8 @@ import io.ktor.util.pipeline.PipelineContext
 import io.ktor.util.toMap
 import io.ktor.utils.io.ByteReadChannel
 import io.ktor.utils.io.InternalAPI
+import io.ktor.utils.io.charsets.Charsets
+import io.ktor.utils.io.core.toByteArray
 
 @OptIn(InternalAPI::class)
 internal fun PipelineContext<Any, HttpRequestBuilder>.fakeHttpFailureClientCall(

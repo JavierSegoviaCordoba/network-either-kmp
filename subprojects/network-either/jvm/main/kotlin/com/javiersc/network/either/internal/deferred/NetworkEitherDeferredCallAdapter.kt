@@ -11,7 +11,7 @@ import retrofit2.Converter
 internal class NetworkEitherDeferredCallAdapter<F : Any, S : Any>(
     private val successBodyType: Type,
     private val errorConverter: Converter<ResponseBody, F>,
-    private val isNetworkAvailable: () -> Boolean,
+    private val isNetworkAvailable: suspend () -> Boolean,
 ) : CallAdapter<S, CompletableDeferred<NetworkEither<F, S>>> {
 
     override fun responseType(): Type = successBodyType

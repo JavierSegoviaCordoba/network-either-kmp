@@ -2,7 +2,7 @@ hubdle {
     config {
         analysis()
         coverage()
-        documentation {
+        documentation { //
             api()
         }
         explicitApi()
@@ -25,13 +25,29 @@ hubdle {
                 }
 
                 test {
-                    dependencies {
+                    dependencies { //
                         implementation(hubdle.ktor.client.mock)
                     }
                 }
             }
 
             jvm()
+
+            js {
+                // browser()
+                nodejs()
+            }
+
+            linux {
+                // linuxArm64()
+                // linuxX64()
+            }
+
+            mingw { //
+                mingwX64()
+            }
+
+            native()
         }
     }
 }
