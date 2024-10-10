@@ -6,6 +6,8 @@ import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
 import kotlin.contracts.contract
+import kotlin.js.JsName
+import kotlin.jvm.JvmName
 
 public sealed class ResourceEither<out F, out S> {
 
@@ -50,6 +52,7 @@ public sealed class ResourceEither<out F, out S> {
     ): Either<L, R> = fold(failure = { failure(it).left() }, success = { success(it).right() })
 
     @JvmName("getIsLoading")
+    @JsName("getIsLoading")
     public fun isLoading(): Boolean {
         return this.isLoading
     }

@@ -90,8 +90,8 @@ public final class com/javiersc/network/either/NetworkEither$Success : com/javie
 
 public final class com/javiersc/network/either/NetworkEitherCallAdapterFactory : retrofit2/CallAdapter$Factory {
 	public fun <init> ()V
-	public fun <init> (Lkotlin/jvm/functions/Function0;)V
-	public synthetic fun <init> (Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Lkotlin/jvm/functions/Function1;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun get (Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;Lretrofit2/Retrofit;)Lretrofit2/CallAdapter;
 }
 
@@ -102,8 +102,8 @@ public final class com/javiersc/network/either/internal/utils/HttpStatusCodeUtil
 public final class com/javiersc/network/either/ktor/NetworkEitherPlugin {
 	public static final field Companion Lcom/javiersc/network/either/ktor/NetworkEitherPlugin$Companion;
 	public fun <init> ()V
-	public fun <init> (Lkotlin/jvm/functions/Function0;)V
-	public synthetic fun <init> (Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Lkotlin/jvm/functions/Function1;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 }
 
 public final class com/javiersc/network/either/ktor/NetworkEitherPlugin$Companion : io/ktor/client/plugins/HttpClientPlugin {
@@ -116,8 +116,8 @@ public final class com/javiersc/network/either/ktor/NetworkEitherPlugin$Companio
 
 public final class com/javiersc/network/either/ktor/NetworkEitherPlugin$Config {
 	public fun <init> ()V
-	public final fun isNetworkAvailable ()Lkotlin/jvm/functions/Function0;
-	public final fun setNetworkAvailable (Lkotlin/jvm/functions/Function0;)V
+	public final fun isNetworkAvailable ()Lkotlin/jvm/functions/Function1;
+	public final fun setNetworkAvailable (Lkotlin/jvm/functions/Function1;)V
 }
 
 public final class com/javiersc/network/either/ktor/_internal/HttpStatusCodeExtensionsKt {
@@ -125,6 +125,6 @@ public final class com/javiersc/network/either/ktor/_internal/HttpStatusCodeExte
 }
 
 public final class com/javiersc/network/either/utils/IsNetworkAvailableKt {
-	public static final fun isNetworkAvailable ()Z
+	public static final fun isNetworkAvailable (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 

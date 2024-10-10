@@ -15,7 +15,7 @@ import io.ktor.http.headersOf
 import io.ktor.util.toMap
 import kotlin.test.Test
 
-internal class NetworkEitherToResourceTests {
+class NetworkEitherToResourceTests {
 
     private val success = 1
     private val failureHttp = 0
@@ -26,7 +26,7 @@ internal class NetworkEitherToResourceTests {
         get() = headersOf("A" to listOf("B")).toMap()
 
     @Test
-    fun `Transform a NetworkEither to Resource with success input`() {
+    fun Transform_a_NetworkEither_to_Resource_with_success_input() {
         NetworkEither.success(success, 200, headers)
             .toResource(
                 failure = { failure: NetworkFailure<Int> ->
@@ -54,7 +54,7 @@ internal class NetworkEitherToResourceTests {
     }
 
     @Test
-    fun `Transform a NetworkEither to Resource with failure http`() {
+    fun Transform_a_NetworkEither_to_Resource_with_failure_http() {
         NetworkEither.buildHttpFailure(failureHttp, 400, headers)
             .toResource(
                 failure = { failure: NetworkFailure<Int> ->
@@ -82,7 +82,7 @@ internal class NetworkEitherToResourceTests {
     }
 
     @Test
-    fun `Transform a NetworkEither to Resource with failure local`() {
+    fun Transform_a_NetworkEither_to_Resource_with_failure_local() {
         NetworkEither.localFailure()
             .toResource(
                 failure = { failure: NetworkFailure<Int> ->
@@ -110,7 +110,7 @@ internal class NetworkEitherToResourceTests {
     }
 
     @Test
-    fun `Transform a NetworkEither to Either with failure remote`() {
+    fun Transform_a_NetworkEither_to_Either_with_failure_remote() {
         NetworkEither.remoteFailure()
             .toResource(
                 failure = { failure: NetworkFailure<Int> ->
@@ -138,7 +138,7 @@ internal class NetworkEitherToResourceTests {
     }
 
     @Test
-    fun `Transform a NetworkEither to Either with failure unknown`() {
+    fun Transform_a_NetworkEither_to_Either_with_failure_unknown() {
         NetworkEither.unknownFailure(IllegalStateException())
             .toResource(
                 failure = { failure: NetworkFailure<Int> ->

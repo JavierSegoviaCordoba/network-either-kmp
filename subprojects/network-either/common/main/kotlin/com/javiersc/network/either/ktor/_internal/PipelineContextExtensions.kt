@@ -7,9 +7,7 @@ import com.javiersc.network.either.NetworkEither
 import io.ktor.client.call.HttpClientCall
 import io.ktor.client.statement.HttpResponseContainer
 import io.ktor.util.pipeline.PipelineContext
-import io.ktor.util.reflect.Type
 import io.ktor.util.reflect.TypeInfo
-import io.ktor.util.reflect.platformType
 import kotlin.reflect.KClass
 import kotlin.reflect.KClassifier
 import kotlin.reflect.KType
@@ -32,13 +30,8 @@ internal val PipelineContext<HttpResponseContainer, HttpClientCall>.failureTypeI
             val failureKotlinType: KType =
                 checkNotNull(subject.expectedType.kotlinType?.arguments?.firstOrNull()?.type)
             val failureType: KClass<*> = failureKotlinType.classifier as KClass<*>
-            val failureReifiedType: Type = failureKotlinType.platformType
 
-            TypeInfo(
-                type = failureType,
-                reifiedType = failureReifiedType,
-                kotlinType = failureKotlinType,
-            )
+            TypeInfo(type = failureType, kotlinType = failureKotlinType)
         } else null
 
 internal val PipelineContext<HttpResponseContainer, HttpClientCall>.successTypeInfo: TypeInfo?
@@ -47,13 +40,8 @@ internal val PipelineContext<HttpResponseContainer, HttpClientCall>.successTypeI
             val successKotlinType: KType =
                 checkNotNull(subject.expectedType.kotlinType?.arguments?.secondOrNull()?.type)
             val successType: KClass<*> = successKotlinType.classifier as KClass<*>
-            val successReifiedType: Type = successKotlinType.platformType
 
-            TypeInfo(
-                type = successType,
-                reifiedType = successReifiedType,
-                kotlinType = successKotlinType,
-            )
+            TypeInfo(type = successType, kotlinType = successKotlinType)
         } else null
 
 internal val PipelineContext<HttpResponseContainer, HttpClientCall>.isNetworkEither: Boolean

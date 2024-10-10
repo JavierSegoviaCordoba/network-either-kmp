@@ -5,7 +5,7 @@ import io.ktor.client.request.HttpSendPipeline
 
 internal fun interceptExceptionsAndReplaceWithNetworkEitherFailures(
     client: HttpClient,
-    isNetAvailable: () -> Boolean,
+    isNetAvailable: suspend () -> Boolean,
 ) {
     client.sendPipeline.intercept(HttpSendPipeline.State) {
         if (isNetAvailable()) {

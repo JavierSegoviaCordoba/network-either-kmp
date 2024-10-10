@@ -6,13 +6,13 @@ import com.javiersc.resource.either.ResourceEither.Companion.resourceSuccess
 import io.kotest.matchers.shouldBe
 import kotlin.test.Test
 
-internal class ResourceFoldTest {
+class ResourceFoldTest {
 
     private val failure = 2
     private val success = 4
 
     @Test
-    fun `Fold Failure`() {
+    fun Fold_Failure() {
         var actual = 0
         var counter = 0
         var actualIsLoading = false
@@ -54,7 +54,7 @@ internal class ResourceFoldTest {
     }
 
     @Test
-    fun `Fold Success`() {
+    fun Fold_Success() {
         var actual = 0
         var counter = 0
         var actualIsLoading = false
@@ -96,7 +96,7 @@ internal class ResourceFoldTest {
     }
 
     @Test
-    fun `Resource to Either`() {
+    fun Resource_to_Either() {
         val failureResource: ResourceEither<Int, Int> = resourceFailure(success, failure, true)
 
         failureResource
