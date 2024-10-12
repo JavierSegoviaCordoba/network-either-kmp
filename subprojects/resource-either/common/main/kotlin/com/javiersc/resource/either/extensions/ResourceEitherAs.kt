@@ -6,12 +6,16 @@ import com.javiersc.resource.either.ResourceEither.Companion.buildResourceSucces
 import com.javiersc.resource.either.ResourceEither.Companion.buildResourceSuccessLoading
 
 /** Transform this in Failure */
-public fun <F, S> F.asFailure(data: S? = null, isLoading: Boolean = false): ResourceEither<F, S> =
-    buildResourceFailure(this, data, isLoading)
+public inline fun <reified F, reified S> F.asFailure(
+    data: S? = null,
+    isLoading: Boolean = false,
+): ResourceEither<F, S> = buildResourceFailure(this, data, isLoading)
 
 /** Transform this in SuccessLoading */
-public fun <F, S> S.asSuccessLoading(): ResourceEither<F, S> = buildResourceSuccessLoading(this)
+public inline fun <reified F, reified S> S.asSuccessLoading(): ResourceEither<F, S> =
+    buildResourceSuccessLoading(this)
 
 /** Transform this in Success */
-public fun <F, S> S.asSuccess(isLoading: Boolean = false): ResourceEither<F, S> =
-    buildResourceSuccess(this, isLoading)
+public inline fun <reified F, reified S> S.asSuccess(
+    isLoading: Boolean = false
+): ResourceEither<F, S> = buildResourceSuccess(this, isLoading)
