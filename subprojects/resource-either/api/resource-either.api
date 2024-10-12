@@ -59,11 +59,3 @@ public final class com/javiersc/resource/either/ResourceEither$Success : com/jav
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class com/javiersc/resource/either/extensions/ResourceEitherAsKt {
-	public static final fun asFailure (Ljava/lang/Object;Ljava/lang/Object;Z)Lcom/javiersc/resource/either/ResourceEither;
-	public static synthetic fun asFailure$default (Ljava/lang/Object;Ljava/lang/Object;ZILjava/lang/Object;)Lcom/javiersc/resource/either/ResourceEither;
-	public static final fun asSuccess (Ljava/lang/Object;Z)Lcom/javiersc/resource/either/ResourceEither;
-	public static synthetic fun asSuccess$default (Ljava/lang/Object;ZILjava/lang/Object;)Lcom/javiersc/resource/either/ResourceEither;
-	public static final fun asSuccessLoading (Ljava/lang/Object;)Lcom/javiersc/resource/either/ResourceEither;
-}
-

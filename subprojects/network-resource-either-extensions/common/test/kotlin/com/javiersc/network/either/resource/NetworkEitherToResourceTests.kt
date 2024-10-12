@@ -164,4 +164,18 @@ class NetworkEitherToResourceTests {
             )
             .shouldBe(resourceFailure(failureUnknown))
     }
+
+    @Test
+    fun Transform_a_NetworkEither_to_Either_with_failure_unknown_and_loading() {
+        NetworkEither.unknownFailure(IllegalStateException())
+            .toResource(
+                httpError = NetworkFailureHttp<Int>::error,
+                localError = { failureLocal },
+                remoteError = { failureRemote },
+                unknownError = { failureUnknown },
+                success = NetworkSuccess<Int>::data,
+                isLoading = true,
+            )
+            .shouldBe(resourceFailure(failureUnknown, isLoading = true))
+    }
 }
