@@ -42,9 +42,15 @@ class ResourceFoldTest {
 
         actualIsLoading = false
 
-        resource.ifFailure { (failure, data, isLoading) ->
-            actual = failure + data!!
-            actualIsLoading = isLoading
+        resource.ifFailure {
+            actual = it.failure + it.data!!
+            actualIsLoading = it.isLoading
+            counter++
+        }
+
+        resource.ifSuccess {
+            actual = it.data
+            actualIsLoading = it.isLoading
             counter++
         }
 
@@ -83,6 +89,12 @@ class ResourceFoldTest {
         actualIsLoading shouldBe true
 
         actualIsLoading = false
+
+        resource.ifFailure {
+            actual = it.failure + it.data!!
+            actualIsLoading = it.isLoading
+            counter++
+        }
 
         resource.ifSuccess { (data, isLoading) ->
             actual = data
