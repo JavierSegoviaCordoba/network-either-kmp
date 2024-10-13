@@ -9,11 +9,11 @@ import io.ktor.client.plugins.HttpClientPlugin
 import io.ktor.util.AttributeKey
 
 public class NetworkEitherPlugin(
-    private val isNetworkAvailable: () -> Boolean = { isNetAvailable }
+    private val isNetworkAvailable: suspend () -> Boolean = { isNetAvailable() }
 ) {
 
     public class Config {
-        public var isNetworkAvailable: () -> Boolean = { isNetAvailable }
+        public var isNetworkAvailable: suspend () -> Boolean = { isNetAvailable() }
     }
 
     public companion object : HttpClientPlugin<Config, NetworkEitherPlugin> {

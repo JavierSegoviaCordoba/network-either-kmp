@@ -6,7 +6,7 @@ import io.ktor.http.headersOf
 import io.ktor.util.toMap
 import kotlin.test.Test
 
-internal class NetworkEitherToEither {
+class NetworkEitherToEither {
 
     private val success = 1
     private val failureHttp = 0
@@ -17,7 +17,7 @@ internal class NetworkEitherToEither {
         get() = headersOf("A" to listOf("B")).toMap()
 
     @Test
-    fun `Transform a NetworkEither to Either with success input`() {
+    fun Transform_a_NetworkEither_to_Either_with_success_input() {
         NetworkEither.success(success, 200, headers)
             .toEither(
                 httpFailure = NetworkFailureHttp<Int>::error,
@@ -30,7 +30,7 @@ internal class NetworkEitherToEither {
     }
 
     @Test
-    fun `Transform a NetworkEither to Either with failure http`() {
+    fun Transform_a_NetworkEither_to_Either_with_failure_http() {
         NetworkEither.httpFailure(failureHttp, 400, headers)
             .toEither(
                 httpFailure = NetworkFailureHttp<Int>::error,
@@ -43,7 +43,7 @@ internal class NetworkEitherToEither {
     }
 
     @Test
-    fun `Transform a NetworkEither to Either with failure local`() {
+    fun Transform_a_NetworkEither_to_Either_with_failure_local() {
         NetworkEither.localFailure()
             .toEither(
                 httpFailure = NetworkFailureHttp<Int>::error,
@@ -56,7 +56,7 @@ internal class NetworkEitherToEither {
     }
 
     @Test
-    fun `Transform a NetworkEither to Either with failure remote`() {
+    fun Transform_a_NetworkEither_to_Either_with_failure_remote() {
         NetworkEither.remoteFailure()
             .toEither(
                 httpFailure = NetworkFailureHttp<Int>::error,
@@ -69,7 +69,7 @@ internal class NetworkEitherToEither {
     }
 
     @Test
-    fun `Transform a NetworkEither to Either with failure unknown`() {
+    fun Transform_a_NetworkEither_to_Either_with_failure_unknown() {
         NetworkEither.unknownFailure(IllegalStateException())
             .toEither(
                 httpFailure = NetworkFailureHttp<Int>::error,

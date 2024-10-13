@@ -6,11 +6,12 @@ import com.javiersc.network.either.NetworkEither.Companion.remoteFailure
 import com.javiersc.network.either.NetworkEither.Companion.success
 import com.javiersc.network.either.NetworkEither.Companion.unknownFailure
 import com.javiersc.network.either._config.DogService
+import com.javiersc.network.either._config.fakes.JsonMalformed
 import com.javiersc.network.either._config.fakes.clientErrorCodes
+import com.javiersc.network.either._config.fakes.getJsonResponse
 import com.javiersc.network.either._config.fakes.headers
 import com.javiersc.network.either._config.fakes.serverErrorCodes
 import com.javiersc.network.either._config.fakes.successCodes
-import com.javiersc.network.either._config.fakes.toResourceJsonFile
 import com.javiersc.network.either._config.mockResponse
 import com.javiersc.network.either._config.models.DogDTO
 import com.javiersc.network.either._config.models.ErrorDTO
@@ -25,7 +26,8 @@ import kotlinx.coroutines.test.runTest
 import org.mockserver.integration.ClientAndServer
 import org.mockserver.model.HttpRequest
 
-internal class RetrofitTest {
+class RetrofitTest {
+
     @Test
     fun `call 2xx`() = runTest {
         val port = 58200
@@ -33,7 +35,7 @@ internal class RetrofitTest {
         server.apply {
             for (code in 200..299) {
                 `when`(HttpRequest.request().withPath("/dog/$code"))
-                    .respond(mockResponse(code, code.toResourceJsonFile(), headers(code)))
+                    .respond(mockResponse(code, getJsonResponse(code), headers(code)))
             }
         }
 
@@ -47,6 +49,7 @@ internal class RetrofitTest {
                     service.getDogWithoutBody(code) shouldBe expected
                     service.getDogWithoutBodyAsync(code).await() shouldBe expected
                 }
+
                 in 200..299 -> {
                     val expected: NetworkEither<ErrorDTO, DogDTO> =
                         success(dogDTO, code, headers(code))
@@ -64,7 +67,7 @@ internal class RetrofitTest {
         server.apply {
             for (code in 400..499) {
                 `when`(HttpRequest.request().withPath("/dog/$code"))
-                    .respond(mockResponse(code, code.toResourceJsonFile(), headers(code)))
+                    .respond(mockResponse(code, getJsonResponse(code), headers(code)))
             }
         }
 
@@ -84,7 +87,7 @@ internal class RetrofitTest {
         server.apply {
             for (code in 500..599) {
                 `when`(HttpRequest.request().withPath("/dog/$code"))
-                    .respond(mockResponse(code, code.toResourceJsonFile(), headers(code)))
+                    .respond(mockResponse(code, getJsonResponse(code), headers(code)))
             }
         }
 
@@ -121,7 +124,7 @@ internal class RetrofitTest {
 
         server
             .`when`(HttpRequest.request().withPath("/dog/$code"))
-            .respond(mockResponse(code, "malformed.json", headers(code, "malformed.json")))
+            .respond(mockResponse(code, JsonMalformed, headers(code, JsonMalformed)))
 
         val service = DogService.getService(port)
         val expected: NetworkEither<ErrorDTO, DogDTO> =
