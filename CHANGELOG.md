@@ -14,6 +14,10 @@
 
 ### Updated
 
+## [0.3.0-alpha.1] - 2024-10-26
+
+### Updated
+
 - `com.javiersc.hubdle:com.javiersc.hubdle.gradle.plugin -> 0.7.18`
 - `gradle -> 8.10.2`
 
@@ -76,7 +80,9 @@
 
 - No changes
 
-[Unreleased]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.2.0-alpha.2...HEAD
+[Unreleased]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.3.0-alpha.1...HEAD
+
+[0.3.0-alpha.1]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.2.0-alpha.2...0.3.0-alpha.1
 
 [0.2.0-alpha.2]: https://github.com/JavierSegoviaCordoba/network-either-kmp/compare/0.2.0-alpha.1...0.2.0-alpha.2
 
