@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `gradle -> 8.11`
+
 ## [0.3.0-alpha.1] - 2024-10-26
 
 ### Updated
