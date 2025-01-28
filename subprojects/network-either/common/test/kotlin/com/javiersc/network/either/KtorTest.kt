@@ -44,7 +44,7 @@ class KtorTest {
                         "/dog/remote-unavailable/$code" -> throw IOException("")
                         "/dog/malformed/$code" -> {
                             checkNotNull(code) { "Code must not be null at this point" }
-                            val headers = headers(code, "malformed.json")
+                            val headers: Headers = headers(code, JsonMalformed)
                             respond(
                                 content = JsonMalformed,
                                 status = code.toHttpStatusCode("Custom HttpStatusCode"),
