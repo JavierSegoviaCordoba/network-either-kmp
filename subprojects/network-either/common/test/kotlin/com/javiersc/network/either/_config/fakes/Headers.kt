@@ -9,7 +9,7 @@ val connection: Pair<String, List<String>> = "connection" to listOf("keep-alive"
 val contentType: Pair<String, List<String>> = "content-type" to listOf("application/json")
 
 fun headers(code: Int, content: String? = null): Headers {
-    val length =
+    val length: String? =
         when {
             content != null -> content.length.toString()
             code == 204 -> null
