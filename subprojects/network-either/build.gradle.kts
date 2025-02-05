@@ -110,6 +110,8 @@ hubdle {
             }
 
             native()
+
+            wasmJs()
         }
     }
 }
