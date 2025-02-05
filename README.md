@@ -9,26 +9,74 @@
 
 # Network Either
 
-_TODO_
+## Ktor
 
-- [ ] Add samples
+### Usage
 
-### Docs
+```kotlin
+val client: HttpClient = HttpClient(MockEngine) {
+    install(NetworkEitherPlugin)
+    install(ContentNegotiation) {
+        json(defaultJson)
+    }
+}
 
-All docs are available on the [Either website](https://network-either-kmp.javiersc.com)
+@Serializable
+data class DogDTO(val id: Int, val name: String, val age: Int)
 
-### Download from MavenCentral
+@Serializable
+data class ErrorDTO(val message: String)
+
+val response: NetworkEither<ErrorDTO, DogDTO> = client.get("dog").body()
+response.fold(
+    failure = { ... },
+    success = { ... },
+)
+```
+
+Check all available functions in the [
+`NetworkEither` class](subprojects/network-either/common/main/kotlin/com/javiersc/network/either/NetworkEither.kt).
+
+Check [the tests](subprojects/network-either/common/test/kotlin/com/javiersc/network/either/KtorTest.kt)
+for more examples.
+
+## Retrofit
+
+### Usage
+
+```kotlin
+val retrofit =
+    Retrofit
+        .Builder()
+        .baseUrl("org.example.com")
+        .addCallAdapterFactory(NetworkEitherCallAdapterFactory())
+        .build()
+
+interface DogService {
+
+    @GET("dog")
+    suspend fun getDog(): NetworkEither<ErrorDTO, DogDTO>
+}
+
+val service: DogService = retrofit.create()
+val response: NetworkEither<ErrorDTO, DogDTO> = service.getDog()
+response.fold(
+    failure = { ... },
+    success = { ... },
+)
+```
+
+Check [the tests](subprojects/network-either/jvm/test/kotlin/com/javiersc/network/either/RetrofitTest.kt)
+for more examples.
+
+## Docs
+
+All docs are available on the [`network-either-kmp` website](https://network-either-kmp.javiersc.com)
+
+## Download from MavenCentral
 
 - NetworkEither, pretty printing logger and ResourceEither mappers
 
 ```kotlin
 implementation("com.javiersc.network:network-either:$version")
-implementation("com.javiersc.network:network-either-logger:$version")
-implementation("com.javiersc.network:network-resource-either-extensions:$version")
-```
-
-- ResourceEither
-
-```kotlin
-implementation("com.javiersc.network:resource-either:$version")
 ```

@@ -1,5 +1,5 @@
-site_name: Netwoek Either
-site_description: ResourceEither for domain layer and NetworkEither for networking sealed classes
+site_name: Network Either
+site_description: Ktor plugin, and Retrofit adapter to manage network request in an easy way.
 site_author: Javier Segovia Córdoba
 remote_branch: gh-pages
 
