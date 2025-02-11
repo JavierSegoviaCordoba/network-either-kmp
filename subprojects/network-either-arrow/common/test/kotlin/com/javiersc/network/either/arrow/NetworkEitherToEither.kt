@@ -1,6 +1,10 @@
-package com.javiersc.network.either
+package com.javiersc.network.either.arrow
 
 import arrow.core.Either
+import com.javiersc.network.either.Headers
+import com.javiersc.network.either.NetworkEither
+import com.javiersc.network.either.NetworkFailureHttp
+import com.javiersc.network.either.NetworkSuccess
 import io.kotest.matchers.shouldBe
 import io.ktor.http.headersOf
 import io.ktor.util.toMap

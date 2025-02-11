@@ -4,6 +4,7 @@
 
 ### Added
 
+- `network-either-arrow` project with Arrow's `Either` integration
 - `ios` support
 - `macos` support
 - `watchos` support
@@ -22,6 +23,8 @@
 ### Fixed
 
 ### Removed
+
+- Arrow `toEither` function in the main project
 
 ### Updated
 

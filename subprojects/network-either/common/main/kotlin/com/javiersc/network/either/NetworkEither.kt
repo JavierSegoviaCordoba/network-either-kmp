@@ -1,8 +1,5 @@
 package com.javiersc.network.either
 
-import arrow.core.Either
-import arrow.core.left
-import arrow.core.right
 import kotlin.contracts.contract
 import kotlin.jvm.JvmName
 
@@ -107,21 +104,6 @@ public sealed class NetworkEither<out F, out S> {
         contract { returnsNotNull() implies (this@NetworkEither is Failure.Unknown) }
         return (this as? Failure.Unknown)?.throwable
     }
-
-    public inline fun <L, R> toEither(
-        crossinline httpFailure: (Failure.Http<F>) -> L,
-        localFailure: () -> L,
-        remoteFailure: () -> L,
-        crossinline unknownFailure: (Throwable) -> L,
-        crossinline success: (Success<S>) -> R,
-    ): Either<L, R> =
-        fold(
-            httpFailure = { f: Failure.Http<F> -> httpFailure(f).left() },
-            localFailure = localFailure()::left,
-            remoteFailure = remoteFailure()::left,
-            unknownFailure = { throwable: Throwable -> unknownFailure(throwable).left() },
-            success = { s: Success<S> -> success(s).right() },
-        )
 
     public fun ifFailure(block: (Failure<F>) -> Unit) {
         if (this is Failure<F>) block(this)

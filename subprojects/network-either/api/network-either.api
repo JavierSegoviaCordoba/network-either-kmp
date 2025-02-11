@@ -20,7 +20,6 @@ public abstract class com/javiersc/network/either/NetworkEither {
 	public final fun isRemoteFailure ()Z
 	public final fun isSuccess ()Z
 	public final fun isUnknownFailure ()Z
-	public final fun toEither (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Larrow/core/Either;
 }
 
 public final class com/javiersc/network/either/NetworkEither$Companion {

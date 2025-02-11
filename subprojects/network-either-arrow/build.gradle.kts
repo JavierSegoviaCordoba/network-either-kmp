@@ -23,27 +23,13 @@ hubdle {
             common {
                 main {
                     dependencies {
-                        api(hubdle.ktor.client.core)
-                        api(hubdle.ktor.client.content.negotiation)
-                        api(hubdle.ktor.serialization.kotlinx.json)
-                    }
-                }
-
-                test {
-                    dependencies {
-                        implementation(hubdle.ktor.client.mock)
-                        implementation(hubdle.kotest.property)
+                        api(hubdle.arrow.kt.arrow.core)
+                        api(projects.subprojects.networkEither)
                     }
                 }
             }
 
             apple {
-                main {
-                    dependencies {
-                        api(hubdle.ktor.client.darwin)
-                    }
-                }
-
                 ios {
                     iosArm64()
                     iosSimulatorArm64()
@@ -65,22 +51,7 @@ hubdle {
                 }
             }
 
-            jvm {
-                main {
-                    dependencies {
-                        api(hubdle.ktor.client.cio)
-                        api(hubdle.squareup.okhttp3.okhttp)
-                        api(hubdle.squareup.retrofit2.retrofit)
-                    }
-                }
-
-                test {
-                    dependencies {
-                        implementation(hubdle.squareup.retrofit2.converter.kotlinx.serialization)
-                        implementation(hubdle.kotest.extensions.kotest.extensions.mockserver)
-                    }
-                }
-            }
+            jvm()
 
             js {
                 // browser()
@@ -99,13 +70,7 @@ hubdle {
             }
 
             mingw {
-                mingwX64 {
-                    main {
-                        dependencies { //
-                            api(hubdle.ktor.client.winhttp)
-                        }
-                    }
-                }
+                mingwX64()
             }
 
             native()
