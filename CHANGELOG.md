@@ -10,6 +10,8 @@
 - `tvos` support
 - `nodejs` support
 - `mingw` support
+- `WAsm > JS > browser` support
+- `WAsm > JS > nodejs` support
 
 ### Changed
 

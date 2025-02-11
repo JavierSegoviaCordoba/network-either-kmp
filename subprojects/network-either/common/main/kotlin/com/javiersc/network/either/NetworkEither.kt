@@ -13,9 +13,9 @@ public sealed class NetworkEither<out F, out S> {
         public data class Http<out F>(val error: F, val code: Int, val headers: Headers) :
             Failure<F>()
 
-        public object Local : Failure<Nothing>()
+        public data object Local : Failure<Nothing>()
 
-        public object Remote : Failure<Nothing>()
+        public data object Remote : Failure<Nothing>()
 
         public data class Unknown(val throwable: Throwable) : Failure<Nothing>()
     }

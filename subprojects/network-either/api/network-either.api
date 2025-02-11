@@ -56,10 +56,16 @@ public final class com/javiersc/network/either/NetworkEither$Failure$Http : com/
 
 public final class com/javiersc/network/either/NetworkEither$Failure$Local : com/javiersc/network/either/NetworkEither$Failure {
 	public static final field INSTANCE Lcom/javiersc/network/either/NetworkEither$Failure$Local;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
 }
 
 public final class com/javiersc/network/either/NetworkEither$Failure$Remote : com/javiersc/network/either/NetworkEither$Failure {
 	public static final field INSTANCE Lcom/javiersc/network/either/NetworkEither$Failure$Remote;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
 }
 
 public final class com/javiersc/network/either/NetworkEither$Failure$Unknown : com/javiersc/network/either/NetworkEither$Failure {
