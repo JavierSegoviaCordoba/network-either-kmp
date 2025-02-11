@@ -1,0 +1,4 @@
+public final class com/javiersc/network/either/arrow/ToEitherKt {
+	public static final fun toEither (Lcom/javiersc/network/either/NetworkEither;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Larrow/core/Either;
+}
+
