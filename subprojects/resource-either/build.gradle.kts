@@ -13,6 +13,9 @@ hubdle {
     }
     kotlin {
         multiplatform {
+            features { //
+                kotest()
+            }
             common {
                 main {
                     dependencies { //

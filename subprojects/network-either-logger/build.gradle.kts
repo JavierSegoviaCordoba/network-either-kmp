@@ -10,6 +10,7 @@ hubdle {
     kotlin {
         multiplatform {
             features { //
+                kotest()
                 serialization()
             }
 

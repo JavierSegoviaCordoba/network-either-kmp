@@ -12,6 +12,7 @@ hubdle {
         multiplatform {
             features {
                 coroutines()
+                kotest()
                 serialization()
             }
 
