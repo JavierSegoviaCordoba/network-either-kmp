@@ -12,6 +12,7 @@ hubdle {
         multiplatform {
             features {
                 coroutines()
+                jvmVersion(JavaVersion.VERSION_11)
                 kotest()
                 serialization()
             }

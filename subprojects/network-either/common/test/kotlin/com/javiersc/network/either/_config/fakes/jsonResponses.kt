@@ -2,44 +2,44 @@ package com.javiersc.network.either._config.fakes
 
 internal val Json2xx: String =
     """
-        {
-          "id": 1,
-          "name": "Auri",
-          "age": 7
-        }
+    {
+      "id": 1,
+      "name": "Auri",
+      "age": 7
+    }
     """
         .trimIndent()
 
 internal val Json4xx: String =
     """
-        {
-          "message": "Dog has some error"
-        }
+    {
+      "message": "Dog has some error"
+    }
     """
         .trimIndent()
 
 internal val Json5xx: String =
     """
-        {
-          "message": "Dog has some error"
-        }
+    {
+      "message": "Dog has some error"
+    }
     """
         .trimIndent()
 
 internal val Json6xx: String =
     """
-        {
-          "message": "Dog has some error"
-        }
+    {
+      "message": "Dog has some error"
+    }
     """
         .trimIndent()
 
 internal val JsonMalformed: String =
     """
-        {
-          "id": 1,
-          "name": "Auri",
-          "age": 7
+    {
+      "id": 1,
+      "name": "Auri",
+      "age": 7
     """
         .trimIndent()
 

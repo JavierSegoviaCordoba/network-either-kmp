@@ -74,11 +74,11 @@ internal fun <F : Any, S : Any> deferredAdapt(
 private fun <F, S> onEOFException(deferred: CompletableDeferred<NetworkEither<F, S>>) {
     printlnWarning(
         """
-           | # # # # # # # # # # # # # # WARNING # # # # # # # # # # # # # # # # # # #
-           | # Every 2XX response should have a body except 204/205, as the response #
-           | # was empty, the response is transformed to Success with code 204 and   #
-           | # the headers are lost. The type should be Unit.                        #
-           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+        | # # # # # # # # # # # # # # WARNING # # # # # # # # # # # # # # # # # # #
+        | # Every 2XX response should have a body except 204/205, as the response #
+        | # was empty, the response is transformed to Success with code 204 and   #
+        | # the headers are lost. The type should be Unit.                        #
+        | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         """
             .trimMargin()
     )
@@ -90,9 +90,9 @@ private fun <F, S> onEOFException(deferred: CompletableDeferred<NetworkEither<F,
     } catch (e: ClassCastException) {
         printlnError(
             """
-               | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
-               | # NetworkResponse should use Unit as Success type when body is null #
-               | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+            | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
+            | # NetworkResponse should use Unit as Success type when body is null #
+            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
                 .trimMargin()
         )
@@ -106,9 +106,9 @@ private fun <F, S> onIllegalStateException(
 ) {
     printlnError(
         """
-           | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # #
-           | # Response body can't be serialized with the object provided  #
-           | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+        | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # #
+        | # Response body can't be serialized with the object provided  #
+        | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         """
             .trimMargin()
     )

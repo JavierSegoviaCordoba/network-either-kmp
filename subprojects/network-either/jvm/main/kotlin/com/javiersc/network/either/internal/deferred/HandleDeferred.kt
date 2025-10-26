@@ -41,9 +41,9 @@ private fun <F, S> handleNullBody(
     } catch (e: ClassCastException) {
         printlnError(
             """
-               | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
-               | # NetworkResponse should use Unit as Success type when body is null #
-               | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+            | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # # #
+            | # NetworkResponse should use Unit as Success type when body is null #
+            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
                 .trimMargin()
         )
@@ -62,9 +62,9 @@ private fun <F, S> handleNullErrorBody(
     } catch (e: ClassCastException) {
         printlnError(
             """
-               | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # #
-               | # NetworkResponse should use Unit as Error type when body is null #
-               | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+            | # # # # # # # # # # # # # # ERROR # # # # # # # # # # # # # # # # #
+            | # NetworkResponse should use Unit as Error type when body is null #
+            | # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             """
                 .trimMargin()
         )
