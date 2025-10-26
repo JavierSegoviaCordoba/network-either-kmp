@@ -14,6 +14,7 @@ hubdle {
     kotlin {
         multiplatform {
             features { //
+                jvmVersion(JavaVersion.VERSION_11)
                 kotest()
             }
             common {
